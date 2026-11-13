@@ -94,7 +94,12 @@ function buildConnectedOptions(
     label: string;
   }> = [];
   const seenOptions = new Set<string>();
+  const providerCounts = new Map<string, number>();
   for (const credential of credentials) {
+    providerCounts.set(credential.provider, (providerCounts.get(credential.provider) ?? 0) + 1);
+  }
+  for (const credential of credentials) {
+    const multipleConnections = (providerCounts.get(credential.provider) ?? 0) > 1;
     const providerModels = catalog.filter(
       (entry) => entry.provider === credential.provider && !entry.placeholder,
     );
@@ -105,7 +110,11 @@ function buildConnectedOptions(
       credential.modelId && !credentialInCatalog
         ? [
             {
-              key: modelOptionKey(credential.id, credential.provider, credential.modelId),
+              key: modelOptionKey(
+                multipleConnections ? credential.id : null,
+                credential.provider,
+                credential.modelId,
+              ),
               credentialId: credential.id,
               provider: credential.provider,
               modelId: credential.modelId,
@@ -113,7 +122,11 @@ function buildConnectedOptions(
             },
           ]
         : providerModels.map((entry) => ({
-            key: modelOptionKey(credential.id, entry.provider, entry.id),
+            key: modelOptionKey(
+              multipleConnections ? credential.id : null,
+              entry.provider,
+              entry.id,
+            ),
             credentialId: credential.id,
             provider: entry.provider,
             modelId: entry.id,
@@ -192,7 +205,18 @@ export function CreateBotForm({
         )
       : undefined;
   const effectiveCredential = modelKey
-    ? credentials.find((entry) => entry.id === parseModelOptionKey(modelKey)?.credentialId)
+    ? (() => {
+        const parsed = parseModelOptionKey(modelKey);
+        if (!parsed) return undefined;
+        if (parsed.credentialId) {
+          return credentials.find((entry) => entry.id === parsed.credentialId);
+        }
+        return (
+          credentials.find(
+            (entry) => entry.provider === parsed.provider && entry.modelId === parsed.modelId,
+          ) ?? credentials.find((entry) => entry.provider === parsed.provider)
+        );
+      })()
     : credentials.find(
         (entry) => entry.provider === effectiveProvider && entry.modelId === effectiveModelId,
       );
@@ -206,6 +230,10 @@ export function CreateBotForm({
   async function handleSubmit() {
     if (!name.trim() || submitting) return;
     const selected = modelKey ? parseModelOptionKey(modelKey) : null;
+    const resolvedCredentialId =
+      selected?.credentialId ??
+      connectedOptions.find((option) => option.key === modelKey)?.credentialId ??
+      null;
     setError(null);
     setSubmitting(true);
     try {
@@ -215,7 +243,7 @@ export function CreateBotForm({
         description: description.trim(),
         computerMode,
         modelProvider: selected?.provider ?? null,
-        modelCredentialId: selected?.credentialId ?? null,
+        modelCredentialId: resolvedCredentialId,
         modelId: selected?.modelId ?? null,
         thinkingLevel: thinkingOptions.length
           ? ((thinkingLevel || null) as ThinkingLevel | null)
@@ -500,6 +528,15 @@ export function BotSettings({
   }, []);
 
   const connectedOptions = buildConnectedOptions(credentials, catalog);
+  const resolvedModelKey =
+    modelKey && !connectedOptions.some((option) => option.key === modelKey)
+      ? (() => {
+          const parsed = parseModelOptionKey(modelKey);
+          if (!parsed?.credentialId) return modelKey;
+          const legacyKey = `${parsed.provider}::${parsed.modelId}`;
+          return connectedOptions.some((option) => option.key === legacyKey) ? legacyKey : modelKey;
+        })()
+      : modelKey;
 
   const effectiveProvider = modelKey
     ? parseModelOptionKey(modelKey)?.provider
@@ -514,7 +551,18 @@ export function BotSettings({
         )
       : undefined;
   const effectiveCredential = modelKey
-    ? credentials.find((entry) => entry.id === parseModelOptionKey(modelKey)?.credentialId)
+    ? (() => {
+        const parsed = parseModelOptionKey(modelKey);
+        if (!parsed) return undefined;
+        if (parsed.credentialId) {
+          return credentials.find((entry) => entry.id === parsed.credentialId);
+        }
+        return (
+          credentials.find(
+            (entry) => entry.provider === parsed.provider && entry.modelId === parsed.modelId,
+          ) ?? credentials.find((entry) => entry.provider === parsed.provider)
+        );
+      })()
     : credentials.find(
         (entry) => entry.provider === effectiveProvider && entry.modelId === effectiveModelId,
       );
@@ -568,7 +616,10 @@ export function BotSettings({
         autoSpeak,
         voiceId: voiceId || null,
         modelProvider: selected?.provider ?? null,
-        modelCredentialId: selected?.credentialId ?? null,
+        modelCredentialId:
+          selected?.credentialId ??
+          connectedOptions.find((option) => option.key === nextModelKey)?.credentialId ??
+          null,
         modelId: selected?.modelId ?? null,
         ...(modelMetaReady
           ? {
@@ -653,61 +704,6 @@ export function BotSettings({
           className="mt-1.5"
         />
       </label>
-      <label htmlFor={`${ids}-model`} className={fieldLabelClass}>
-        <Trans>Model</Trans>
-        <NativeSelect
-          id={`${ids}-model`}
-          className="mt-2 w-full"
-          value={modelKey}
-          onChange={(event) => {
-            const nextKey = event.target.value;
-            setModelKey(nextKey);
-            setThinkingLevel("");
-            void enqueueSave({ modelKey: nextKey, thinkingLevel: "" });
-          }}
-        >
-          <NativeSelectOption value="">
-            {t`Space default`}
-            {me?.defaultModel
-              ? ` (${catalogLabel(catalog, me.defaultProvider, me.defaultModel) ?? me.defaultModel})`
-              : ""}
-          </NativeSelectOption>
-          {modelKey && !connectedOptions.some((option) => option.key === modelKey) ? (
-            <NativeSelectOption value={modelKey}>
-              {parseModelOptionKey(modelKey)?.modelId ?? modelKey}
-            </NativeSelectOption>
-          ) : null}
-          {connectedOptions.map((option) => (
-            <NativeSelectOption key={option.key} value={option.key}>
-              {option.label}
-            </NativeSelectOption>
-          ))}
-        </NativeSelect>
-      </label>
-      {thinkingOptions.length ? (
-        <label htmlFor={`${ids}-thinking`} className={fieldLabelClass}>
-          <Trans>Thinking</Trans>
-          <NativeSelect
-            id={`${ids}-thinking`}
-            className="mt-2 w-full"
-            value={thinkingLevel}
-            onChange={(event) => {
-              const nextLevel = event.target.value;
-              setThinkingLevel(nextLevel);
-              void enqueueSave({ thinkingLevel: nextLevel });
-            }}
-          >
-            <NativeSelectOption value="">
-              {t`Default (${thinkingLevelLabel(defaultThinkingLevel)})`}
-            </NativeSelectOption>
-            {thinkingOptions.map((level) => (
-              <NativeSelectOption key={level} value={level}>
-                {thinkingLevelLabel(level)}
-              </NativeSelectOption>
-            ))}
-          </NativeSelect>
-        </label>
-      ) : null}
       <div className="mt-6 flex items-center justify-between pt-4 border-t border-border/20">
         <div className="space-y-0.5 pe-4">
           <div
@@ -746,6 +742,62 @@ export function BotSettings({
             ›
           </span>
         </summary>
+        <label htmlFor={`${ids}-model`} className={fieldLabelClass}>
+          <Trans>Model</Trans>
+          <NativeSelect
+            id={`${ids}-model`}
+            className="mt-2 w-full"
+            value={resolvedModelKey}
+            onChange={(event) => {
+              const nextKey = event.target.value;
+              setModelKey(nextKey);
+              setThinkingLevel("");
+              void enqueueSave({ modelKey: nextKey, thinkingLevel: "" });
+            }}
+          >
+            <NativeSelectOption value="">
+              {t`Space default`}
+              {me?.defaultModel
+                ? ` (${catalogLabel(catalog, me.defaultProvider, me.defaultModel) ?? me.defaultModel})`
+                : ""}
+            </NativeSelectOption>
+            {resolvedModelKey &&
+            !connectedOptions.some((option) => option.key === resolvedModelKey) ? (
+              <NativeSelectOption value={resolvedModelKey}>
+                {parseModelOptionKey(resolvedModelKey)?.modelId ?? resolvedModelKey}
+              </NativeSelectOption>
+            ) : null}
+            {connectedOptions.map((option) => (
+              <NativeSelectOption key={option.key} value={option.key}>
+                {option.label}
+              </NativeSelectOption>
+            ))}
+          </NativeSelect>
+        </label>
+        {thinkingOptions.length ? (
+          <label htmlFor={`${ids}-thinking`} className={fieldLabelClass}>
+            <Trans>Thinking</Trans>
+            <NativeSelect
+              id={`${ids}-thinking`}
+              className="mt-2 w-full"
+              value={thinkingLevel}
+              onChange={(event) => {
+                const nextLevel = event.target.value;
+                setThinkingLevel(nextLevel);
+                void enqueueSave({ thinkingLevel: nextLevel });
+              }}
+            >
+              <NativeSelectOption value="">
+                {t`Default (${thinkingLevelLabel(defaultThinkingLevel)})`}
+              </NativeSelectOption>
+              {thinkingOptions.map((level) => (
+                <NativeSelectOption key={level} value={level}>
+                  {thinkingLevelLabel(level)}
+                </NativeSelectOption>
+              ))}
+            </NativeSelect>
+          </label>
+        ) : null}
         <ComputerModePicker value={computerMode} onChange={setComputerMode} />
         <Suspense fallback={null}>
           <ScratchpadSection botId={bot.id} />
@@ -843,8 +895,8 @@ export function BotSettings({
   );
 }
 
-function modelOptionKey(credentialId: string, provider: string, modelId: string) {
-  return `${credentialId}::${provider}::${modelId}`;
+function modelOptionKey(credentialId: string | null, provider: string, modelId: string) {
+  return credentialId ? `${credentialId}::${provider}::${modelId}` : `${provider}::${modelId}`;
 }
 
 function thinkingLevelLabel(level: ThinkingLevel) {

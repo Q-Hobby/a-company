@@ -4941,118 +4941,116 @@ const Transcript = memo(function Transcript({
             })()}
           </div>
         ) : (
-          <div className="flex w-full flex-col gap-2">
-            {reactionView.visibleMessages.map((message) => {
-              if (!message.blocks.some((block) => !isToolActivityBlock(block))) return null;
-              const peerReceipt = isPeerReceiptBlocks(message.blocks);
-              const messageReactions = reactionView.reactions.get(message.id);
-              return (
+          reactionView.visibleMessages.map((message) => {
+            if (!message.blocks.some((block) => !isToolActivityBlock(block))) return null;
+            const peerReceipt = isPeerReceiptBlocks(message.blocks);
+            const messageReactions = reactionView.reactions.get(message.id);
+            return (
+              <div
+                key={message.id}
+                data-message-id={message.id}
+                // Only persisted messages can be reply targets; synthetic rows
+                // (progress:, subagent:) carry a `prefix:` id.
+                data-quotable={message.id.includes(":") ? undefined : ""}
+                className={peerReceipt ? "relative py-0.5" : "group/message relative hover:z-20"}
+              >
+                {!peerReceipt && !message.id.startsWith("progress:") ? (
+                  <time
+                    dateTime={message.createdAt}
+                    data-testid="message-hover-time"
+                    className={cn(
+                      "pointer-events-none absolute top-1 z-10 text-xs tabular-nums text-muted-foreground opacity-0 transition-opacity group-hover/message:opacity-100 group-focus-within/message:opacity-100 group-has-[[aria-expanded=true]]/message:opacity-100",
+                      message.role === "user" ? "start-0" : "end-0",
+                    )}
+                  >
+                    {new Date(message.createdAt).toLocaleTimeString(i18n.locale || "en", {
+                      hour: "numeric",
+                      minute: "2-digit",
+                    })}
+                  </time>
+                ) : null}
                 <div
-                  key={message.id}
-                  data-message-id={message.id}
-                  // Only persisted messages can be reply targets; synthetic rows
-                  // (progress:, subagent:) carry a `prefix:` id.
-                  data-quotable={message.id.includes(":") ? undefined : ""}
-                  className={peerReceipt ? "relative py-0.5" : "group/message relative hover:z-20"}
+                  className={
+                    peerReceipt
+                      ? undefined
+                      : `relative flex ${message.role === "user" ? "justify-end" : "justify-start"}`
+                  }
                 >
-                  {!peerReceipt && !message.id.startsWith("progress:") ? (
-                    <time
-                      dateTime={message.createdAt}
-                      data-testid="message-hover-time"
-                      className={cn(
-                        "pointer-events-none absolute top-1 z-10 text-xs tabular-nums text-muted-foreground opacity-0 transition-opacity group-hover/message:opacity-100 group-focus-within/message:opacity-100 group-has-[[aria-expanded=true]]/message:opacity-100",
-                        message.role === "user" ? "start-0" : "end-0",
-                      )}
-                    >
-                      {new Date(message.createdAt).toLocaleTimeString(i18n.locale || "en", {
-                        hour: "numeric",
-                        minute: "2-digit",
-                      })}
-                    </time>
-                  ) : null}
                   <div
+                    data-testid={peerReceipt ? undefined : "message-bubble-frame"}
                     className={
                       peerReceipt
                         ? undefined
-                        : `relative flex ${message.role === "user" ? "justify-end" : "justify-start"}`
+                        : `relative w-fit min-w-0 ${
+                            message.role === "user"
+                              ? "max-w-[min(70%,calc(100%_-_6rem))]"
+                              : "max-w-[min(74%,calc(100%_-_6rem))]"
+                          }`
                     }
                   >
-                    <div
-                      data-testid={peerReceipt ? undefined : "message-bubble-frame"}
-                      className={
+                    {peerReceipt ? null : (
+                      <MessageHoverActions
+                        message={message}
+                        side={message.role === "user" ? "start" : "end"}
+                        onReply={onReply}
+                        onReact={onReact}
+                      />
+                    )}
+                    <MessageView
+                      artifactTarget={artifactTarget}
+                      message={message}
+                      canAnswer={message.id === answerableAskMessageId}
+                      onOpenBot={onOpenBot}
+                      onOpenPeerMessages={onOpenPeerMessages}
+                      onAnswer={onAnswer}
+                      speakerName={
                         peerReceipt
                           ? undefined
-                          : `relative w-fit min-w-0 ${
-                              message.role === "user"
-                                ? "max-w-[min(70%,calc(100%_-_6rem))]"
-                                : "max-w-[min(74%,calc(100%_-_6rem))]"
-                            }`
-                      }
-                    >
-                      {peerReceipt ? null : (
-                        <MessageHoverActions
-                          message={message}
-                          side={message.role === "user" ? "start" : "end"}
-                          onReply={onReply}
-                          onReact={onReact}
-                        />
-                      )}
-                      <MessageView
-                        artifactTarget={artifactTarget}
-                        message={message}
-                        canAnswer={message.id === answerableAskMessageId}
-                        onOpenBot={onOpenBot}
-                        onOpenPeerMessages={onOpenPeerMessages}
-                        onAnswer={onAnswer}
-                        speakerName={
-                          peerReceipt
-                            ? undefined
-                            : message.role === "bot"
-                              ? memberName?.(message.botId)
-                              : undefined
-                        }
-                        memberName={memberName}
-                        peerBot={peerBot}
-                        replyPreview={
-                          message.replyToMessageId
-                            ? messageById.get(message.replyToMessageId)
+                          : message.role === "bot"
+                            ? memberName?.(message.botId)
                             : undefined
-                        }
-                        replyToMessageId={message.replyToMessageId}
-                        onJumpToMessage={onJumpToMessage}
-                        onRefresh={onRefresh}
-                        onBotChanged={onBotChanged}
-                        onAddRoutine={onAddRoutine}
-                        voiceReady={voiceReady}
-                        speaking={speakingMessageId === message.id}
-                        onSpeak={() => onSpeak(message)}
-                        onOpenComputer={onOpenComputer}
-                      />
-                    </div>
+                      }
+                      memberName={memberName}
+                      peerBot={peerBot}
+                      replyPreview={
+                        message.replyToMessageId
+                          ? messageById.get(message.replyToMessageId)
+                          : undefined
+                      }
+                      replyToMessageId={message.replyToMessageId}
+                      onJumpToMessage={onJumpToMessage}
+                      onRefresh={onRefresh}
+                      onBotChanged={onBotChanged}
+                      onAddRoutine={onAddRoutine}
+                      voiceReady={voiceReady}
+                      speaking={speakingMessageId === message.id}
+                      onSpeak={() => onSpeak(message)}
+                      onOpenComputer={onOpenComputer}
+                    />
                   </div>
-                  {!peerReceipt && messageReactions ? (
-                    <div
-                      data-testid="message-reactions"
-                      className={cn(
-                        "mt-1 flex flex-wrap gap-1",
-                        message.role === "user" && "justify-end",
-                      )}
-                    >
-                      {[...messageReactions].map(([emoji, count]) => (
-                        <span
-                          key={emoji}
-                          className="rounded-full border border-border bg-muted px-2 py-0.5 text-xs"
-                        >
-                          {emoji}
-                          {count > 1 ? ` ${count}` : ""}
-                        </span>
-                      ))}
-                    </div>
-                  ) : null}
                 </div>
-              );
-            })}
-          </div>
+                {!peerReceipt && messageReactions ? (
+                  <div
+                    data-testid="message-reactions"
+                    className={cn(
+                      "mt-1 flex flex-wrap gap-1",
+                      message.role === "user" && "justify-end",
+                    )}
+                  >
+                    {[...messageReactions].map(([emoji, count]) => (
+                      <span
+                        key={emoji}
+                        className="rounded-full border border-border bg-muted px-2 py-0.5 text-xs"
+                      >
+                        {emoji}
+                        {count > 1 ? ` ${count}` : ""}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            );
+          })
         )}
         {running &&
         !messages.some(

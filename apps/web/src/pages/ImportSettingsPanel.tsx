@@ -676,11 +676,20 @@ function downloadTextBlob(filename: string, content: string, mimeType: string) {
   URL.revokeObjectURL(url);
 }
 
+function pickLocalFile(accept: string, onPick: (file: File) => void) {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = accept;
+  input.onchange = () => {
+    const file = input.files?.[0];
+    if (file) onPick(file);
+  };
+  input.click();
+}
+
 function TeamBlueprintsAndBackupCard({ onClose }: { onClose: () => void }) {
   const { t } = useLingui();
   const navigate = useNavigate();
-  const mdInputRef = useRef<HTMLInputElement>(null);
-  const snapInputRef = useRef<HTMLInputElement>(null);
   const [starters, setStarters] = useState<StarterTeamSummary[]>([]);
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState("");
@@ -811,7 +820,9 @@ function TeamBlueprintsAndBackupCard({ onClose }: { onClose: () => void }) {
             size="sm"
             variant="outline"
             disabled={busy}
-            onClick={() => mdInputRef.current?.click()}
+            onClick={() =>
+              pickLocalFile(".md,text/markdown,text/plain", (f) => void importBlueprintFile(f))
+            }
           >
             {t`Import Team (.md)`}
           </Button>
@@ -822,32 +833,12 @@ function TeamBlueprintsAndBackupCard({ onClose }: { onClose: () => void }) {
             size="sm"
             variant="outline"
             disabled={busy}
-            onClick={() => snapInputRef.current?.click()}
+            onClick={() =>
+              pickLocalFile(".json,application/json", (f) => void restoreSnapshotFile(f))
+            }
           >
             {t`Restore Backup`}
           </Button>
-          <input
-            ref={mdInputRef}
-            type="file"
-            className="hidden"
-            accept=".md,text/markdown,text/plain"
-            onChange={(e) => {
-              const f = e.target.files?.[0];
-              e.target.value = "";
-              if (f) void importBlueprintFile(f);
-            }}
-          />
-          <input
-            ref={snapInputRef}
-            type="file"
-            className="hidden"
-            accept=".json,application/json"
-            onChange={(e) => {
-              const f = e.target.files?.[0];
-              e.target.value = "";
-              if (f) void restoreSnapshotFile(f);
-            }}
-          />
         </div>
       </div>
 
