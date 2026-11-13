@@ -5,6 +5,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { authClient } from "../lib/auth";
+import { clearPostAuthReturnPath, consumePostAuthReturnPath } from "../lib/post-auth-redirect";
 import { clearSpaceSelection } from "../lib/rpc";
 
 type AuthMode = "in" | "up" | "forgot";
@@ -104,12 +105,16 @@ export function AuthPage({ mode }: { mode: AuthMode }) {
         return;
       }
       clearSpaceSelection();
+      if (mode === "up") {
+        clearPostAuthReturnPath();
+        navigate("/onboarding");
+        return;
+      }
+      const savedPath = consumePostAuthReturnPath();
       navigate(
-        mode === "up"
-          ? "/onboarding"
-          : searchParams.get("next") === "/integrations/setup"
-            ? "/integrations/setup"
-            : "/app",
+        searchParams.get("next") === "/integrations/setup"
+          ? "/integrations/setup"
+          : (savedPath ?? "/app"),
       );
     } catch {
       setError(t`Could not reach the server`);

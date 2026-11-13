@@ -91,6 +91,8 @@ export interface AppEnv {
   updaterToken: string | undefined;
   /** Current application image tag; used for compose manual-upgrade command selection. */
   imageTag: string | undefined;
+  /** When true, unauthenticated RPC requests resolve to the single local workspace owner. */
+  accountlessMode: boolean;
 }
 
 export function loadEnv(source: NodeJS.ProcessEnv = process.env): AppEnv {
@@ -100,10 +102,15 @@ export function loadEnv(source: NodeJS.ProcessEnv = process.env): AppEnv {
   const deploymentModel = resolveDeploymentModel(source);
   const updaterUrl = optional(source.ACOMPANY_UPDATER_URL);
   const updaterToken = optional(source.ACOMPANY_UPDATER_TOKEN);
+  const databaseUrl = required(source, "DATABASE_URL");
+  const accountlessMode =
+    source.ACCOUNTLESS_MODE === "true" ||
+    (source.ACCOUNTLESS_MODE !== "false" &&
+      (databaseUrl === "pglite" || databaseUrl.startsWith("pglite:")));
   return {
     nodeEnv: source.NODE_ENV ?? "",
-    databaseUrl: required(source, "DATABASE_URL"),
-    realtimeDatabaseUrl: source.REALTIME_DATABASE_URL ?? required(source, "DATABASE_URL"),
+    databaseUrl,
+    realtimeDatabaseUrl: source.REALTIME_DATABASE_URL ?? databaseUrl,
     desktopStackToken: optional(source.ACOMPANY_DESKTOP_STACK_TOKEN),
     authSecret,
     authUrl: source.BETTER_AUTH_URL ?? source.WEB_ORIGIN ?? "http://127.0.0.1:5173",
@@ -177,6 +184,7 @@ export function loadEnv(source: NodeJS.ProcessEnv = process.env): AppEnv {
     updaterUrl,
     updaterToken,
     imageTag: optional(source.ACOMPANY_IMAGE_TAG),
+    accountlessMode,
   };
 }
 

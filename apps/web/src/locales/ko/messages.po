@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/Shell.tsx:3028
+#: src/pages/Shell.tsx:3040
 msgid " (unread)"
 msgstr " (읽지 않음)"
 
@@ -23,12 +23,12 @@ msgid "{0, plural, one {# model} other {# models}}"
 msgstr "{0, plural, one {모델 #개} other {모델 #개}}"
 
 #. placeholder {0}: file.name
-#: src/pages/Shell.tsx:1970
+#: src/pages/Shell.tsx:1975
 msgid "{0} (max {ATTACHMENT_MAX_COUNT} attachments)"
 msgstr "{0} (첨부 파일 최대 {ATTACHMENT_MAX_COUNT}개)"
 
 #. placeholder {0}: file.name
-#: src/pages/Shell.tsx:1974
+#: src/pages/Shell.tsx:1979
 msgid "{0} (over 10 MiB)"
 msgstr "{0} (10 MiB 초과)"
 
@@ -78,7 +78,7 @@ msgstr "메시지 {0}개"
 #. placeholder {0}: receipt.projectCount
 #. placeholder {1}: receipt.sessionCount
 #. placeholder {2}: receipt.skillCount
-#: src/pages/ImportSettingsPanel.tsx:553
+#: src/pages/ImportSettingsPanel.tsx:552
 msgid "{0} projects · {1} sessions · {2} skills"
 msgstr "프로젝트 {0}개 · 세션 {1}개 · 스킬 {2}개"
 
@@ -89,14 +89,14 @@ msgstr "{0} rollup hours"
 
 #. placeholder {0}: usage.runs
 #. placeholder {1}: (usage.inputTokens + usage.outputTokens).toLocaleString()
-#: src/pages/AccountSettingsOverlay.tsx:252
+#: src/pages/AccountSettingsOverlay.tsx:375
 msgid "{0} runs · {1} tokens"
 msgstr "{0}회 실행 · 토큰 {1}개"
 
 #. placeholder {0}: archive.receipt.sensitiveFileCount ?? 0
 #. placeholder {0}: receipt.sensitiveFileCount ?? 0
-#: src/pages/ImportSettingsPanel.tsx:555
-#: src/pages/ImportSettingsPanel.tsx:616
+#: src/pages/ImportSettingsPanel.tsx:554
+#: src/pages/ImportSettingsPanel.tsx:615
 msgid "{0} sensitive files included"
 msgstr "민감한 파일 {0}개 포함"
 
@@ -106,11 +106,11 @@ msgid "{0} will still respond to direct mentions."
 msgstr "{0} will still respond to direct mentions."
 
 #. placeholder {0}: active.name
-#: src/pages/Shell.tsx:3660
+#: src/pages/Shell.tsx:3690
 msgid "{0}'s screen"
 msgstr "{0}의 화면"
 
-#: src/pages/Shell.tsx:6581
+#: src/pages/Shell.tsx:6612
 msgid "{botName}’s computer"
 msgstr "{botName}의 컴퓨터"
 
@@ -158,12 +158,12 @@ msgstr "{title}, {label}"
 msgid "{toolCount, plural, one {# tool} other {# tools}}"
 msgstr "{toolCount, plural, one {# tool} other {# tools}}"
 
-#: src/pages/Shell.tsx:4593
+#: src/pages/Shell.tsx:4624
 msgid "{workingBotName} is working"
 msgstr "{workingBotName} 작업 중"
 
 #. placeholder {0}: mention.name
-#: src/pages/Shell.tsx:5547
+#: src/pages/Shell.tsx:5578
 msgid "@{0}"
 msgstr "@{0}"
 
@@ -209,12 +209,12 @@ msgstr "작업 실행 전 확인"
 #. placeholder {0}: group.spaceName
 #. placeholder {0}: sectionMenu.section.name
 #: src/pages/BotContextMenu.tsx:84
-#: src/pages/Shell.tsx:2905
-#: src/pages/Shell.tsx:4174
+#: src/pages/Shell.tsx:2917
+#: src/pages/Shell.tsx:4204
 msgid "Actions for {0}"
 msgstr "{0} 작업 메뉴"
 
-#: src/pages/Shell.tsx:4048
+#: src/pages/Shell.tsx:4078
 msgid "Actions for space"
 msgstr "Actions for space"
 
@@ -226,8 +226,8 @@ msgstr "활성"
 msgid "Active model"
 msgstr "현재 모델"
 
-#: src/pages/Shell.tsx:2701
-#: src/pages/Shell.tsx:2703
+#: src/pages/Shell.tsx:2713
+#: src/pages/Shell.tsx:2715
 msgid "Activity"
 msgstr "활동"
 
@@ -250,11 +250,11 @@ msgstr ""
 msgid "Add a model in Settings to use this."
 msgstr "이 기능을 사용하려면 설정에서 모델을 추가하세요."
 
-#: src/pages/Shell.tsx:3830
+#: src/pages/Shell.tsx:3860
 msgid "Add a run time for this one-shot."
 msgstr "이 일회성 실행의 시간을 추가하세요."
 
-#: src/pages/Shell.tsx:3808
+#: src/pages/Shell.tsx:3838
 msgid "Add a schedule, webhook, GitHub, or message trigger"
 msgstr "Add a schedule, webhook, GitHub, or message trigger"
 
@@ -339,7 +339,7 @@ msgstr "Added"
 msgid "Adding…"
 msgstr "추가 중…"
 
-#: src/pages/AccountSettingsOverlay.tsx:153
+#: src/pages/AccountSettingsOverlay.tsx:276
 #: src/pages/McpServersOverlay.tsx:342
 #: src/pages/ModelSettingsOverlay.tsx:666
 #: src/pages/Onboarding.tsx:508
@@ -353,11 +353,11 @@ msgstr "고급 설정"
 msgid "Advanced..."
 msgstr "고급..."
 
-#: src/pages/Shell.tsx:4796
+#: src/pages/Shell.tsx:4827
 msgid "Agent"
 msgstr "에이전트"
 
-#: src/pages/Shell.tsx:3407
+#: src/pages/Shell.tsx:3437
 msgid "Agent computer"
 msgstr "Agent 컴퓨터"
 
@@ -370,7 +370,7 @@ msgstr "Agent 연결"
 msgid "Agents:"
 msgstr "사용 Bot:"
 
-#: src/pages/ImportSettingsPanel.tsx:449
+#: src/pages/ImportSettingsPanel.tsx:448
 msgid "All sources"
 msgstr "모든 소스"
 
@@ -409,7 +409,7 @@ msgstr "쓰기 허용"
 msgid "Allowed once"
 msgstr "한 번 허용됨"
 
-#: src/pages/Auth.tsx:228
+#: src/pages/Auth.tsx:233
 msgid "Already have an account?"
 msgstr "이미 계정이 있나요?"
 
@@ -425,7 +425,7 @@ msgstr "이 도구 항상 허용"
 msgid "Always allowed"
 msgstr "항상 허용됨"
 
-#: src/pages/Shell.tsx:4859
+#: src/pages/Shell.tsx:4890
 msgid "Analyze system architecture and running services"
 msgstr "시스템 아키텍처 및 실행 중인 서비스 분석"
 
@@ -467,8 +467,8 @@ msgstr "API 키"
 msgid "API key header"
 msgstr "API 키 헤더"
 
-#: src/pages/AccountSettingsOverlay.tsx:94
-#: src/pages/AccountSettingsOverlay.tsx:425
+#: src/pages/AccountSettingsOverlay.tsx:134
+#: src/pages/AccountSettingsOverlay.tsx:548
 msgid "Appearance"
 msgstr "모양"
 
@@ -490,19 +490,19 @@ msgstr "이 서버를 승인하면 Bot이 제공되는 도구를 사용할 수 �
 msgid "Archive"
 msgstr "보관"
 
-#: src/pages/ImportSettingsPanel.tsx:607
+#: src/pages/ImportSettingsPanel.tsx:606
 msgid "Archive contents"
 msgstr "아카이브 내용"
 
-#: src/pages/Shell.tsx:6330
+#: src/pages/Shell.tsx:6361
 msgid "archived"
 msgstr "보관됨"
 
-#: src/pages/Shell.tsx:3098
+#: src/pages/Shell.tsx:3110
 msgid "Archived"
 msgstr "보관됨"
 
-#: src/pages/Shell.tsx:6341
+#: src/pages/Shell.tsx:6372
 msgid "Archived. Chat, memory, and files kept."
 msgstr "보관되었습니다. 대화, 기억, 파일은 유지됩니다."
 
@@ -556,11 +556,11 @@ msgstr "{0}에"
 msgid "at {timeSelect}"
 msgstr "{timeSelect}에"
 
-#: src/pages/Shell.tsx:5638
+#: src/pages/Shell.tsx:5669
 msgid "Attach file"
 msgstr "파일 첨부"
 
-#: src/pages/Shell.tsx:5885
+#: src/pages/Shell.tsx:5916
 msgid "Attachment"
 msgstr "첨부 파일"
 
@@ -602,7 +602,7 @@ msgstr "루틴을 저장한 후 사용할 수 있습니다"
 msgid "Avatar Studio"
 msgstr "아바타 스튜디오"
 
-#: src/pages/AccountSettingsOverlay.tsx:114
+#: src/pages/AccountSettingsOverlay.tsx:154
 msgid "Avatars"
 msgstr "아바타"
 
@@ -611,9 +611,9 @@ msgstr "아바타"
 msgid "Back"
 msgstr "뒤로"
 
-#: src/pages/Auth.tsx:126
-#: src/pages/Auth.tsx:235
-#: src/pages/Auth.tsx:320
+#: src/pages/Auth.tsx:131
+#: src/pages/Auth.tsx:240
+#: src/pages/Auth.tsx:325
 msgid "Back to sign in"
 msgstr "로그인으로 돌아가기"
 
@@ -634,23 +634,23 @@ msgstr "Bearer 토큰"
 msgid "Binary or unreadable file"
 msgstr "바이너리 또는 읽을 수 없는 파일"
 
-#: src/pages/Shell.tsx:6573
+#: src/pages/Shell.tsx:6604
 msgid "Booting live desktop…"
 msgstr "라이브 데스크톱 시작 중…"
 
 #. placeholder {0}: computerBot?.name ?? active?.name
-#: src/pages/Shell.tsx:4353
+#: src/pages/Shell.tsx:4384
 msgid "Booting up {0}’s computer"
 msgstr "{0}의 컴퓨터를 켜는 중"
 
-#: src/pages/Shell.tsx:6205
-#: src/pages/Shell.tsx:6206
-#: src/pages/Shell.tsx:6334
+#: src/pages/Shell.tsx:6236
+#: src/pages/Shell.tsx:6237
+#: src/pages/Shell.tsx:6365
 msgid "bot"
 msgstr "Bot"
 
 #: src/pages/IntegrationSetup.tsx:51
-#: src/pages/Shell.tsx:1764
+#: src/pages/Shell.tsx:1769
 #: src/pages/shell/avatar-studio-popover.tsx:169
 msgid "Bot"
 msgstr "봇"
@@ -660,11 +660,11 @@ msgstr "봇"
 msgid "Bot"
 msgstr "Bot"
 
-#: src/pages/Shell.tsx:4469
+#: src/pages/Shell.tsx:4500
 msgid "Bot screen"
 msgstr "Bot 화면"
 
-#: src/pages/Shell.tsx:3623
+#: src/pages/Shell.tsx:3653
 msgid "Bot screen preview"
 msgstr "Bot 화면 미리보기"
 
@@ -676,7 +676,7 @@ msgstr "연결할 Bot"
 msgid "Bots act without asking by default. Add an exception only when you want to review a type of action first."
 msgstr "Bot은 기본적으로 묻지 않고 작업합니다. 먼저 확인하고 싶은 작업만 예외로 추가하세요."
 
-#: src/pages/Shell.tsx:4594
+#: src/pages/Shell.tsx:4625
 msgid "Bots are working"
 msgstr "봇 작업 중"
 
@@ -688,11 +688,11 @@ msgstr "기억 레이블"
 msgid "Browse MCP servers"
 msgstr "Browse MCP servers"
 
-#: src/pages/AccountSettingsOverlay.tsx:338
+#: src/pages/AccountSettingsOverlay.tsx:461
 msgid "By Bot"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:359
+#: src/pages/AccountSettingsOverlay.tsx:482
 msgid "By Model"
 msgstr ""
 
@@ -705,7 +705,7 @@ msgstr "통화"
 #: src/components/ComputerMaintenanceActions.tsx:97
 #: src/components/ComputerUpdateProgress.tsx:233
 #: src/components/teach/TeachComputerOverlay.tsx:254
-#: src/pages/ImportSettingsPanel.tsx:387
+#: src/pages/ImportSettingsPanel.tsx:386
 #: src/pages/KnowledgeSection.tsx:212
 #: src/pages/KnowledgeSection.tsx:438
 #: src/pages/PluginsOverlay.tsx:1102
@@ -718,7 +718,7 @@ msgstr "통화"
 msgid "Cancel"
 msgstr "취소"
 
-#: src/pages/ImportSettingsPanel.tsx:600
+#: src/pages/ImportSettingsPanel.tsx:599
 msgid "Cancel export"
 msgstr "내보내기 취소"
 
@@ -730,7 +730,7 @@ msgstr "새 Bot 만들기 취소"
 msgid "Cancel new group"
 msgstr "새 그룹 만들기 취소"
 
-#: src/pages/Shell.tsx:5485
+#: src/pages/Shell.tsx:5516
 msgid "Cancel reply"
 msgstr "답장 취소"
 
@@ -743,8 +743,17 @@ msgstr "취소됨"
 msgid "Cancelled"
 msgstr "취소됨"
 
-#: src/pages/AccountSettingsOverlay.tsx:213
+#: src/pages/AccountSettingsOverlay.tsx:336
 msgid "Caps must be whole numbers of at least 1,000 tokens (or empty)."
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:192
+#: src/pages/AccountSettingsOverlay.tsx:260
+msgid "Change password"
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:260
+msgid "Changing…"
 msgstr ""
 
 #: src/pages/MessagingSettingsOverlay.tsx:190
@@ -759,15 +768,15 @@ msgstr "차트를 표시하지 못했습니다: {error}"
 msgid "Chat apps"
 msgstr "채팅 앱"
 
-#: src/pages/AccountSettingsOverlay.tsx:84
+#: src/pages/AccountSettingsOverlay.tsx:124
 msgid "Chat apps, group channels, and agent connections."
 msgstr "채팅 앱, 그룹 채널 및 Agent 연결을 관리합니다."
 
-#: src/pages/Shell.tsx:5828
+#: src/pages/Shell.tsx:5859
 msgid "Chat Settings"
 msgstr "채팅 설정"
 
-#: src/pages/Shell.tsx:4858
+#: src/pages/Shell.tsx:4889
 msgid "Check architecture"
 msgstr "아키텍처 확인"
 
@@ -781,12 +790,12 @@ msgstr "확인 실패"
 msgid "Check for updates"
 msgstr "업데이트 확인"
 
-#: src/pages/Shell.tsx:3843
-#: src/pages/Shell.tsx:3855
+#: src/pages/Shell.tsx:3873
+#: src/pages/Shell.tsx:3885
 msgid "Check in."
 msgstr "확인해 주세요."
 
-#: src/pages/Auth.tsx:34
+#: src/pages/Auth.tsx:35
 msgid "Check your email"
 msgstr "이메일을 확인하세요"
 
@@ -807,7 +816,7 @@ msgstr "봇 모양과 색을 고르거나 이미지를 업로드하세요"
 msgid "Choose a bot…"
 msgstr "Bot 선택…"
 
-#: src/pages/Auth.tsx:281
+#: src/pages/Auth.tsx:286
 msgid "Choose a new password"
 msgstr "새 비밀번호 선택"
 
@@ -816,7 +825,7 @@ msgid "Choose file"
 msgstr "파일 선택"
 
 #: src/pages/ImportSettingsPanel.tsx:128
-#: src/pages/ImportSettingsPanel.tsx:422
+#: src/pages/ImportSettingsPanel.tsx:421
 msgid "Choose Include sensitive data before uploading this file."
 msgstr "이 파일을 업로드하기 전에 ‘민감한 데이터 포함’을 선택하세요."
 
@@ -824,7 +833,7 @@ msgstr "이 파일을 업로드하기 전에 ‘민감한 데이터 포함’을
 msgid "Choose which connected model A-Company uses."
 msgstr "A-Company가 사용할 연결된 모델을 선택하세요."
 
-#: src/pages/Shell.tsx:4836
+#: src/pages/Shell.tsx:4867
 msgid "Cinematic sunset"
 msgstr "영화 같은 일몰"
 
@@ -842,7 +851,7 @@ msgstr "{0}와의 대화 내용을 비울까요?"
 msgid "Clear conversation"
 msgstr "대화 내용 비우기"
 
-#: src/pages/ImportSettingsPanel.tsx:482
+#: src/pages/ImportSettingsPanel.tsx:481
 msgid "Clear selection"
 msgstr "선택 해제"
 
@@ -869,7 +878,7 @@ msgstr "Client secret"
 msgid "Close"
 msgstr "닫기"
 
-#: src/pages/ImportSettingsPanel.tsx:612
+#: src/pages/ImportSettingsPanel.tsx:611
 msgid "Close archive"
 msgstr "아카이브 닫기"
 
@@ -877,7 +886,7 @@ msgstr "아카이브 닫기"
 msgid "Close chart"
 msgstr "차트 닫기"
 
-#: src/pages/Shell.tsx:4448
+#: src/pages/Shell.tsx:4479
 msgid "Close computer"
 msgstr "컴퓨터 닫기"
 
@@ -907,11 +916,11 @@ msgstr "메시징 설정 닫기"
 msgid "Close model settings"
 msgstr "AI 모델 설정 닫기"
 
-#: src/pages/Shell.tsx:2672
+#: src/pages/Shell.tsx:2684
 msgid "Close navigation"
 msgstr "메뉴 닫기"
 
-#: src/pages/Shell.tsx:3601
+#: src/pages/Shell.tsx:3631
 msgid "Close panel"
 msgstr "패널 닫기"
 
@@ -940,13 +949,13 @@ msgstr "클라우드"
 msgid "Code"
 msgstr "코드"
 
-#: src/pages/ImportSettingsPanel.tsx:451
-#: src/pages/ImportSettingsPanel.tsx:515
+#: src/pages/ImportSettingsPanel.tsx:450
+#: src/pages/ImportSettingsPanel.tsx:514
 msgid "Codex"
 msgstr "Codex"
 
 #. placeholder {0}: group.title
-#: src/pages/Shell.tsx:2879
+#: src/pages/Shell.tsx:2891
 msgid "Collapse {0}"
 msgstr "{0} 접기"
 
@@ -971,28 +980,28 @@ msgid "Complete"
 msgstr "완료"
 
 #: src/pages/SettingsOverlay.tsx:91
-#: src/pages/Shell.tsx:6499
+#: src/pages/Shell.tsx:6530
 #: src/pages/shell/bot-panel.tsx:57
 msgid "Computer"
 msgstr "컴퓨터"
 
-#: src/pages/Shell.tsx:6576
+#: src/pages/Shell.tsx:6607
 msgid "Computer failed to boot"
 msgstr "컴퓨터를 시작하지 못했습니다"
 
-#: src/pages/Shell.tsx:4492
+#: src/pages/Shell.tsx:4523
 msgid "Computer is asleep"
 msgstr "컴퓨터가 절전 상태입니다"
 
-#: src/pages/Shell.tsx:6575
+#: src/pages/Shell.tsx:6606
 msgid "Computer is asleep. Open it to wake."
 msgstr "컴퓨터가 절전 상태입니다. 열어 깨우세요."
 
-#: src/pages/Shell.tsx:6577
+#: src/pages/Shell.tsx:6608
 msgid "Computer is stopped"
 msgstr "컴퓨터가 중지됨"
 
-#: src/pages/AccountSettingsOverlay.tsx:389
+#: src/pages/AccountSettingsOverlay.tsx:512
 msgid "Computers"
 msgstr "컴퓨터"
 
@@ -1013,11 +1022,12 @@ msgstr "연결된 서버"
 msgid "Confirm delete"
 msgstr "삭제 확인"
 
-#: src/pages/ImportSettingsPanel.tsx:528
+#: src/pages/ImportSettingsPanel.tsx:527
 msgid "Confirm import"
 msgstr "가져오기 확인"
 
-#: src/pages/Auth.tsx:301
+#: src/pages/AccountSettingsOverlay.tsx:238
+#: src/pages/Auth.tsx:306
 msgid "Confirm password"
 msgstr "비밀번호 확인"
 
@@ -1043,7 +1053,7 @@ msgstr "API 키 연결"
 msgid "Connect Executor"
 msgstr "Executor 연결"
 
-#: src/pages/ImportSettingsPanel.tsx:369
+#: src/pages/ImportSettingsPanel.tsx:368
 msgid "Connect local"
 msgstr "로컬 연결"
 
@@ -1125,15 +1135,15 @@ msgstr "계속"
 msgid "Continue in Background"
 msgstr "Continue in Background"
 
-#: src/pages/ImportSettingsPanel.tsx:648
+#: src/pages/ImportSettingsPanel.tsx:647
 msgid "Continue project"
 msgstr "프로젝트 이어가기"
 
-#: src/pages/ImportSettingsPanel.tsx:629
+#: src/pages/ImportSettingsPanel.tsx:628
 msgid "Continue session"
 msgstr "세션 이어가기"
 
-#: src/pages/Auth.tsx:211
+#: src/pages/Auth.tsx:216
 msgid "Continue with email"
 msgstr "이메일로 계속하기"
 
@@ -1141,7 +1151,7 @@ msgstr "이메일로 계속하기"
 msgid "Copied curl"
 msgstr ""
 
-#: src/pages/Shell.tsx:6012
+#: src/pages/Shell.tsx:6043
 msgid "Copy"
 msgstr "복사"
 
@@ -1168,6 +1178,11 @@ msgstr "서버를 승인하지 못했습니다."
 #: src/pages/shell/message-cards.tsx:153
 msgid "Could not authorize this app"
 msgstr "앱 인증을 완료하지 못했습니다."
+
+#: src/pages/AccountSettingsOverlay.tsx:79
+#: src/pages/AccountSettingsOverlay.tsx:87
+msgid "Could not change password"
+msgstr ""
 
 #: src/pages/ModelSettingsOverlay.tsx:288
 msgid "Could not change the default model"
@@ -1213,7 +1228,7 @@ msgstr "AI 서비스에 연결하지 못했습니다."
 msgid "Could not connect this voice provider"
 msgstr "음성 서비스에 연결하지 못했습니다."
 
-#: src/pages/Shell.tsx:1000
+#: src/pages/Shell.tsx:1005
 msgid "Could not connect to the computer screen"
 msgstr "Could not connect to the computer screen"
 
@@ -1221,8 +1236,8 @@ msgstr "Could not connect to the computer screen"
 msgid "Could not connect to the local helper. Allow popups, start the helper, then try again."
 msgstr "로컬 도우미에 연결할 수 없습니다. 팝업을 허용하고 도우미를 실행한 후 다시 시도하세요."
 
-#: src/pages/Auth.tsx:99
-#: src/pages/Shell.tsx:2576
+#: src/pages/Auth.tsx:100
+#: src/pages/Shell.tsx:2581
 msgid "Could not continue"
 msgstr "계속 진행하지 못했습니다."
 
@@ -1311,7 +1326,7 @@ msgstr "불러올 수 없음"
 msgid "Could not load approval rules"
 msgstr "확인 규칙을 불러오지 못했습니다."
 
-#: src/pages/ImportSettingsPanel.tsx:539
+#: src/pages/ImportSettingsPanel.tsx:538
 msgid "Could not load archives. Reopen settings to retry."
 msgstr "아카이브를 불러올 수 없습니다. 설정을 다시 열어 재시도하세요."
 
@@ -1362,8 +1377,8 @@ msgstr "Could not open local settings. Start the local server and create its own
 msgid "Could not play a test clip"
 msgstr "샘플 음성을 재생하지 못했습니다."
 
-#: src/pages/Auth.tsx:115
-#: src/pages/Auth.tsx:274
+#: src/pages/Auth.tsx:120
+#: src/pages/Auth.tsx:279
 msgid "Could not reach the server"
 msgstr "서버에 연결할 수 없습니다"
 
@@ -1404,7 +1419,7 @@ msgstr "섹션 이름을 바꿀 수 없습니다"
 msgid "Could not render chart"
 msgstr "차트를 만들지 못했습니다."
 
-#: src/pages/Auth.tsx:269
+#: src/pages/Auth.tsx:274
 msgid "Could not reset password"
 msgstr "비밀번호를 재설정할 수 없습니다"
 
@@ -1413,7 +1428,7 @@ msgstr "비밀번호를 재설정할 수 없습니다"
 msgid "Could not revoke connection"
 msgstr "연결을 해제하지 못했습니다."
 
-#: src/pages/Shell.tsx:3909
+#: src/pages/Shell.tsx:3939
 msgid "Could not run routine"
 msgstr "루틴을 실행할 수 없습니다"
 
@@ -1435,7 +1450,7 @@ msgstr "그룹을 저장하지 못했습니다."
 msgid "Could not save model"
 msgstr "AI 모델을 저장하지 못했습니다."
 
-#: src/pages/Shell.tsx:3880
+#: src/pages/Shell.tsx:3910
 msgid "Could not save routine"
 msgstr "자동 실행을 저장하지 못했습니다."
 
@@ -1463,7 +1478,7 @@ msgstr "선택 내용을 저장하지 못했습니다."
 msgid "Could not search catalog"
 msgstr "Could not search catalog"
 
-#: src/pages/Auth.tsx:84
+#: src/pages/Auth.tsx:85
 msgid "Could not send reset email"
 msgstr "재설정 이메일을 보낼 수 없습니다"
 
@@ -1483,7 +1498,7 @@ msgstr "가르치기를 시작하지 못했습니다."
 msgid "Could not submit this answer"
 msgstr "답변을 보내지 못했습니다."
 
-#: src/pages/Shell.tsx:2389
+#: src/pages/Shell.tsx:2394
 msgid "Could not take control"
 msgstr "직접 조작으로 전환하지 못했습니다."
 
@@ -1499,7 +1514,7 @@ msgstr "Bot의 서버 사용 권한을 변경하지 못했습니다."
 msgid "Could not update computer"
 msgstr "컴퓨터를 업데이트할 수 없습니다"
 
-#: src/pages/Shell.tsx:1956
+#: src/pages/Shell.tsx:1961
 msgid "Could not update reaction"
 msgstr "반응을 업데이트할 수 없습니다"
 
@@ -1511,7 +1526,7 @@ msgstr "기본 기억 범위를 변경하지 못했습니다."
 msgid "Couldn't load messaging settings"
 msgstr "메시징 설정을 불러올 수 없습니다"
 
-#: src/pages/AccountSettingsOverlay.tsx:70
+#: src/pages/AccountSettingsOverlay.tsx:110
 msgid "Couldn't update avatars"
 msgstr "아바타를 업데이트할 수 없습니다"
 
@@ -1519,8 +1534,8 @@ msgstr "아바타를 업데이트할 수 없습니다"
 msgid "Couldn't update messaging settings"
 msgstr "메시징 설정을 업데이트할 수 없습니다"
 
-#: src/pages/Shell.tsx:2733
-#: src/pages/Shell.tsx:2734
+#: src/pages/Shell.tsx:2745
+#: src/pages/Shell.tsx:2746
 #: src/pages/shell/bot-panel.tsx:341
 #: src/pages/shell/dialogs.tsx:203
 msgid "Create"
@@ -1531,7 +1546,7 @@ msgstr "만들기"
 msgid "Create a section and move {0} into it."
 msgstr "새 섹션을 만들고 {0}을 옮깁니다."
 
-#: src/pages/Auth.tsx:215
+#: src/pages/Auth.tsx:220
 msgid "Create account"
 msgstr "계정 만들기"
 
@@ -1539,11 +1554,11 @@ msgstr "계정 만들기"
 msgid "Create group"
 msgstr "그룹 만들기"
 
-#: src/pages/Shell.tsx:3440
+#: src/pages/Shell.tsx:3470
 msgid "Create Group"
 msgstr "그룹 생성"
 
-#: src/pages/Shell.tsx:3437
+#: src/pages/Shell.tsx:3467
 #: src/pages/shell/bot-picker.tsx:74
 msgid "Create new Bot"
 msgstr "새 Bot 만들기"
@@ -1566,7 +1581,7 @@ msgstr "자동 실행 만들기"
 msgid "Create space"
 msgstr "스페이스 만들기"
 
-#: src/pages/Auth.tsx:38
+#: src/pages/Auth.tsx:39
 msgid "Create your A-Company"
 msgstr "A-Company 계정 만들기"
 
@@ -1611,6 +1626,10 @@ msgstr "Cron"
 msgid "Cron expression"
 msgstr "Cron 표현식"
 
+#: src/pages/AccountSettingsOverlay.tsx:206
+msgid "Current password"
+msgstr ""
+
 #: src/pages/shell/dialogs.tsx:81
 msgid "Customer support"
 msgstr "고객 지원"
@@ -1619,15 +1638,15 @@ msgstr "고객 지원"
 msgid "Customize bot avatar"
 msgstr "봇 아바타 맞춤설정"
 
-#: src/pages/Shell.tsx:4841
+#: src/pages/Shell.tsx:4872
 msgid "Cute kitten on lawn"
 msgstr "잔디밭의 귀여운 새끼 고양이"
 
-#: src/pages/AccountSettingsOverlay.tsx:294
+#: src/pages/AccountSettingsOverlay.tsx:417
 msgid "Daily token cap"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:420
+#: src/pages/AccountSettingsOverlay.tsx:543
 msgid "Dark"
 msgstr "다크"
 
@@ -1664,8 +1683,8 @@ msgstr "기본 기억 범위"
 #: src/pages/KnowledgeSection.tsx:450
 #: src/pages/McpServersOverlay.tsx:508
 #: src/pages/RoutineEditor.tsx:301
-#: src/pages/Shell.tsx:3134
-#: src/pages/Shell.tsx:3165
+#: src/pages/Shell.tsx:3146
+#: src/pages/Shell.tsx:3177
 #: src/pages/shell/dialogs.tsx:410
 #: src/pages/shell/dialogs.tsx:471
 msgid "Delete"
@@ -1673,8 +1692,8 @@ msgstr "삭제"
 
 #. placeholder {0}: bot.name
 #. placeholder {0}: group.name
-#: src/pages/Shell.tsx:3131
-#: src/pages/Shell.tsx:3162
+#: src/pages/Shell.tsx:3143
+#: src/pages/Shell.tsx:3174
 msgid "Delete {0}"
 msgstr "{0} 삭제"
 
@@ -1693,11 +1712,11 @@ msgstr "그룹 삭제"
 msgid "Delete memories too"
 msgstr "기억도 함께 삭제"
 
-#: src/pages/Shell.tsx:4062
+#: src/pages/Shell.tsx:4092
 msgid "Delete space"
 msgstr "Delete space"
 
-#: src/pages/Shell.tsx:6332
+#: src/pages/Shell.tsx:6363
 msgid "deleted"
 msgstr "삭제됨"
 
@@ -1728,7 +1747,7 @@ msgstr "이 Bot이 하는 일을 짧게 설명하세요"
 msgid "Description"
 msgstr "설명"
 
-#: src/pages/Shell.tsx:4847
+#: src/pages/Shell.tsx:4878
 msgid "design a cyberpunk space station concept"
 msgstr "사이버펑크 우주 정거장 콘셉트 디자인"
 
@@ -1744,7 +1763,7 @@ msgstr "Desktop update"
 msgid "Direct MCP"
 msgstr "Direct MCP"
 
-#: src/pages/ImportSettingsPanel.tsx:434
+#: src/pages/ImportSettingsPanel.tsx:433
 msgid "Discard"
 msgstr "버리기"
 
@@ -1765,7 +1784,7 @@ msgstr "연결 해제 중…"
 msgid "Dismiss"
 msgstr "닫기"
 
-#: src/pages/Shell.tsx:5461
+#: src/pages/Shell.tsx:5492
 msgid "Dismiss error"
 msgstr "오류 닫기"
 
@@ -1790,7 +1809,7 @@ msgstr "Docker"
 msgid "Docker limits access to your computer for added security. Using {hostLabel} lets bots work with your local files and tools."
 msgstr "Docker는 보안을 위해 컴퓨터 접근을 제한합니다. {hostLabel}에서는 Bot이 로컬 파일과 도구로 작업할 수 있습니다."
 
-#: src/pages/Auth.tsx:221
+#: src/pages/Auth.tsx:226
 msgid "Don’t have an account?"
 msgstr "계정이 없나요?"
 
@@ -1799,7 +1818,7 @@ msgstr "계정이 없나요?"
 msgid "Done"
 msgstr "완료"
 
-#: src/pages/ImportSettingsPanel.tsx:568
+#: src/pages/ImportSettingsPanel.tsx:567
 msgid "Download"
 msgstr "다운로드"
 
@@ -1838,7 +1857,7 @@ msgstr "작업 기술 초안"
 msgid "Drag, drop, or paste an image"
 msgstr "이미지를 끌어다 놓거나 붙여넣으세요"
 
-#: src/pages/Shell.tsx:4842
+#: src/pages/Shell.tsx:4873
 msgid "draw a cute white fluffy kitten playing on the green grass"
 msgstr "초록 잔디 위에서 노는 귀여운 흰색 솜털 새끼 고양이를 그려줘"
 
@@ -1854,7 +1873,7 @@ msgstr "예: Hivenet Agent, Presales, 근무표 봇"
 msgid "e.g. Mobbin"
 msgstr "예: Mobbin"
 
-#: src/pages/Shell.tsx:6158
+#: src/pages/Shell.tsx:6189
 msgid "Earlier message"
 msgstr "이전 메시지"
 
@@ -1866,7 +1885,7 @@ msgstr "수정 후 보내기"
 msgid "Edit Profile"
 msgstr "Bot 정보 수정"
 
-#: src/pages/Auth.tsx:149
+#: src/pages/Auth.tsx:154
 msgid "Email"
 msgstr "이메일"
 
@@ -1949,11 +1968,11 @@ msgid "Expand"
 msgstr "펼치기"
 
 #. placeholder {0}: group.title
-#: src/pages/Shell.tsx:2878
+#: src/pages/Shell.tsx:2890
 msgid "Expand {0}"
 msgstr "{0} 펼치기"
 
-#: src/pages/Shell.tsx:4824
+#: src/pages/Shell.tsx:4855
 msgid "Expert in AI artistic image generation and visual ideas."
 msgstr "AI 예술적 이미지 생성 및 시각적 아이디어 전문가."
 
@@ -1961,8 +1980,8 @@ msgstr "AI 예술적 이미지 생성 및 시각적 아이디어 전문가."
 msgid "Export"
 msgstr "내보내기"
 
-#: src/pages/ImportSettingsPanel.tsx:574
-#: src/pages/ImportSettingsPanel.tsx:583
+#: src/pages/ImportSettingsPanel.tsx:573
+#: src/pages/ImportSettingsPanel.tsx:582
 msgid "Export sensitive data"
 msgstr "민감한 데이터 내보내기"
 
@@ -2010,18 +2029,18 @@ msgstr ""
 msgid "Failed to export workspace backup."
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:233
+#: src/pages/AccountSettingsOverlay.tsx:356
 msgid "Failed to save spend caps."
 msgstr ""
 
-#: src/pages/Shell.tsx:2131
-#: src/pages/Shell.tsx:2133
-#: src/pages/Shell.tsx:2135
+#: src/pages/Shell.tsx:2136
+#: src/pages/Shell.tsx:2138
+#: src/pages/Shell.tsx:2140
 msgid "Failed to send message"
 msgstr "메시지를 보내지 못했습니다."
 
-#: src/pages/Shell.tsx:2170
-#: src/pages/Shell.tsx:2189
+#: src/pages/Shell.tsx:2175
+#: src/pages/Shell.tsx:2194
 msgid "Failed to stop"
 msgstr "작업을 중지하지 못했습니다."
 
@@ -2065,11 +2084,11 @@ msgstr "MCP 연결을 마무리하는 중…"
 msgid "Flag unexpected actions"
 msgstr "예상하지 못한 작업 표시"
 
-#: src/pages/Shell.tsx:5817
+#: src/pages/Shell.tsx:5848
 msgid "for new line"
 msgstr "줄 바꿈"
 
-#: src/pages/Auth.tsx:196
+#: src/pages/Auth.tsx:201
 msgid "Forgot password?"
 msgstr "비밀번호를 잊으셨나요?"
 
@@ -2081,7 +2100,7 @@ msgstr "무료"
 msgid "Fullscreen"
 msgstr "전체 화면"
 
-#: src/pages/Shell.tsx:4846
+#: src/pages/Shell.tsx:4877
 msgid "Futuristic concept"
 msgstr "미래지향적 콘셉트"
 
@@ -2113,8 +2132,8 @@ msgid "Git history is excluded."
 msgstr "Git 기록은 제외됩니다."
 
 #: src/pages/MessagingSettingsOverlay.tsx:204
-#: src/pages/Shell.tsx:3356
-#: src/pages/Shell.tsx:3571
+#: src/pages/Shell.tsx:3386
+#: src/pages/Shell.tsx:3601
 msgid "Group"
 msgstr "그룹"
 
@@ -2160,8 +2179,8 @@ msgstr "헤더 값"
 msgid "Hear a sample"
 msgstr "샘플 듣기"
 
-#: src/pages/ImportSettingsPanel.tsx:450
-#: src/pages/ImportSettingsPanel.tsx:515
+#: src/pages/ImportSettingsPanel.tsx:449
+#: src/pages/ImportSettingsPanel.tsx:514
 msgid "Hermes"
 msgstr "Hermes"
 
@@ -2169,11 +2188,11 @@ msgstr "Hermes"
 msgid "Hi, this is how I'll sound when I read replies out loud."
 msgstr "안녕하세요. 답변을 소리 내어 읽을 때 이런 목소리로 들립니다."
 
-#: src/pages/Shell.tsx:3261
+#: src/pages/Shell.tsx:3291
 msgid "Hide bots"
 msgstr "Hide bots"
 
-#: src/pages/Auth.tsx:186
+#: src/pages/Auth.tsx:191
 msgid "Hide password"
 msgstr "비밀번호 숨기기"
 
@@ -2183,7 +2202,7 @@ msgstr "비밀번호 숨기기"
 msgid "High"
 msgstr "높음"
 
-#: src/pages/ImportSettingsPanel.tsx:524
+#: src/pages/ImportSettingsPanel.tsx:523
 msgid "History stays in the archive. Skills and tool calls are not executed."
 msgstr "기록은 아카이브에 유지됩니다. 스킬과 도구 호출은 실행되지 않습니다."
 
@@ -2204,7 +2223,7 @@ msgstr "실행 주기"
 msgid "How to check"
 msgstr "완료 확인 방법"
 
-#: src/pages/Shell.tsx:6067
+#: src/pages/Shell.tsx:6098
 msgid "I’m done"
 msgstr "조작 끝내기"
 
@@ -2224,7 +2243,7 @@ msgstr "이미지 업로드 영역"
 msgid "Import .md"
 msgstr ""
 
-#: src/pages/ImportSettingsPanel.tsx:402
+#: src/pages/ImportSettingsPanel.tsx:401
 msgid "Import complete"
 msgstr "가져오기 완료"
 
@@ -2237,7 +2256,7 @@ msgstr "데이터 가져오기"
 msgid "Import failed. Check the file or connection and try again."
 msgstr "가져오기에 실패했습니다. 파일이나 연결을 확인한 후 다시 시도하세요."
 
-#: src/pages/ImportSettingsPanel.tsx:380
+#: src/pages/ImportSettingsPanel.tsx:379
 msgid "Import file"
 msgstr "파일 가져오기"
 
@@ -2254,7 +2273,7 @@ msgstr ""
 msgid "Imported {0} bots."
 msgstr ""
 
-#: src/pages/ImportSettingsPanel.tsx:534
+#: src/pages/ImportSettingsPanel.tsx:533
 msgid "Imported archives"
 msgstr "가져온 아카이브"
 
@@ -2262,8 +2281,8 @@ msgstr "가져온 아카이브"
 msgid "Inbound Webhook"
 msgstr ""
 
-#: src/pages/ImportSettingsPanel.tsx:409
-#: src/pages/ImportSettingsPanel.tsx:413
+#: src/pages/ImportSettingsPanel.tsx:408
+#: src/pages/ImportSettingsPanel.tsx:412
 msgid "Include sensitive data"
 msgstr "민감한 데이터 포함"
 
@@ -2275,7 +2294,7 @@ msgstr "기본 설정 사용"
 msgid "Inputs"
 msgstr "입력값"
 
-#: src/pages/ImportSettingsPanel.tsx:563
+#: src/pages/ImportSettingsPanel.tsx:562
 msgid "Inspect"
 msgstr "살펴보기"
 
@@ -2296,7 +2315,7 @@ msgid "Integration options"
 msgstr "Integration options"
 
 #: src/pages/PluginsOverlay.tsx:679
-#: src/pages/Shell.tsx:3183
+#: src/pages/Shell.tsx:3195
 msgid "Integrations"
 msgstr "앱·도구 연동"
 
@@ -2338,11 +2357,11 @@ msgstr "이 Bot만 사용"
 msgid "Its conversation, files, and routines will be permanently deleted. Bots it created stay in your list."
 msgstr "대화, 파일, 자동 실행이 영구 삭제됩니다. 이 Bot이 만든 다른 Bot은 목록에 남습니다."
 
-#: src/pages/Shell.tsx:5044
+#: src/pages/Shell.tsx:5075
 msgid "Jump to latest"
 msgstr "최신 메시지로 이동"
 
-#: src/pages/Shell.tsx:6149
+#: src/pages/Shell.tsx:6180
 msgid "Jump to replied message"
 msgstr "답장한 메시지로 이동"
 
@@ -2366,9 +2385,9 @@ msgstr "지식"
 msgid "Known secrets were redacted. Review the selection before uploading."
 msgstr "알려진 비밀 정보는 가렸습니다. 업로드하기 전에 선택 내용을 검토하세요."
 
-#: src/pages/AccountSettingsOverlay.tsx:107
-#: src/pages/AccountSettingsOverlay.tsx:541
-#: src/pages/AccountSettingsOverlay.tsx:558
+#: src/pages/AccountSettingsOverlay.tsx:147
+#: src/pages/AccountSettingsOverlay.tsx:664
+#: src/pages/AccountSettingsOverlay.tsx:681
 msgid "Language"
 msgstr "언어"
 
@@ -2380,7 +2399,7 @@ msgstr "Later"
 msgid "Leave"
 msgstr "나가기"
 
-#: src/pages/AccountSettingsOverlay.tsx:419
+#: src/pages/AccountSettingsOverlay.tsx:542
 msgid "Light"
 msgstr "라이트"
 
@@ -2404,7 +2423,7 @@ msgstr "Listening"
 msgid "Listening…"
 msgstr "듣는 중…"
 
-#: src/pages/Shell.tsx:4768
+#: src/pages/Shell.tsx:4799
 msgid "Load earlier messages"
 msgstr "이전 메시지 불러오기"
 
@@ -2444,7 +2463,7 @@ msgstr "음성 서비스를 불러오는 중…"
 #: src/pages/IntegrationSetup.tsx:72
 #: src/pages/Onboarding.tsx:390
 #: src/pages/PeerMessagesOverlay.tsx:105
-#: src/pages/Shell.tsx:4768
+#: src/pages/Shell.tsx:4799
 msgid "Loading…"
 msgstr "불러오는 중…"
 
@@ -2460,6 +2479,11 @@ msgstr "로컬 접근을 허용하면 Bot이 묻지 않고 명령을 실행할 �
 msgid "Local Server Settings"
 msgstr "Local Server Settings"
 
+#: src/pages/Shell.tsx:3269
+#: src/pages/Shell.tsx:3280
+msgid "Log out"
+msgstr ""
+
 #: src/pages/ModelSettingsOverlay.tsx:676
 #: src/pages/Onboarding.tsx:516
 #: src/pages/shell/bot-panel.tsx:852
@@ -2474,7 +2498,7 @@ msgstr "이 컴퓨터에서 실행 중인 작업이 없는지 확인하세요."
 msgid "Manage MCP servers"
 msgstr "MCP 서버 관리"
 
-#: src/pages/AccountSettingsOverlay.tsx:87
+#: src/pages/AccountSettingsOverlay.tsx:127
 msgid "Manage messaging settings"
 msgstr "메시징 설정 관리"
 
@@ -2547,7 +2571,7 @@ msgstr "기억"
 msgid "Memory scope"
 msgstr "기억 사용 범위"
 
-#: src/pages/Shell.tsx:5533
+#: src/pages/Shell.tsx:5564
 msgid "Mentions"
 msgstr "멘션"
 
@@ -2555,8 +2579,8 @@ msgstr "멘션"
 msgid "Mentions only"
 msgstr "Mentions only"
 
-#: src/pages/Shell.tsx:5745
-#: src/pages/Shell.tsx:5887
+#: src/pages/Shell.tsx:5776
+#: src/pages/Shell.tsx:5918
 msgid "Message"
 msgstr "메시지"
 
@@ -2565,12 +2589,12 @@ msgstr "메시지"
 msgid "Message"
 msgstr "메시지"
 
-#: src/pages/Shell.tsx:5741
-#: src/pages/Shell.tsx:5745
+#: src/pages/Shell.tsx:5772
+#: src/pages/Shell.tsx:5776
 msgid "Message {activeName}"
 msgstr "{activeName}에게 메시지 보내기"
 
-#: src/pages/Shell.tsx:5440
+#: src/pages/Shell.tsx:5471
 msgid "Message composer"
 msgstr "메시지 작성기"
 
@@ -2579,19 +2603,19 @@ msgstr "메시지 작성기"
 msgid "Message event"
 msgstr "Message event"
 
-#: src/pages/Shell.tsx:6223
+#: src/pages/Shell.tsx:6254
 msgid "Message from {peer}"
 msgstr "{peer}의 메시지"
 
-#: src/pages/Shell.tsx:5742
+#: src/pages/Shell.tsx:5773
 msgid "Message…"
 msgstr "메시지를 입력하세요"
 
-#: src/pages/Shell.tsx:6223
+#: src/pages/Shell.tsx:6254
 msgid "Messaged {peer}"
 msgstr "{peer}에게 메시지 보냄"
 
-#: src/pages/AccountSettingsOverlay.tsx:81
+#: src/pages/AccountSettingsOverlay.tsx:121
 #: src/pages/MessagingSettingsOverlay.tsx:98
 msgid "Messaging"
 msgstr "메시징"
@@ -2610,8 +2634,8 @@ msgstr "최소"
 msgid "Minimize"
 msgstr "최소화"
 
-#: src/pages/Shell.tsx:2722
-#: src/pages/Shell.tsx:2723
+#: src/pages/Shell.tsx:2734
+#: src/pages/Shell.tsx:2735
 msgid "Minimize bots"
 msgstr "Minimize bots"
 
@@ -2643,7 +2667,7 @@ msgstr "모델 ID"
 msgid "Model options"
 msgstr "모델 선택지"
 
-#: src/pages/AccountSettingsOverlay.tsx:281
+#: src/pages/AccountSettingsOverlay.tsx:404
 msgid "Model spend uses your provider keys or local CLI sessions."
 msgstr ""
 
@@ -2670,11 +2694,11 @@ msgstr "서버에서 찾은 모델"
 msgid "Monthly"
 msgstr "매월"
 
-#: src/pages/AccountSettingsOverlay.tsx:308
+#: src/pages/AccountSettingsOverlay.tsx:431
 msgid "Monthly token cap"
 msgstr ""
 
-#: src/pages/Shell.tsx:5994
+#: src/pages/Shell.tsx:6025
 msgid "More"
 msgstr "More"
 
@@ -2691,7 +2715,7 @@ msgid "Move to"
 msgstr "섹션으로 이동"
 
 #: src/components/teach/SkillDraftCard.tsx:79
-#: src/pages/Auth.tsx:134
+#: src/pages/Auth.tsx:139
 #: src/pages/GroupPanel.tsx:119
 #: src/pages/GroupPanel.tsx:212
 #: src/pages/RoutineEditor.tsx:310
@@ -2723,7 +2747,7 @@ msgstr "입력 필요"
 msgid "Needs takeover"
 msgstr "인수 필요"
 
-#: src/pages/Shell.tsx:4395
+#: src/pages/Shell.tsx:4426
 msgid "Needs you"
 msgstr "Needs you"
 
@@ -2739,7 +2763,8 @@ msgstr "새 그룹 만들기"
 msgid "New open-work item"
 msgstr "새 진행 작업"
 
-#: src/pages/Auth.tsx:295
+#: src/pages/AccountSettingsOverlay.tsx:222
+#: src/pages/Auth.tsx:300
 msgid "New password"
 msgstr "새 비밀번호"
 
@@ -2792,7 +2817,7 @@ msgstr "별도 확인 규칙이 없습니다. 작업이 자동으로 실행됩�
 msgid "No group chats yet."
 msgstr "아직 그룹 채팅이 없습니다."
 
-#: src/pages/ImportSettingsPanel.tsx:542
+#: src/pages/ImportSettingsPanel.tsx:541
 msgid "No imports yet"
 msgstr "아직 가져온 항목이 없습니다"
 
@@ -2926,35 +2951,35 @@ msgstr "일정에 따라"
 msgid "on the 1st at {0}"
 msgstr "매월 1일 {0}에"
 
-#: src/pages/ImportSettingsPanel.tsx:399
+#: src/pages/ImportSettingsPanel.tsx:398
 msgid "On Windows, you can also run import_local.bat. Or open an exported .a-company-import.json file."
 msgstr "Windows에서는 import_local.bat를 실행할 수도 있습니다. 또는 내보낸 .a-company-import.json 파일을 여세요."
 
-#: src/pages/Shell.tsx:4100
+#: src/pages/Shell.tsx:4130
 msgid "Only empty spaces can be deleted. Delete its bots and groups first."
 msgstr "Only empty spaces can be deleted. Delete its bots and groups first."
 
 #: src/pages/ScratchpadSection.tsx:159
-#: src/pages/Shell.tsx:3649
-#: src/pages/Shell.tsx:3654
-#: src/pages/Shell.tsx:6520
+#: src/pages/Shell.tsx:3679
+#: src/pages/Shell.tsx:3684
+#: src/pages/Shell.tsx:6551
 msgid "Open"
 msgstr "열기"
 
 #. placeholder {0}: group.title
-#: src/pages/Shell.tsx:2876
+#: src/pages/Shell.tsx:2888
 msgid "Open {0}"
 msgstr "{0} 열기"
 
-#: src/pages/ImportSettingsPanel.tsx:374
+#: src/pages/ImportSettingsPanel.tsx:373
 msgid "Open import file"
 msgstr "가져오기 파일 열기"
 
-#: src/pages/Shell.tsx:3617
+#: src/pages/Shell.tsx:3647
 msgid "Open in full window"
 msgstr "전체 창으로 열기"
 
-#: src/pages/Shell.tsx:3312
+#: src/pages/Shell.tsx:3342
 msgid "Open navigation"
 msgstr "메뉴 열기"
 
@@ -2967,7 +2992,7 @@ msgstr "진행 중인 작업"
 msgid "OpenAI-compatible server URL"
 msgstr "OpenAI 호환 서버 주소"
 
-#: src/pages/Shell.tsx:6343
+#: src/pages/Shell.tsx:6374
 msgid "Opened its thread."
 msgstr "대화가 만들어졌습니다."
 
@@ -2975,7 +3000,7 @@ msgstr "대화가 만들어졌습니다."
 msgid "Opening chat…"
 msgstr "채팅 여는 중…"
 
-#: src/pages/Shell.tsx:4863
+#: src/pages/Shell.tsx:4894
 msgid "Optimization proposals"
 msgstr "최적화 제안"
 
@@ -2984,7 +3009,7 @@ msgstr "최적화 제안"
 msgid "Optional"
 msgstr "선택 사항"
 
-#: src/pages/AccountSettingsOverlay.tsx:156
+#: src/pages/AccountSettingsOverlay.tsx:279
 msgid "Optional controls most people never need"
 msgstr "필요할 때만 쓰는 세부 설정"
 
@@ -3004,7 +3029,7 @@ msgstr "또는 API 키 붙여넣기"
 msgid "Or start from a template"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:132
+#: src/pages/AccountSettingsOverlay.tsx:172
 msgid "Organic"
 msgstr "자연스럽게"
 
@@ -3022,7 +3047,7 @@ msgstr "다른 모델 직접 입력…"
 msgid "PagerDuty incident"
 msgstr "PagerDuty 인시던트"
 
-#: src/pages/Shell.tsx:4837
+#: src/pages/Shell.tsx:4868
 msgid "paint a cinematic 4K sunset over the ocean"
 msgstr "바다 위의 영화 같은 4K 일몰을 그려줘"
 
@@ -3032,20 +3057,22 @@ msgid "Park"
 msgstr "보류"
 
 #: src/components/AskCard.tsx:43
-#: src/pages/Auth.tsx:166
-#: src/pages/Auth.tsx:175
+#: src/pages/Auth.tsx:171
+#: src/pages/Auth.tsx:180
 msgid "Password"
 msgstr "비밀번호"
 
-#: src/pages/Auth.tsx:76
+#: src/pages/Auth.tsx:77
 msgid "Password recovery is not configured for this server"
 msgstr "이 서버에는 비밀번호 복구가 설정되어 있지 않습니다"
 
-#: src/pages/Auth.tsx:285
+#: src/pages/AccountSettingsOverlay.tsx:264
+#: src/pages/Auth.tsx:290
 msgid "Password updated"
 msgstr "비밀번호가 업데이트되었습니다"
 
-#: src/pages/Auth.tsx:261
+#: src/pages/AccountSettingsOverlay.tsx:68
+#: src/pages/Auth.tsx:266
 msgid "Passwords do not match"
 msgstr "비밀번호가 일치하지 않습니다"
 
@@ -3081,11 +3108,11 @@ msgstr "재생 중…"
 msgid "POST to"
 msgstr "POST 대상"
 
-#: src/pages/ImportSettingsPanel.tsx:528
+#: src/pages/ImportSettingsPanel.tsx:527
 msgid "Prepare selection"
 msgstr "선택 항목 준비"
 
-#: src/pages/Shell.tsx:5809
+#: src/pages/Shell.tsx:5840
 msgid "Press"
 msgstr "누르기:"
 
@@ -3110,7 +3137,7 @@ msgstr "Project ID"
 msgid "Projects"
 msgstr "프로젝트"
 
-#: src/pages/Shell.tsx:4864
+#: src/pages/Shell.tsx:4895
 msgid "Propose performance improvements and upgrade paths"
 msgstr "성능 개선 및 업그레이드 경로 제안"
 
@@ -3133,19 +3160,19 @@ msgstr "풀 리퀘스트"
 msgid "Queued"
 msgstr "대기 중"
 
-#: src/pages/Shell.tsx:4871
+#: src/pages/Shell.tsx:4902
 msgid "Quick Actions"
 msgstr "빠른 작업"
 
-#: src/pages/Shell.tsx:5126
+#: src/pages/Shell.tsx:5157
 msgid "Quote"
 msgstr "인용"
 
-#: src/pages/Shell.tsx:5954
+#: src/pages/Shell.tsx:5985
 msgid "React"
 msgstr "반응하기"
 
-#: src/pages/Shell.tsx:5965
+#: src/pages/Shell.tsx:5996
 msgid "Reactions"
 msgstr "반응"
 
@@ -3157,12 +3184,12 @@ msgstr "답변을 자동으로 읽기"
 msgid "read-only"
 msgstr "읽기 전용"
 
-#: src/pages/ImportSettingsPanel.tsx:614
+#: src/pages/ImportSettingsPanel.tsx:613
 msgid "Read-only history. Continue creates a new agent; the archive stays unchanged."
 msgstr "읽기 전용 기록입니다. 이어가면 새 에이전트가 생성되며 아카이브는 변경되지 않습니다."
 
-#: src/pages/Shell.tsx:3362
-#: src/pages/Shell.tsx:4813
+#: src/pages/Shell.tsx:3392
+#: src/pages/Shell.tsx:4844
 msgid "Ready"
 msgstr "준비됨"
 
@@ -3249,7 +3276,7 @@ msgstr "화면 새로고침"
 msgid "Refreshing…"
 msgstr "새로고침 중…"
 
-#: src/pages/Shell.tsx:6057
+#: src/pages/Shell.tsx:6088
 msgid "Release"
 msgstr "제어권 돌려주기"
 
@@ -3270,7 +3297,7 @@ msgid "Remove"
 msgstr "삭제"
 
 #. placeholder {0}: attachment.file.name
-#: src/pages/Shell.tsx:5519
+#: src/pages/Shell.tsx:5550
 msgid "Remove {0}"
 msgstr "{0} 삭제"
 
@@ -3284,7 +3311,7 @@ msgid "Remove Git event"
 msgstr "Remove Git event"
 
 #. placeholder {0}: mention.name
-#: src/pages/Shell.tsx:5678
+#: src/pages/Shell.tsx:5709
 msgid "Remove mention {0}"
 msgstr "{0} 멘션 삭제"
 
@@ -3297,7 +3324,7 @@ msgid "Remove schedule"
 msgstr "일정 제거"
 
 #. placeholder {0}: selectedSkill.name
-#: src/pages/Shell.tsx:5657
+#: src/pages/Shell.tsx:5688
 msgid "Remove skill {0}"
 msgstr "작업 기술 {0} 삭제"
 
@@ -3305,7 +3332,7 @@ msgstr "작업 기술 {0} 삭제"
 msgid "Remove webhook"
 msgstr "웹훅 제거"
 
-#: src/pages/Shell.tsx:6342
+#: src/pages/Shell.tsx:6373
 msgid "Removed with chat, computer, and memory."
 msgstr "대화, 컴퓨터, 기억과 함께 삭제되었습니다."
 
@@ -3321,7 +3348,7 @@ msgid "Removing…"
 msgstr "삭제 중…"
 
 #: src/pages/BotContextMenu.tsx:119
-#: src/pages/Shell.tsx:4189
+#: src/pages/Shell.tsx:4219
 #: src/pages/shell/dialogs.tsx:247
 msgid "Rename section"
 msgstr "섹션 이름 바꾸기"
@@ -3340,16 +3367,16 @@ msgstr "API 키 교체"
 msgid "Replace key"
 msgstr "키 교체"
 
-#: src/pages/Shell.tsx:5986
-#: src/pages/Shell.tsx:6008
+#: src/pages/Shell.tsx:6017
+#: src/pages/Shell.tsx:6039
 msgid "Reply"
 msgstr "답장"
 
-#: src/pages/Shell.tsx:5481
+#: src/pages/Shell.tsx:5512
 msgid "Replying to {replyName}"
 msgstr "{replyName}에게 답장"
 
-#: src/pages/Shell.tsx:5480
+#: src/pages/Shell.tsx:5511
 msgid "Replying to {replyName}: “{replyQuote}”"
 msgstr "{replyName}에게 답장 중: “{replyQuote}”"
 
@@ -3366,11 +3393,11 @@ msgstr "컴퓨터 재설정"
 msgid "Reset computer?"
 msgstr "컴퓨터를 재설정할까요?"
 
-#: src/pages/Auth.tsx:317
+#: src/pages/Auth.tsx:322
 msgid "Reset password"
 msgstr "비밀번호 재설정"
 
-#: src/pages/Auth.tsx:40
+#: src/pages/Auth.tsx:41
 msgid "Reset your password"
 msgstr "비밀번호를 재설정하세요"
 
@@ -3384,8 +3411,8 @@ msgstr "재설정 중…"
 msgid "Restart to update"
 msgstr "Restart to update"
 
-#: src/pages/Shell.tsx:3125
-#: src/pages/Shell.tsx:3156
+#: src/pages/Shell.tsx:3137
+#: src/pages/Shell.tsx:3168
 msgid "Restore"
 msgstr "복원"
 
@@ -3411,7 +3438,7 @@ msgstr "Restoring your workspace"
 msgid "Retry now"
 msgstr "지금 다시 시도"
 
-#: src/pages/Shell.tsx:2606
+#: src/pages/Shell.tsx:2611
 msgid "Retry screen"
 msgstr "Retry screen"
 
@@ -3428,7 +3455,7 @@ msgstr "리비전 {0}"
 msgid "Revoke"
 msgstr "연결 해제"
 
-#: src/pages/AccountSettingsOverlay.tsx:132
+#: src/pages/AccountSettingsOverlay.tsx:172
 msgid "Robot"
 msgstr "로봇"
 
@@ -3445,8 +3472,8 @@ msgid "Rotate secret"
 msgstr ""
 
 #: src/pages/RoutineEditor.tsx:265
-#: src/pages/Shell.tsx:3842
-#: src/pages/Shell.tsx:3854
+#: src/pages/Shell.tsx:3872
+#: src/pages/Shell.tsx:3884
 msgid "Routine"
 msgstr "자동 실행"
 
@@ -3463,7 +3490,7 @@ msgstr "실행 시간"
 msgid "Run history"
 msgstr "실행 기록"
 
-#: src/pages/Shell.tsx:3835
+#: src/pages/Shell.tsx:3865
 msgid "Run time must be in the future."
 msgstr "실행 시간은 미래여야 합니다."
 
@@ -3504,13 +3531,13 @@ msgstr "런타임 설정은 가져오지 않습니다."
 msgid "Save"
 msgstr "저장"
 
-#: src/pages/AccountSettingsOverlay.tsx:325
+#: src/pages/AccountSettingsOverlay.tsx:448
 msgid "Save caps"
 msgstr ""
 
 #: src/components/AskCard.tsx:18
 #: src/components/teach/SkillDraftCard.tsx:142
-#: src/pages/AccountSettingsOverlay.tsx:329
+#: src/pages/AccountSettingsOverlay.tsx:452
 #: src/pages/ExternalConversationSettings.tsx:257
 msgid "Saved"
 msgstr "저장됨"
@@ -3539,7 +3566,7 @@ msgstr "Saving..."
 
 #: src/components/AskCard.tsx:157
 #: src/components/teach/SkillDraftCard.tsx:142
-#: src/pages/AccountSettingsOverlay.tsx:325
+#: src/pages/AccountSettingsOverlay.tsx:448
 #: src/pages/GroupPanel.tsx:236
 #: src/pages/ModelSettingsOverlay.tsx:904
 #: src/pages/RoutineEditor.tsx:489
@@ -3568,7 +3595,7 @@ msgstr "스캔 한도에 도달했습니다. 일부 항목이 누락되었을 �
 msgid "Search"
 msgstr "검색"
 
-#: src/pages/Shell.tsx:2793
+#: src/pages/Shell.tsx:2805
 msgid "Search agents…"
 msgstr "에이전트 검색…"
 
@@ -3605,20 +3632,20 @@ msgstr "AI 서비스 검색"
 msgid "Searching…"
 msgstr "검색 중…"
 
-#: src/pages/Shell.tsx:3357
+#: src/pages/Shell.tsx:3387
 msgid "Select a bot"
 msgstr "대화할 Bot을 선택하세요"
 
-#: src/pages/ImportSettingsPanel.tsx:472
+#: src/pages/ImportSettingsPanel.tsx:471
 msgid "Select visible"
 msgstr "표시된 항목 선택"
 
-#: src/pages/ImportSettingsPanel.tsx:416
+#: src/pages/ImportSettingsPanel.tsx:415
 msgid "Selected data may contain passwords, keys, tokens, or .env files. It is stored encrypted and inactive, never used to sign in or continue chats."
 msgstr "선택한 데이터에 비밀번호, 키, 토큰 또는 .env 파일이 포함될 수 있습니다. 데이터는 암호화된 비활성 상태로 저장되며, 로그인하거나 채팅을 이어가는 데 사용되지 않습니다."
 
-#: src/pages/Shell.tsx:5776
-#: src/pages/Shell.tsx:5797
+#: src/pages/Shell.tsx:5807
+#: src/pages/Shell.tsx:5828
 msgid "Send"
 msgstr "보내기"
 
@@ -3634,7 +3661,7 @@ msgstr "답변 보내기"
 msgid "Send it"
 msgstr "보내기"
 
-#: src/pages/Auth.tsx:213
+#: src/pages/Auth.tsx:218
 msgid "Send reset link"
 msgstr "재설정 링크 보내기"
 
@@ -3657,7 +3684,7 @@ msgid "Sentry alert"
 msgstr "Sentry 알림"
 
 #: src/components/integrations/IntegrationSetup.tsx:132
-#: src/pages/AccountSettingsOverlay.tsx:145
+#: src/pages/AccountSettingsOverlay.tsx:185
 #: src/pages/LocalSettings.tsx:42
 msgid "Server integrations"
 msgstr "Server integrations"
@@ -3681,17 +3708,17 @@ msgstr "세션"
 #: src/pages/MessagingSettingsOverlay.tsx:361
 #: src/pages/SettingsOverlay.tsx:97
 #: src/pages/SettingsOverlay.tsx:152
-#: src/pages/Shell.tsx:3228
-#: src/pages/Shell.tsx:3235
-#: src/pages/Shell.tsx:3567
+#: src/pages/Shell.tsx:3240
+#: src/pages/Shell.tsx:3247
+#: src/pages/Shell.tsx:3597
 msgid "Settings"
 msgstr "설정"
 
-#: src/pages/Shell.tsx:5830
+#: src/pages/Shell.tsx:5861
 msgid "Settings: General"
 msgstr "설정: 일반"
 
-#: src/pages/Shell.tsx:5832
+#: src/pages/Shell.tsx:5863
 msgid "Settings: Usage"
 msgstr "설정: 사용량"
 
@@ -3717,13 +3744,13 @@ msgstr "Shared chat with 2-6 bots. They all reply in the same thread."
 msgid "Shared documents"
 msgstr "공유 문서"
 
-#: src/pages/Shell.tsx:3261
-#: src/pages/Shell.tsx:3322
-#: src/pages/Shell.tsx:3323
+#: src/pages/Shell.tsx:3291
+#: src/pages/Shell.tsx:3352
+#: src/pages/Shell.tsx:3353
 msgid "Show bots"
 msgstr "Show bots"
 
-#: src/pages/Shell.tsx:3591
+#: src/pages/Shell.tsx:3621
 msgid "Show computer"
 msgstr "컴퓨터 표시"
 
@@ -3731,33 +3758,33 @@ msgstr "컴퓨터 표시"
 msgid "Show more"
 msgstr "더 보기"
 
-#: src/pages/Auth.tsx:186
+#: src/pages/Auth.tsx:191
 msgid "Show password"
 msgstr "비밀번호 표시"
 
-#: src/pages/Shell.tsx:3591
+#: src/pages/Shell.tsx:3621
 msgid "Show settings"
 msgstr "설정 보기"
 
 #: src/lib/localized-provider-hint.ts:7
-#: src/pages/Auth.tsx:230
-#: src/pages/Auth.tsx:288
+#: src/pages/Auth.tsx:235
+#: src/pages/Auth.tsx:293
 #: src/pages/ModelSettingsOverlay.tsx:841
 #: src/pages/Onboarding.tsx:189
 msgid "Sign in"
 msgstr "로그인"
 
-#: src/pages/Auth.tsx:36
+#: src/pages/Auth.tsx:37
 msgid "Sign in to A-Company"
 msgstr "A-Company 로그인"
 
-#: src/pages/Auth.tsx:223
+#: src/pages/Auth.tsx:228
 #: src/pages/Welcome.tsx:34
 msgid "Sign up"
 msgstr "가입하기"
 
 #. placeholder {0}: skill.name
-#: src/pages/Shell.tsx:5583
+#: src/pages/Shell.tsx:5614
 msgid "Skill {0}"
 msgstr "작업 기술 {0}"
 
@@ -3771,7 +3798,7 @@ msgid "Skills are archived, not activated."
 msgstr "스킬은 보관만 되며 활성화되지 않습니다."
 
 #: src/components/integrations/IntegrationSetup.tsx:364
-#: src/pages/Shell.tsx:6064
+#: src/pages/Shell.tsx:6095
 msgid "Skip"
 msgstr "건너뛰기"
 
@@ -3780,7 +3807,7 @@ msgid "Skip or deploy key"
 msgstr "건너뛰거나 배포 키"
 
 #. placeholder {0}: skipped.join(", ")
-#: src/pages/Shell.tsx:1990
+#: src/pages/Shell.tsx:1995
 msgid "Skipped {0}"
 msgstr "{0} 건너뜀"
 
@@ -3812,7 +3839,7 @@ msgstr "일부 소스 데이터를 사용할 수 없습니다."
 msgid "Some source formats are not supported."
 msgstr "일부 소스 형식은 지원되지 않습니다."
 
-#: src/pages/ImportSettingsPanel.tsx:442
+#: src/pages/ImportSettingsPanel.tsx:441
 msgid "Source"
 msgstr "소스"
 
@@ -3829,8 +3856,8 @@ msgstr "Space: 끼어들기 · Esc: 통화 종료"
 msgid "Spaces"
 msgstr "Spaces"
 
-#: src/pages/Shell.tsx:6191
-#: src/pages/Shell.tsx:6449
+#: src/pages/Shell.tsx:6222
+#: src/pages/Shell.tsx:6480
 msgid "Speak"
 msgstr "읽기"
 
@@ -3842,8 +3869,8 @@ msgstr "음성 출력·받아쓰기"
 msgid "Speak only"
 msgstr "음성 출력만"
 
-#: src/pages/Shell.tsx:6187
-#: src/pages/Shell.tsx:6445
+#: src/pages/Shell.tsx:6218
+#: src/pages/Shell.tsx:6476
 msgid "Speak this reply"
 msgstr "이 답변 읽기"
 
@@ -3851,7 +3878,7 @@ msgstr "이 답변 읽기"
 msgid "Speaking…"
 msgstr "말하는 중…"
 
-#: src/pages/Shell.tsx:4825
+#: src/pages/Shell.tsx:4856
 msgid "Specialized AI assistant for A-Company workspace."
 msgstr "A-Company 워크스페이스 전용 AI 어시스턴트."
 
@@ -3859,7 +3886,7 @@ msgstr "A-Company 워크스페이스 전용 AI 어시스턴트."
 msgid "Start recording"
 msgstr "작업 녹화 시작"
 
-#: src/pages/ImportSettingsPanel.tsx:397
+#: src/pages/ImportSettingsPanel.tsx:396
 msgid "Start the helper on this computer, then reconnect:"
 msgstr "이 컴퓨터에서 도우미를 실행한 후 다시 연결하세요:"
 
@@ -3877,7 +3904,7 @@ msgstr "시작 중"
 msgid "Starting…"
 msgstr "시작하는 중…"
 
-#: src/pages/Shell.tsx:4853
+#: src/pages/Shell.tsx:4884
 msgid "Status overview"
 msgstr "상태 개요"
 
@@ -3885,16 +3912,16 @@ msgstr "상태 개요"
 msgid "Steps"
 msgstr "실행 단계"
 
-#: src/pages/Shell.tsx:4410
-#: src/pages/Shell.tsx:4415
-#: src/pages/Shell.tsx:5786
-#: src/pages/Shell.tsx:6191
-#: src/pages/Shell.tsx:6449
+#: src/pages/Shell.tsx:4441
+#: src/pages/Shell.tsx:4446
+#: src/pages/Shell.tsx:5817
+#: src/pages/Shell.tsx:6222
+#: src/pages/Shell.tsx:6480
 msgid "Stop"
 msgstr "중지"
 
-#: src/pages/Shell.tsx:6187
-#: src/pages/Shell.tsx:6445
+#: src/pages/Shell.tsx:6218
+#: src/pages/Shell.tsx:6476
 msgid "Stop speaking"
 msgstr "읽기 중지"
 
@@ -3916,7 +3943,7 @@ msgstr "암호화해 저장"
 msgid "Stored securely. Never shown here."
 msgstr "안전하게 저장됩니다. 이 화면에 표시되지 않습니다."
 
-#: src/pages/Shell.tsx:6296
+#: src/pages/Shell.tsx:6327
 msgid "subagent"
 msgstr "보조 에이전트"
 
@@ -3925,7 +3952,7 @@ msgstr "보조 에이전트"
 msgid "Submit"
 msgstr "확인"
 
-#: src/pages/Shell.tsx:4854
+#: src/pages/Shell.tsx:4885
 msgid "Summarize current workspace status and active tasks"
 msgstr "현재 워크스페이스 상태 및 활성 작업 요약"
 
@@ -3951,7 +3978,7 @@ msgstr "전환 중…"
 msgid "Symbolic links are excluded."
 msgstr "심볼릭 링크는 제외됩니다."
 
-#: src/pages/AccountSettingsOverlay.tsx:418
+#: src/pages/AccountSettingsOverlay.tsx:541
 msgid "System"
 msgstr "시스템"
 
@@ -3960,7 +3987,7 @@ msgstr "시스템"
 msgid "Teach a task"
 msgstr "작업 가르치기"
 
-#: src/pages/Shell.tsx:3488
+#: src/pages/Shell.tsx:3518
 msgid "Teaching in progress. Stop teaching before sending a new message."
 msgstr "작업을 가르치는 중입니다. 새 메시지를 보내려면 먼저 가르치기를 종료하세요."
 
@@ -3972,7 +3999,7 @@ msgstr "팀 공용"
 msgid "Team Blueprints & Backup"
 msgstr ""
 
-#: src/pages/Shell.tsx:6581
+#: src/pages/Shell.tsx:6612
 msgid "Team Computer"
 msgstr "팀 컴퓨터"
 
@@ -4015,7 +4042,7 @@ msgstr "세션의 프로젝트가 선택되지 않았습니다."
 msgid "Thinking"
 msgstr "생각 깊이"
 
-#: src/pages/Shell.tsx:6561
+#: src/pages/Shell.tsx:6592
 msgid "This bot runs on this computer, not a Linux desktop. Shell and files use your home folder."
 msgstr "이 Bot은 별도 Linux 화면이 아니라 현재 컴퓨터에서 실행됩니다. 터미널과 파일 작업은 홈 폴더를 사용합니다."
 
@@ -4032,7 +4059,7 @@ msgstr "이 채팅은 읽기 전용입니다"
 msgid "this computer"
 msgstr "이 컴퓨터"
 
-#: src/pages/ImportSettingsPanel.tsx:590
+#: src/pages/ImportSettingsPanel.tsx:589
 msgid "This file contains secrets in plaintext. Store it securely and do not share it."
 msgstr "이 파일에는 암호화되지 않은 비밀 정보가 들어 있습니다. 안전하게 보관하고 공유하지 마세요."
 
@@ -4044,7 +4071,7 @@ msgstr "이 파일은 올바른 UTF-8 Markdown 형식이 아닙니다."
 msgid "this Mac"
 msgstr "이 Mac"
 
-#: src/pages/AccountSettingsOverlay.tsx:270
+#: src/pages/AccountSettingsOverlay.tsx:393
 msgid "This month (UTC)"
 msgstr ""
 
@@ -4052,7 +4079,7 @@ msgstr ""
 msgid "This permanently removes every message and stops current work. The chat remains available."
 msgstr "모든 메시지를 영구적으로 삭제하고 진행 중인 작업을 중지합니다. 채팅은 계속 사용할 수 있습니다."
 
-#: src/pages/Auth.tsx:253
+#: src/pages/Auth.tsx:258
 msgid "This reset link is invalid or expired"
 msgstr "이 재설정 링크는 유효하지 않거나 만료되었습니다"
 
@@ -4081,7 +4108,7 @@ msgstr "실행 시각"
 msgid "Title"
 msgstr "역할"
 
-#: src/pages/Shell.tsx:5813
+#: src/pages/Shell.tsx:5844
 msgid "to send,"
 msgstr "전송,"
 
@@ -4089,11 +4116,11 @@ msgstr "전송,"
 msgid "To:"
 msgstr "받는 사람:"
 
-#: src/pages/AccountSettingsOverlay.tsx:261
+#: src/pages/AccountSettingsOverlay.tsx:384
 msgid "Today (UTC)"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:290
+#: src/pages/AccountSettingsOverlay.tsx:413
 msgid "Token spend caps"
 msgstr ""
 
@@ -4133,8 +4160,8 @@ msgstr "사용할 수 없음"
 msgid "Uninstall"
 msgstr "Uninstall"
 
-#: src/pages/AccountSettingsOverlay.tsx:302
-#: src/pages/AccountSettingsOverlay.tsx:316
+#: src/pages/AccountSettingsOverlay.tsx:425
+#: src/pages/AccountSettingsOverlay.tsx:439
 msgid "Unlimited"
 msgstr ""
 
@@ -4147,12 +4174,12 @@ msgid "Unpin"
 msgstr "고정 해제"
 
 #. placeholder {0}: pending.file.name
-#: src/pages/Shell.tsx:2068
+#: src/pages/Shell.tsx:2073
 msgid "Unsupported file type: {0}"
 msgstr "지원하지 않는 파일 형식: {0}"
 
 #: src/pages/ImportSettingsPanel.tsx:327
-#: src/pages/ImportSettingsPanel.tsx:622
+#: src/pages/ImportSettingsPanel.tsx:621
 msgid "Untitled session"
 msgstr "제목 없는 세션"
 
@@ -4214,18 +4241,18 @@ msgstr "업데이트 중…"
 msgid "Upload"
 msgstr "업로드"
 
-#: src/pages/ImportSettingsPanel.tsx:433
+#: src/pages/ImportSettingsPanel.tsx:432
 msgid "Upload for preview"
 msgstr "미리보기용 업로드"
 
-#: src/pages/ImportSettingsPanel.tsx:428
+#: src/pages/ImportSettingsPanel.tsx:427
 msgid "Upload the selected content to this A-Company server for preview? Nothing is imported yet."
 msgstr "미리보기를 위해 선택한 내용을 이 A-Company 서버에 업로드할까요? 아직 아무것도 가져오지 않았습니다."
 
-#: src/pages/AccountSettingsOverlay.tsx:248
+#: src/pages/AccountSettingsOverlay.tsx:371
 #: src/pages/SettingsOverlay.tsx:89
-#: src/pages/Shell.tsx:3240
-#: src/pages/Shell.tsx:3251
+#: src/pages/Shell.tsx:3252
+#: src/pages/Shell.tsx:3263
 msgid "Usage"
 msgstr "사용량"
 
@@ -4256,8 +4283,8 @@ msgid "Verifying…"
 msgstr "확인 중…"
 
 #: src/pages/SettingsOverlay.tsx:88
-#: src/pages/Shell.tsx:5763
-#: src/pages/Shell.tsx:5764
+#: src/pages/Shell.tsx:5794
+#: src/pages/Shell.tsx:5795
 #: src/pages/shell/bot-panel.tsx:796
 #: src/pages/VoiceSettingsOverlay.tsx:175
 #: src/pages/VoiceSettingsOverlay.tsx:298
@@ -4330,22 +4357,22 @@ msgstr "언제 사용할지"
 msgid "Where should bots run?"
 msgstr "Bot을 어디에서 실행할까요?"
 
-#: src/pages/Auth.tsx:209
-#: src/pages/Auth.tsx:317
+#: src/pages/Auth.tsx:214
+#: src/pages/Auth.tsx:322
 #: src/pages/CallView.tsx:251
-#: src/pages/ImportSettingsPanel.tsx:389
+#: src/pages/ImportSettingsPanel.tsx:388
 msgid "Working…"
 msgstr "처리 중…"
 
-#: src/pages/ImportSettingsPanel.tsx:595
+#: src/pages/ImportSettingsPanel.tsx:594
 msgid "Yes, export sensitive data"
 msgstr "예, 민감한 데이터 내보내기"
 
-#: src/pages/Shell.tsx:5910
+#: src/pages/Shell.tsx:5941
 msgid "Yesterday"
 msgstr "어제"
 
-#: src/pages/Shell.tsx:1763
+#: src/pages/Shell.tsx:1768
 msgid "You"
 msgstr "나"
 
@@ -4357,15 +4384,15 @@ msgstr "자동으로 이동하지 않으면 이 탭을 닫아도 됩니다."
 msgid "You can close this window."
 msgstr "이 창을 닫아도 됩니다."
 
-#: src/pages/Shell.tsx:4399
+#: src/pages/Shell.tsx:4430
 msgid "You have control"
 msgstr "직접 조작 중"
 
-#: src/pages/Auth.tsx:157
+#: src/pages/Auth.tsx:162
 msgid "Your email address"
 msgstr "이메일 주소"
 
-#: src/pages/Auth.tsx:142
+#: src/pages/Auth.tsx:147
 msgid "Your name"
 msgstr "이름"
 

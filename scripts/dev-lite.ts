@@ -68,6 +68,9 @@ const sharedEnv: NodeJS.ProcessEnv = {
   WEB_PORT: webPort,
   WEB_ORIGIN: webOrigin,
   BETTER_AUTH_URL: process.env.BETTER_AUTH_URL ?? webOrigin,
+  ACCOUNTLESS_MODE: process.env.ACCOUNTLESS_MODE ?? "true",
+  VITE_ACCOUNTLESS_MODE:
+    process.env.VITE_ACCOUNTLESS_MODE ?? process.env.ACCOUNTLESS_MODE ?? "true",
 };
 
 const require = createRequire(import.meta.url);

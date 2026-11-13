@@ -3,6 +3,7 @@ import { BotAvatar, Button, Input, Toggle } from "@acompany/ui-web";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { ChevronDown } from "lucide-react";
 import {
+  type FormEvent,
   type KeyboardEvent as ReactKeyboardEvent,
   type RefObject,
   useEffect,
@@ -15,6 +16,7 @@ import { ApprovalRulesSettings } from "../components/ApprovalRulesSettings";
 import { ComputersUnavailableHint } from "../components/ComputersUnavailableHint";
 import { DesktopUpdateSection } from "../components/DesktopUpdates";
 import { SoftwareUpdateSection } from "../components/SoftwareUpdateSection";
+import { authClient } from "../lib/auth";
 import { getActiveUiLocale, setUiLocale } from "../lib/i18n";
 import { rpc } from "../lib/rpc";
 import {
@@ -35,6 +37,7 @@ export type SettingsGeneralProps = {
 };
 
 export function GeneralSettingsPanels({
+  email,
   avatarStyle,
   onAvatarStyleChange,
   messagingEnabled = false,
@@ -42,6 +45,7 @@ export function GeneralSettingsPanels({
   isDeploymentOwner = false,
 }: SettingsGeneralProps) {
   const { t } = useLingui();
+  const pwdIds = useId();
   const [locale, setLocale] = useState<UiLocale>(() => getActiveUiLocale());
   const localeRequestRef = useRef(0);
   const [appearance, setAppearance] = useState<AppearancePreference>(() =>
@@ -49,6 +53,42 @@ export function GeneralSettingsPanels({
   );
   const [avatarPending, setAvatarPending] = useState(false);
   const [avatarError, setAvatarError] = useState<string | null>(null);
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordPending, setPasswordPending] = useState(false);
+  const [passwordError, setPasswordError] = useState("");
+  const [passwordUpdated, setPasswordUpdated] = useState(false);
+
+  async function submitPasswordChange(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setPasswordError("");
+    setPasswordUpdated(false);
+    if (newPassword !== confirmPassword) {
+      setPasswordError(t`Passwords do not match`);
+      return;
+    }
+    setPasswordPending(true);
+    try {
+      const result = await authClient.changePassword({
+        currentPassword,
+        newPassword,
+        revokeOtherSessions: false,
+      });
+      if (result.error) {
+        setPasswordError(result.error.message ?? t`Could not change password`);
+        return;
+      }
+      setCurrentPassword("");
+      setNewPassword("");
+      setConfirmPassword("");
+      setPasswordUpdated(true);
+    } catch {
+      setPasswordError(t`Could not change password`);
+    } finally {
+      setPasswordPending(false);
+    }
+  }
 
   function chooseLocale(next: UiLocale) {
     if (next === locale) return;
@@ -144,6 +184,95 @@ export function GeneralSettingsPanels({
         <Button variant="outline" render={<Link to="/integrations/setup" />}>
           <Trans>Server integrations</Trans>
         </Button>
+      ) : null}
+
+      {email ? (
+        <section className="rounded-xl border border-border px-4 py-4">
+          <h3 className="text-[15px] font-medium text-foreground">
+            <Trans>Change password</Trans>
+          </h3>
+          <form onSubmit={submitPasswordChange} className="mt-3 space-y-3">
+            <input
+              type="text"
+              name="username"
+              autoComplete="username"
+              value={email}
+              readOnly
+              tabIndex={-1}
+              aria-hidden="true"
+              className="sr-only"
+            />
+            <label
+              htmlFor={`${pwdIds}-current`}
+              className="block text-[13px] text-muted-foreground"
+            >
+              <Trans>Current password</Trans>
+              <Input
+                id={`${pwdIds}-current`}
+                type="password"
+                autoComplete="current-password"
+                value={currentPassword}
+                onChange={(e) => {
+                  setCurrentPassword(e.target.value);
+                  setPasswordUpdated(false);
+                }}
+                minLength={8}
+                required
+                className="mt-1.5"
+              />
+            </label>
+            <label htmlFor={`${pwdIds}-new`} className="block text-[13px] text-muted-foreground">
+              <Trans>New password</Trans>
+              <Input
+                id={`${pwdIds}-new`}
+                type="password"
+                autoComplete="new-password"
+                value={newPassword}
+                onChange={(e) => {
+                  setNewPassword(e.target.value);
+                  setPasswordUpdated(false);
+                }}
+                minLength={8}
+                required
+                className="mt-1.5"
+              />
+            </label>
+            <label
+              htmlFor={`${pwdIds}-confirm`}
+              className="block text-[13px] text-muted-foreground"
+            >
+              <Trans>Confirm password</Trans>
+              <Input
+                id={`${pwdIds}-confirm`}
+                type="password"
+                autoComplete="new-password"
+                value={confirmPassword}
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value);
+                  setPasswordUpdated(false);
+                }}
+                minLength={8}
+                required
+                className="mt-1.5"
+              />
+            </label>
+            {passwordError ? (
+              <p role="alert" className="text-[12.5px] text-destructive">
+                {passwordError}
+              </p>
+            ) : null}
+            <div className="flex items-center gap-3">
+              <Button type="submit" size="sm" disabled={passwordPending}>
+                {passwordPending ? <Trans>Changing…</Trans> : <Trans>Change password</Trans>}
+              </Button>
+              {passwordUpdated ? (
+                <span className="text-[12.5px] text-muted-foreground">
+                  <Trans>Password updated</Trans>
+                </span>
+              ) : null}
+            </div>
+          </form>
+        </section>
       ) : null}
 
       <details data-testid="advanced-settings" className="group rounded-xl border border-border">

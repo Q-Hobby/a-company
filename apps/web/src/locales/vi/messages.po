@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/Shell.tsx:3028
+#: src/pages/Shell.tsx:3040
 msgid " (unread)"
 msgstr " (chưa đọc)"
 
@@ -23,12 +23,12 @@ msgid "{0, plural, one {# model} other {# models}}"
 msgstr "{0, plural, one {# mô hình} other {# mô hình}}"
 
 #. placeholder {0}: file.name
-#: src/pages/Shell.tsx:1970
+#: src/pages/Shell.tsx:1975
 msgid "{0} (max {ATTACHMENT_MAX_COUNT} attachments)"
 msgstr "{0} (tối đa {ATTACHMENT_MAX_COUNT} tệp đính kèm)"
 
 #. placeholder {0}: file.name
-#: src/pages/Shell.tsx:1974
+#: src/pages/Shell.tsx:1979
 msgid "{0} (over 10 MiB)"
 msgstr "{0} (quá 10 MiB)"
 
@@ -78,7 +78,7 @@ msgstr "{0} tin nhắn"
 #. placeholder {0}: receipt.projectCount
 #. placeholder {1}: receipt.sessionCount
 #. placeholder {2}: receipt.skillCount
-#: src/pages/ImportSettingsPanel.tsx:553
+#: src/pages/ImportSettingsPanel.tsx:552
 msgid "{0} projects · {1} sessions · {2} skills"
 msgstr "{0} dự án · {1} phiên · {2} kỹ năng"
 
@@ -89,14 +89,14 @@ msgstr "{0} giờ tổng hợp"
 
 #. placeholder {0}: usage.runs
 #. placeholder {1}: (usage.inputTokens + usage.outputTokens).toLocaleString()
-#: src/pages/AccountSettingsOverlay.tsx:252
+#: src/pages/AccountSettingsOverlay.tsx:375
 msgid "{0} runs · {1} tokens"
 msgstr "{0} lượt chạy · {1} token"
 
 #. placeholder {0}: archive.receipt.sensitiveFileCount ?? 0
 #. placeholder {0}: receipt.sensitiveFileCount ?? 0
-#: src/pages/ImportSettingsPanel.tsx:555
-#: src/pages/ImportSettingsPanel.tsx:616
+#: src/pages/ImportSettingsPanel.tsx:554
+#: src/pages/ImportSettingsPanel.tsx:615
 msgid "{0} sensitive files included"
 msgstr "Đã bao gồm {0} tệp nhạy cảm"
 
@@ -106,11 +106,11 @@ msgid "{0} will still respond to direct mentions."
 msgstr "{0} vẫn sẽ trả lời khi được nhắc trực tiếp."
 
 #. placeholder {0}: active.name
-#: src/pages/Shell.tsx:3660
+#: src/pages/Shell.tsx:3690
 msgid "{0}'s screen"
 msgstr "Màn hình của {0}"
 
-#: src/pages/Shell.tsx:6581
+#: src/pages/Shell.tsx:6612
 msgid "{botName}’s computer"
 msgstr "Máy tính của {botName}"
 
@@ -158,12 +158,12 @@ msgstr "{title}, {label}"
 msgid "{toolCount, plural, one {# tool} other {# tools}}"
 msgstr "{toolCount, plural, one {# công cụ} other {# công cụ}}"
 
-#: src/pages/Shell.tsx:4593
+#: src/pages/Shell.tsx:4624
 msgid "{workingBotName} is working"
 msgstr "{workingBotName} đang làm việc"
 
 #. placeholder {0}: mention.name
-#: src/pages/Shell.tsx:5547
+#: src/pages/Shell.tsx:5578
 msgid "@{0}"
 msgstr "@{0}"
 
@@ -209,12 +209,12 @@ msgstr "Xác nhận hành động"
 #. placeholder {0}: group.spaceName
 #. placeholder {0}: sectionMenu.section.name
 #: src/pages/BotContextMenu.tsx:84
-#: src/pages/Shell.tsx:2905
-#: src/pages/Shell.tsx:4174
+#: src/pages/Shell.tsx:2917
+#: src/pages/Shell.tsx:4204
 msgid "Actions for {0}"
 msgstr "Thao tác cho {0}"
 
-#: src/pages/Shell.tsx:4048
+#: src/pages/Shell.tsx:4078
 msgid "Actions for space"
 msgstr "Thao tác cho không gian"
 
@@ -226,8 +226,8 @@ msgstr "Hoạt động"
 msgid "Active model"
 msgstr "Mô hình đang dùng"
 
-#: src/pages/Shell.tsx:2701
-#: src/pages/Shell.tsx:2703
+#: src/pages/Shell.tsx:2713
+#: src/pages/Shell.tsx:2715
 msgid "Activity"
 msgstr "Hoạt động"
 
@@ -250,11 +250,11 @@ msgstr ""
 msgid "Add a model in Settings to use this."
 msgstr "Thêm một mô hình trong Cài đặt để dùng tính năng này."
 
-#: src/pages/Shell.tsx:3830
+#: src/pages/Shell.tsx:3860
 msgid "Add a run time for this one-shot."
 msgstr "Thêm thời điểm chạy cho lần chạy một lần này."
 
-#: src/pages/Shell.tsx:3808
+#: src/pages/Shell.tsx:3838
 msgid "Add a schedule, webhook, GitHub, or message trigger"
 msgstr "Thêm lịch, webhook, GitHub hoặc trình kích hoạt tin nhắn"
 
@@ -339,7 +339,7 @@ msgstr "Đã thêm"
 msgid "Adding…"
 msgstr "Đang thêm…"
 
-#: src/pages/AccountSettingsOverlay.tsx:153
+#: src/pages/AccountSettingsOverlay.tsx:276
 #: src/pages/McpServersOverlay.tsx:342
 #: src/pages/ModelSettingsOverlay.tsx:666
 #: src/pages/Onboarding.tsx:508
@@ -353,11 +353,11 @@ msgstr "Nâng cao"
 msgid "Advanced..."
 msgstr "Nâng cao..."
 
-#: src/pages/Shell.tsx:4796
+#: src/pages/Shell.tsx:4827
 msgid "Agent"
 msgstr "Trợ lý"
 
-#: src/pages/Shell.tsx:3407
+#: src/pages/Shell.tsx:3437
 msgid "Agent computer"
 msgstr "Máy tính của trợ lý"
 
@@ -370,7 +370,7 @@ msgstr "Kết nối trợ lý"
 msgid "Agents:"
 msgstr "Trợ lý:"
 
-#: src/pages/ImportSettingsPanel.tsx:449
+#: src/pages/ImportSettingsPanel.tsx:448
 msgid "All sources"
 msgstr "Tất cả nguồn"
 
@@ -409,7 +409,7 @@ msgstr "Cho phép ghi"
 msgid "Allowed once"
 msgstr "Đã cho phép một lần"
 
-#: src/pages/Auth.tsx:228
+#: src/pages/Auth.tsx:233
 msgid "Already have an account?"
 msgstr "Đã có tài khoản?"
 
@@ -425,7 +425,7 @@ msgstr "Luôn cho phép công cụ này"
 msgid "Always allowed"
 msgstr "Luôn được phép"
 
-#: src/pages/Shell.tsx:4859
+#: src/pages/Shell.tsx:4890
 msgid "Analyze system architecture and running services"
 msgstr "Phân tích kiến trúc hệ thống và các service đang chạy"
 
@@ -467,8 +467,8 @@ msgstr "API key"
 msgid "API key header"
 msgstr "Header API key"
 
-#: src/pages/AccountSettingsOverlay.tsx:94
-#: src/pages/AccountSettingsOverlay.tsx:425
+#: src/pages/AccountSettingsOverlay.tsx:134
+#: src/pages/AccountSettingsOverlay.tsx:548
 msgid "Appearance"
 msgstr "Giao diện"
 
@@ -490,19 +490,19 @@ msgstr "Phê duyệt máy chủ này để trợ lý dùng các công cụ của
 msgid "Archive"
 msgstr "Lưu trữ"
 
-#: src/pages/ImportSettingsPanel.tsx:607
+#: src/pages/ImportSettingsPanel.tsx:606
 msgid "Archive contents"
 msgstr "Nội dung bản lưu"
 
-#: src/pages/Shell.tsx:6330
+#: src/pages/Shell.tsx:6361
 msgid "archived"
 msgstr "đã lưu trữ"
 
-#: src/pages/Shell.tsx:3098
+#: src/pages/Shell.tsx:3110
 msgid "Archived"
 msgstr "Đã lưu trữ"
 
-#: src/pages/Shell.tsx:6341
+#: src/pages/Shell.tsx:6372
 msgid "Archived. Chat, memory, and files kept."
 msgstr "Đã lưu trữ. Cuộc trò chuyện, bộ nhớ và tệp vẫn được giữ."
 
@@ -556,11 +556,11 @@ msgstr "lúc {0}"
 msgid "at {timeSelect}"
 msgstr "lúc {timeSelect}"
 
-#: src/pages/Shell.tsx:5638
+#: src/pages/Shell.tsx:5669
 msgid "Attach file"
 msgstr "Đính kèm tệp"
 
-#: src/pages/Shell.tsx:5885
+#: src/pages/Shell.tsx:5916
 msgid "Attachment"
 msgstr "Tệp đính kèm"
 
@@ -602,7 +602,7 @@ msgstr "Có sau khi lưu quy trình"
 msgid "Avatar Studio"
 msgstr "Avatar Studio"
 
-#: src/pages/AccountSettingsOverlay.tsx:114
+#: src/pages/AccountSettingsOverlay.tsx:154
 msgid "Avatars"
 msgstr "Ảnh đại diện"
 
@@ -611,9 +611,9 @@ msgstr "Ảnh đại diện"
 msgid "Back"
 msgstr "Quay lại"
 
-#: src/pages/Auth.tsx:126
-#: src/pages/Auth.tsx:235
-#: src/pages/Auth.tsx:320
+#: src/pages/Auth.tsx:131
+#: src/pages/Auth.tsx:240
+#: src/pages/Auth.tsx:325
 msgid "Back to sign in"
 msgstr "Quay lại đăng nhập"
 
@@ -634,23 +634,23 @@ msgstr "Bearer token"
 msgid "Binary or unreadable file"
 msgstr "Tệp nhị phân hoặc không đọc được"
 
-#: src/pages/Shell.tsx:6573
+#: src/pages/Shell.tsx:6604
 msgid "Booting live desktop…"
 msgstr "Đang khởi động màn hình trực tiếp…"
 
 #. placeholder {0}: computerBot?.name ?? active?.name
-#: src/pages/Shell.tsx:4353
+#: src/pages/Shell.tsx:4384
 msgid "Booting up {0}’s computer"
 msgstr "Đang khởi động máy tính của {0}"
 
-#: src/pages/Shell.tsx:6205
-#: src/pages/Shell.tsx:6206
-#: src/pages/Shell.tsx:6334
+#: src/pages/Shell.tsx:6236
+#: src/pages/Shell.tsx:6237
+#: src/pages/Shell.tsx:6365
 msgid "bot"
 msgstr "bot"
 
 #: src/pages/IntegrationSetup.tsx:51
-#: src/pages/Shell.tsx:1764
+#: src/pages/Shell.tsx:1769
 #: src/pages/shell/avatar-studio-popover.tsx:169
 msgid "Bot"
 msgstr "Bot"
@@ -660,11 +660,11 @@ msgstr "Bot"
 msgid "Bot"
 msgstr "Bot"
 
-#: src/pages/Shell.tsx:4469
+#: src/pages/Shell.tsx:4500
 msgid "Bot screen"
 msgstr "Màn hình bot"
 
-#: src/pages/Shell.tsx:3623
+#: src/pages/Shell.tsx:3653
 msgid "Bot screen preview"
 msgstr "Xem trước màn hình bot"
 
@@ -676,7 +676,7 @@ msgstr "Bot cần liên kết"
 msgid "Bots act without asking by default. Add an exception only when you want to review a type of action first."
 msgstr "Mặc định bot hành động mà không hỏi. Chỉ thêm ngoại lệ khi anh muốn xem lại một loại hành động trước."
 
-#: src/pages/Shell.tsx:4594
+#: src/pages/Shell.tsx:4625
 msgid "Bots are working"
 msgstr "Các bot đang làm việc"
 
@@ -688,11 +688,11 @@ msgstr "Nhãn bộ não"
 msgid "Browse MCP servers"
 msgstr "Duyệt máy chủ MCP"
 
-#: src/pages/AccountSettingsOverlay.tsx:338
+#: src/pages/AccountSettingsOverlay.tsx:461
 msgid "By Bot"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:359
+#: src/pages/AccountSettingsOverlay.tsx:482
 msgid "By Model"
 msgstr ""
 
@@ -705,7 +705,7 @@ msgstr "Gọi"
 #: src/components/ComputerMaintenanceActions.tsx:97
 #: src/components/ComputerUpdateProgress.tsx:233
 #: src/components/teach/TeachComputerOverlay.tsx:254
-#: src/pages/ImportSettingsPanel.tsx:387
+#: src/pages/ImportSettingsPanel.tsx:386
 #: src/pages/KnowledgeSection.tsx:212
 #: src/pages/KnowledgeSection.tsx:438
 #: src/pages/PluginsOverlay.tsx:1102
@@ -718,7 +718,7 @@ msgstr "Gọi"
 msgid "Cancel"
 msgstr "Hủy"
 
-#: src/pages/ImportSettingsPanel.tsx:600
+#: src/pages/ImportSettingsPanel.tsx:599
 msgid "Cancel export"
 msgstr "Hủy xuất"
 
@@ -730,7 +730,7 @@ msgstr "Hủy tạo bot"
 msgid "Cancel new group"
 msgstr "Hủy tạo nhóm"
 
-#: src/pages/Shell.tsx:5485
+#: src/pages/Shell.tsx:5516
 msgid "Cancel reply"
 msgstr "Hủy trả lời"
 
@@ -743,8 +743,17 @@ msgstr "đã hủy"
 msgid "Cancelled"
 msgstr "Đã hủy"
 
-#: src/pages/AccountSettingsOverlay.tsx:213
+#: src/pages/AccountSettingsOverlay.tsx:336
 msgid "Caps must be whole numbers of at least 1,000 tokens (or empty)."
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:192
+#: src/pages/AccountSettingsOverlay.tsx:260
+msgid "Change password"
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:260
+msgid "Changing…"
 msgstr ""
 
 #: src/pages/MessagingSettingsOverlay.tsx:190
@@ -759,15 +768,15 @@ msgstr "Không hiển thị được biểu đồ: {error}"
 msgid "Chat apps"
 msgstr "Ứng dụng chat"
 
-#: src/pages/AccountSettingsOverlay.tsx:84
+#: src/pages/AccountSettingsOverlay.tsx:124
 msgid "Chat apps, group channels, and agent connections."
 msgstr "Ứng dụng chat, kênh nhóm và kết nối trợ lý."
 
-#: src/pages/Shell.tsx:5828
+#: src/pages/Shell.tsx:5859
 msgid "Chat Settings"
 msgstr "Cài đặt trò chuyện"
 
-#: src/pages/Shell.tsx:4858
+#: src/pages/Shell.tsx:4889
 msgid "Check architecture"
 msgstr "Kiểm tra kiến trúc"
 
@@ -781,12 +790,12 @@ msgstr "Kiểm tra thất bại"
 msgid "Check for updates"
 msgstr "Kiểm tra cập nhật"
 
-#: src/pages/Shell.tsx:3843
-#: src/pages/Shell.tsx:3855
+#: src/pages/Shell.tsx:3873
+#: src/pages/Shell.tsx:3885
 msgid "Check in."
 msgstr "Báo cáo tình hình."
 
-#: src/pages/Auth.tsx:34
+#: src/pages/Auth.tsx:35
 msgid "Check your email"
 msgstr "Kiểm tra email của anh"
 
@@ -807,7 +816,7 @@ msgstr "Chọn hình dạng, màu bot hoặc tải ảnh lên"
 msgid "Choose a bot…"
 msgstr "Chọn một bot…"
 
-#: src/pages/Auth.tsx:281
+#: src/pages/Auth.tsx:286
 msgid "Choose a new password"
 msgstr "Chọn mật khẩu mới"
 
@@ -816,7 +825,7 @@ msgid "Choose file"
 msgstr "Chọn tệp"
 
 #: src/pages/ImportSettingsPanel.tsx:128
-#: src/pages/ImportSettingsPanel.tsx:422
+#: src/pages/ImportSettingsPanel.tsx:421
 msgid "Choose Include sensitive data before uploading this file."
 msgstr "Chọn «Bao gồm dữ liệu nhạy cảm» trước khi tải tệp này lên."
 
@@ -824,7 +833,7 @@ msgstr "Chọn «Bao gồm dữ liệu nhạy cảm» trước khi tải tệp n
 msgid "Choose which connected model A-Company uses."
 msgstr "Chọn mô hình đã kết nối mà A-Company sử dụng."
 
-#: src/pages/Shell.tsx:4836
+#: src/pages/Shell.tsx:4867
 msgid "Cinematic sunset"
 msgstr "Hoàng hôn điện ảnh"
 
@@ -842,7 +851,7 @@ msgstr "Xóa cuộc trò chuyện của {0}?"
 msgid "Clear conversation"
 msgstr "Xóa cuộc trò chuyện"
 
-#: src/pages/ImportSettingsPanel.tsx:482
+#: src/pages/ImportSettingsPanel.tsx:481
 msgid "Clear selection"
 msgstr "Bỏ chọn tất cả"
 
@@ -869,7 +878,7 @@ msgstr "Client secret"
 msgid "Close"
 msgstr "Đóng"
 
-#: src/pages/ImportSettingsPanel.tsx:612
+#: src/pages/ImportSettingsPanel.tsx:611
 msgid "Close archive"
 msgstr "Đóng bản lưu"
 
@@ -877,7 +886,7 @@ msgstr "Đóng bản lưu"
 msgid "Close chart"
 msgstr "Đóng biểu đồ"
 
-#: src/pages/Shell.tsx:4448
+#: src/pages/Shell.tsx:4479
 msgid "Close computer"
 msgstr "Đóng máy tính"
 
@@ -907,11 +916,11 @@ msgstr "Đóng cài đặt nhắn tin"
 msgid "Close model settings"
 msgstr "Đóng cài đặt mô hình"
 
-#: src/pages/Shell.tsx:2672
+#: src/pages/Shell.tsx:2684
 msgid "Close navigation"
 msgstr "Đóng điều hướng"
 
-#: src/pages/Shell.tsx:3601
+#: src/pages/Shell.tsx:3631
 msgid "Close panel"
 msgstr "Đóng bảng"
 
@@ -940,13 +949,13 @@ msgstr "Đám mây"
 msgid "Code"
 msgstr "Mã"
 
-#: src/pages/ImportSettingsPanel.tsx:451
-#: src/pages/ImportSettingsPanel.tsx:515
+#: src/pages/ImportSettingsPanel.tsx:450
+#: src/pages/ImportSettingsPanel.tsx:514
 msgid "Codex"
 msgstr "Codex"
 
 #. placeholder {0}: group.title
-#: src/pages/Shell.tsx:2879
+#: src/pages/Shell.tsx:2891
 msgid "Collapse {0}"
 msgstr "Thu gọn {0}"
 
@@ -971,28 +980,28 @@ msgid "Complete"
 msgstr "Hoàn tất"
 
 #: src/pages/SettingsOverlay.tsx:91
-#: src/pages/Shell.tsx:6499
+#: src/pages/Shell.tsx:6530
 #: src/pages/shell/bot-panel.tsx:57
 msgid "Computer"
 msgstr "Máy tính"
 
-#: src/pages/Shell.tsx:6576
+#: src/pages/Shell.tsx:6607
 msgid "Computer failed to boot"
 msgstr "Máy tính khởi động thất bại"
 
-#: src/pages/Shell.tsx:4492
+#: src/pages/Shell.tsx:4523
 msgid "Computer is asleep"
 msgstr "Máy tính đang ngủ"
 
-#: src/pages/Shell.tsx:6575
+#: src/pages/Shell.tsx:6606
 msgid "Computer is asleep. Open it to wake."
 msgstr "Máy tính đang ngủ. Mở để đánh thức."
 
-#: src/pages/Shell.tsx:6577
+#: src/pages/Shell.tsx:6608
 msgid "Computer is stopped"
 msgstr "Máy tính đã dừng"
 
-#: src/pages/AccountSettingsOverlay.tsx:389
+#: src/pages/AccountSettingsOverlay.tsx:512
 msgid "Computers"
 msgstr "Máy tính"
 
@@ -1013,11 +1022,12 @@ msgstr "Máy chủ đã cấu hình"
 msgid "Confirm delete"
 msgstr "Xác nhận xóa"
 
-#: src/pages/ImportSettingsPanel.tsx:528
+#: src/pages/ImportSettingsPanel.tsx:527
 msgid "Confirm import"
 msgstr "Xác nhận nhập"
 
-#: src/pages/Auth.tsx:301
+#: src/pages/AccountSettingsOverlay.tsx:238
+#: src/pages/Auth.tsx:306
 msgid "Confirm password"
 msgstr "Xác nhận mật khẩu"
 
@@ -1043,7 +1053,7 @@ msgstr "Kết nối API key"
 msgid "Connect Executor"
 msgstr "Kết nối Executor"
 
-#: src/pages/ImportSettingsPanel.tsx:369
+#: src/pages/ImportSettingsPanel.tsx:368
 msgid "Connect local"
 msgstr "Kết nối cục bộ"
 
@@ -1125,15 +1135,15 @@ msgstr "Tiếp tục"
 msgid "Continue in Background"
 msgstr "Tiếp tục chạy nền"
 
-#: src/pages/ImportSettingsPanel.tsx:648
+#: src/pages/ImportSettingsPanel.tsx:647
 msgid "Continue project"
 msgstr "Tiếp tục dự án"
 
-#: src/pages/ImportSettingsPanel.tsx:629
+#: src/pages/ImportSettingsPanel.tsx:628
 msgid "Continue session"
 msgstr "Tiếp tục phiên"
 
-#: src/pages/Auth.tsx:211
+#: src/pages/Auth.tsx:216
 msgid "Continue with email"
 msgstr "Tiếp tục bằng email"
 
@@ -1141,7 +1151,7 @@ msgstr "Tiếp tục bằng email"
 msgid "Copied curl"
 msgstr ""
 
-#: src/pages/Shell.tsx:6012
+#: src/pages/Shell.tsx:6043
 msgid "Copy"
 msgstr "Sao chép"
 
@@ -1168,6 +1178,11 @@ msgstr "Không thể phê duyệt máy chủ này"
 #: src/pages/shell/message-cards.tsx:153
 msgid "Could not authorize this app"
 msgstr "Không thể ủy quyền ứng dụng này"
+
+#: src/pages/AccountSettingsOverlay.tsx:79
+#: src/pages/AccountSettingsOverlay.tsx:87
+msgid "Could not change password"
+msgstr ""
 
 #: src/pages/ModelSettingsOverlay.tsx:288
 msgid "Could not change the default model"
@@ -1213,7 +1228,7 @@ msgstr "Không thể kết nối nhà cung cấp này"
 msgid "Could not connect this voice provider"
 msgstr "Không thể kết nối nhà cung cấp giọng nói này"
 
-#: src/pages/Shell.tsx:1000
+#: src/pages/Shell.tsx:1005
 msgid "Could not connect to the computer screen"
 msgstr "Không thể kết nối tới màn hình máy tính"
 
@@ -1221,8 +1236,8 @@ msgstr "Không thể kết nối tới màn hình máy tính"
 msgid "Could not connect to the local helper. Allow popups, start the helper, then try again."
 msgstr "Không thể kết nối với trình hỗ trợ cục bộ. Hãy cho phép cửa sổ bật lên, khởi chạy trình hỗ trợ rồi thử lại."
 
-#: src/pages/Auth.tsx:99
-#: src/pages/Shell.tsx:2576
+#: src/pages/Auth.tsx:100
+#: src/pages/Shell.tsx:2581
 msgid "Could not continue"
 msgstr "Không thể tiếp tục"
 
@@ -1311,7 +1326,7 @@ msgstr "Không thể tải"
 msgid "Could not load approval rules"
 msgstr "Không thể tải quy tắc phê duyệt"
 
-#: src/pages/ImportSettingsPanel.tsx:539
+#: src/pages/ImportSettingsPanel.tsx:538
 msgid "Could not load archives. Reopen settings to retry."
 msgstr "Không thể tải các bản lưu. Mở lại phần cài đặt để thử lại."
 
@@ -1362,8 +1377,8 @@ msgstr "Không thể mở cài đặt cục bộ. Hãy khởi động máy chủ
 msgid "Could not play a test clip"
 msgstr "Không thể phát đoạn thử"
 
-#: src/pages/Auth.tsx:115
-#: src/pages/Auth.tsx:274
+#: src/pages/Auth.tsx:120
+#: src/pages/Auth.tsx:279
 msgid "Could not reach the server"
 msgstr "Không thể kết nối tới máy chủ"
 
@@ -1404,7 +1419,7 @@ msgstr "Không thể đổi tên mục"
 msgid "Could not render chart"
 msgstr "Không thể hiển thị biểu đồ"
 
-#: src/pages/Auth.tsx:269
+#: src/pages/Auth.tsx:274
 msgid "Could not reset password"
 msgstr "Không thể đặt lại mật khẩu"
 
@@ -1413,7 +1428,7 @@ msgstr "Không thể đặt lại mật khẩu"
 msgid "Could not revoke connection"
 msgstr "Không thể thu hồi kết nối"
 
-#: src/pages/Shell.tsx:3909
+#: src/pages/Shell.tsx:3939
 msgid "Could not run routine"
 msgstr "Không thể chạy quy trình"
 
@@ -1435,7 +1450,7 @@ msgstr "Không thể lưu nhóm"
 msgid "Could not save model"
 msgstr "Không thể lưu mô hình"
 
-#: src/pages/Shell.tsx:3880
+#: src/pages/Shell.tsx:3910
 msgid "Could not save routine"
 msgstr "Không thể lưu quy trình"
 
@@ -1463,7 +1478,7 @@ msgstr "Không thể lưu lựa chọn này"
 msgid "Could not search catalog"
 msgstr "Không thể tìm kiếm danh mục"
 
-#: src/pages/Auth.tsx:84
+#: src/pages/Auth.tsx:85
 msgid "Could not send reset email"
 msgstr "Không thể gửi email đặt lại"
 
@@ -1483,7 +1498,7 @@ msgstr "Không thể bắt đầu hướng dẫn"
 msgid "Could not submit this answer"
 msgstr "Không thể gửi câu trả lời này"
 
-#: src/pages/Shell.tsx:2389
+#: src/pages/Shell.tsx:2394
 msgid "Could not take control"
 msgstr "Không thể tiếp quản quyền điều khiển"
 
@@ -1499,7 +1514,7 @@ msgstr "Không thể cập nhật quyền truy cập của trợ lý"
 msgid "Could not update computer"
 msgstr "Không thể cập nhật máy tính"
 
-#: src/pages/Shell.tsx:1956
+#: src/pages/Shell.tsx:1961
 msgid "Could not update reaction"
 msgstr "Không thể cập nhật biểu cảm"
 
@@ -1511,7 +1526,7 @@ msgstr "Không thể cập nhật phạm vi bộ nhớ mặc định"
 msgid "Couldn't load messaging settings"
 msgstr "Không thể tải cài đặt nhắn tin"
 
-#: src/pages/AccountSettingsOverlay.tsx:70
+#: src/pages/AccountSettingsOverlay.tsx:110
 msgid "Couldn't update avatars"
 msgstr "Không thể cập nhật ảnh đại diện"
 
@@ -1519,8 +1534,8 @@ msgstr "Không thể cập nhật ảnh đại diện"
 msgid "Couldn't update messaging settings"
 msgstr "Không thể cập nhật cài đặt nhắn tin"
 
-#: src/pages/Shell.tsx:2733
-#: src/pages/Shell.tsx:2734
+#: src/pages/Shell.tsx:2745
+#: src/pages/Shell.tsx:2746
 #: src/pages/shell/bot-panel.tsx:341
 #: src/pages/shell/dialogs.tsx:203
 msgid "Create"
@@ -1531,7 +1546,7 @@ msgstr "Tạo"
 msgid "Create a section and move {0} into it."
 msgstr "Tạo một mục và chuyển {0} vào đó."
 
-#: src/pages/Auth.tsx:215
+#: src/pages/Auth.tsx:220
 msgid "Create account"
 msgstr "Tạo tài khoản"
 
@@ -1539,11 +1554,11 @@ msgstr "Tạo tài khoản"
 msgid "Create group"
 msgstr "Tạo nhóm"
 
-#: src/pages/Shell.tsx:3440
+#: src/pages/Shell.tsx:3470
 msgid "Create Group"
 msgstr "Tạo nhóm"
 
-#: src/pages/Shell.tsx:3437
+#: src/pages/Shell.tsx:3467
 #: src/pages/shell/bot-picker.tsx:74
 msgid "Create new Bot"
 msgstr "Tạo Bot mới"
@@ -1566,7 +1581,7 @@ msgstr "Tạo Quy trình"
 msgid "Create space"
 msgstr "Tạo không gian"
 
-#: src/pages/Auth.tsx:38
+#: src/pages/Auth.tsx:39
 msgid "Create your A-Company"
 msgstr "Tạo không gian A-Company của anh"
 
@@ -1611,6 +1626,10 @@ msgstr "Cron"
 msgid "Cron expression"
 msgstr "Biểu thức cron"
 
+#: src/pages/AccountSettingsOverlay.tsx:206
+msgid "Current password"
+msgstr ""
+
 #: src/pages/shell/dialogs.tsx:81
 msgid "Customer support"
 msgstr "Hỗ trợ khách hàng"
@@ -1619,15 +1638,15 @@ msgstr "Hỗ trợ khách hàng"
 msgid "Customize bot avatar"
 msgstr "Tùy chỉnh ảnh đại diện bot"
 
-#: src/pages/Shell.tsx:4841
+#: src/pages/Shell.tsx:4872
 msgid "Cute kitten on lawn"
 msgstr "Mèo con trên thảm cỏ"
 
-#: src/pages/AccountSettingsOverlay.tsx:294
+#: src/pages/AccountSettingsOverlay.tsx:417
 msgid "Daily token cap"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:420
+#: src/pages/AccountSettingsOverlay.tsx:543
 msgid "Dark"
 msgstr "Tối"
 
@@ -1664,8 +1683,8 @@ msgstr "Phạm vi mặc định"
 #: src/pages/KnowledgeSection.tsx:450
 #: src/pages/McpServersOverlay.tsx:508
 #: src/pages/RoutineEditor.tsx:301
-#: src/pages/Shell.tsx:3134
-#: src/pages/Shell.tsx:3165
+#: src/pages/Shell.tsx:3146
+#: src/pages/Shell.tsx:3177
 #: src/pages/shell/dialogs.tsx:410
 #: src/pages/shell/dialogs.tsx:471
 msgid "Delete"
@@ -1673,8 +1692,8 @@ msgstr "Xóa"
 
 #. placeholder {0}: bot.name
 #. placeholder {0}: group.name
-#: src/pages/Shell.tsx:3131
-#: src/pages/Shell.tsx:3162
+#: src/pages/Shell.tsx:3143
+#: src/pages/Shell.tsx:3174
 msgid "Delete {0}"
 msgstr "Xóa {0}"
 
@@ -1693,11 +1712,11 @@ msgstr "Xóa nhóm"
 msgid "Delete memories too"
 msgstr "Xóa cả bộ nhớ"
 
-#: src/pages/Shell.tsx:4062
+#: src/pages/Shell.tsx:4092
 msgid "Delete space"
 msgstr "Xóa không gian"
 
-#: src/pages/Shell.tsx:6332
+#: src/pages/Shell.tsx:6363
 msgid "deleted"
 msgstr "đã xóa"
 
@@ -1728,7 +1747,7 @@ msgstr "Mô tả công việc của bot này"
 msgid "Description"
 msgstr "Mô tả"
 
-#: src/pages/Shell.tsx:4847
+#: src/pages/Shell.tsx:4878
 msgid "design a cyberpunk space station concept"
 msgstr "thiết kế concept trạm không gian vũ trụ tương lai cyberpunk"
 
@@ -1744,7 +1763,7 @@ msgstr "Cập nhật ứng dụng máy tính"
 msgid "Direct MCP"
 msgstr "MCP trực tiếp"
 
-#: src/pages/ImportSettingsPanel.tsx:434
+#: src/pages/ImportSettingsPanel.tsx:433
 msgid "Discard"
 msgstr "Loại bỏ"
 
@@ -1765,7 +1784,7 @@ msgstr "Đang ngắt kết nối…"
 msgid "Dismiss"
 msgstr "Bỏ qua"
 
-#: src/pages/Shell.tsx:5461
+#: src/pages/Shell.tsx:5492
 msgid "Dismiss error"
 msgstr "Bỏ qua lỗi"
 
@@ -1790,7 +1809,7 @@ msgstr "Docker"
 msgid "Docker limits access to your computer for added security. Using {hostLabel} lets bots work with your local files and tools."
 msgstr "Docker giới hạn quyền truy cập vào máy tính để tăng bảo mật. Dùng {hostLabel} cho phép bot làm việc với tệp và công cụ cục bộ của anh."
 
-#: src/pages/Auth.tsx:221
+#: src/pages/Auth.tsx:226
 msgid "Don’t have an account?"
 msgstr "Chưa có tài khoản?"
 
@@ -1799,7 +1818,7 @@ msgstr "Chưa có tài khoản?"
 msgid "Done"
 msgstr "Xong"
 
-#: src/pages/ImportSettingsPanel.tsx:568
+#: src/pages/ImportSettingsPanel.tsx:567
 msgid "Download"
 msgstr "Tải xuống"
 
@@ -1838,7 +1857,7 @@ msgstr "Bản nháp kỹ năng"
 msgid "Drag, drop, or paste an image"
 msgstr "Kéo, thả hoặc dán ảnh"
 
-#: src/pages/Shell.tsx:4842
+#: src/pages/Shell.tsx:4873
 msgid "draw a cute white fluffy kitten playing on the green grass"
 msgstr "vẽ cho anh một chú mèo con lông trắng dễ thương trên thảm cỏ"
 
@@ -1854,7 +1873,7 @@ msgstr "ví dụ: Trợ lý Hivenet, Tiền bán hàng, Bot chấm công"
 msgid "e.g. Mobbin"
 msgstr "Ví dụ: Mobbin"
 
-#: src/pages/Shell.tsx:6158
+#: src/pages/Shell.tsx:6189
 msgid "Earlier message"
 msgstr "Tin nhắn trước"
 
@@ -1866,7 +1885,7 @@ msgstr "Chỉnh sửa trước"
 msgid "Edit Profile"
 msgstr "Chỉnh sửa hồ sơ"
 
-#: src/pages/Auth.tsx:149
+#: src/pages/Auth.tsx:154
 msgid "Email"
 msgstr "Email"
 
@@ -1949,11 +1968,11 @@ msgid "Expand"
 msgstr "Mở rộng"
 
 #. placeholder {0}: group.title
-#: src/pages/Shell.tsx:2878
+#: src/pages/Shell.tsx:2890
 msgid "Expand {0}"
 msgstr "Mở rộng {0}"
 
-#: src/pages/Shell.tsx:4824
+#: src/pages/Shell.tsx:4855
 msgid "Expert in AI artistic image generation and visual ideas."
 msgstr "Chuyên gia tạo ảnh AI nghệ thuật và ý tưởng hình ảnh trực quan."
 
@@ -1961,8 +1980,8 @@ msgstr "Chuyên gia tạo ảnh AI nghệ thuật và ý tưởng hình ảnh tr
 msgid "Export"
 msgstr "Xuất"
 
-#: src/pages/ImportSettingsPanel.tsx:574
-#: src/pages/ImportSettingsPanel.tsx:583
+#: src/pages/ImportSettingsPanel.tsx:573
+#: src/pages/ImportSettingsPanel.tsx:582
 msgid "Export sensitive data"
 msgstr "Xuất dữ liệu nhạy cảm"
 
@@ -2010,18 +2029,18 @@ msgstr ""
 msgid "Failed to export workspace backup."
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:233
+#: src/pages/AccountSettingsOverlay.tsx:356
 msgid "Failed to save spend caps."
 msgstr ""
 
-#: src/pages/Shell.tsx:2131
-#: src/pages/Shell.tsx:2133
-#: src/pages/Shell.tsx:2135
+#: src/pages/Shell.tsx:2136
+#: src/pages/Shell.tsx:2138
+#: src/pages/Shell.tsx:2140
 msgid "Failed to send message"
 msgstr "Gửi tin nhắn thất bại"
 
-#: src/pages/Shell.tsx:2170
-#: src/pages/Shell.tsx:2189
+#: src/pages/Shell.tsx:2175
+#: src/pages/Shell.tsx:2194
 msgid "Failed to stop"
 msgstr "Dừng thất bại"
 
@@ -2065,11 +2084,11 @@ msgstr "Đang hoàn tất kết nối MCP…"
 msgid "Flag unexpected actions"
 msgstr "Đánh dấu hành động bất thường"
 
-#: src/pages/Shell.tsx:5817
+#: src/pages/Shell.tsx:5848
 msgid "for new line"
 msgstr "xuống dòng"
 
-#: src/pages/Auth.tsx:196
+#: src/pages/Auth.tsx:201
 msgid "Forgot password?"
 msgstr "Quên mật khẩu?"
 
@@ -2081,7 +2100,7 @@ msgstr "Miễn phí"
 msgid "Fullscreen"
 msgstr "Toàn màn hình"
 
-#: src/pages/Shell.tsx:4846
+#: src/pages/Shell.tsx:4877
 msgid "Futuristic concept"
 msgstr "Concept tương lai"
 
@@ -2113,8 +2132,8 @@ msgid "Git history is excluded."
 msgstr "Không bao gồm lịch sử Git."
 
 #: src/pages/MessagingSettingsOverlay.tsx:204
-#: src/pages/Shell.tsx:3356
-#: src/pages/Shell.tsx:3571
+#: src/pages/Shell.tsx:3386
+#: src/pages/Shell.tsx:3601
 msgid "Group"
 msgstr "Nhóm"
 
@@ -2160,8 +2179,8 @@ msgstr "Giá trị header"
 msgid "Hear a sample"
 msgstr "Nghe thử"
 
-#: src/pages/ImportSettingsPanel.tsx:450
-#: src/pages/ImportSettingsPanel.tsx:515
+#: src/pages/ImportSettingsPanel.tsx:449
+#: src/pages/ImportSettingsPanel.tsx:514
 msgid "Hermes"
 msgstr "Hermes"
 
@@ -2169,11 +2188,11 @@ msgstr "Hermes"
 msgid "Hi, this is how I'll sound when I read replies out loud."
 msgstr "Xin chào, đây là giọng của tôi khi đọc to câu trả lời."
 
-#: src/pages/Shell.tsx:3261
+#: src/pages/Shell.tsx:3291
 msgid "Hide bots"
 msgstr "Ẩn bot"
 
-#: src/pages/Auth.tsx:186
+#: src/pages/Auth.tsx:191
 msgid "Hide password"
 msgstr "Ẩn mật khẩu"
 
@@ -2183,7 +2202,7 @@ msgstr "Ẩn mật khẩu"
 msgid "High"
 msgstr "Cao"
 
-#: src/pages/ImportSettingsPanel.tsx:524
+#: src/pages/ImportSettingsPanel.tsx:523
 msgid "History stays in the archive. Skills and tool calls are not executed."
 msgstr "Lịch sử vẫn nằm trong bản lưu. Kỹ năng và lệnh gọi công cụ không được thực thi."
 
@@ -2204,7 +2223,7 @@ msgstr "Tần suất"
 msgid "How to check"
 msgstr "Cách kiểm tra"
 
-#: src/pages/Shell.tsx:6067
+#: src/pages/Shell.tsx:6098
 msgid "I’m done"
 msgstr "Tôi xong rồi"
 
@@ -2224,7 +2243,7 @@ msgstr "Vùng tải ảnh lên"
 msgid "Import .md"
 msgstr ""
 
-#: src/pages/ImportSettingsPanel.tsx:402
+#: src/pages/ImportSettingsPanel.tsx:401
 msgid "Import complete"
 msgstr "Đã nhập xong"
 
@@ -2237,7 +2256,7 @@ msgstr "Nhập dữ liệu"
 msgid "Import failed. Check the file or connection and try again."
 msgstr "Nhập thất bại. Kiểm tra tệp hoặc kết nối rồi thử lại."
 
-#: src/pages/ImportSettingsPanel.tsx:380
+#: src/pages/ImportSettingsPanel.tsx:379
 msgid "Import file"
 msgstr "Nhập tệp"
 
@@ -2254,7 +2273,7 @@ msgstr ""
 msgid "Imported {0} bots."
 msgstr ""
 
-#: src/pages/ImportSettingsPanel.tsx:534
+#: src/pages/ImportSettingsPanel.tsx:533
 msgid "Imported archives"
 msgstr "Các bản lưu đã nhập"
 
@@ -2262,8 +2281,8 @@ msgstr "Các bản lưu đã nhập"
 msgid "Inbound Webhook"
 msgstr ""
 
-#: src/pages/ImportSettingsPanel.tsx:409
-#: src/pages/ImportSettingsPanel.tsx:413
+#: src/pages/ImportSettingsPanel.tsx:408
+#: src/pages/ImportSettingsPanel.tsx:412
 msgid "Include sensitive data"
 msgstr "Bao gồm dữ liệu nhạy cảm"
 
@@ -2275,7 +2294,7 @@ msgstr "Kế thừa mặc định"
 msgid "Inputs"
 msgstr "Đầu vào"
 
-#: src/pages/ImportSettingsPanel.tsx:563
+#: src/pages/ImportSettingsPanel.tsx:562
 msgid "Inspect"
 msgstr "Kiểm tra"
 
@@ -2296,7 +2315,7 @@ msgid "Integration options"
 msgstr "Tùy chọn tích hợp"
 
 #: src/pages/PluginsOverlay.tsx:679
-#: src/pages/Shell.tsx:3183
+#: src/pages/Shell.tsx:3195
 msgid "Integrations"
 msgstr "Tích hợp"
 
@@ -2338,11 +2357,11 @@ msgstr "Tách biệt"
 msgid "Its conversation, files, and routines will be permanently deleted. Bots it created stay in your list."
 msgstr "Cuộc trò chuyện, tệp và routine của Bot này sẽ bị xóa vĩnh viễn. Các Bot do nó tạo vẫn ở trong danh sách của bạn."
 
-#: src/pages/Shell.tsx:5044
+#: src/pages/Shell.tsx:5075
 msgid "Jump to latest"
 msgstr "Đến tin mới nhất"
 
-#: src/pages/Shell.tsx:6149
+#: src/pages/Shell.tsx:6180
 msgid "Jump to replied message"
 msgstr "Đến tin nhắn được trả lời"
 
@@ -2366,9 +2385,9 @@ msgstr "Kiến thức"
 msgid "Known secrets were redacted. Review the selection before uploading."
 msgstr "Đã che các thông tin bí mật nhận diện được. Kiểm tra nội dung đã chọn trước khi tải lên."
 
-#: src/pages/AccountSettingsOverlay.tsx:107
-#: src/pages/AccountSettingsOverlay.tsx:541
-#: src/pages/AccountSettingsOverlay.tsx:558
+#: src/pages/AccountSettingsOverlay.tsx:147
+#: src/pages/AccountSettingsOverlay.tsx:664
+#: src/pages/AccountSettingsOverlay.tsx:681
 msgid "Language"
 msgstr "Ngôn ngữ"
 
@@ -2380,7 +2399,7 @@ msgstr "Để sau"
 msgid "Leave"
 msgstr "Rời đi"
 
-#: src/pages/AccountSettingsOverlay.tsx:419
+#: src/pages/AccountSettingsOverlay.tsx:542
 msgid "Light"
 msgstr "Sáng"
 
@@ -2404,7 +2423,7 @@ msgstr "Đang nghe"
 msgid "Listening…"
 msgstr "Đang nghe…"
 
-#: src/pages/Shell.tsx:4768
+#: src/pages/Shell.tsx:4799
 msgid "Load earlier messages"
 msgstr "Tải tin nhắn cũ hơn"
 
@@ -2444,7 +2463,7 @@ msgstr "Đang tải nhà cung cấp giọng nói…"
 #: src/pages/IntegrationSetup.tsx:72
 #: src/pages/Onboarding.tsx:390
 #: src/pages/PeerMessagesOverlay.tsx:105
-#: src/pages/Shell.tsx:4768
+#: src/pages/Shell.tsx:4799
 msgid "Loading…"
 msgstr "Đang tải…"
 
@@ -2460,6 +2479,11 @@ msgstr "Quyền truy cập cục bộ cho phép Bot chạy lệnh mà không c�
 msgid "Local Server Settings"
 msgstr "Cài đặt máy chủ cục bộ"
 
+#: src/pages/Shell.tsx:3269
+#: src/pages/Shell.tsx:3280
+msgid "Log out"
+msgstr ""
+
 #: src/pages/ModelSettingsOverlay.tsx:676
 #: src/pages/Onboarding.tsx:516
 #: src/pages/shell/bot-panel.tsx:852
@@ -2474,7 +2498,7 @@ msgstr "Đảm bảo không còn tác vụ nào đang chạy trên máy tính n�
 msgid "Manage MCP servers"
 msgstr "Quản lý máy chủ MCP"
 
-#: src/pages/AccountSettingsOverlay.tsx:87
+#: src/pages/AccountSettingsOverlay.tsx:127
 msgid "Manage messaging settings"
 msgstr "Quản lý cài đặt nhắn tin"
 
@@ -2547,7 +2571,7 @@ msgstr "Bộ nhớ"
 msgid "Memory scope"
 msgstr "Phạm vi bộ nhớ"
 
-#: src/pages/Shell.tsx:5533
+#: src/pages/Shell.tsx:5564
 msgid "Mentions"
 msgstr "Lượt nhắc đến"
 
@@ -2555,8 +2579,8 @@ msgstr "Lượt nhắc đến"
 msgid "Mentions only"
 msgstr "Chỉ khi được nhắc đến"
 
-#: src/pages/Shell.tsx:5745
-#: src/pages/Shell.tsx:5887
+#: src/pages/Shell.tsx:5776
+#: src/pages/Shell.tsx:5918
 msgid "Message"
 msgstr "Tin nhắn"
 
@@ -2565,12 +2589,12 @@ msgstr "Tin nhắn"
 msgid "Message"
 msgstr "Tin nhắn"
 
-#: src/pages/Shell.tsx:5741
-#: src/pages/Shell.tsx:5745
+#: src/pages/Shell.tsx:5772
+#: src/pages/Shell.tsx:5776
 msgid "Message {activeName}"
 msgstr "Nhắn tin cho {activeName}"
 
-#: src/pages/Shell.tsx:5440
+#: src/pages/Shell.tsx:5471
 msgid "Message composer"
 msgstr "Khung soạn tin nhắn"
 
@@ -2579,19 +2603,19 @@ msgstr "Khung soạn tin nhắn"
 msgid "Message event"
 msgstr "Sự kiện tin nhắn"
 
-#: src/pages/Shell.tsx:6223
+#: src/pages/Shell.tsx:6254
 msgid "Message from {peer}"
 msgstr "Tin nhắn từ {peer}"
 
-#: src/pages/Shell.tsx:5742
+#: src/pages/Shell.tsx:5773
 msgid "Message…"
 msgstr "Nhắn tin…"
 
-#: src/pages/Shell.tsx:6223
+#: src/pages/Shell.tsx:6254
 msgid "Messaged {peer}"
 msgstr "Đã nhắn cho {peer}"
 
-#: src/pages/AccountSettingsOverlay.tsx:81
+#: src/pages/AccountSettingsOverlay.tsx:121
 #: src/pages/MessagingSettingsOverlay.tsx:98
 msgid "Messaging"
 msgstr "Nhắn tin"
@@ -2610,8 +2634,8 @@ msgstr "Tối thiểu"
 msgid "Minimize"
 msgstr "Thu nhỏ"
 
-#: src/pages/Shell.tsx:2722
-#: src/pages/Shell.tsx:2723
+#: src/pages/Shell.tsx:2734
+#: src/pages/Shell.tsx:2735
 msgid "Minimize bots"
 msgstr "Thu gọn Bot"
 
@@ -2643,7 +2667,7 @@ msgstr "ID model"
 msgid "Model options"
 msgstr "Tùy chọn model"
 
-#: src/pages/AccountSettingsOverlay.tsx:281
+#: src/pages/AccountSettingsOverlay.tsx:404
 msgid "Model spend uses your provider keys or local CLI sessions."
 msgstr ""
 
@@ -2670,11 +2694,11 @@ msgstr "Model từ máy chủ"
 msgid "Monthly"
 msgstr "Hằng tháng"
 
-#: src/pages/AccountSettingsOverlay.tsx:308
+#: src/pages/AccountSettingsOverlay.tsx:431
 msgid "Monthly token cap"
 msgstr ""
 
-#: src/pages/Shell.tsx:5994
+#: src/pages/Shell.tsx:6025
 msgid "More"
 msgstr "Thêm"
 
@@ -2691,7 +2715,7 @@ msgid "Move to"
 msgstr "Chuyển đến"
 
 #: src/components/teach/SkillDraftCard.tsx:79
-#: src/pages/Auth.tsx:134
+#: src/pages/Auth.tsx:139
 #: src/pages/GroupPanel.tsx:119
 #: src/pages/GroupPanel.tsx:212
 #: src/pages/RoutineEditor.tsx:310
@@ -2723,7 +2747,7 @@ msgstr "Cần nhập liệu"
 msgid "Needs takeover"
 msgstr "Cần tiếp quản"
 
-#: src/pages/Shell.tsx:4395
+#: src/pages/Shell.tsx:4426
 msgid "Needs you"
 msgstr "Cần bạn"
 
@@ -2739,7 +2763,8 @@ msgstr "Nhóm mới"
 msgid "New open-work item"
 msgstr "Mục việc mở mới"
 
-#: src/pages/Auth.tsx:295
+#: src/pages/AccountSettingsOverlay.tsx:222
+#: src/pages/Auth.tsx:300
 msgid "New password"
 msgstr "Mật khẩu mới"
 
@@ -2792,7 +2817,7 @@ msgstr "Không có ngoại lệ. Các thao tác chạy tự động."
 msgid "No group chats yet."
 msgstr "Chưa có nhóm chat nào."
 
-#: src/pages/ImportSettingsPanel.tsx:542
+#: src/pages/ImportSettingsPanel.tsx:541
 msgid "No imports yet"
 msgstr "Chưa có dữ liệu đã nhập"
 
@@ -2926,35 +2951,35 @@ msgstr "Theo lịch"
 msgid "on the 1st at {0}"
 msgstr "vào ngày 1 lúc {0}"
 
-#: src/pages/ImportSettingsPanel.tsx:399
+#: src/pages/ImportSettingsPanel.tsx:398
 msgid "On Windows, you can also run import_local.bat. Or open an exported .a-company-import.json file."
 msgstr "Trên Windows, bạn cũng có thể chạy import_local.bat. Hoặc mở tệp .a-company-import.json đã xuất."
 
-#: src/pages/Shell.tsx:4100
+#: src/pages/Shell.tsx:4130
 msgid "Only empty spaces can be deleted. Delete its bots and groups first."
 msgstr "Chỉ có thể xóa space trống. Hãy xóa Bot và nhóm trong đó trước."
 
 #: src/pages/ScratchpadSection.tsx:159
-#: src/pages/Shell.tsx:3649
-#: src/pages/Shell.tsx:3654
-#: src/pages/Shell.tsx:6520
+#: src/pages/Shell.tsx:3679
+#: src/pages/Shell.tsx:3684
+#: src/pages/Shell.tsx:6551
 msgid "Open"
 msgstr "Mở"
 
 #. placeholder {0}: group.title
-#: src/pages/Shell.tsx:2876
+#: src/pages/Shell.tsx:2888
 msgid "Open {0}"
 msgstr "Mở {0}"
 
-#: src/pages/ImportSettingsPanel.tsx:374
+#: src/pages/ImportSettingsPanel.tsx:373
 msgid "Open import file"
 msgstr "Mở tệp nhập"
 
-#: src/pages/Shell.tsx:3617
+#: src/pages/Shell.tsx:3647
 msgid "Open in full window"
 msgstr "Mở toàn cửa sổ"
 
-#: src/pages/Shell.tsx:3312
+#: src/pages/Shell.tsx:3342
 msgid "Open navigation"
 msgstr "Mở điều hướng"
 
@@ -2967,7 +2992,7 @@ msgstr "Việc đang mở"
 msgid "OpenAI-compatible server URL"
 msgstr "URL máy chủ tương thích OpenAI"
 
-#: src/pages/Shell.tsx:6343
+#: src/pages/Shell.tsx:6374
 msgid "Opened its thread."
 msgstr "Đã mở luồng của nó."
 
@@ -2975,7 +3000,7 @@ msgstr "Đã mở luồng của nó."
 msgid "Opening chat…"
 msgstr "Đang mở chat…"
 
-#: src/pages/Shell.tsx:4863
+#: src/pages/Shell.tsx:4894
 msgid "Optimization proposals"
 msgstr "Đề xuất tối ưu"
 
@@ -2984,7 +3009,7 @@ msgstr "Đề xuất tối ưu"
 msgid "Optional"
 msgstr "Không bắt buộc"
 
-#: src/pages/AccountSettingsOverlay.tsx:156
+#: src/pages/AccountSettingsOverlay.tsx:279
 msgid "Optional controls most people never need"
 msgstr "Tùy chọn nâng cao mà hầu hết mọi người không cần"
 
@@ -3004,7 +3029,7 @@ msgstr "Hoặc dán API key"
 msgid "Or start from a template"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:132
+#: src/pages/AccountSettingsOverlay.tsx:172
 msgid "Organic"
 msgstr "Tự nhiên"
 
@@ -3022,7 +3047,7 @@ msgstr "Model khác…"
 msgid "PagerDuty incident"
 msgstr "Sự cố PagerDuty"
 
-#: src/pages/Shell.tsx:4837
+#: src/pages/Shell.tsx:4868
 msgid "paint a cinematic 4K sunset over the ocean"
 msgstr "vẽ ảnh phong cảnh hoàng hôn trên biển điện ảnh 4K"
 
@@ -3032,20 +3057,22 @@ msgid "Park"
 msgstr "Tạm gác"
 
 #: src/components/AskCard.tsx:43
-#: src/pages/Auth.tsx:166
-#: src/pages/Auth.tsx:175
+#: src/pages/Auth.tsx:171
+#: src/pages/Auth.tsx:180
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: src/pages/Auth.tsx:76
+#: src/pages/Auth.tsx:77
 msgid "Password recovery is not configured for this server"
 msgstr "Máy chủ này chưa cấu hình khôi phục mật khẩu"
 
-#: src/pages/Auth.tsx:285
+#: src/pages/AccountSettingsOverlay.tsx:264
+#: src/pages/Auth.tsx:290
 msgid "Password updated"
 msgstr "Đã cập nhật mật khẩu"
 
-#: src/pages/Auth.tsx:261
+#: src/pages/AccountSettingsOverlay.tsx:68
+#: src/pages/Auth.tsx:266
 msgid "Passwords do not match"
 msgstr "Mật khẩu không khớp"
 
@@ -3081,11 +3108,11 @@ msgstr "Đang phát…"
 msgid "POST to"
 msgstr "POST tới"
 
-#: src/pages/ImportSettingsPanel.tsx:528
+#: src/pages/ImportSettingsPanel.tsx:527
 msgid "Prepare selection"
 msgstr "Chuẩn bị nội dung đã chọn"
 
-#: src/pages/Shell.tsx:5809
+#: src/pages/Shell.tsx:5840
 msgid "Press"
 msgstr "Nhấn"
 
@@ -3110,7 +3137,7 @@ msgstr "Project ID"
 msgid "Projects"
 msgstr "Dự án"
 
-#: src/pages/Shell.tsx:4864
+#: src/pages/Shell.tsx:4895
 msgid "Propose performance improvements and upgrade paths"
 msgstr "Đề xuất các phương án nâng cấp và tối ưu hiệu năng"
 
@@ -3133,19 +3160,19 @@ msgstr "Pull request"
 msgid "Queued"
 msgstr "Đang chờ"
 
-#: src/pages/Shell.tsx:4871
+#: src/pages/Shell.tsx:4902
 msgid "Quick Actions"
 msgstr "Gợi ý tác vụ nhanh"
 
-#: src/pages/Shell.tsx:5126
+#: src/pages/Shell.tsx:5157
 msgid "Quote"
 msgstr "Trích dẫn"
 
-#: src/pages/Shell.tsx:5954
+#: src/pages/Shell.tsx:5985
 msgid "React"
 msgstr "Bày tỏ cảm xúc"
 
-#: src/pages/Shell.tsx:5965
+#: src/pages/Shell.tsx:5996
 msgid "Reactions"
 msgstr "Cảm xúc"
 
@@ -3157,12 +3184,12 @@ msgstr "Đọc to câu trả lời"
 msgid "read-only"
 msgstr "chỉ đọc"
 
-#: src/pages/ImportSettingsPanel.tsx:614
+#: src/pages/ImportSettingsPanel.tsx:613
 msgid "Read-only history. Continue creates a new agent; the archive stays unchanged."
 msgstr "Lịch sử chỉ đọc. Thao tác tiếp tục tạo một tác nhân mới; bản lưu không thay đổi."
 
-#: src/pages/Shell.tsx:3362
-#: src/pages/Shell.tsx:4813
+#: src/pages/Shell.tsx:3392
+#: src/pages/Shell.tsx:4844
 msgid "Ready"
 msgstr "Sẵn sàng"
 
@@ -3249,7 +3276,7 @@ msgstr "Làm mới giao diện"
 msgid "Refreshing…"
 msgstr "Đang làm mới…"
 
-#: src/pages/Shell.tsx:6057
+#: src/pages/Shell.tsx:6088
 msgid "Release"
 msgstr "Giải phóng"
 
@@ -3270,7 +3297,7 @@ msgid "Remove"
 msgstr "Xóa"
 
 #. placeholder {0}: attachment.file.name
-#: src/pages/Shell.tsx:5519
+#: src/pages/Shell.tsx:5550
 msgid "Remove {0}"
 msgstr "Xóa {0}"
 
@@ -3284,7 +3311,7 @@ msgid "Remove Git event"
 msgstr "Xóa sự kiện Git"
 
 #. placeholder {0}: mention.name
-#: src/pages/Shell.tsx:5678
+#: src/pages/Shell.tsx:5709
 msgid "Remove mention {0}"
 msgstr "Xóa nhắc đến {0}"
 
@@ -3297,7 +3324,7 @@ msgid "Remove schedule"
 msgstr "Xóa lịch"
 
 #. placeholder {0}: selectedSkill.name
-#: src/pages/Shell.tsx:5657
+#: src/pages/Shell.tsx:5688
 msgid "Remove skill {0}"
 msgstr "Xóa kỹ năng {0}"
 
@@ -3305,7 +3332,7 @@ msgstr "Xóa kỹ năng {0}"
 msgid "Remove webhook"
 msgstr "Xóa webhook"
 
-#: src/pages/Shell.tsx:6342
+#: src/pages/Shell.tsx:6373
 msgid "Removed with chat, computer, and memory."
 msgstr "Đã xóa cùng với chat, máy tính và bộ nhớ."
 
@@ -3321,7 +3348,7 @@ msgid "Removing…"
 msgstr "Đang xóa…"
 
 #: src/pages/BotContextMenu.tsx:119
-#: src/pages/Shell.tsx:4189
+#: src/pages/Shell.tsx:4219
 #: src/pages/shell/dialogs.tsx:247
 msgid "Rename section"
 msgstr "Đổi tên mục"
@@ -3340,16 +3367,16 @@ msgstr "Thay API key"
 msgid "Replace key"
 msgstr "Thay key"
 
-#: src/pages/Shell.tsx:5986
-#: src/pages/Shell.tsx:6008
+#: src/pages/Shell.tsx:6017
+#: src/pages/Shell.tsx:6039
 msgid "Reply"
 msgstr "Trả lời"
 
-#: src/pages/Shell.tsx:5481
+#: src/pages/Shell.tsx:5512
 msgid "Replying to {replyName}"
 msgstr "Đang trả lời {replyName}"
 
-#: src/pages/Shell.tsx:5480
+#: src/pages/Shell.tsx:5511
 msgid "Replying to {replyName}: “{replyQuote}”"
 msgstr "Đang trả lời {replyName}: “{replyQuote}”"
 
@@ -3366,11 +3393,11 @@ msgstr "Đặt lại máy tính"
 msgid "Reset computer?"
 msgstr "Đặt lại máy tính?"
 
-#: src/pages/Auth.tsx:317
+#: src/pages/Auth.tsx:322
 msgid "Reset password"
 msgstr "Đặt lại mật khẩu"
 
-#: src/pages/Auth.tsx:40
+#: src/pages/Auth.tsx:41
 msgid "Reset your password"
 msgstr "Đặt lại mật khẩu của bạn"
 
@@ -3384,8 +3411,8 @@ msgstr "Đang đặt lại…"
 msgid "Restart to update"
 msgstr "Khởi động lại để cập nhật"
 
-#: src/pages/Shell.tsx:3125
-#: src/pages/Shell.tsx:3156
+#: src/pages/Shell.tsx:3137
+#: src/pages/Shell.tsx:3168
 msgid "Restore"
 msgstr "Khôi phục"
 
@@ -3411,7 +3438,7 @@ msgstr "Đang khôi phục không gian làm việc"
 msgid "Retry now"
 msgstr "Thử lại ngay"
 
-#: src/pages/Shell.tsx:2606
+#: src/pages/Shell.tsx:2611
 msgid "Retry screen"
 msgstr "Thử lại màn hình"
 
@@ -3428,7 +3455,7 @@ msgstr "bản sửa đổi {0}"
 msgid "Revoke"
 msgstr "Thu hồi"
 
-#: src/pages/AccountSettingsOverlay.tsx:132
+#: src/pages/AccountSettingsOverlay.tsx:172
 msgid "Robot"
 msgstr "Robot"
 
@@ -3445,8 +3472,8 @@ msgid "Rotate secret"
 msgstr ""
 
 #: src/pages/RoutineEditor.tsx:265
-#: src/pages/Shell.tsx:3842
-#: src/pages/Shell.tsx:3854
+#: src/pages/Shell.tsx:3872
+#: src/pages/Shell.tsx:3884
 msgid "Routine"
 msgstr "Routine"
 
@@ -3463,7 +3490,7 @@ msgstr "Chạy lúc"
 msgid "Run history"
 msgstr "Lịch sử chạy"
 
-#: src/pages/Shell.tsx:3835
+#: src/pages/Shell.tsx:3865
 msgid "Run time must be in the future."
 msgstr "Thời gian chạy phải ở tương lai."
 
@@ -3504,13 +3531,13 @@ msgstr "Không nhập cài đặt thời gian chạy."
 msgid "Save"
 msgstr "Lưu"
 
-#: src/pages/AccountSettingsOverlay.tsx:325
+#: src/pages/AccountSettingsOverlay.tsx:448
 msgid "Save caps"
 msgstr ""
 
 #: src/components/AskCard.tsx:18
 #: src/components/teach/SkillDraftCard.tsx:142
-#: src/pages/AccountSettingsOverlay.tsx:329
+#: src/pages/AccountSettingsOverlay.tsx:452
 #: src/pages/ExternalConversationSettings.tsx:257
 msgid "Saved"
 msgstr "Đã lưu"
@@ -3539,7 +3566,7 @@ msgstr "Đang lưu..."
 
 #: src/components/AskCard.tsx:157
 #: src/components/teach/SkillDraftCard.tsx:142
-#: src/pages/AccountSettingsOverlay.tsx:325
+#: src/pages/AccountSettingsOverlay.tsx:448
 #: src/pages/GroupPanel.tsx:236
 #: src/pages/ModelSettingsOverlay.tsx:904
 #: src/pages/RoutineEditor.tsx:489
@@ -3568,7 +3595,7 @@ msgstr "Đã đạt giới hạn quét. Có thể thiếu một số mục."
 msgid "Search"
 msgstr "Tìm kiếm"
 
-#: src/pages/Shell.tsx:2793
+#: src/pages/Shell.tsx:2805
 msgid "Search agents…"
 msgstr "Tìm kiếm trợ lý…"
 
@@ -3605,20 +3632,20 @@ msgstr "Tìm nhà cung cấp"
 msgid "Searching…"
 msgstr "Đang tìm…"
 
-#: src/pages/Shell.tsx:3357
+#: src/pages/Shell.tsx:3387
 msgid "Select a bot"
 msgstr "Chọn một trợ lý"
 
-#: src/pages/ImportSettingsPanel.tsx:472
+#: src/pages/ImportSettingsPanel.tsx:471
 msgid "Select visible"
 msgstr "Chọn các mục đang hiển thị"
 
-#: src/pages/ImportSettingsPanel.tsx:416
+#: src/pages/ImportSettingsPanel.tsx:415
 msgid "Selected data may contain passwords, keys, tokens, or .env files. It is stored encrypted and inactive, never used to sign in or continue chats."
 msgstr "Dữ liệu đã chọn có thể chứa mật khẩu, khóa, token hoặc tệp .env. Dữ liệu được lưu ở dạng mã hóa, không tự kích hoạt và không bao giờ được dùng để đăng nhập hay tiếp tục trò chuyện."
 
-#: src/pages/Shell.tsx:5776
-#: src/pages/Shell.tsx:5797
+#: src/pages/Shell.tsx:5807
+#: src/pages/Shell.tsx:5828
 msgid "Send"
 msgstr "Gửi"
 
@@ -3634,7 +3661,7 @@ msgstr "Gửi câu trả lời"
 msgid "Send it"
 msgstr "Gửi đi"
 
-#: src/pages/Auth.tsx:213
+#: src/pages/Auth.tsx:218
 msgid "Send reset link"
 msgstr "Gửi liên kết đặt lại"
 
@@ -3657,7 +3684,7 @@ msgid "Sentry alert"
 msgstr "Cảnh báo Sentry"
 
 #: src/components/integrations/IntegrationSetup.tsx:132
-#: src/pages/AccountSettingsOverlay.tsx:145
+#: src/pages/AccountSettingsOverlay.tsx:185
 #: src/pages/LocalSettings.tsx:42
 msgid "Server integrations"
 msgstr "Tích hợp máy chủ"
@@ -3681,17 +3708,17 @@ msgstr "Phiên"
 #: src/pages/MessagingSettingsOverlay.tsx:361
 #: src/pages/SettingsOverlay.tsx:97
 #: src/pages/SettingsOverlay.tsx:152
-#: src/pages/Shell.tsx:3228
-#: src/pages/Shell.tsx:3235
-#: src/pages/Shell.tsx:3567
+#: src/pages/Shell.tsx:3240
+#: src/pages/Shell.tsx:3247
+#: src/pages/Shell.tsx:3597
 msgid "Settings"
 msgstr "Cài đặt"
 
-#: src/pages/Shell.tsx:5830
+#: src/pages/Shell.tsx:5861
 msgid "Settings: General"
 msgstr "Cài đặt: Chung"
 
-#: src/pages/Shell.tsx:5832
+#: src/pages/Shell.tsx:5863
 msgid "Settings: Usage"
 msgstr "Cài đặt: Mức sử dụng"
 
@@ -3717,13 +3744,13 @@ msgstr "Chat chung với 2-6 Bot. Tất cả cùng trả lời trong một luồ
 msgid "Shared documents"
 msgstr "Tài liệu dùng chung"
 
-#: src/pages/Shell.tsx:3261
-#: src/pages/Shell.tsx:3322
-#: src/pages/Shell.tsx:3323
+#: src/pages/Shell.tsx:3291
+#: src/pages/Shell.tsx:3352
+#: src/pages/Shell.tsx:3353
 msgid "Show bots"
 msgstr "Hiện Bot"
 
-#: src/pages/Shell.tsx:3591
+#: src/pages/Shell.tsx:3621
 msgid "Show computer"
 msgstr "Hiện máy tính"
 
@@ -3731,33 +3758,33 @@ msgstr "Hiện máy tính"
 msgid "Show more"
 msgstr "Xem thêm"
 
-#: src/pages/Auth.tsx:186
+#: src/pages/Auth.tsx:191
 msgid "Show password"
 msgstr "Hiện mật khẩu"
 
-#: src/pages/Shell.tsx:3591
+#: src/pages/Shell.tsx:3621
 msgid "Show settings"
 msgstr "Hiện cài đặt"
 
 #: src/lib/localized-provider-hint.ts:7
-#: src/pages/Auth.tsx:230
-#: src/pages/Auth.tsx:288
+#: src/pages/Auth.tsx:235
+#: src/pages/Auth.tsx:293
 #: src/pages/ModelSettingsOverlay.tsx:841
 #: src/pages/Onboarding.tsx:189
 msgid "Sign in"
 msgstr "Đăng nhập"
 
-#: src/pages/Auth.tsx:36
+#: src/pages/Auth.tsx:37
 msgid "Sign in to A-Company"
 msgstr "Đăng nhập vào A-Company"
 
-#: src/pages/Auth.tsx:223
+#: src/pages/Auth.tsx:228
 #: src/pages/Welcome.tsx:34
 msgid "Sign up"
 msgstr "Đăng ký"
 
 #. placeholder {0}: skill.name
-#: src/pages/Shell.tsx:5583
+#: src/pages/Shell.tsx:5614
 msgid "Skill {0}"
 msgstr "Kỹ năng {0}"
 
@@ -3771,7 +3798,7 @@ msgid "Skills are archived, not activated."
 msgstr "Kỹ năng được lưu trữ, không được kích hoạt."
 
 #: src/components/integrations/IntegrationSetup.tsx:364
-#: src/pages/Shell.tsx:6064
+#: src/pages/Shell.tsx:6095
 msgid "Skip"
 msgstr "Bỏ qua"
 
@@ -3780,7 +3807,7 @@ msgid "Skip or deploy key"
 msgstr "Bỏ qua hoặc triển khai key"
 
 #. placeholder {0}: skipped.join(", ")
-#: src/pages/Shell.tsx:1990
+#: src/pages/Shell.tsx:1995
 msgid "Skipped {0}"
 msgstr "Đã bỏ qua {0}"
 
@@ -3812,7 +3839,7 @@ msgstr "Một số dữ liệu nguồn không khả dụng."
 msgid "Some source formats are not supported."
 msgstr "Một số định dạng nguồn không được hỗ trợ."
 
-#: src/pages/ImportSettingsPanel.tsx:442
+#: src/pages/ImportSettingsPanel.tsx:441
 msgid "Source"
 msgstr "Nguồn"
 
@@ -3829,8 +3856,8 @@ msgstr "Phím cách để ngắt · Esc để gác máy"
 msgid "Spaces"
 msgstr "Space"
 
-#: src/pages/Shell.tsx:6191
-#: src/pages/Shell.tsx:6449
+#: src/pages/Shell.tsx:6222
+#: src/pages/Shell.tsx:6480
 msgid "Speak"
 msgstr "Nói"
 
@@ -3842,8 +3869,8 @@ msgstr "Nói + chép lời"
 msgid "Speak only"
 msgstr "Chỉ nói"
 
-#: src/pages/Shell.tsx:6187
-#: src/pages/Shell.tsx:6445
+#: src/pages/Shell.tsx:6218
+#: src/pages/Shell.tsx:6476
 msgid "Speak this reply"
 msgstr "Đọc câu trả lời này"
 
@@ -3851,7 +3878,7 @@ msgstr "Đọc câu trả lời này"
 msgid "Speaking…"
 msgstr "Đang nói…"
 
-#: src/pages/Shell.tsx:4825
+#: src/pages/Shell.tsx:4856
 msgid "Specialized AI assistant for A-Company workspace."
 msgstr "Trợ lý AI chuyên biệt cho không gian làm việc A-Company."
 
@@ -3859,7 +3886,7 @@ msgstr "Trợ lý AI chuyên biệt cho không gian làm việc A-Company."
 msgid "Start recording"
 msgstr "Bắt đầu ghi"
 
-#: src/pages/ImportSettingsPanel.tsx:397
+#: src/pages/ImportSettingsPanel.tsx:396
 msgid "Start the helper on this computer, then reconnect:"
 msgstr "Khởi chạy trình hỗ trợ trên máy tính này, rồi kết nối lại:"
 
@@ -3877,7 +3904,7 @@ msgstr "Đang khởi động"
 msgid "Starting…"
 msgstr "Đang khởi động…"
 
-#: src/pages/Shell.tsx:4853
+#: src/pages/Shell.tsx:4884
 msgid "Status overview"
 msgstr "Tổng quan trạng thái"
 
@@ -3885,16 +3912,16 @@ msgstr "Tổng quan trạng thái"
 msgid "Steps"
 msgstr "Các bước"
 
-#: src/pages/Shell.tsx:4410
-#: src/pages/Shell.tsx:4415
-#: src/pages/Shell.tsx:5786
-#: src/pages/Shell.tsx:6191
-#: src/pages/Shell.tsx:6449
+#: src/pages/Shell.tsx:4441
+#: src/pages/Shell.tsx:4446
+#: src/pages/Shell.tsx:5817
+#: src/pages/Shell.tsx:6222
+#: src/pages/Shell.tsx:6480
 msgid "Stop"
 msgstr "Dừng"
 
-#: src/pages/Shell.tsx:6187
-#: src/pages/Shell.tsx:6445
+#: src/pages/Shell.tsx:6218
+#: src/pages/Shell.tsx:6476
 msgid "Stop speaking"
 msgstr "Dừng nói"
 
@@ -3916,7 +3943,7 @@ msgstr "Được lưu mã hóa"
 msgid "Stored securely. Never shown here."
 msgstr "Được lưu an toàn. Không bao giờ hiển thị ở đây."
 
-#: src/pages/Shell.tsx:6296
+#: src/pages/Shell.tsx:6327
 msgid "subagent"
 msgstr "subagent"
 
@@ -3925,7 +3952,7 @@ msgstr "subagent"
 msgid "Submit"
 msgstr "Gửi"
 
-#: src/pages/Shell.tsx:4854
+#: src/pages/Shell.tsx:4885
 msgid "Summarize current workspace status and active tasks"
 msgstr "Tóm tắt trạng thái và các tác vụ hiện tại trong workspace"
 
@@ -3951,7 +3978,7 @@ msgstr "Đang chuyển…"
 msgid "Symbolic links are excluded."
 msgstr "Không bao gồm liên kết tượng trưng."
 
-#: src/pages/AccountSettingsOverlay.tsx:418
+#: src/pages/AccountSettingsOverlay.tsx:541
 msgid "System"
 msgstr "Hệ thống"
 
@@ -3960,7 +3987,7 @@ msgstr "Hệ thống"
 msgid "Teach a task"
 msgstr "Dạy một tác vụ"
 
-#: src/pages/Shell.tsx:3488
+#: src/pages/Shell.tsx:3518
 msgid "Teaching in progress. Stop teaching before sending a new message."
 msgstr "Đang dạy. Hãy dừng dạy trước khi gửi tin nhắn mới."
 
@@ -3972,7 +3999,7 @@ msgstr "Nhóm"
 msgid "Team Blueprints & Backup"
 msgstr ""
 
-#: src/pages/Shell.tsx:6581
+#: src/pages/Shell.tsx:6612
 msgid "Team Computer"
 msgstr "Máy tính nhóm"
 
@@ -4015,7 +4042,7 @@ msgstr "Chưa chọn dự án của phiên này."
 msgid "Thinking"
 msgstr "Đang suy nghĩ"
 
-#: src/pages/Shell.tsx:6561
+#: src/pages/Shell.tsx:6592
 msgid "This bot runs on this computer, not a Linux desktop. Shell and files use your home folder."
 msgstr "Bot này chạy trên máy tính này, không phải máy tính Linux. Shell và tệp dùng thư mục home của bạn."
 
@@ -4032,7 +4059,7 @@ msgstr "Cuộc trò chuyện này chỉ xem"
 msgid "this computer"
 msgstr "máy tính này"
 
-#: src/pages/ImportSettingsPanel.tsx:590
+#: src/pages/ImportSettingsPanel.tsx:589
 msgid "This file contains secrets in plaintext. Store it securely and do not share it."
 msgstr "Tệp này chứa thông tin bí mật ở dạng văn bản thuần. Hãy lưu trữ an toàn và không chia sẻ tệp."
 
@@ -4044,7 +4071,7 @@ msgstr "Tệp này không phải Markdown UTF-8 hợp lệ."
 msgid "this Mac"
 msgstr "máy Mac này"
 
-#: src/pages/AccountSettingsOverlay.tsx:270
+#: src/pages/AccountSettingsOverlay.tsx:393
 msgid "This month (UTC)"
 msgstr ""
 
@@ -4052,7 +4079,7 @@ msgstr ""
 msgid "This permanently removes every message and stops current work. The chat remains available."
 msgstr "Thao tác này sẽ xóa vĩnh viễn mọi tin nhắn và dừng công việc hiện tại. Cuộc trò chuyện vẫn còn."
 
-#: src/pages/Auth.tsx:253
+#: src/pages/Auth.tsx:258
 msgid "This reset link is invalid or expired"
 msgstr "Liên kết đặt lại không hợp lệ hoặc đã hết hạn"
 
@@ -4081,7 +4108,7 @@ msgstr "Thời điểm trong ngày"
 msgid "Title"
 msgstr "Tiêu đề"
 
-#: src/pages/Shell.tsx:5813
+#: src/pages/Shell.tsx:5844
 msgid "to send,"
 msgstr "để gửi,"
 
@@ -4089,11 +4116,11 @@ msgstr "để gửi,"
 msgid "To:"
 msgstr "Đến:"
 
-#: src/pages/AccountSettingsOverlay.tsx:261
+#: src/pages/AccountSettingsOverlay.tsx:384
 msgid "Today (UTC)"
 msgstr ""
 
-#: src/pages/AccountSettingsOverlay.tsx:290
+#: src/pages/AccountSettingsOverlay.tsx:413
 msgid "Token spend caps"
 msgstr ""
 
@@ -4133,8 +4160,8 @@ msgstr "Không khả dụng"
 msgid "Uninstall"
 msgstr "Gỡ cài đặt"
 
-#: src/pages/AccountSettingsOverlay.tsx:302
-#: src/pages/AccountSettingsOverlay.tsx:316
+#: src/pages/AccountSettingsOverlay.tsx:425
+#: src/pages/AccountSettingsOverlay.tsx:439
 msgid "Unlimited"
 msgstr ""
 
@@ -4147,12 +4174,12 @@ msgid "Unpin"
 msgstr "Bỏ ghim"
 
 #. placeholder {0}: pending.file.name
-#: src/pages/Shell.tsx:2068
+#: src/pages/Shell.tsx:2073
 msgid "Unsupported file type: {0}"
 msgstr "Loại tệp không được hỗ trợ: {0}"
 
 #: src/pages/ImportSettingsPanel.tsx:327
-#: src/pages/ImportSettingsPanel.tsx:622
+#: src/pages/ImportSettingsPanel.tsx:621
 msgid "Untitled session"
 msgstr "Phiên chưa đặt tên"
 
@@ -4214,18 +4241,18 @@ msgstr "Đang cập nhật…"
 msgid "Upload"
 msgstr "Tải lên"
 
-#: src/pages/ImportSettingsPanel.tsx:433
+#: src/pages/ImportSettingsPanel.tsx:432
 msgid "Upload for preview"
 msgstr "Tải lên để xem trước"
 
-#: src/pages/ImportSettingsPanel.tsx:428
+#: src/pages/ImportSettingsPanel.tsx:427
 msgid "Upload the selected content to this A-Company server for preview? Nothing is imported yet."
 msgstr "Tải nội dung đã chọn lên máy chủ A-Company này để xem trước? Chưa có dữ liệu nào được nhập."
 
-#: src/pages/AccountSettingsOverlay.tsx:248
+#: src/pages/AccountSettingsOverlay.tsx:371
 #: src/pages/SettingsOverlay.tsx:89
-#: src/pages/Shell.tsx:3240
-#: src/pages/Shell.tsx:3251
+#: src/pages/Shell.tsx:3252
+#: src/pages/Shell.tsx:3263
 msgid "Usage"
 msgstr "Mức sử dụng"
 
@@ -4256,8 +4283,8 @@ msgid "Verifying…"
 msgstr "Đang xác minh…"
 
 #: src/pages/SettingsOverlay.tsx:88
-#: src/pages/Shell.tsx:5763
-#: src/pages/Shell.tsx:5764
+#: src/pages/Shell.tsx:5794
+#: src/pages/Shell.tsx:5795
 #: src/pages/shell/bot-panel.tsx:796
 #: src/pages/VoiceSettingsOverlay.tsx:175
 #: src/pages/VoiceSettingsOverlay.tsx:298
@@ -4330,22 +4357,22 @@ msgstr "Khi nào dùng"
 msgid "Where should bots run?"
 msgstr "Bot nên chạy ở đâu?"
 
-#: src/pages/Auth.tsx:209
-#: src/pages/Auth.tsx:317
+#: src/pages/Auth.tsx:214
+#: src/pages/Auth.tsx:322
 #: src/pages/CallView.tsx:251
-#: src/pages/ImportSettingsPanel.tsx:389
+#: src/pages/ImportSettingsPanel.tsx:388
 msgid "Working…"
 msgstr "Đang xử lý…"
 
-#: src/pages/ImportSettingsPanel.tsx:595
+#: src/pages/ImportSettingsPanel.tsx:594
 msgid "Yes, export sensitive data"
 msgstr "Có, xuất dữ liệu nhạy cảm"
 
-#: src/pages/Shell.tsx:5910
+#: src/pages/Shell.tsx:5941
 msgid "Yesterday"
 msgstr "Hôm qua"
 
-#: src/pages/Shell.tsx:1763
+#: src/pages/Shell.tsx:1768
 msgid "You"
 msgstr "Bạn"
 
@@ -4357,15 +4384,15 @@ msgstr "Bạn có thể đóng tab này nếu trang không tự chuyển hướn
 msgid "You can close this window."
 msgstr "Bạn có thể đóng cửa sổ này."
 
-#: src/pages/Shell.tsx:4399
+#: src/pages/Shell.tsx:4430
 msgid "You have control"
 msgstr "Bạn đang điều khiển"
 
-#: src/pages/Auth.tsx:157
+#: src/pages/Auth.tsx:162
 msgid "Your email address"
 msgstr "Địa chỉ email của bạn"
 
-#: src/pages/Auth.tsx:142
+#: src/pages/Auth.tsx:147
 msgid "Your name"
 msgstr "Tên của bạn"
 

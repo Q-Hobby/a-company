@@ -96,6 +96,7 @@ import {
   Image as ImageIcon,
   LayoutGrid,
   Lock,
+  LogOut,
   Maximize2,
   Menu,
   Mic,
@@ -154,6 +155,7 @@ import { TeachComputerOverlayControl } from "../components/teach/TeachComputerOv
 import { TeachRecordingChrome, TeachStopButton } from "../components/teach/TeachRecordingChrome";
 import { readActivityMode, writeActivityMode } from "../lib/activity-mode";
 import type { ArtifactTarget } from "../lib/artifact-open";
+import { authClient } from "../lib/auth";
 import { takeInitialBootstrap } from "../lib/bootstrap";
 import {
   BOTS_SIDEBAR_EDGE_DRAG_PX,
@@ -177,8 +179,9 @@ import {
   revokePendingAttachmentPreviews,
 } from "../lib/pending-attachments";
 import { markAfterPaint, markOnce } from "../lib/performance";
+import { clearPostAuthReturnPath } from "../lib/post-auth-redirect";
 import { quoteDraftForSelection } from "../lib/quote-selection";
-import { rpc, selectedSpaceId, selectSpace } from "../lib/rpc";
+import { clearSpaceSelection, rpc, selectedSpaceId, selectSpace } from "../lib/rpc";
 import { readSeenRunErrorIds, rememberSeenRunErrorId } from "../lib/run-error-storage";
 import { sharedInflight } from "../lib/shared-inflight";
 import {
@@ -336,7 +339,9 @@ export function ShellPage() {
   // effect below, which should only restart when the active bot changes).
   const searchParamsRef = useRef(searchParams);
   searchParamsRef.current = searchParams;
-  const userId = "workspace";
+  const { data: authSession } = authClient.useSession();
+  const sessionUser = authSession?.user;
+  const userId = sessionUser?.id ?? "workspace";
   const [groups, setGroups] = useState<Group[]>([]);
   const [bots, setBots] = useState<Bot[]>([]);
   const botsRef = useRef(bots);
@@ -2608,8 +2613,15 @@ export function ShellPage() {
       </div>
     ) : null;
 
-  const userName = "A-Company";
-  const initials = "AC";
+  const userName = sessionUser?.name?.trim() || sessionUser?.email || "A-Company";
+  const userEmail = sessionUser?.email ?? bootstrapMe?.email ?? null;
+  const initials =
+    userName
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => part[0]?.toUpperCase() ?? "")
+      .join("") || "AC";
 
   const shell = (
     <div
@@ -3250,6 +3262,24 @@ export function ShellPage() {
                 <Gauge size={15} className="text-muted-foreground" strokeWidth={1.75} />
                 <Trans>Usage</Trans>
               </Button>
+              {sessionUser ? (
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start font-normal text-[13px] gap-2.5 h-9"
+                  aria-label={t`Log out`}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    clearPostAuthReturnPath();
+                    clearSpaceSelection();
+                    void authClient.signOut().finally(() => {
+                      navigate("/sign-in", { replace: true });
+                    });
+                  }}
+                >
+                  <LogOut size={15} className="text-muted-foreground" strokeWidth={1.75} />
+                  <Trans>Log out</Trans>
+                </Button>
+              ) : null}
             </PopoverContent>
           ) : null}
         </Popover>
@@ -4284,6 +4314,7 @@ export function ShellPage() {
       <Suspense fallback={null}>
         {settingsOpen ? (
           <SettingsOverlay
+            email={userEmail}
             name={userName}
             usage={usage}
             initialSection={settingsSection}

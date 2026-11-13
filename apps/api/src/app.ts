@@ -523,6 +523,7 @@ export async function createApp(
     c.json({
       passwordReset: Boolean(email),
       resetUrl: email ? new URL("/reset-password", env.webOrigin).href : null,
+      accountless: env.accountlessMode,
     }),
   );
   if (localEmailEmulator && env.nodeEnv === "development") {
@@ -552,7 +553,9 @@ export async function createApp(
     const requestedSpaceId = c.req.header("x-acompany-space-id");
     const actor = session?.user
       ? await requireMembership(prisma, session.user.id, requestedSpaceId).catch(() => null)
-      : await resolveDefaultActor(prisma, requestedSpaceId).catch(() => null);
+      : env.accountlessMode
+        ? await resolveDefaultActor(prisma, requestedSpaceId).catch(() => null)
+        : null;
     if (actor) {
       enrichLogContext({ "user.id": actor.userId, "space.id": actor.spaceId });
     }
@@ -570,7 +573,9 @@ export async function createApp(
     const requestedSpaceId = c.req.header("x-acompany-space-id");
     const actor = session?.user
       ? await requireMembership(prisma, session.user.id, requestedSpaceId).catch(() => null)
-      : await resolveDefaultActor(prisma, requestedSpaceId).catch(() => null);
+      : env.accountlessMode
+        ? await resolveDefaultActor(prisma, requestedSpaceId).catch(() => null)
+        : null;
     if (actor) enrichLogContext({ "user.id": actor.userId, "space.id": actor.spaceId });
     return actor;
   });

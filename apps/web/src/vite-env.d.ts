@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_DEFAULT_UI_LOCALE?: string;
+  readonly VITE_ACCOUNTLESS_MODE?: string;
 }
 
 interface ImportMeta {
