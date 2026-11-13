@@ -364,7 +364,6 @@ export function ImportSettingsPanel({ onClose }: { onClose: () => void }) {
 
   return (
     <section className="space-y-5" aria-label={t`Import data`} aria-busy={busy}>
-      <TeamBlueprintsAndBackupCard onClose={onClose} />
       <div className="flex flex-wrap gap-2">
         <Button disabled={busy} onClick={connect}>{t`Connect local`}</Button>
         <Button
@@ -660,6 +659,7 @@ export function ImportSettingsPanel({ onClose }: { onClose: () => void }) {
           ))}
         </div>
       ) : null}
+      <TeamBlueprintsAndBackupCard onClose={onClose} />
     </section>
   );
 }
@@ -689,8 +689,8 @@ function TeamBlueprintsAndBackupCard({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     let active = true;
     void rpc.blueprints
-      .listStarters()
-      .then((items) => {
+      ?.listStarters?.()
+      ?.then((items) => {
         if (active) setStarters(items);
       })
       .catch(() => undefined);

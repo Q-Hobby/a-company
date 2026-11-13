@@ -3,9 +3,9 @@ import { botColors, tokens } from "./theme.js";
 
 describe("mobile theme tokens", () => {
   it("exposes the shared product palette used by custom surfaces", () => {
-    expect(tokens.background).toBe("#0B0C0E");
-    expect(tokens.foreground).toBe("#ECECEE");
-    expect(tokens.primary).toBe("#F1F1EF");
+    expect(tokens.background).toBe("#161820");
+    expect(tokens.foreground).toBe("#f1f3f7");
+    expect(tokens.primary).toBe("#f1f3f7");
   });
 
   it("re-exports botColors for identity accents", () => {

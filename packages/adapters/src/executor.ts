@@ -1455,7 +1455,7 @@ export function createRunExecutor(deps: ExecutorDeps) {
           (values) => runSecrets.push(...values),
         );
         runSecrets.push(...resolved.redact);
-        const spaceBudget = await deps.prisma.space.findUnique({
+        const spaceBudget = await deps.prisma.space?.findUnique?.({
           where: { id: run.spaceId },
           select: { dailyTokenCap: true, monthlyTokenCap: true },
         });

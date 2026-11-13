@@ -563,7 +563,7 @@ function oauthPopupWindowOptions() {
     frame: true,
     titleBarStyle: "default" as const,
     autoHideMenuBar: true,
-    backgroundColor: "#0B0C0E",
+    backgroundColor: "#161820",
     webPreferences: {
       preload: "",
       nodeIntegration: false,

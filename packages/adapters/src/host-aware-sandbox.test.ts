@@ -61,13 +61,20 @@ describe("host-aware sandbox", () => {
     expect(pageBrowser).not.toHaveBeenCalled();
   });
 
-  it("does not expose page commands when neither provider supports them", () => {
-    const sandbox = new HostAwareSandbox(
+  it("exposes page commands on DesktopSandboxProvider for My Chrome CDP and hides them when neither provider supports them", () => {
+    const withDesktop = new HostAwareSandbox(
       new FakeSandboxProvider(),
       new DesktopSandboxProvider(),
       async () => false,
     );
-    expect(sandbox.pageBrowser).toBeUndefined();
+    expect(withDesktop.pageBrowser).toBeTypeOf("function");
+
+    const withoutEither = new HostAwareSandbox(
+      new FakeSandboxProvider(),
+      new FakeSandboxProvider(),
+      async () => false,
+    );
+    expect(withoutEither.pageBrowser).toBeUndefined();
   });
 
   it("lets this-mac cwd run under a host root", async () => {

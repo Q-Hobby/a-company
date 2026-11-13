@@ -804,6 +804,7 @@ export function openCodeCliProvider(): Provider {
 }
 
 export function registerLocalCliProviders(models: MutableModels): MutableModels {
+  if (typeof models.setProvider !== "function") return models;
   models.setProvider(claudeCliProvider());
   models.setProvider(codexCliProvider());
   models.setProvider(geminiCliProvider());
