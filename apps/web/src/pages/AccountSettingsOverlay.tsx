@@ -189,8 +189,9 @@ export function GeneralSettingsPanels({
       {email ? (
         <section className="rounded-xl border border-border px-4 py-4">
           <h3 className="text-[15px] font-medium text-foreground">
-            <Trans>Change password</Trans>
+            <Trans>Account</Trans>
           </h3>
+          <p className="mt-1 text-[13px] text-muted-foreground">{email}</p>
           <form onSubmit={submitPasswordChange} className="mt-3 space-y-3">
             <input
               type="text"

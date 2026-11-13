@@ -381,7 +381,9 @@ export function ModelSettingsOverlay({
       setApiKey("");
       await refresh();
       detailScrollRef.current?.scrollTo({ top: 0 });
-      setNotice(t`Saved.`);
+      setNotice(
+        isOpenAiCompatible || isLocalCli ? t`Saved.` : t`Connected and using ${selected.label}.`,
+      );
     } catch (err) {
       setError(err instanceof Error ? err.message : t`Could not connect this provider`);
     } finally {
@@ -497,11 +499,13 @@ export function ModelSettingsOverlay({
                               </span>
                             ) : null}
                           </span>
-                          {entry.isDefault ? (
-                            <span className="text-[12px] text-success">
+                          <span className="text-[12px] text-success">
+                            {groupCredentials.length > 1 && entry.isDefault ? (
                               <Trans>Default</Trans>
-                            </span>
-                          ) : null}
+                            ) : (
+                              <Trans>Connected</Trans>
+                            )}
+                          </span>
                         </button>
                       ))}
                       <button

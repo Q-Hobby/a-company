@@ -162,6 +162,28 @@ test("portable import requires selection, upload consent and confirmation; archi
   await page.addInitScript(() => {
     localStorage.setItem("acompany.uiLocale", "en");
   });
+  await page.route("**/api/auth/get-session**", (route) =>
+    route.fulfill({
+      json: {
+        session: {
+          id: "fixture-session",
+          userId: me.userId,
+          token: "fixture-token",
+          expiresAt: new Date(Date.now() + 86_400_000).toISOString(),
+          createdAt: stamp,
+          updatedAt: stamp,
+        },
+        user: {
+          id: me.userId,
+          email: me.email,
+          name: me.name,
+          emailVerified: true,
+          createdAt: stamp,
+          updatedAt: stamp,
+        },
+      },
+    }),
+  );
   await context.route("http://127.0.0.1:43123/**", async (route) => {
     const request = route.request();
     const url = new URL(request.url());

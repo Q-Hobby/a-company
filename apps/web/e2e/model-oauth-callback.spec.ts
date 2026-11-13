@@ -1,9 +1,10 @@
 import { expect, test } from "@playwright/test";
-import { captureScreenshot, openUserSettings } from "./helpers";
+import { captureScreenshot, completeOnboarding, openUserSettings, signup } from "./helpers";
 
 test("Claude sign-in completes automatically with manual entry hidden as a fallback", async ({
   page,
 }, testInfo) => {
+  const stamp = Date.now();
   let callbackReceived = false;
   let finished = 0;
   let submitted = 0;
@@ -11,6 +12,8 @@ test("Claude sign-in completes automatically with manual entry hidden as a fallb
     localStorage.setItem("acompany.uiLocale", "en");
     window.open = () => null;
   });
+  await signup(page, `claude-oauth-${stamp}@acompany.test`, "password12", "Claude OAuth");
+  await completeOnboarding(page);
   await page.route("**/rpc/models/beginOAuth", (route) =>
     route.fulfill({
       json: {
@@ -38,7 +41,6 @@ test("Claude sign-in completes automatically with manual entry hidden as a fallb
     submitted++;
     return route.fulfill({ json: { json: { ok: true } } });
   });
-  await page.goto("/");
   await openUserSettings(page, "models");
   await page.getByPlaceholder("Search providers").fill("anthropic");
   await page.getByRole("button", { name: /Anthropic/ }).click();

@@ -606,7 +606,9 @@ export function ShellPage() {
       .then(([catalog, credentials, me]) => {
         setModelCatalog(catalog);
         setModelCredentials(credentials);
-        setBootstrapMe(me);
+        setBootstrapMe((prev) =>
+          prev?.isDeploymentOwner ? { ...me, isDeploymentOwner: true } : me,
+        );
       })
       .catch(() => undefined);
   }, []);
@@ -2993,13 +2995,13 @@ export function ShellPage() {
                               position: { x: event.clientX, y: event.clientY },
                             });
                           }}
-                          className={`flex w-full items-center gap-3 rounded-xl px-2.5 py-[9px] text-start transition-all duration-150 ${
+                          className={`flex w-full items-center gap-3 rounded-xl px-2.5 py-[9px] text-start ${
                             item.kind === "bot" ? "cursor-grab active:cursor-grabbing" : ""
                           } ${
                             (item.kind === "bot" && !inGroup && active?.id === item.chat.id) ||
                             (item.kind === "group" && inGroup && activeGroup?.id === item.chat.id)
                               ? "bg-accent/80 font-medium shadow-xs border border-border/80 ring-1 ring-border/40 text-foreground"
-                              : "border border-transparent hover:bg-accent/40"
+                              : "border border-transparent hover:bg-sidebar-accent"
                           }`}
                           style={{
                             opacity:
@@ -3360,6 +3362,11 @@ export function ShellPage() {
             <button
               type="button"
               data-testid="bot-settings-trigger"
+              aria-label={
+                inGroup
+                  ? (activeGroup?.name ?? activeSnapshot?.groupName ?? t`Group`)
+                  : (active?.name ?? t`Select a bot`)
+              }
               onClick={() => setPanel(inGroup ? "group-settings" : "settings")}
               className="app-no-drag flex min-w-0 items-center gap-3"
             >
@@ -3520,7 +3527,7 @@ export function ShellPage() {
         ) : null}
         {active || activeGroup ? (
           <Composer
-            key={inGroup ? `group:$groupId` : `bot:$active?.id`}
+            key={inGroup ? `group:${groupId}` : `bot:${active?.id}`}
             activeName={inGroup ? (activeGroup?.name ?? activeSnapshot?.groupName) : active?.name}
             running={composerRunning}
             disabled={Boolean(recordingSkill)}
@@ -4934,7 +4941,7 @@ const Transcript = memo(function Transcript({
             })()}
           </div>
         ) : (
-          <div className="mx-auto flex w-full max-w-4xl flex-col gap-2">
+          <div className="flex w-full flex-col gap-2">
             {reactionView.visibleMessages.map((message) => {
               if (!message.blocks.some((block) => !isToolActivityBlock(block))) return null;
               const peerReceipt = isPeerReceiptBlocks(message.blocks);
