@@ -1,0 +1,3 @@
+ALTER TABLE "spaces"
+  ADD COLUMN IF NOT EXISTS "dailyTokenCap" INTEGER,
+  ADD COLUMN IF NOT EXISTS "monthlyTokenCap" INTEGER;

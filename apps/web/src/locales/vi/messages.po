@@ -1,0 +1,4374 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-11-10 17:14+0700\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: vi\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/pages/Shell.tsx:3028
+msgid " (unread)"
+msgstr " (chưa đọc)"
+
+#. placeholder {0}: group.entries.length
+#: src/pages/ModelSettingsOverlay.tsx:535
+msgid "{0, plural, one {# model} other {# models}}"
+msgstr "{0, plural, one {# mô hình} other {# mô hình}}"
+
+#. placeholder {0}: file.name
+#: src/pages/Shell.tsx:1970
+msgid "{0} (max {ATTACHMENT_MAX_COUNT} attachments)"
+msgstr "{0} (tối đa {ATTACHMENT_MAX_COUNT} tệp đính kèm)"
+
+#. placeholder {0}: file.name
+#: src/pages/Shell.tsx:1974
+msgid "{0} (over 10 MiB)"
+msgstr "{0} (quá 10 MiB)"
+
+#. placeholder {0}: preset.n
+#: src/pages/RoutineSchedule.tsx:145
+msgid "{0} {unitLabel}"
+msgstr "{0} {unitLabel}"
+
+#. placeholder {0}: block.name
+#: src/pages/shell/message-cards.tsx:165
+msgid "{0} connection"
+msgstr "Kết nối {0}"
+
+#. placeholder {0}: bot.name
+#: src/pages/ExternalConversationSettings.tsx:98
+#: src/pages/ExternalConversationSettings.tsx:141
+msgid "{0} default"
+msgstr "Mặc định của {0}"
+
+#. placeholder {0}: item.fileCount
+#: src/pages/ImportSettingsPanel.tsx:319
+#: src/pages/ImportSettingsPanel.tsx:337
+#: src/pages/ImportSettingsPanel.tsx:348
+msgid "{0} files"
+msgstr "{0} tệp"
+
+#. placeholder {0}: sender.name
+#: src/pages/ExternalConversationSettings.tsx:176
+msgid "{0} handling"
+msgstr "Xử lý {0}"
+
+#. placeholder {0}: format(size / 1024)
+#: src/components/ArtifactFileCard.tsx:224
+msgid "{0} KB"
+msgstr "{0} KB"
+
+#. placeholder {0}: format(size / (1024 * 1024))
+#: src/components/ArtifactFileCard.tsx:225
+msgid "{0} MB"
+msgstr "{0} MB"
+
+#. placeholder {0}: item.messageCount
+#: src/pages/ImportSettingsPanel.tsx:328
+msgid "{0} messages"
+msgstr "{0} tin nhắn"
+
+#. placeholder {0}: receipt.projectCount
+#. placeholder {1}: receipt.sessionCount
+#. placeholder {2}: receipt.skillCount
+#: src/pages/ImportSettingsPanel.tsx:553
+msgid "{0} projects · {1} sessions · {2} skills"
+msgstr "{0} dự án · {1} phiên · {2} kỹ năng"
+
+#. placeholder {0}: sender.name
+#: src/pages/ExternalConversationSettings.tsx:198
+msgid "{0} rollup hours"
+msgstr "{0} giờ tổng hợp"
+
+#. placeholder {0}: usage.runs
+#. placeholder {1}: (usage.inputTokens + usage.outputTokens).toLocaleString()
+#: src/pages/AccountSettingsOverlay.tsx:252
+msgid "{0} runs · {1} tokens"
+msgstr "{0} lượt chạy · {1} token"
+
+#. placeholder {0}: archive.receipt.sensitiveFileCount ?? 0
+#. placeholder {0}: receipt.sensitiveFileCount ?? 0
+#: src/pages/ImportSettingsPanel.tsx:555
+#: src/pages/ImportSettingsPanel.tsx:616
+msgid "{0} sensitive files included"
+msgstr "Đã bao gồm {0} tệp nhạy cảm"
+
+#. placeholder {0}: bot.name
+#: src/pages/ExternalConversationSettings.tsx:232
+msgid "{0} will still respond to direct mentions."
+msgstr "{0} vẫn sẽ trả lời khi được nhắc trực tiếp."
+
+#. placeholder {0}: active.name
+#: src/pages/Shell.tsx:3660
+msgid "{0}'s screen"
+msgstr "Màn hình của {0}"
+
+#: src/pages/Shell.tsx:6581
+msgid "{botName}’s computer"
+msgstr "Máy tính của {botName}"
+
+#: src/pages/ActivityList.tsx:140
+msgid "{days}d ago"
+msgstr "{days} ngày trước"
+
+#: src/pages/ActivityList.tsx:138
+msgid "{hours}h ago"
+msgstr "{hours} giờ trước"
+
+#: src/pages/ActivityList.tsx:136
+msgid "{minutes}m ago"
+msgstr "{minutes} phút trước"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:87
+msgid "{name} failed"
+msgstr "{name} thất bại"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:98
+msgid "{name} finished"
+msgstr "{name} đã xong"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:93
+msgid "{name} stopped"
+msgstr "{name} đã dừng"
+
+#: src/components/teach/TeachRecordingChrome.tsx:46
+#: src/components/teach/TeachRecordingChrome.tsx:64
+msgid "{remaining} left · bot is watching, not acting"
+msgstr "Còn {remaining} · bot chỉ quan sát, không thao tác"
+
+#: src/components/ArtifactFileCard.tsx:218
+msgid "{size} B"
+msgstr "{size} B"
+
+#: src/pages/ActivityList.tsx:97
+msgid "{title}, {label}"
+msgstr "{title}, {label}"
+
+#: src/pages/PluginsOverlay.tsx:631
+msgid "{toolCount, plural, one {# tool} other {# tools}}"
+msgstr "{toolCount, plural, one {# công cụ} other {# công cụ}}"
+
+#: src/pages/Shell.tsx:4593
+msgid "{workingBotName} is working"
+msgstr "{workingBotName} đang làm việc"
+
+#. placeholder {0}: mention.name
+#: src/pages/Shell.tsx:5547
+msgid "@{0}"
+msgstr "@{0}"
+
+#: src/pages/ModelSettingsOverlay.tsx:516
+msgid "+ Add connection"
+msgstr "+ Thêm kết nối"
+
+#: src/pages/shell/bot-picker.tsx:105
+#: src/pages/shell/bot-picker.tsx:106
+msgid "About groups"
+msgstr "Về nhóm"
+
+#: src/pages/shell/bot-picker.tsx:133
+#: src/pages/shell/bot-picker.tsx:134
+msgid "About spaces"
+msgstr "Về không gian"
+
+#: src/components/integrations/IntegrationSetup.tsx:310
+msgid "Access token"
+msgstr "Access token"
+
+#: src/pages/McpServersOverlay.tsx:354
+msgid "Access token (optional)"
+msgstr "Access token (tùy chọn)"
+
+#: src/pages/shell/bot-panel.tsx:803
+msgid "Account default"
+msgstr "Mặc định của tài khoản"
+
+#: src/pages/PluginsOverlay.tsx:583
+msgid "Account label"
+msgstr "Nhãn tài khoản"
+
+#: src/pages/PluginsOverlay.tsx:575
+msgid "Accounts"
+msgstr "Tài khoản"
+
+#: src/components/ApprovalRulesSettings.tsx:112
+msgid "Action confirmations"
+msgstr "Xác nhận hành động"
+
+#. placeholder {0}: bot.name
+#. placeholder {0}: group.spaceName
+#. placeholder {0}: sectionMenu.section.name
+#: src/pages/BotContextMenu.tsx:84
+#: src/pages/Shell.tsx:2905
+#: src/pages/Shell.tsx:4174
+msgid "Actions for {0}"
+msgstr "Thao tác cho {0}"
+
+#: src/pages/Shell.tsx:4048
+msgid "Actions for space"
+msgstr "Thao tác cho không gian"
+
+#: src/pages/RoutineEditor.tsx:297
+msgid "Active"
+msgstr "Hoạt động"
+
+#: src/pages/ModelSettingsOverlay.tsx:443
+msgid "Active model"
+msgstr "Mô hình đang dùng"
+
+#: src/pages/Shell.tsx:2701
+#: src/pages/Shell.tsx:2703
+msgid "Activity"
+msgstr "Hoạt động"
+
+#: src/pages/PluginsOverlay.tsx:467
+#: src/pages/PluginsOverlay.tsx:932
+#: src/pages/ScratchpadSection.tsx:196
+msgid "Add"
+msgstr "Thêm"
+
+#. placeholder {0}: starter.botCount
+#: src/pages/ImportSettingsPanel.tsx:874
+msgid "Add {0} bots"
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:874
+msgid "Add 1 bot"
+msgstr ""
+
+#: src/components/ApprovalRulesSettings.tsx:151
+msgid "Add a model in Settings to use this."
+msgstr "Thêm một mô hình trong Cài đặt để dùng tính năng này."
+
+#: src/pages/Shell.tsx:3830
+msgid "Add a run time for this one-shot."
+msgstr "Thêm thời điểm chạy cho lần chạy một lần này."
+
+#: src/pages/Shell.tsx:3808
+msgid "Add a schedule, webhook, GitHub, or message trigger"
+msgstr "Thêm lịch, webhook, GitHub hoặc trình kích hoạt tin nhắn"
+
+#: src/pages/RoutineEditor.tsx:482
+msgid "Add a schedule, webhook, GitHub, or message trigger to run this routine."
+msgstr "Thêm lịch, webhook, GitHub hoặc trình kích hoạt tin nhắn để chạy quy trình này."
+
+#: src/pages/McpServersOverlay.tsx:108
+msgid "Add a server name."
+msgstr "Thêm tên máy chủ."
+
+#: src/pages/McpServersOverlay.tsx:116
+msgid "Add a stdio command."
+msgstr "Thêm lệnh stdio."
+
+#: src/pages/McpServersOverlay.tsx:112
+msgid "Add an HTTPS server URL."
+msgstr "Thêm URL máy chủ HTTPS."
+
+#: src/pages/PluginsOverlay.tsx:615
+msgid "Add another"
+msgstr "Thêm cái khác"
+
+#: src/pages/PluginsOverlay.tsx:978
+msgid "Add Executor"
+msgstr "Thêm Executor"
+
+#: src/pages/PluginsOverlay.tsx:969
+msgid "Add GraphQL"
+msgstr "Thêm GraphQL"
+
+#: src/pages/PluginsOverlay.tsx:1004
+msgid "Add GraphQL endpoint"
+msgstr "Thêm endpoint GraphQL"
+
+#: src/pages/ScratchpadSection.tsx:185
+msgid "Add item"
+msgstr "Thêm mục"
+
+#: src/components/integrations/IntegrationSetup.tsx:132
+#: src/pages/PluginsOverlay.tsx:951
+msgid "Add MCP server"
+msgstr "Thêm máy chủ MCP"
+
+#: src/pages/PluginsOverlay.tsx:960
+msgid "Add OpenAPI"
+msgstr "Thêm OpenAPI"
+
+#: src/pages/PluginsOverlay.tsx:1002
+msgid "Add remote MCP server"
+msgstr "Thêm máy chủ MCP từ xa"
+
+#: src/pages/McpServersOverlay.tsx:275
+#: src/pages/McpServersOverlay.tsx:415
+msgid "Add server"
+msgstr "Thêm máy chủ"
+
+#: src/components/integrations/IntegrationSetup.tsx:278
+msgid "Add server URL"
+msgstr "Thêm URL máy chủ"
+
+#: src/components/teach/SkillDraftCard.tsx:152
+msgid "Add to routine"
+msgstr "Thêm vào quy trình"
+
+#: src/pages/PluginsOverlay.tsx:987
+msgid "Add Treg"
+msgstr "Thêm Treg"
+
+#: src/pages/RoutineEditor.tsx:418
+msgid "Add trigger"
+msgstr "Thêm trình kích hoạt"
+
+#: src/pages/PluginsOverlay.tsx:451
+msgid "Added"
+msgstr "Đã thêm"
+
+#: src/pages/McpServersOverlay.tsx:415
+#: src/pages/PluginsOverlay.tsx:451
+#: src/pages/PluginsOverlay.tsx:467
+#: src/pages/PluginsOverlay.tsx:615
+msgid "Adding…"
+msgstr "Đang thêm…"
+
+#: src/pages/AccountSettingsOverlay.tsx:153
+#: src/pages/McpServersOverlay.tsx:342
+#: src/pages/ModelSettingsOverlay.tsx:666
+#: src/pages/Onboarding.tsx:508
+#: src/pages/PluginsOverlay.tsx:836
+#: src/pages/RoutineSchedule.tsx:44
+#: src/pages/shell/bot-panel.tsx:743
+msgid "Advanced"
+msgstr "Nâng cao"
+
+#: src/pages/RoutineEditor.tsx:643
+msgid "Advanced..."
+msgstr "Nâng cao..."
+
+#: src/pages/Shell.tsx:4796
+msgid "Agent"
+msgstr "Trợ lý"
+
+#: src/pages/Shell.tsx:3407
+msgid "Agent computer"
+msgstr "Máy tính của trợ lý"
+
+#: src/pages/MessagingSettingsOverlay.tsx:261
+msgid "Agent connections"
+msgstr "Kết nối trợ lý"
+
+#: src/pages/McpServersOverlay.tsx:385
+#: src/pages/McpServersOverlay.tsx:452
+msgid "Agents:"
+msgstr "Trợ lý:"
+
+#: src/pages/ImportSettingsPanel.tsx:449
+msgid "All sources"
+msgstr "Tất cả nguồn"
+
+#. placeholder {0}: rule.matchValue
+#: src/components/ApprovalRulesSettings.tsx:21
+msgid "Allow {0} actions without asking"
+msgstr "Cho phép hành động {0} mà không hỏi"
+
+#. placeholder {0}: rule.matchValue
+#: src/components/ApprovalRulesSettings.tsx:23
+msgid "Allow {0} connector without asking"
+msgstr "Cho phép trình kết nối {0} mà không hỏi"
+
+#. placeholder {0}: rule.matchValue
+#: src/components/ApprovalRulesSettings.tsx:24
+msgid "Allow {0} without asking"
+msgstr "Cho phép {0} mà không hỏi"
+
+#: src/components/ApprovalRulesSettings.tsx:19
+msgid "Allow email actions without asking"
+msgstr "Cho phép hành động email mà không hỏi"
+
+#: src/components/AskCard.tsx:36
+msgid "Allow once"
+msgstr "Cho phép một lần"
+
+#: src/components/ApprovalRulesSettings.tsx:20
+msgid "Allow purchase actions without asking"
+msgstr "Cho phép hành động mua hàng mà không hỏi"
+
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:76
+msgid "Allow writing"
+msgstr "Cho phép ghi"
+
+#: src/components/AskCard.tsx:23
+msgid "Allowed once"
+msgstr "Đã cho phép một lần"
+
+#: src/pages/Auth.tsx:228
+msgid "Already have an account?"
+msgstr "Đã có tài khoản?"
+
+#: src/pages/ExternalConversationSettings.tsx:60
+msgid "Always act"
+msgstr "Luôn thực hiện"
+
+#: src/components/AskCard.tsx:37
+msgid "Always allow this tool"
+msgstr "Luôn cho phép công cụ này"
+
+#: src/components/AskCard.tsx:24
+msgid "Always allowed"
+msgstr "Luôn được phép"
+
+#: src/pages/Shell.tsx:4859
+msgid "Analyze system architecture and running services"
+msgstr "Phân tích kiến trúc hệ thống và các service đang chạy"
+
+#: src/components/AskCard.tsx:169
+msgid "Answer"
+msgstr "Trả lời"
+
+#: src/components/AskCard.tsx:19
+msgid "Answered"
+msgstr "Đã trả lời"
+
+#. placeholder {0}: selectedAskActionLabel(answer, actions)
+#: src/components/AskCard.tsx:20
+msgid "Answered: {0}"
+msgstr "Đã trả lời: {0}"
+
+#: src/components/AskCard.tsx:26
+msgid "Answered: {answer}"
+msgstr "Đã trả lời: {answer}"
+
+#: src/components/SoftwareUpdateSection.tsx:205
+msgid "API is back, but the update did not finish. Check the host logs."
+msgstr "API đã hoạt động lại nhưng bản cập nhật chưa hoàn tất. Hãy kiểm tra log của máy chủ."
+
+#: src/components/AskCard.tsx:44
+#: src/components/integrations/IntegrationSetup.tsx:194
+#: src/lib/localized-provider-hint.ts:9
+#: src/pages/ModelSettingsOverlay.tsx:853
+#: src/pages/ModelSettingsOverlay.tsx:856
+#: src/pages/ModelSettingsOverlay.tsx:875
+#: src/pages/Onboarding.tsx:643
+#: src/pages/Onboarding.tsx:646
+#: src/pages/Onboarding.tsx:660
+#: src/pages/VoiceSettingsOverlay.tsx:252
+msgid "API key"
+msgstr "API key"
+
+#: src/pages/PluginsOverlay.tsx:1044
+msgid "API key header"
+msgstr "Header API key"
+
+#: src/pages/AccountSettingsOverlay.tsx:94
+#: src/pages/AccountSettingsOverlay.tsx:425
+msgid "Appearance"
+msgstr "Giao diện"
+
+#: src/components/teach/SkillDraftCard.tsx:126
+msgid "Approval boundaries"
+msgstr "Giới hạn phê duyệt"
+
+#: src/pages/MessagingSettingsOverlay.tsx:223
+#: src/pages/MessagingSettingsOverlay.tsx:296
+#: src/pages/shell/message-cards.tsx:360
+msgid "Approve"
+msgstr "Phê duyệt"
+
+#: src/pages/shell/message-cards.tsx:351
+msgid "Approve this server to let your agent use its tools."
+msgstr "Phê duyệt máy chủ này để trợ lý dùng các công cụ của nó."
+
+#: src/pages/BotContextMenu.tsx:144
+msgid "Archive"
+msgstr "Lưu trữ"
+
+#: src/pages/ImportSettingsPanel.tsx:607
+msgid "Archive contents"
+msgstr "Nội dung bản lưu"
+
+#: src/pages/Shell.tsx:6330
+msgid "archived"
+msgstr "đã lưu trữ"
+
+#: src/pages/Shell.tsx:3098
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#: src/pages/Shell.tsx:6341
+msgid "Archived. Chat, memory, and files kept."
+msgstr "Đã lưu trữ. Cuộc trò chuyện, bộ nhớ và tệp vẫn được giữ."
+
+#: src/pages/McpServersOverlay.tsx:316
+msgid "Arguments"
+msgstr "Tham số"
+
+#. placeholder {0}: rule.matchValue
+#: src/components/ApprovalRulesSettings.tsx:16
+msgid "Ask before {0}"
+msgstr "Hỏi trước khi {0}"
+
+#. placeholder {0}: rule.matchValue
+#: src/components/ApprovalRulesSettings.tsx:13
+msgid "Ask before {0} actions"
+msgstr "Hỏi trước hành động {0}"
+
+#. placeholder {0}: rule.matchValue
+#: src/components/ApprovalRulesSettings.tsx:15
+msgid "Ask before {0} connector"
+msgstr "Hỏi trước khi dùng trình kết nối {0}"
+
+#: src/components/ApprovalRulesSettings.tsx:11
+msgid "Ask before email actions"
+msgstr "Hỏi trước hành động email"
+
+#: src/components/ApprovalRulesSettings.tsx:12
+msgid "Ask before purchase actions"
+msgstr "Hỏi trước hành động mua hàng"
+
+#: src/components/ApprovalRulesSettings.tsx:133
+msgid "Ask before purchases"
+msgstr "Hỏi trước khi mua hàng"
+
+#: src/components/ApprovalRulesSettings.tsx:126
+msgid "Ask before sending external email"
+msgstr "Hỏi trước khi gửi email ra ngoài"
+
+#: src/components/integrations/IntegrationSetup.tsx:228
+msgid "Ask the server owner to configure this provider."
+msgstr "Hãy nhờ chủ máy chủ cấu hình nhà cung cấp này."
+
+#. placeholder {0}: preset.time
+#: src/pages/RoutineSchedule.tsx:155
+#: src/pages/RoutineSchedule.tsx:158
+#: src/pages/RoutineSchedule.tsx:163
+msgid "at {0}"
+msgstr "lúc {0}"
+
+#: src/pages/RoutineSchedule.tsx:268
+msgid "at {timeSelect}"
+msgstr "lúc {timeSelect}"
+
+#: src/pages/Shell.tsx:5638
+msgid "Attach file"
+msgstr "Đính kèm tệp"
+
+#: src/pages/Shell.tsx:5885
+msgid "Attachment"
+msgstr "Tệp đính kèm"
+
+#: src/pages/ImportSettingsPanel.tsx:39
+msgid "Attachments are not imported."
+msgstr "Không nhập tệp đính kèm."
+
+#: src/pages/ModelSettingsOverlay.tsx:785
+#: src/pages/Onboarding.tsx:591
+msgid "Authorization code or callback URL"
+msgstr "Mã ủy quyền hoặc URL callback"
+
+#: src/pages/shell/message-cards.tsx:150
+msgid "Authorization timed out. Please try again."
+msgstr "Hết thời gian ủy quyền. Vui lòng thử lại."
+
+#: src/pages/shell/message-cards.tsx:195
+#: src/pages/shell/message-cards.tsx:360
+msgid "Authorize"
+msgstr "Ủy quyền"
+
+#: src/pages/shell/message-cards.tsx:350
+msgid "Authorize this server so agents can use its tools. A popup opens."
+msgstr "Ủy quyền máy chủ này để trợ lý dùng các công cụ của nó. Một cửa sổ bật lên sẽ mở."
+
+#: src/pages/ExternalConversationSettings.tsx:160
+msgid "Automated senders"
+msgstr "Người gửi tự động"
+
+#: src/pages/ExternalConversationSettings.tsx:225
+msgid "Automated senders will appear after they post here."
+msgstr "Người gửi tự động sẽ xuất hiện sau khi họ đăng tại đây."
+
+#: src/pages/RoutineEditor.tsx:557
+msgid "Available after the routine is saved"
+msgstr "Có sau khi lưu quy trình"
+
+#: src/pages/shell/avatar-studio-popover.tsx:138
+msgid "Avatar Studio"
+msgstr "Avatar Studio"
+
+#: src/pages/AccountSettingsOverlay.tsx:114
+msgid "Avatars"
+msgstr "Ảnh đại diện"
+
+#: src/pages/PluginsOverlay.tsx:540
+#: src/pages/RoutineEditor.tsx:260
+msgid "Back"
+msgstr "Quay lại"
+
+#: src/pages/Auth.tsx:126
+#: src/pages/Auth.tsx:235
+#: src/pages/Auth.tsx:320
+msgid "Back to sign in"
+msgstr "Quay lại đăng nhập"
+
+#: src/pages/ImportSettingsPanel.tsx:819
+msgid "Backup Workspace (.json)"
+msgstr ""
+
+#: src/pages/memory-providers/SupermemorySettingsForm.tsx:47
+msgid "Base URL"
+msgstr "Base URL"
+
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:48
+#: src/pages/PluginsOverlay.tsx:1041
+msgid "Bearer token"
+msgstr "Bearer token"
+
+#: src/pages/ImportSettingsPanel.tsx:360
+msgid "Binary or unreadable file"
+msgstr "Tệp nhị phân hoặc không đọc được"
+
+#: src/pages/Shell.tsx:6573
+msgid "Booting live desktop…"
+msgstr "Đang khởi động màn hình trực tiếp…"
+
+#. placeholder {0}: computerBot?.name ?? active?.name
+#: src/pages/Shell.tsx:4353
+msgid "Booting up {0}’s computer"
+msgstr "Đang khởi động máy tính của {0}"
+
+#: src/pages/Shell.tsx:6205
+#: src/pages/Shell.tsx:6206
+#: src/pages/Shell.tsx:6334
+msgid "bot"
+msgstr "bot"
+
+#: src/pages/IntegrationSetup.tsx:51
+#: src/pages/Shell.tsx:1764
+#: src/pages/shell/avatar-studio-popover.tsx:169
+msgid "Bot"
+msgstr "Bot"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:71
+msgid "Bot"
+msgstr "Bot"
+
+#: src/pages/Shell.tsx:4469
+msgid "Bot screen"
+msgstr "Màn hình bot"
+
+#: src/pages/Shell.tsx:3623
+msgid "Bot screen preview"
+msgstr "Xem trước màn hình bot"
+
+#: src/pages/MessagingSettingsOverlay.tsx:151
+msgid "Bot to link"
+msgstr "Bot cần liên kết"
+
+#: src/components/ApprovalRulesSettings.tsx:115
+msgid "Bots act without asking by default. Add an exception only when you want to review a type of action first."
+msgstr "Mặc định bot hành động mà không hỏi. Chỉ thêm ngoại lệ khi anh muốn xem lại một loại hành động trước."
+
+#: src/pages/Shell.tsx:4594
+msgid "Bots are working"
+msgstr "Các bot đang làm việc"
+
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:63
+msgid "Brain label"
+msgstr "Nhãn bộ não"
+
+#: src/pages/PluginsOverlay.tsx:709
+msgid "Browse MCP servers"
+msgstr "Duyệt máy chủ MCP"
+
+#: src/pages/AccountSettingsOverlay.tsx:338
+msgid "By Bot"
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:359
+msgid "By Model"
+msgstr ""
+
+#: src/pages/CallView.tsx:241
+msgid "Call"
+msgstr "Gọi"
+
+#: src/components/AskCard.tsx:35
+#: src/components/AskCard.tsx:186
+#: src/components/ComputerMaintenanceActions.tsx:97
+#: src/components/ComputerUpdateProgress.tsx:233
+#: src/components/teach/TeachComputerOverlay.tsx:254
+#: src/pages/ImportSettingsPanel.tsx:387
+#: src/pages/KnowledgeSection.tsx:212
+#: src/pages/KnowledgeSection.tsx:438
+#: src/pages/PluginsOverlay.tsx:1102
+#: src/pages/shell/dialogs.tsx:88
+#: src/pages/shell/dialogs.tsx:200
+#: src/pages/shell/dialogs.tsx:264
+#: src/pages/shell/dialogs.tsx:306
+#: src/pages/shell/dialogs.tsx:396
+#: src/pages/shell/dialogs.tsx:449
+msgid "Cancel"
+msgstr "Hủy"
+
+#: src/pages/ImportSettingsPanel.tsx:600
+msgid "Cancel export"
+msgstr "Hủy xuất"
+
+#: src/pages/shell/bot-panel.tsx:237
+msgid "Cancel new bot"
+msgstr "Hủy tạo bot"
+
+#: src/pages/GroupPanel.tsx:106
+msgid "Cancel new group"
+msgstr "Hủy tạo nhóm"
+
+#: src/pages/Shell.tsx:5485
+msgid "Cancel reply"
+msgstr "Hủy trả lời"
+
+#: src/components/CloudAgentCard.tsx:36
+msgid "cancelled"
+msgstr "đã hủy"
+
+#: src/components/AskCard.tsx:22
+#: src/pages/ActivityList.tsx:161
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#: src/pages/AccountSettingsOverlay.tsx:213
+msgid "Caps must be whole numbers of at least 1,000 tokens (or empty)."
+msgstr ""
+
+#: src/pages/MessagingSettingsOverlay.tsx:190
+msgid "Channels"
+msgstr "Kênh"
+
+#: src/pages/shell/message-cards.tsx:258
+msgid "Chart failed to render: {error}"
+msgstr "Không hiển thị được biểu đồ: {error}"
+
+#: src/pages/MessagingSettingsOverlay.tsx:112
+msgid "Chat apps"
+msgstr "Ứng dụng chat"
+
+#: src/pages/AccountSettingsOverlay.tsx:84
+msgid "Chat apps, group channels, and agent connections."
+msgstr "Ứng dụng chat, kênh nhóm và kết nối trợ lý."
+
+#: src/pages/Shell.tsx:5828
+msgid "Chat Settings"
+msgstr "Cài đặt trò chuyện"
+
+#: src/pages/Shell.tsx:4858
+msgid "Check architecture"
+msgstr "Kiểm tra kiến trúc"
+
+#: src/components/SoftwareUpdateSection.tsx:157
+msgid "Check failed"
+msgstr "Kiểm tra thất bại"
+
+#: src/components/DesktopUpdates.tsx:106
+#: src/components/DesktopUpdates.tsx:156
+#: src/components/SoftwareUpdateSection.tsx:77
+msgid "Check for updates"
+msgstr "Kiểm tra cập nhật"
+
+#: src/pages/Shell.tsx:3843
+#: src/pages/Shell.tsx:3855
+msgid "Check in."
+msgstr "Báo cáo tình hình."
+
+#: src/pages/Auth.tsx:34
+msgid "Check your email"
+msgstr "Kiểm tra email của anh"
+
+#: src/components/DesktopUpdates.tsx:154
+#: src/components/SoftwareUpdateSection.tsx:77
+msgid "Checking…"
+msgstr "Đang kiểm tra…"
+
+#: src/components/SoftwareUpdateSection.tsx:267
+msgid "Checkout has local changes. Clean it before updating."
+msgstr "Bản checkout có thay đổi cục bộ. Hãy dọn sạch trước khi cập nhật."
+
+#: src/pages/shell/avatar-studio-popover.tsx:141
+msgid "Choose a bot shape, color, or upload an image"
+msgstr "Chọn hình dạng, màu bot hoặc tải ảnh lên"
+
+#: src/pages/MessagingSettingsOverlay.tsx:158
+msgid "Choose a bot…"
+msgstr "Chọn một bot…"
+
+#: src/pages/Auth.tsx:281
+msgid "Choose a new password"
+msgstr "Chọn mật khẩu mới"
+
+#: src/pages/shell/avatar-studio-popover.tsx:275
+msgid "Choose file"
+msgstr "Chọn tệp"
+
+#: src/pages/ImportSettingsPanel.tsx:128
+#: src/pages/ImportSettingsPanel.tsx:422
+msgid "Choose Include sensitive data before uploading this file."
+msgstr "Chọn «Bao gồm dữ liệu nhạy cảm» trước khi tải tệp này lên."
+
+#: src/pages/ModelSettingsOverlay.tsx:414
+msgid "Choose which connected model A-Company uses."
+msgstr "Chọn mô hình đã kết nối mà A-Company sử dụng."
+
+#: src/pages/Shell.tsx:4836
+msgid "Cinematic sunset"
+msgstr "Hoàng hôn điện ảnh"
+
+#: src/pages/shell/dialogs.tsx:320
+msgid "Clear"
+msgstr "Xóa"
+
+#. placeholder {0}: bot.name
+#: src/pages/shell/dialogs.tsx:294
+msgid "Clear {0}’s conversation?"
+msgstr "Xóa cuộc trò chuyện của {0}?"
+
+#: src/pages/BotContextMenu.tsx:140
+#: src/pages/shell/bot-panel.tsx:839
+msgid "Clear conversation"
+msgstr "Xóa cuộc trò chuyện"
+
+#: src/pages/ImportSettingsPanel.tsx:482
+msgid "Clear selection"
+msgstr "Bỏ chọn tất cả"
+
+#: src/pages/shell/dialogs.tsx:320
+msgid "Clearing…"
+msgstr "Đang xóa…"
+
+#: src/components/integrations/IntegrationSetup.tsx:172
+msgid "Client ID"
+msgstr "Client ID"
+
+#: src/components/integrations/IntegrationSetup.tsx:194
+msgid "Client secret"
+msgstr "Client secret"
+
+#: src/pages/KnowledgeSection.tsx:438
+#: src/pages/MessagingSettingsOverlay.tsx:361
+#: src/pages/PeerMessagesOverlay.tsx:98
+#: src/pages/PeerMessagesOverlay.tsx:99
+#: src/pages/RoutineEditor.tsx:272
+#: src/pages/shell/avatar-studio-popover.tsx:147
+#: src/pages/shell/dialogs.tsx:114
+#: src/pages/WindowChrome.tsx:19
+msgid "Close"
+msgstr "Đóng"
+
+#: src/pages/ImportSettingsPanel.tsx:612
+msgid "Close archive"
+msgstr "Đóng bản lưu"
+
+#: src/pages/shell/message-cards.tsx:432
+msgid "Close chart"
+msgstr "Đóng biểu đồ"
+
+#: src/pages/Shell.tsx:4448
+msgid "Close computer"
+msgstr "Đóng máy tính"
+
+#: src/pages/shell/message-cards.tsx:596
+msgid "Close image preview"
+msgstr "Đóng xem trước ảnh"
+
+#: src/pages/PluginsOverlay.tsx:682
+msgid "Close integrations"
+msgstr "Đóng tích hợp"
+
+#: src/pages/McpServersOverlay.tsx:258
+msgid "Close MCP servers"
+msgstr "Đóng máy chủ MCP"
+
+#: src/pages/MemorySettingsOverlay.tsx:168
+#: src/pages/SettingsOverlay.tsx:103
+msgid "Close memory settings"
+msgstr "Đóng cài đặt bộ nhớ"
+
+#: src/pages/MessagingSettingsOverlay.tsx:101
+msgid "Close messaging settings"
+msgstr "Đóng cài đặt nhắn tin"
+
+#: src/pages/ModelSettingsOverlay.tsx:430
+#: src/pages/SettingsOverlay.tsx:101
+msgid "Close model settings"
+msgstr "Đóng cài đặt mô hình"
+
+#: src/pages/Shell.tsx:2672
+msgid "Close navigation"
+msgstr "Đóng điều hướng"
+
+#: src/pages/Shell.tsx:3601
+msgid "Close panel"
+msgstr "Đóng bảng"
+
+#: src/components/ArtifactFileCard.tsx:176
+msgid "Close preview"
+msgstr "Đóng xem trước"
+
+#: src/pages/SettingsOverlay.tsx:106
+msgid "Close user settings"
+msgstr "Đóng cài đặt người dùng"
+
+#: src/pages/SettingsOverlay.tsx:105
+#: src/pages/VoiceSettingsOverlay.tsx:179
+msgid "Close voice settings"
+msgstr "Đóng cài đặt giọng nói"
+
+#: src/pages/shell/message-cards.tsx:492
+msgid "Close widget"
+msgstr ""
+
+#: src/pages/memory-providers/SupermemorySettingsForm.tsx:39
+msgid "Cloud"
+msgstr "Đám mây"
+
+#: src/components/AskCard.tsx:45
+msgid "Code"
+msgstr "Mã"
+
+#: src/pages/ImportSettingsPanel.tsx:451
+#: src/pages/ImportSettingsPanel.tsx:515
+msgid "Codex"
+msgstr "Codex"
+
+#. placeholder {0}: group.title
+#: src/pages/Shell.tsx:2879
+msgid "Collapse {0}"
+msgstr "Thu gọn {0}"
+
+#: src/pages/shell/avatar-studio-popover.tsx:215
+msgid "Color"
+msgstr "Màu"
+
+#: src/pages/shell/avatar-studio-popover.tsx:226
+msgid "Color {color}"
+msgstr "Màu {color}"
+
+#: src/pages/RoutineEditor.tsx:455
+msgid "Coming soon"
+msgstr "Sắp ra mắt"
+
+#: src/pages/McpServersOverlay.tsx:305
+msgid "Command"
+msgstr "Lệnh"
+
+#: src/pages/ScratchpadSection.tsx:119
+msgid "Complete"
+msgstr "Hoàn tất"
+
+#: src/pages/SettingsOverlay.tsx:91
+#: src/pages/Shell.tsx:6499
+#: src/pages/shell/bot-panel.tsx:57
+msgid "Computer"
+msgstr "Máy tính"
+
+#: src/pages/Shell.tsx:6576
+msgid "Computer failed to boot"
+msgstr "Máy tính khởi động thất bại"
+
+#: src/pages/Shell.tsx:4492
+msgid "Computer is asleep"
+msgstr "Máy tính đang ngủ"
+
+#: src/pages/Shell.tsx:6575
+msgid "Computer is asleep. Open it to wake."
+msgstr "Máy tính đang ngủ. Mở để đánh thức."
+
+#: src/pages/Shell.tsx:6577
+msgid "Computer is stopped"
+msgstr "Máy tính đã dừng"
+
+#: src/pages/AccountSettingsOverlay.tsx:389
+msgid "Computers"
+msgstr "Máy tính"
+
+#: src/components/ComputersUnavailableHint.tsx:7
+msgid "Computers are off. Set SANDBOX_PROVIDER=docker with SANDBOX_SUPERVISOR_TOKEN, or set SANDBOX_PROVIDER to e2b, daytona, or box with its API key. Recreate the stack after changing .env."
+msgstr "Máy tính đang tắt. Đặt SANDBOX_PROVIDER=docker cùng SANDBOX_SUPERVISOR_TOKEN, hoặc đặt SANDBOX_PROVIDER thành e2b, daytona hay box kèm API key. Tạo lại stack sau khi sửa .env."
+
+#: src/pages/ModelSettingsOverlay.tsx:450
+msgid "Configured by deployment"
+msgstr "Được cấu hình khi triển khai"
+
+#: src/pages/McpServersOverlay.tsx:421
+msgid "Configured servers"
+msgstr "Máy chủ đã cấu hình"
+
+#: src/pages/KnowledgeSection.tsx:450
+#: src/pages/McpServersOverlay.tsx:506
+msgid "Confirm delete"
+msgstr "Xác nhận xóa"
+
+#: src/pages/ImportSettingsPanel.tsx:528
+msgid "Confirm import"
+msgstr "Xác nhận nhập"
+
+#: src/pages/Auth.tsx:301
+msgid "Confirm password"
+msgstr "Xác nhận mật khẩu"
+
+#: src/components/integrations/IntegrationSetup.tsx:222
+#: src/components/integrations/IntegrationSetup.tsx:267
+#: src/components/integrations/IntegrationSetup.tsx:291
+#: src/components/integrations/IntegrationSetup.tsx:324
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:107
+#: src/pages/memory-providers/SupermemorySettingsForm.tsx:82
+#: src/pages/VoiceSettingsOverlay.tsx:274
+msgid "Connect"
+msgstr "Kết nối"
+
+#: src/pages/Onboarding.tsx:396
+msgid "Connect a model"
+msgstr "Kết nối mô hình"
+
+#: src/pages/ModelSettingsOverlay.tsx:910
+msgid "Connect API key"
+msgstr "Kết nối API key"
+
+#: src/pages/PluginsOverlay.tsx:1000
+msgid "Connect Executor"
+msgstr "Kết nối Executor"
+
+#: src/pages/ImportSettingsPanel.tsx:369
+msgid "Connect local"
+msgstr "Kết nối cục bộ"
+
+#: src/pages/shell/message-cards.tsx:342
+msgid "Connect MCP server “{name}”"
+msgstr "Kết nối máy chủ MCP “{name}”"
+
+#: src/pages/McpServersOverlay.tsx:39
+msgid "Connect OAuth"
+msgstr "Kết nối OAuth"
+
+#: src/pages/ModelSettingsOverlay.tsx:755
+msgid "Connect this provider to use it as your personal model."
+msgstr "Kết nối nhà cung cấp này để dùng làm mô hình cá nhân."
+
+#: src/pages/PluginsOverlay.tsx:998
+msgid "Connect Treg"
+msgstr "Kết nối Treg"
+
+#: src/components/integrations/IntegrationSetup.tsx:164
+#: src/components/integrations/IntegrationSetup.tsx:267
+#: src/pages/McpOAuthCallback.tsx:54
+#: src/pages/MemorySettingsOverlay.tsx:191
+#: src/pages/ModelSettingsOverlay.tsx:542
+#: src/pages/shell/message-cards.tsx:187
+#: src/pages/VoiceSettingsOverlay.tsx:231
+msgid "Connected"
+msgstr "Đã kết nối"
+
+#. placeholder {0}: credential.label
+#: src/pages/ModelSettingsOverlay.tsx:746
+msgid "Connected · {0}"
+msgstr "Đã kết nối · {0}"
+
+#. placeholder {0}: selected.name
+#: src/pages/VoiceSettingsOverlay.tsx:111
+msgid "Connected {0}."
+msgstr "Đã kết nối {0}."
+
+#. placeholder {0}: selectedLabelRef.current ?? "this model"
+#: src/pages/ModelSettingsOverlay.tsx:98
+msgid "Connected and using {0}."
+msgstr "Đã kết nối và đang dùng {0}."
+
+#: src/pages/shell/message-cards.tsx:374
+msgid "Connected. Its tools are available from your next message."
+msgstr "Đã kết nối. Công cụ của nó có từ tin nhắn tiếp theo."
+
+#: src/components/integrations/IntegrationSetup.tsx:222
+#: src/components/integrations/IntegrationSetup.tsx:361
+#: src/pages/McpServersOverlay.tsx:38
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:107
+#: src/pages/memory-providers/SupermemorySettingsForm.tsx:82
+#: src/pages/shell/message-cards.tsx:360
+#: src/pages/VoiceSettingsOverlay.tsx:270
+msgid "Connecting…"
+msgstr "Đang kết nối…"
+
+#: src/pages/ModelSettingsOverlay.tsx:563
+msgid "Connection name"
+msgstr "Tên kết nối"
+
+#. placeholder {0}: item.name
+#: src/pages/PluginsOverlay.tsx:259
+msgid "Connection to {0} is still pending. You can close this and check again."
+msgstr "Kết nối tới {0} vẫn đang chờ. Anh có thể đóng và kiểm tra lại sau."
+
+#: src/pages/ModelSettingsOverlay.tsx:697
+#: src/pages/Onboarding.tsx:529
+msgid "Context limit"
+msgstr "Giới hạn ngữ cảnh"
+
+#: src/components/integrations/IntegrationSetup.tsx:361
+#: src/pages/Onboarding.tsx:677
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#: src/components/ComputerUpdateProgress.tsx:194
+msgid "Continue in Background"
+msgstr "Tiếp tục chạy nền"
+
+#: src/pages/ImportSettingsPanel.tsx:648
+msgid "Continue project"
+msgstr "Tiếp tục dự án"
+
+#: src/pages/ImportSettingsPanel.tsx:629
+msgid "Continue session"
+msgstr "Tiếp tục phiên"
+
+#: src/pages/Auth.tsx:211
+msgid "Continue with email"
+msgstr "Tiếp tục bằng email"
+
+#: src/pages/shell/bot-panel.tsx:936
+msgid "Copied curl"
+msgstr ""
+
+#: src/pages/Shell.tsx:6012
+msgid "Copy"
+msgstr "Sao chép"
+
+#: src/pages/shell/bot-panel.tsx:936
+msgid "Copy curl example"
+msgstr ""
+
+#: src/pages/ScratchpadSection.tsx:56
+msgid "Could not add"
+msgstr "Không thể thêm"
+
+#: src/pages/McpServersOverlay.tsx:170
+msgid "Could not add MCP server"
+msgstr "Không thể thêm máy chủ MCP"
+
+#: src/pages/shell/bot-panel.tsx:394
+msgid "Could not add starter team"
+msgstr ""
+
+#: src/pages/shell/message-cards.tsx:329
+msgid "Could not approve this server"
+msgstr "Không thể phê duyệt máy chủ này"
+
+#: src/pages/shell/message-cards.tsx:153
+msgid "Could not authorize this app"
+msgstr "Không thể ủy quyền ứng dụng này"
+
+#: src/pages/ModelSettingsOverlay.tsx:288
+msgid "Could not change the default model"
+msgstr "Không thể đổi mô hình mặc định"
+
+#: src/components/teach/TeachComputerOverlay.tsx:85
+msgid "Could not check teaching status. Refresh the view to continue."
+msgstr "Không thể kiểm tra trạng thái hướng dẫn. Làm mới để tiếp tục."
+
+#: src/pages/shell/dialogs.tsx:315
+msgid "Could not clear conversation"
+msgstr "Không thể xóa cuộc trò chuyện"
+
+#: src/components/ComputerUpdateProgress.tsx:174
+msgid "Could not complete action"
+msgstr "Không thể hoàn tất thao tác"
+
+#: src/pages/McpOAuthCallback.tsx:43
+msgid "Could not complete OAuth"
+msgstr "Không thể hoàn tất OAuth"
+
+#: src/components/DesktopUpdates.tsx:70
+msgid "Could not complete the update. Try again."
+msgstr "Không thể hoàn tất cập nhật. Hãy thử lại."
+
+#: src/components/integrations/IntegrationSetup.tsx:79
+#: src/pages/PluginsOverlay.tsx:264
+msgid "Could not connect"
+msgstr "Không thể kết nối"
+
+#. placeholder {0}: registration.name
+#: src/pages/MemorySettingsOverlay.tsx:119
+msgid "Could not connect {0}"
+msgstr "Không thể kết nối {0}"
+
+#: src/lib/use-model-oauth-signin.ts:109
+#: src/lib/use-model-oauth-signin.ts:170
+#: src/pages/ModelSettingsOverlay.tsx:386
+msgid "Could not connect this provider"
+msgstr "Không thể kết nối nhà cung cấp này"
+
+#: src/pages/VoiceSettingsOverlay.tsx:113
+msgid "Could not connect this voice provider"
+msgstr "Không thể kết nối nhà cung cấp giọng nói này"
+
+#: src/pages/Shell.tsx:1000
+msgid "Could not connect to the computer screen"
+msgstr "Không thể kết nối tới màn hình máy tính"
+
+#: src/pages/ImportSettingsPanel.tsx:135
+msgid "Could not connect to the local helper. Allow popups, start the helper, then try again."
+msgstr "Không thể kết nối với trình hỗ trợ cục bộ. Hãy cho phép cửa sổ bật lên, khởi chạy trình hỗ trợ rồi thử lại."
+
+#: src/pages/Auth.tsx:99
+#: src/pages/Shell.tsx:2576
+msgid "Could not continue"
+msgstr "Không thể tiếp tục"
+
+#: src/pages/shell/bot-panel.tsx:225
+msgid "Could not create bot"
+msgstr "Không thể tạo bot"
+
+#: src/pages/GroupPanel.tsx:91
+msgid "Could not create group"
+msgstr "Không thể tạo nhóm"
+
+#: src/pages/shell/dialogs.tsx:174
+msgid "Could not create section"
+msgstr "Không thể tạo mục"
+
+#: src/pages/shell/dialogs.tsx:52
+msgid "Could not create space"
+msgstr "Không thể tạo không gian"
+
+#: src/pages/Onboarding.tsx:376
+msgid "Could not create your bot"
+msgstr "Không thể tạo bot của anh"
+
+#: src/pages/shell/dialogs.tsx:405
+msgid "Could not delete bot"
+msgstr "Không thể xóa bot"
+
+#: src/pages/shell/dialogs.tsx:462
+msgid "Could not delete group"
+msgstr "Không thể xóa nhóm"
+
+#: src/pages/McpServersOverlay.tsx:225
+msgid "Could not delete MCP server"
+msgstr "Không thể xóa máy chủ MCP"
+
+#: src/pages/shell/dialogs.tsx:465
+msgid "Could not delete routine"
+msgstr "Không thể xóa quy trình"
+
+#: src/pages/KnowledgeSection.tsx:352
+msgid "Could not delete skill"
+msgstr "Không thể xóa kỹ năng"
+
+#: src/pages/shell/dialogs.tsx:464
+msgid "Could not delete space"
+msgstr "Không thể xóa không gian"
+
+#: src/pages/MemorySettingsOverlay.tsx:133
+msgid "Could not disconnect memory provider"
+msgstr "Không thể ngắt kết nối nhà cung cấp bộ nhớ"
+
+#: src/pages/McpServersOverlay.tsx:236
+msgid "Could not disconnect OAuth"
+msgstr "Không thể ngắt kết nối OAuth"
+
+#: src/pages/VoiceSettingsOverlay.tsx:129
+msgid "Could not disconnect this voice provider"
+msgstr "Không thể ngắt kết nối nhà cung cấp giọng nói này"
+
+#: src/pages/shell/message-cards.tsx:48
+msgid "Could not dismiss"
+msgstr "Không thể bỏ qua"
+
+#. placeholder {0}: props.name
+#: src/components/ArtifactFileCard.tsx:36
+msgid "Could not download {0}. Try again."
+msgstr "Không thể tải {0}. Hãy thử lại."
+
+#: src/components/ArtifactFileCard.tsx:167
+msgid "Could not download {name}. Try again."
+msgstr "Không thể tải {name}. Hãy thử lại."
+
+#: src/pages/PluginsOverlay.tsx:415
+msgid "Could not install connector"
+msgstr "Không thể cài trình kết nối"
+
+#: src/pages/KnowledgeSection.tsx:110
+#: src/pages/KnowledgeSection.tsx:151
+#: src/pages/KnowledgeSection.tsx:280
+#: src/pages/KnowledgeSection.tsx:322
+#: src/pages/KnowledgeSection.tsx:349
+msgid "Could not load"
+msgstr "Không thể tải"
+
+#: src/components/ApprovalRulesSettings.tsx:48
+msgid "Could not load approval rules"
+msgstr "Không thể tải quy tắc phê duyệt"
+
+#: src/pages/ImportSettingsPanel.tsx:539
+msgid "Could not load archives. Reopen settings to retry."
+msgstr "Không thể tải các bản lưu. Mở lại phần cài đặt để thử lại."
+
+#: src/pages/IntegrationSetup.tsx:72
+msgid "Could not load bots. Reload to try again."
+msgstr "Không thể tải bot. Tải lại trang để thử lại."
+
+#: src/components/integrations/IntegrationSetup.tsx:70
+#: src/pages/PluginsOverlay.tsx:143
+#: src/pages/PluginsOverlay.tsx:719
+msgid "Could not load integrations"
+msgstr "Không thể tải tích hợp"
+
+#: src/pages/McpServersOverlay.tsx:82
+msgid "Could not load MCP servers"
+msgstr "Không thể tải máy chủ MCP"
+
+#: src/pages/ModelSettingsOverlay.tsx:157
+msgid "Could not load model settings"
+msgstr "Không thể tải cài đặt mô hình"
+
+#: src/pages/KnowledgeSection.tsx:302
+msgid "Could not load skill"
+msgstr "Không thể tải kỹ năng"
+
+#: src/pages/PeerMessagesOverlay.tsx:110
+msgid "Could not load this chat."
+msgstr "Không thể tải cuộc trò chuyện này."
+
+#: src/components/ArtifactFileCard.tsx:140
+msgid "Could not load this file."
+msgstr "Không thể tải tệp này."
+
+#: src/components/SoftwareUpdateSection.tsx:117
+msgid "Could not load update status"
+msgstr "Không thể tải trạng thái cập nhật"
+
+#: src/pages/VoiceSettingsOverlay.tsx:86
+#: src/pages/VoiceSettingsOverlay.tsx:210
+msgid "Could not load voice settings"
+msgstr "Không thể tải cài đặt giọng nói"
+
+#: src/pages/LocalSettings.tsx:26
+msgid "Could not open local settings. Start the local server and create its owner account, then try again."
+msgstr "Không thể mở cài đặt cục bộ. Hãy khởi động máy chủ cục bộ, tạo tài khoản chủ sở hữu rồi thử lại."
+
+#: src/pages/VoiceSettingsOverlay.tsx:163
+msgid "Could not play a test clip"
+msgstr "Không thể phát đoạn thử"
+
+#: src/pages/Auth.tsx:115
+#: src/pages/Auth.tsx:274
+msgid "Could not reach the server"
+msgstr "Không thể kết nối tới máy chủ"
+
+#: src/pages/ModelSettingsOverlay.tsx:268
+#: src/pages/Onboarding.tsx:280
+msgid "Could not reach this model server"
+msgstr "Không thể kết nối tới máy chủ mô hình này"
+
+#: src/pages/ScratchpadSection.tsx:97
+msgid "Could not remove"
+msgstr "Không thể gỡ"
+
+#: src/pages/PluginsOverlay.tsx:428
+msgid "Could not remove connector"
+msgstr "Không thể gỡ trình kết nối"
+
+#: src/pages/GroupPanel.tsx:180
+msgid "Could not remove group"
+msgstr "Không thể gỡ nhóm"
+
+#: src/components/ApprovalRulesSettings.tsx:92
+msgid "Could not remove rule"
+msgstr "Không thể gỡ quy tắc"
+
+#: src/pages/ModelSettingsOverlay.tsx:311
+msgid "Could not remove this connection"
+msgstr "Không thể gỡ kết nối này"
+
+#: src/pages/PluginsOverlay.tsx:329
+msgid "Could not rename connection"
+msgstr "Không thể đổi tên kết nối"
+
+#: src/pages/shell/dialogs.tsx:240
+msgid "Could not rename section"
+msgstr "Không thể đổi tên mục"
+
+#: src/pages/shell/message-cards.tsx:248
+msgid "Could not render chart"
+msgstr "Không thể hiển thị biểu đồ"
+
+#: src/pages/Auth.tsx:269
+msgid "Could not reset password"
+msgstr "Không thể đặt lại mật khẩu"
+
+#: src/pages/PluginsOverlay.tsx:285
+#: src/pages/PluginsOverlay.tsx:308
+msgid "Could not revoke connection"
+msgstr "Không thể thu hồi kết nối"
+
+#: src/pages/Shell.tsx:3909
+msgid "Could not run routine"
+msgstr "Không thể chạy quy trình"
+
+#: src/pages/ExternalConversationSettings.tsx:250
+#: src/pages/KnowledgeSection.tsx:132
+#: src/pages/shell/bot-panel.tsx:582
+msgid "Could not save"
+msgstr "Không thể lưu"
+
+#: src/components/ApprovalRulesSettings.tsx:103
+msgid "Could not save Auto Review"
+msgstr "Không thể lưu Tự động duyệt"
+
+#: src/pages/GroupPanel.tsx:179
+msgid "Could not save group"
+msgstr "Không thể lưu nhóm"
+
+#: src/pages/Onboarding.tsx:343
+msgid "Could not save model"
+msgstr "Không thể lưu mô hình"
+
+#: src/pages/Shell.tsx:3880
+msgid "Could not save routine"
+msgstr "Không thể lưu quy trình"
+
+#: src/components/ApprovalRulesSettings.tsx:80
+msgid "Could not save rule"
+msgstr "Không thể lưu quy tắc"
+
+#: src/pages/KnowledgeSection.tsx:325
+msgid "Could not save skill"
+msgstr "Không thể lưu kỹ năng"
+
+#: src/pages/HostComputerPrompt.tsx:47
+msgid "Could not save that choice"
+msgstr "Không thể lưu lựa chọn đó"
+
+#: src/pages/VoiceSettingsOverlay.tsx:144
+msgid "Could not save that voice"
+msgstr "Không thể lưu giọng nói đó"
+
+#: src/pages/shell/message-cards.tsx:35
+msgid "Could not save this choice"
+msgstr "Không thể lưu lựa chọn này"
+
+#: src/pages/PluginsOverlay.tsx:356
+msgid "Could not search catalog"
+msgstr "Không thể tìm kiếm danh mục"
+
+#: src/pages/Auth.tsx:84
+msgid "Could not send reset email"
+msgstr "Không thể gửi email đặt lại"
+
+#: src/pages/CallView.tsx:113
+msgid "Could not send that"
+msgstr "Không thể gửi tin nhắn đó"
+
+#: src/pages/McpServersOverlay.tsx:194
+msgid "Could not start OAuth"
+msgstr "Không thể bắt đầu OAuth"
+
+#: src/components/teach/TeachComputerOverlay.tsx:166
+msgid "Could not start teaching"
+msgstr "Không thể bắt đầu hướng dẫn"
+
+#: src/components/AskCard.tsx:79
+msgid "Could not submit this answer"
+msgstr "Không thể gửi câu trả lời này"
+
+#: src/pages/Shell.tsx:2389
+msgid "Could not take control"
+msgstr "Không thể tiếp quản quyền điều khiển"
+
+#: src/pages/ScratchpadSection.tsx:78
+msgid "Could not update"
+msgstr "Không thể cập nhật"
+
+#: src/pages/McpServersOverlay.tsx:210
+msgid "Could not update agent access"
+msgstr "Không thể cập nhật quyền truy cập của trợ lý"
+
+#: src/components/ComputerMaintenanceActions.tsx:64
+msgid "Could not update computer"
+msgstr "Không thể cập nhật máy tính"
+
+#: src/pages/Shell.tsx:1956
+msgid "Could not update reaction"
+msgstr "Không thể cập nhật biểu cảm"
+
+#: src/pages/MemorySettingsOverlay.tsx:147
+msgid "Could not update the default memory scope"
+msgstr "Không thể cập nhật phạm vi bộ nhớ mặc định"
+
+#: src/pages/MessagingSettingsOverlay.tsx:53
+msgid "Couldn't load messaging settings"
+msgstr "Không thể tải cài đặt nhắn tin"
+
+#: src/pages/AccountSettingsOverlay.tsx:70
+msgid "Couldn't update avatars"
+msgstr "Không thể cập nhật ảnh đại diện"
+
+#: src/pages/MessagingSettingsOverlay.tsx:66
+msgid "Couldn't update messaging settings"
+msgstr "Không thể cập nhật cài đặt nhắn tin"
+
+#: src/pages/Shell.tsx:2733
+#: src/pages/Shell.tsx:2734
+#: src/pages/shell/bot-panel.tsx:341
+#: src/pages/shell/dialogs.tsx:203
+msgid "Create"
+msgstr "Tạo"
+
+#. placeholder {0}: bot.name
+#: src/pages/shell/dialogs.tsx:184
+msgid "Create a section and move {0} into it."
+msgstr "Tạo một mục và chuyển {0} vào đó."
+
+#: src/pages/Auth.tsx:215
+msgid "Create account"
+msgstr "Tạo tài khoản"
+
+#: src/pages/GroupPanel.tsx:144
+msgid "Create group"
+msgstr "Tạo nhóm"
+
+#: src/pages/Shell.tsx:3440
+msgid "Create Group"
+msgstr "Tạo nhóm"
+
+#: src/pages/Shell.tsx:3437
+#: src/pages/shell/bot-picker.tsx:74
+msgid "Create new Bot"
+msgstr "Tạo Bot mới"
+
+#: src/pages/shell/bot-picker.tsx:100
+msgid "Create new Group"
+msgstr "Tạo Nhóm mới"
+
+#: src/pages/shell/bot-picker.tsx:128
+msgid "Create new Space"
+msgstr "Tạo Không gian mới"
+
+#: src/pages/RoutineEditor.tsx:122
+#: src/pages/RoutineEditor.tsx:123
+msgid "Create Routine"
+msgstr "Tạo Quy trình"
+
+#: src/components/AskCard.tsx:34
+#: src/pages/shell/dialogs.tsx:91
+msgid "Create space"
+msgstr "Tạo không gian"
+
+#: src/pages/Auth.tsx:38
+msgid "Create your A-Company"
+msgstr "Tạo không gian A-Company của anh"
+
+#: src/components/AskCard.tsx:21
+msgid "Created"
+msgstr "Đã tạo"
+
+#. placeholder {0}: res.createdBots
+#: src/pages/ImportSettingsPanel.tsx:714
+msgid "Created {0} bots."
+msgstr ""
+
+#: src/pages/GroupPanel.tsx:144
+#: src/pages/shell/bot-panel.tsx:341
+#: src/pages/shell/dialogs.tsx:91
+#: src/pages/shell/dialogs.tsx:203
+msgid "Creating…"
+msgstr "Đang tạo…"
+
+#: src/pages/PluginsOverlay.tsx:1070
+msgid "Credential"
+msgstr "Thông tin xác thực"
+
+#: src/pages/McpServersOverlay.tsx:34
+#: src/pages/PluginsOverlay.tsx:1133
+msgid "credential saved"
+msgstr "thông tin xác thực đã lưu"
+
+#: src/pages/ImportSettingsPanel.tsx:344
+msgid "Credential sources"
+msgstr "Nguồn thông tin xác thực"
+
+#: src/pages/PluginsOverlay.tsx:1075
+msgid "Credentials are encrypted and never sent to the model."
+msgstr "Thông tin xác thực được mã hóa và không bao giờ gửi tới mô hình."
+
+#: src/pages/RoutineSchedule.tsx:152
+msgid "Cron"
+msgstr "Cron"
+
+#: src/pages/RoutineSchedule.tsx:273
+msgid "Cron expression"
+msgstr "Biểu thức cron"
+
+#: src/pages/shell/dialogs.tsx:81
+msgid "Customer support"
+msgstr "Hỗ trợ khách hàng"
+
+#: src/pages/shell/avatar-studio-popover.tsx:121
+msgid "Customize bot avatar"
+msgstr "Tùy chỉnh ảnh đại diện bot"
+
+#: src/pages/Shell.tsx:4841
+msgid "Cute kitten on lawn"
+msgstr "Mèo con trên thảm cỏ"
+
+#: src/pages/AccountSettingsOverlay.tsx:294
+msgid "Daily token cap"
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:420
+msgid "Dark"
+msgstr "Tối"
+
+#: src/pages/RoutineSchedule.tsx:72
+msgid "day"
+msgstr "ngày"
+
+#: src/pages/RoutineSchedule.tsx:58
+msgid "days"
+msgstr "ngày"
+
+#: src/pages/MessagingSettingsOverlay.tsx:237
+#: src/pages/MessagingSettingsOverlay.tsx:310
+msgid "Decline"
+msgstr "Từ chối"
+
+#: src/pages/ModelSettingsOverlay.tsx:502
+#: src/pages/ModelSettingsOverlay.tsx:683
+#: src/pages/Onboarding.tsx:523
+msgid "Default"
+msgstr "Mặc định"
+
+#. placeholder {0}: thinkingLevelLabel(defaultThinkingLevel)
+#: src/pages/shell/bot-panel.tsx:318
+#: src/pages/shell/bot-panel.tsx:701
+msgid "Default ({0})"
+msgstr "Mặc định ({0})"
+
+#: src/pages/MemorySettingsOverlay.tsx:38
+msgid "Default scope"
+msgstr "Phạm vi mặc định"
+
+#: src/pages/BotContextMenu.tsx:148
+#: src/pages/KnowledgeSection.tsx:450
+#: src/pages/McpServersOverlay.tsx:508
+#: src/pages/RoutineEditor.tsx:301
+#: src/pages/Shell.tsx:3134
+#: src/pages/Shell.tsx:3165
+#: src/pages/shell/dialogs.tsx:410
+#: src/pages/shell/dialogs.tsx:471
+msgid "Delete"
+msgstr "Xóa"
+
+#. placeholder {0}: bot.name
+#. placeholder {0}: group.name
+#: src/pages/Shell.tsx:3131
+#: src/pages/Shell.tsx:3162
+msgid "Delete {0}"
+msgstr "Xóa {0}"
+
+#. placeholder {0}: bot.name
+#. placeholder {0}: item.name
+#: src/pages/shell/dialogs.tsx:347
+#: src/pages/shell/dialogs.tsx:440
+msgid "Delete {0}?"
+msgstr "Xóa {0}?"
+
+#: src/pages/GroupPanel.tsx:244
+msgid "Delete group"
+msgstr "Xóa nhóm"
+
+#: src/pages/shell/dialogs.tsx:385
+msgid "Delete memories too"
+msgstr "Xóa cả bộ nhớ"
+
+#: src/pages/Shell.tsx:4062
+msgid "Delete space"
+msgstr "Xóa không gian"
+
+#: src/pages/Shell.tsx:6332
+msgid "deleted"
+msgstr "đã xóa"
+
+#: src/pages/GroupPanel.tsx:244
+#: src/pages/shell/dialogs.tsx:410
+#: src/pages/shell/dialogs.tsx:471
+msgid "Deleting…"
+msgstr "Đang xóa…"
+
+#: src/components/AskCard.tsx:25
+msgid "Denied"
+msgstr "Bị từ chối"
+
+#: src/components/AskCard.tsx:38
+msgid "Deny"
+msgstr "Từ chối"
+
+#: src/pages/ModelSettingsOverlay.tsx:446
+msgid "Deployment default"
+msgstr "Mặc định theo triển khai"
+
+#: src/pages/shell/bot-panel.tsx:268
+msgid "Describe what this bot does"
+msgstr "Mô tả công việc của bot này"
+
+#: src/pages/shell/bot-panel.tsx:273
+#: src/pages/shell/bot-panel.tsx:645
+msgid "Description"
+msgstr "Mô tả"
+
+#: src/pages/Shell.tsx:4847
+msgid "design a cyberpunk space station concept"
+msgstr "thiết kế concept trạm không gian vũ trụ tương lai cyberpunk"
+
+#: src/components/DesktopUpdates.tsx:140
+msgid "Desktop app"
+msgstr "Ứng dụng máy tính"
+
+#: src/components/DesktopUpdates.tsx:94
+msgid "Desktop update"
+msgstr "Cập nhật ứng dụng máy tính"
+
+#: src/components/integrations/IntegrationSetup.tsx:43
+msgid "Direct MCP"
+msgstr "MCP trực tiếp"
+
+#: src/pages/ImportSettingsPanel.tsx:434
+msgid "Discard"
+msgstr "Loại bỏ"
+
+#: src/pages/McpServersOverlay.tsx:493
+#: src/pages/MemorySettingsOverlay.tsx:211
+#: src/pages/VoiceSettingsOverlay.tsx:289
+msgid "Disconnect"
+msgstr "Ngắt kết nối"
+
+#: src/pages/MemorySettingsOverlay.tsx:211
+#: src/pages/VoiceSettingsOverlay.tsx:287
+msgid "Disconnecting…"
+msgstr "Đang ngắt kết nối…"
+
+#: src/components/ComputerUpdateProgress.tsx:190
+#: src/components/teach/TeachComputerOverlay.tsx:274
+#: src/pages/shell/message-cards.tsx:62
+msgid "Dismiss"
+msgstr "Bỏ qua"
+
+#: src/pages/Shell.tsx:5461
+msgid "Dismiss error"
+msgstr "Bỏ qua lỗi"
+
+#: src/pages/shell/message-cards.tsx:379
+msgid "Dismissed. Reconnect anytime from MCP settings."
+msgstr "Đã bỏ qua. Có thể kết nối lại bất cứ lúc nào trong cài đặt MCP."
+
+#: src/pages/PluginsOverlay.tsx:1014
+msgid "Display name"
+msgstr "Tên hiển thị"
+
+#: src/components/teach/TeachRecordingChrome.tsx:49
+#: src/components/teach/TeachRecordingChrome.tsx:67
+msgid "Do not type passwords into the demo. Use Take control for credentials."
+msgstr "Không nhập mật khẩu vào bản demo. Hãy dùng quyền tiếp quản để điền thông tin xác thực."
+
+#: src/pages/HostComputerPrompt.tsx:84
+msgid "Docker"
+msgstr "Docker"
+
+#: src/pages/HostComputerPrompt.tsx:63
+msgid "Docker limits access to your computer for added security. Using {hostLabel} lets bots work with your local files and tools."
+msgstr "Docker giới hạn quyền truy cập vào máy tính để tăng bảo mật. Dùng {hostLabel} cho phép bot làm việc với tệp và công cụ cục bộ của anh."
+
+#: src/pages/Auth.tsx:221
+msgid "Don’t have an account?"
+msgstr "Chưa có tài khoản?"
+
+#: src/pages/ActivityList.tsx:157
+#: src/pages/shell/avatar-studio-popover.tsx:287
+msgid "Done"
+msgstr "Xong"
+
+#: src/pages/ImportSettingsPanel.tsx:568
+msgid "Download"
+msgstr "Tải xuống"
+
+#. placeholder {0}: props.name
+#: src/components/ArtifactFileCard.tsx:81
+#: src/components/ArtifactFileCard.tsx:82
+msgid "Download {0}"
+msgstr "Tải {0}"
+
+#: src/components/ArtifactFileCard.tsx:158
+#: src/components/ArtifactFileCard.tsx:159
+msgid "Download {name}"
+msgstr "Tải {name}"
+
+#: src/pages/KnowledgeSection.tsx:227
+msgid "Download as markdown"
+msgstr "Tải về dưới dạng markdown"
+
+#: src/components/integrations/IntegrationSetup.tsx:336
+msgid "Download Executor"
+msgstr "Tải Executor"
+
+#: src/pages/ImportSettingsPanel.tsx:771
+msgid "Downloaded {filename}."
+msgstr ""
+
+#: src/components/DesktopUpdates.tsx:152
+msgid "Downloading…"
+msgstr "Đang tải xuống…"
+
+#: src/components/teach/SkillDraftCard.tsx:76
+msgid "Draft skill"
+msgstr "Bản nháp kỹ năng"
+
+#: src/pages/shell/avatar-studio-popover.tsx:272
+msgid "Drag, drop, or paste an image"
+msgstr "Kéo, thả hoặc dán ảnh"
+
+#: src/pages/Shell.tsx:4842
+msgid "draw a cute white fluffy kitten playing on the green grass"
+msgstr "vẽ cho anh một chú mèo con lông trắng dễ thương trên thảm cỏ"
+
+#: src/pages/BotContextMenu.tsx:135
+msgid "Duplicate"
+msgstr "Nhân bản"
+
+#: src/pages/shell/bot-panel.tsx:640
+msgid "e.g. Hivenet Agent, Presales, Timesheets bot"
+msgstr "ví dụ: Trợ lý Hivenet, Tiền bán hàng, Bot chấm công"
+
+#: src/pages/McpServersOverlay.tsx:288
+msgid "e.g. Mobbin"
+msgstr "Ví dụ: Mobbin"
+
+#: src/pages/Shell.tsx:6158
+msgid "Earlier message"
+msgstr "Tin nhắn trước"
+
+#: src/components/AskCard.tsx:196
+msgid "Edit first"
+msgstr "Chỉnh sửa trước"
+
+#: src/pages/BotContextMenu.tsx:131
+msgid "Edit Profile"
+msgstr "Chỉnh sửa hồ sơ"
+
+#: src/pages/Auth.tsx:149
+msgid "Email"
+msgstr "Email"
+
+#: src/pages/shell/bot-panel.tsx:924
+msgid "Enable webhook"
+msgstr ""
+
+#: src/pages/ExternalConversationSettings.tsx:152
+msgid "Engage when... Ignore..."
+msgstr "Tham gia khi... Bỏ qua khi..."
+
+#: src/pages/ModelSettingsOverlay.tsx:345
+#: src/pages/Onboarding.tsx:310
+msgid "Enter a whole number from 1 to {MAX_MODEL_CONTEXT_WINDOW} for the context limit."
+msgstr "Nhập một số nguyên từ 1 đến {MAX_MODEL_CONTEXT_WINDOW} cho giới hạn ngữ cảnh."
+
+#: src/pages/ModelSettingsOverlay.tsx:338
+#: src/pages/Onboarding.tsx:303
+msgid "Enter a whole number from 1 to {MAX_MODEL_MAX_TOKENS} for maximum output tokens."
+msgstr "Nhập một số nguyên từ 1 đến {MAX_MODEL_MAX_TOKENS} cho số token đầu ra tối đa."
+
+#: src/pages/ModelSettingsOverlay.tsx:329
+#: src/pages/Onboarding.tsx:294
+msgid "Enter a whole number from 1 to 1000 for the image limit."
+msgstr "Nhập một số nguyên từ 1 đến 1000 cho giới hạn ảnh."
+
+#: src/pages/ModelSettingsOverlay.tsx:779
+#: src/pages/Onboarding.tsx:585
+msgid "Enter code manually"
+msgstr "Nhập mã thủ công"
+
+#. placeholder {0}: oauth.verificationUri.replace(/^https:\/\//, "")
+#: src/pages/ModelSettingsOverlay.tsx:809
+#: src/pages/Onboarding.tsx:611
+msgid "Enter this code at <0>{0}</0>"
+msgstr "Nhập mã này tại <0>{0}</0>"
+
+#: src/pages/ExternalConversationSettings.tsx:196
+#: src/pages/RoutineSchedule.tsx:144
+msgid "Every"
+msgstr "Mỗi"
+
+#: src/pages/RoutineSchedule.tsx:263
+msgid "every {intervalAmountSelect} {intervalUnitSelect}"
+msgstr "mỗi {intervalAmountSelect} {intervalUnitSelect}"
+
+#: src/pages/RoutineEditor.tsx:633
+#: src/pages/RoutineSchedule.tsx:34
+#: src/pages/RoutineSchedule.tsx:163
+msgid "Every day"
+msgstr "Mỗi ngày"
+
+#: src/pages/RoutineEditor.tsx:631
+#: src/pages/RoutineSchedule.tsx:32
+#: src/pages/RoutineSchedule.tsx:149
+msgid "Every hour"
+msgstr "Mỗi giờ"
+
+#: src/pages/RoutineSchedule.tsx:158
+msgid "Every Monday"
+msgstr "Mỗi thứ Hai"
+
+#: src/pages/RoutineEditor.tsx:639
+#: src/pages/RoutineSchedule.tsx:40
+msgid "Every month"
+msgstr "Mỗi tháng"
+
+#: src/pages/RoutineEditor.tsx:637
+#: src/pages/RoutineSchedule.tsx:38
+msgid "Every week"
+msgstr "Mỗi tuần"
+
+#: src/pages/PluginsOverlay.tsx:1069
+msgid "Executor token"
+msgstr "Token Executor"
+
+#: src/pages/shell/message-cards.tsx:419
+#: src/pages/shell/message-cards.tsx:472
+msgid "Expand"
+msgstr "Mở rộng"
+
+#. placeholder {0}: group.title
+#: src/pages/Shell.tsx:2878
+msgid "Expand {0}"
+msgstr "Mở rộng {0}"
+
+#: src/pages/Shell.tsx:4824
+msgid "Expert in AI artistic image generation and visual ideas."
+msgstr "Chuyên gia tạo ảnh AI nghệ thuật và ý tưởng hình ảnh trực quan."
+
+#: src/pages/shell/bot-panel.tsx:831
+msgid "Export"
+msgstr "Xuất"
+
+#: src/pages/ImportSettingsPanel.tsx:574
+#: src/pages/ImportSettingsPanel.tsx:583
+msgid "Export sensitive data"
+msgstr "Xuất dữ liệu nhạy cảm"
+
+#: src/pages/ImportSettingsPanel.tsx:808
+msgid "Export Team (.md)"
+msgstr ""
+
+#: src/components/teach/TeachComputerOverlay.tsx:235
+msgid "Export this week's list from the CRM and drop it in the shared folder"
+msgstr "Xuất danh sách tuần này từ CRM và thả vào thư mục dùng chung"
+
+#. placeholder {0}: res.filename
+#: src/pages/ImportSettingsPanel.tsx:729
+msgid "Exported {0} (secrets redacted)."
+msgstr ""
+
+#: src/pages/ExternalConversationSettings.tsx:84
+#: src/pages/MessagingSettingsOverlay.tsx:351
+msgid "External conversation"
+msgstr "Cuộc trò chuyện bên ngoài"
+
+#: src/pages/ModelSettingsOverlay.tsx:679
+#: src/pages/Onboarding.tsx:519
+#: src/pages/shell/bot-panel.tsx:851
+msgid "Extra high"
+msgstr "Rất cao"
+
+#: src/components/CloudAgentCard.tsx:38
+msgid "failed"
+msgstr "thất bại"
+
+#: src/pages/ActivityList.tsx:159
+msgid "Failed"
+msgstr "Thất bại"
+
+#: src/pages/ImportSettingsPanel.tsx:716
+msgid "Failed to apply starter team."
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:731
+msgid "Failed to export blueprint."
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:773
+msgid "Failed to export workspace backup."
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:233
+msgid "Failed to save spend caps."
+msgstr ""
+
+#: src/pages/Shell.tsx:2131
+#: src/pages/Shell.tsx:2133
+#: src/pages/Shell.tsx:2135
+msgid "Failed to send message"
+msgstr "Gửi tin nhắn thất bại"
+
+#: src/pages/Shell.tsx:2170
+#: src/pages/Shell.tsx:2189
+msgid "Failed to stop"
+msgstr "Dừng thất bại"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:88
+msgid "Failed."
+msgstr "Thất bại."
+
+#: src/components/teach/SkillDraftCard.tsx:133
+msgid "Failure handling"
+msgstr "Xử lý sự cố"
+
+#: src/pages/ImportSettingsPanel.tsx:47
+msgid "Files exceeding the import limit are excluded."
+msgstr "Các tệp vượt quá giới hạn nhập sẽ bị loại trừ."
+
+#: src/pages/ModelSettingsOverlay.tsx:602
+#: src/pages/Onboarding.tsx:440
+msgid "Find models"
+msgstr "Tìm mô hình"
+
+#: src/pages/ModelSettingsOverlay.tsx:602
+#: src/pages/Onboarding.tsx:440
+msgid "Finding…"
+msgstr "Đang tìm…"
+
+#: src/components/CloudAgentCard.tsx:34
+msgid "finished"
+msgstr "đã xong"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:99
+msgid "Finished."
+msgstr "Đã xong."
+
+#: src/pages/McpOAuthCallback.tsx:56
+msgid "Finishing MCP connection…"
+msgstr "Đang hoàn tất kết nối MCP…"
+
+#: src/components/ApprovalRulesSettings.tsx:147
+msgid "Flag unexpected actions"
+msgstr "Đánh dấu hành động bất thường"
+
+#: src/pages/Shell.tsx:5817
+msgid "for new line"
+msgstr "xuống dòng"
+
+#: src/pages/Auth.tsx:196
+msgid "Forgot password?"
+msgstr "Quên mật khẩu?"
+
+#: src/pages/ModelSettingsOverlay.tsx:1295
+msgid "Free"
+msgstr "Miễn phí"
+
+#: src/pages/WindowChrome.tsx:31
+msgid "Fullscreen"
+msgstr "Toàn màn hình"
+
+#: src/pages/Shell.tsx:4846
+msgid "Futuristic concept"
+msgstr "Concept tương lai"
+
+#: src/pages/SettingsOverlay.tsx:85
+#: src/pages/SettingsOverlay.tsx:97
+msgid "General"
+msgstr "Cài đặt chung"
+
+#: src/components/integrations/IntegrationSetup.tsx:214
+msgid "Get credentials"
+msgstr "Lấy thông tin xác thực"
+
+#: src/pages/shell/bot-panel.tsx:720
+msgid "Get notified when this Bot finishes or needs input"
+msgstr "Nhận thông báo khi Bot này hoàn tất hoặc cần thông tin nhập"
+
+#: src/components/ComputerUpdateProgress.tsx:50
+msgid "Getting ready"
+msgstr "Đang chuẩn bị"
+
+#: src/pages/RoutineEditor.tsx:103
+#: src/pages/RoutineEditor.tsx:470
+#: src/pages/RoutineEditor.tsx:586
+msgid "Git event"
+msgstr "Sự kiện Git"
+
+#: src/pages/ImportSettingsPanel.tsx:41
+msgid "Git history is excluded."
+msgstr "Không bao gồm lịch sử Git."
+
+#: src/pages/MessagingSettingsOverlay.tsx:204
+#: src/pages/Shell.tsx:3356
+#: src/pages/Shell.tsx:3571
+msgid "Group"
+msgstr "Nhóm"
+
+#: src/pages/GroupPanel.tsx:203
+msgid "Group settings"
+msgstr "Cài đặt nhóm"
+
+#: src/pages/ExternalConversationSettings.tsx:59
+msgid "Group updates"
+msgstr "Cập nhật nhóm"
+
+#: src/pages/shell/dialogs.tsx:132
+msgid "Groups"
+msgstr "Các nhóm"
+
+#: src/pages/CallView.tsx:263
+msgid "Hang up"
+msgstr "Gác máy"
+
+#: src/pages/CallView.tsx:43
+#: src/pages/CallView.tsx:44
+msgid "Hang up first, then enter the code on screen."
+msgstr "Gác máy trước, sau đó nhập mã trên màn hình."
+
+#: src/pages/CallView.tsx:96
+msgid "Hang up, then enter the code on screen."
+msgstr "Gác máy, sau đó nhập mã trên màn hình."
+
+#: src/pages/RoutineEditor.tsx:610
+msgid "header"
+msgstr "tiêu đề"
+
+#: src/pages/McpServersOverlay.tsx:367
+#: src/pages/PluginsOverlay.tsx:1054
+msgid "Header name"
+msgstr "Tên header"
+
+#: src/pages/McpServersOverlay.tsx:372
+msgid "Header value"
+msgstr "Giá trị header"
+
+#: src/pages/VoiceSettingsOverlay.tsx:322
+msgid "Hear a sample"
+msgstr "Nghe thử"
+
+#: src/pages/ImportSettingsPanel.tsx:450
+#: src/pages/ImportSettingsPanel.tsx:515
+msgid "Hermes"
+msgstr "Hermes"
+
+#: src/pages/VoiceSettingsOverlay.tsx:156
+msgid "Hi, this is how I'll sound when I read replies out loud."
+msgstr "Xin chào, đây là giọng của tôi khi đọc to câu trả lời."
+
+#: src/pages/Shell.tsx:3261
+msgid "Hide bots"
+msgstr "Ẩn bot"
+
+#: src/pages/Auth.tsx:186
+msgid "Hide password"
+msgstr "Ẩn mật khẩu"
+
+#: src/pages/ModelSettingsOverlay.tsx:678
+#: src/pages/Onboarding.tsx:518
+#: src/pages/shell/bot-panel.tsx:854
+msgid "High"
+msgstr "Cao"
+
+#: src/pages/ImportSettingsPanel.tsx:524
+msgid "History stays in the archive. Skills and tool calls are not executed."
+msgstr "Lịch sử vẫn nằm trong bản lưu. Kỹ năng và lệnh gọi công cụ không được thực thi."
+
+#: src/pages/RoutineSchedule.tsx:70
+msgid "hour"
+msgstr "giờ"
+
+#: src/pages/ExternalConversationSettings.tsx:216
+#: src/pages/RoutineSchedule.tsx:56
+msgid "hours"
+msgstr "giờ"
+
+#: src/pages/RoutineSchedule.tsx:241
+msgid "How often"
+msgstr "Tần suất"
+
+#: src/components/teach/SkillDraftCard.tsx:112
+msgid "How to check"
+msgstr "Cách kiểm tra"
+
+#: src/pages/Shell.tsx:6067
+msgid "I’m done"
+msgstr "Tôi xong rồi"
+
+#: src/pages/VoiceSettingsOverlay.tsx:161
+msgid "If you heard that, voice is ready."
+msgstr "Nếu bạn nghe thấy âm thanh này, giọng nói đã sẵn sàng."
+
+#: src/pages/ExternalConversationSettings.tsx:58
+msgid "Ignore"
+msgstr "Bỏ qua"
+
+#: src/pages/shell/avatar-studio-popover.tsx:243
+msgid "Image upload area"
+msgstr "Vùng tải ảnh lên"
+
+#: src/pages/shell/bot-panel.tsx:355
+msgid "Import .md"
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:402
+msgid "Import complete"
+msgstr "Đã nhập xong"
+
+#: src/pages/ImportSettingsPanel.tsx:366
+#: src/pages/SettingsOverlay.tsx:90
+msgid "Import data"
+msgstr "Nhập dữ liệu"
+
+#: src/pages/ImportSettingsPanel.tsx:136
+msgid "Import failed. Check the file or connection and try again."
+msgstr "Nhập thất bại. Kiểm tra tệp hoặc kết nối rồi thử lại."
+
+#: src/pages/ImportSettingsPanel.tsx:380
+msgid "Import file"
+msgstr "Nhập tệp"
+
+#: src/pages/PluginsOverlay.tsx:1006
+msgid "Import OpenAPI JSON"
+msgstr "Nhập OpenAPI JSON"
+
+#: src/pages/ImportSettingsPanel.tsx:816
+msgid "Import Team (.md)"
+msgstr ""
+
+#. placeholder {0}: res.createdBots
+#: src/pages/ImportSettingsPanel.tsx:750
+msgid "Imported {0} bots."
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:534
+msgid "Imported archives"
+msgstr "Các bản lưu đã nhập"
+
+#: src/pages/shell/bot-panel.tsx:921
+msgid "Inbound Webhook"
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:409
+#: src/pages/ImportSettingsPanel.tsx:413
+msgid "Include sensitive data"
+msgstr "Bao gồm dữ liệu nhạy cảm"
+
+#: src/pages/shell/bot-panel.tsx:762
+msgid "Inherit default"
+msgstr "Kế thừa mặc định"
+
+#: src/components/teach/SkillDraftCard.tsx:88
+msgid "Inputs"
+msgstr "Đầu vào"
+
+#: src/pages/ImportSettingsPanel.tsx:563
+msgid "Inspect"
+msgstr "Kiểm tra"
+
+#: src/pages/memory-providers/SupermemorySettingsForm.tsx:61
+msgid "Instance API key"
+msgstr "API key của phiên bản"
+
+#: src/pages/RoutineEditor.tsx:321
+msgid "Instruction"
+msgstr "Chỉ dẫn"
+
+#: src/pages/PluginsOverlay.tsx:869
+msgid "Integration domain"
+msgstr "Tên miền tích hợp"
+
+#: src/components/integrations/IntegrationSetup.tsx:136
+msgid "Integration options"
+msgstr "Tùy chọn tích hợp"
+
+#: src/pages/PluginsOverlay.tsx:679
+#: src/pages/Shell.tsx:3183
+msgid "Integrations"
+msgstr "Tích hợp"
+
+#: src/pages/CallView.tsx:260
+msgid "Interrupt"
+msgstr "Ngắt"
+
+#: src/pages/RoutineEditor.tsx:641
+#: src/pages/RoutineSchedule.tsx:42
+msgid "Interval"
+msgstr "Khoảng thời gian"
+
+#: src/pages/RoutineSchedule.tsx:187
+msgid "Interval amount"
+msgstr "Số lượng khoảng thời gian"
+
+#: src/pages/RoutineSchedule.tsx:202
+msgid "Interval unit"
+msgstr "Đơn vị khoảng thời gian"
+
+#: src/pages/shell/bot-panel.tsx:373
+msgid "Invalid blueprint Markdown"
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:752
+msgid "Invalid blueprint Markdown file."
+msgstr ""
+
+#: src/pages/ImportSettingsPanel.tsx:788
+msgid "Invalid workspace backup file."
+msgstr ""
+
+#: src/pages/MemorySettingsOverlay.tsx:49
+#: src/pages/shell/bot-panel.tsx:763
+msgid "Isolated"
+msgstr "Tách biệt"
+
+#: src/pages/shell/dialogs.tsx:350
+msgid "Its conversation, files, and routines will be permanently deleted. Bots it created stay in your list."
+msgstr "Cuộc trò chuyện, tệp và routine của Bot này sẽ bị xóa vĩnh viễn. Các Bot do nó tạo vẫn ở trong danh sách của bạn."
+
+#: src/pages/Shell.tsx:5044
+msgid "Jump to latest"
+msgstr "Đến tin mới nhất"
+
+#: src/pages/Shell.tsx:6149
+msgid "Jump to replied message"
+msgstr "Đến tin nhắn được trả lời"
+
+#: src/pages/ActivityList.tsx:134
+msgid "just now"
+msgstr "vừa xong"
+
+#: src/pages/shell/dialogs.tsx:369
+msgid "Keep memories"
+msgstr "Giữ ký ức"
+
+#: src/pages/RoutineEditor.tsx:605
+msgid "key"
+msgstr "key"
+
+#: src/pages/KnowledgeSection.tsx:37
+msgid "Knowledge"
+msgstr "Kiến thức"
+
+#: src/pages/ImportSettingsPanel.tsx:44
+msgid "Known secrets were redacted. Review the selection before uploading."
+msgstr "Đã che các thông tin bí mật nhận diện được. Kiểm tra nội dung đã chọn trước khi tải lên."
+
+#: src/pages/AccountSettingsOverlay.tsx:107
+#: src/pages/AccountSettingsOverlay.tsx:541
+#: src/pages/AccountSettingsOverlay.tsx:558
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: src/components/DesktopUpdates.tsx:114
+msgid "Later"
+msgstr "Để sau"
+
+#: src/pages/MessagingSettingsOverlay.tsx:249
+msgid "Leave"
+msgstr "Rời đi"
+
+#: src/pages/AccountSettingsOverlay.tsx:419
+msgid "Light"
+msgstr "Sáng"
+
+#: src/pages/RoutineEditor.tsx:57
+msgid "Linear issue"
+msgstr "Issue Linear"
+
+#: src/pages/MessagingSettingsOverlay.tsx:175
+msgid "Link a chat app"
+msgstr "Liên kết ứng dụng chat"
+
+#: src/pages/ExternalConversationSettings.tsx:99
+msgid "Listen"
+msgstr "Nghe"
+
+#: src/pages/ExternalConversationSettings.tsx:93
+msgid "Listening"
+msgstr "Đang nghe"
+
+#: src/pages/CallView.tsx:247
+msgid "Listening…"
+msgstr "Đang nghe…"
+
+#: src/pages/Shell.tsx:4768
+msgid "Load earlier messages"
+msgstr "Tải tin nhắn cũ hơn"
+
+#: src/pages/ActivityList.tsx:60
+msgid "Loading activity…"
+msgstr "Đang tải hoạt động…"
+
+#: src/pages/PluginsOverlay.tsx:734
+msgid "Loading integrations…"
+msgstr "Đang tải tích hợp…"
+
+#: src/pages/MemorySettingsOverlay.tsx:186
+msgid "Loading memory settings…"
+msgstr "Đang tải cài đặt bộ nhớ…"
+
+#: src/pages/ModelSettingsOverlay.tsx:410
+#: src/pages/ModelSettingsOverlay.tsx:957
+msgid "Loading model catalog…"
+msgstr "Đang tải danh mục model…"
+
+#: src/components/ArtifactFileCard.tsx:193
+msgid "Loading preview…"
+msgstr "Đang tải bản xem trước…"
+
+#: src/components/ApprovalRulesSettings.tsx:159
+msgid "Loading rules…"
+msgstr "Đang tải quy tắc…"
+
+#: src/pages/PluginsOverlay.tsx:644
+msgid "Loading tools…"
+msgstr "Đang tải công cụ…"
+
+#: src/pages/VoiceSettingsOverlay.tsx:243
+msgid "Loading voice providers…"
+msgstr "Đang tải nhà cung cấp giọng nói…"
+
+#: src/pages/IntegrationSetup.tsx:72
+#: src/pages/Onboarding.tsx:390
+#: src/pages/PeerMessagesOverlay.tsx:105
+#: src/pages/Shell.tsx:4768
+msgid "Loading…"
+msgstr "Đang tải…"
+
+#: src/pages/memory-providers/SupermemorySettingsForm.tsx:39
+msgid "Local"
+msgstr "Cục bộ"
+
+#: src/pages/HostComputerPrompt.tsx:69
+msgid "Local access lets bots run commands without asking. Avoid it on shared or public servers."
+msgstr "Quyền truy cập cục bộ cho phép Bot chạy lệnh mà không cần hỏi. Tránh dùng trên máy chủ dùng chung hoặc công khai."
+
+#: src/pages/LocalSettings.tsx:22
+msgid "Local Server Settings"
+msgstr "Cài đặt máy chủ cục bộ"
+
+#: src/pages/ModelSettingsOverlay.tsx:676
+#: src/pages/Onboarding.tsx:516
+#: src/pages/shell/bot-panel.tsx:852
+msgid "Low"
+msgstr "Thấp"
+
+#: src/components/ComputerUpdateProgress.tsx:228
+msgid "Make sure nothing is still running on this computer."
+msgstr "Đảm bảo không còn tác vụ nào đang chạy trên máy tính này."
+
+#: src/pages/PluginsOverlay.tsx:1159
+msgid "Manage MCP servers"
+msgstr "Quản lý máy chủ MCP"
+
+#: src/pages/AccountSettingsOverlay.tsx:87
+msgid "Manage messaging settings"
+msgstr "Quản lý cài đặt nhắn tin"
+
+#: src/pages/MemorySettingsOverlay.tsx:163
+#: src/pages/MemorySettingsOverlay.tsx:177
+msgid "Manage the Space semantic memory provider."
+msgstr "Quản lý nhà cung cấp bộ nhớ ngữ nghĩa của Space."
+
+#: src/pages/PluginsOverlay.tsx:932
+msgid "Manual"
+msgstr "Thủ công"
+
+#: src/pages/PluginsOverlay.tsx:929
+msgid "Manual setup required"
+msgstr "Cần thiết lập thủ công"
+
+#: src/pages/BotContextMenu.tsx:126
+msgid "Mark as Read"
+msgstr "Đánh dấu đã đọc"
+
+#: src/pages/BotContextMenu.tsx:126
+msgid "Mark as Unread"
+msgstr "Đánh dấu chưa đọc"
+
+#: src/pages/ModelSettingsOverlay.tsx:680
+#: src/pages/Onboarding.tsx:520
+#: src/pages/shell/bot-panel.tsx:856
+msgid "Max"
+msgstr "Tối đa"
+
+#: src/pages/ModelSettingsOverlay.tsx:711
+#: src/pages/Onboarding.tsx:535
+msgid "Maximum images per request"
+msgstr "Số ảnh tối đa mỗi yêu cầu"
+
+#: src/pages/ModelSettingsOverlay.tsx:690
+#: src/pages/Onboarding.tsx:526
+msgid "Maximum output tokens"
+msgstr "Số token đầu ra tối đa"
+
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:34
+msgid "MCP endpoint"
+msgstr "Endpoint MCP"
+
+#: src/pages/McpServersOverlay.tsx:255
+msgid "MCP servers"
+msgstr "Máy chủ MCP"
+
+#: src/pages/ModelSettingsOverlay.tsx:677
+#: src/pages/Onboarding.tsx:517
+#: src/pages/shell/bot-panel.tsx:853
+msgid "Medium"
+msgstr "Trung bình"
+
+#: src/pages/GroupPanel.tsx:221
+msgid "Members ({GROUP_MEMBER_MIN}–{GROUP_MEMBER_MAX})"
+msgstr "Thành viên ({GROUP_MEMBER_MIN}–{GROUP_MEMBER_MAX})"
+
+#: src/pages/GroupPanel.tsx:129
+msgid "Members (pick {GROUP_MEMBER_MIN}–{GROUP_MEMBER_MAX})"
+msgstr "Thành viên (chọn {GROUP_MEMBER_MIN}–{GROUP_MEMBER_MAX})"
+
+#: src/pages/KnowledgeSection.tsx:39
+#: src/pages/MemorySettingsOverlay.tsx:159
+#: src/pages/SettingsOverlay.tsx:87
+msgid "Memory"
+msgstr "Bộ nhớ"
+
+#: src/pages/shell/bot-panel.tsx:758
+msgid "Memory scope"
+msgstr "Phạm vi bộ nhớ"
+
+#: src/pages/Shell.tsx:5533
+msgid "Mentions"
+msgstr "Lượt nhắc đến"
+
+#: src/pages/ExternalConversationSettings.tsx:100
+msgid "Mentions only"
+msgstr "Chỉ khi được nhắc đến"
+
+#: src/pages/Shell.tsx:5745
+#: src/pages/Shell.tsx:5887
+msgid "Message"
+msgstr "Tin nhắn"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:83
+msgid "Message"
+msgstr "Tin nhắn"
+
+#: src/pages/Shell.tsx:5741
+#: src/pages/Shell.tsx:5745
+msgid "Message {activeName}"
+msgstr "Nhắn tin cho {activeName}"
+
+#: src/pages/Shell.tsx:5440
+msgid "Message composer"
+msgstr "Khung soạn tin nhắn"
+
+#: src/pages/RoutineEditor.tsx:106
+#: src/pages/RoutineEditor.tsx:515
+msgid "Message event"
+msgstr "Sự kiện tin nhắn"
+
+#: src/pages/Shell.tsx:6223
+msgid "Message from {peer}"
+msgstr "Tin nhắn từ {peer}"
+
+#: src/pages/Shell.tsx:5742
+msgid "Message…"
+msgstr "Nhắn tin…"
+
+#: src/pages/Shell.tsx:6223
+msgid "Messaged {peer}"
+msgstr "Đã nhắn cho {peer}"
+
+#: src/pages/AccountSettingsOverlay.tsx:81
+#: src/pages/MessagingSettingsOverlay.tsx:98
+msgid "Messaging"
+msgstr "Nhắn tin"
+
+#: src/pages/CallView.tsx:82
+msgid "Microphone failed"
+msgstr "Lỗi micrô"
+
+#: src/pages/ModelSettingsOverlay.tsx:675
+#: src/pages/Onboarding.tsx:515
+#: src/pages/shell/bot-panel.tsx:855
+msgid "Minimal"
+msgstr "Tối thiểu"
+
+#: src/pages/WindowChrome.tsx:25
+msgid "Minimize"
+msgstr "Thu nhỏ"
+
+#: src/pages/Shell.tsx:2722
+#: src/pages/Shell.tsx:2723
+msgid "Minimize bots"
+msgstr "Thu gọn Bot"
+
+#: src/pages/RoutineSchedule.tsx:68
+msgid "minute"
+msgstr "phút"
+
+#: src/pages/RoutineSchedule.tsx:54
+msgid "minutes"
+msgstr "phút"
+
+#: src/pages/ModelSettingsOverlay.tsx:607
+#: src/pages/ModelSettingsOverlay.tsx:717
+#: src/pages/ModelSettingsOverlay.tsx:1183
+#: src/pages/Onboarding.tsx:445
+#: src/pages/Onboarding.tsx:541
+#: src/pages/Onboarding.tsx:553
+#: src/pages/shell/bot-panel.tsx:285
+#: src/pages/shell/bot-panel.tsx:657
+msgid "Model"
+msgstr "Mô hình"
+
+#: src/pages/ModelSettingsOverlay.tsx:641
+#: src/pages/Onboarding.tsx:483
+msgid "Model id"
+msgstr "ID model"
+
+#: src/pages/ModelSettingsOverlay.tsx:1219
+msgid "Model options"
+msgstr "Tùy chọn model"
+
+#: src/pages/AccountSettingsOverlay.tsx:281
+msgid "Model spend uses your provider keys or local CLI sessions."
+msgstr ""
+
+#: src/pages/ModelSettingsOverlay.tsx:286
+msgid "Model updated."
+msgstr "Đã cập nhật model."
+
+#: src/pages/LocalSettings.tsx:36
+#: src/pages/ModelSettingsOverlay.tsx:423
+#: src/pages/SettingsOverlay.tsx:86
+msgid "Models"
+msgstr "Mô hình"
+
+#: src/pages/ModelSettingsOverlay.tsx:412
+msgid "Models for the server owner’s default space."
+msgstr "Các model cho space mặc định của chủ máy chủ."
+
+#: src/pages/ModelSettingsOverlay.tsx:620
+#: src/pages/Onboarding.tsx:462
+msgid "Models from server"
+msgstr "Model từ máy chủ"
+
+#: src/pages/RoutineSchedule.tsx:161
+msgid "Monthly"
+msgstr "Hằng tháng"
+
+#: src/pages/AccountSettingsOverlay.tsx:308
+msgid "Monthly token cap"
+msgstr ""
+
+#: src/pages/Shell.tsx:5994
+msgid "More"
+msgstr "Thêm"
+
+#: src/components/ComputerMaintenanceActions.tsx:118
+msgid "More computer actions"
+msgstr "Thêm thao tác máy tính"
+
+#: src/pages/shell/dialogs.tsx:372
+msgid "Move them to your shared memory."
+msgstr "Chuyển chúng vào bộ nhớ dùng chung của bạn."
+
+#: src/pages/BotContextMenu.tsx:96
+msgid "Move to"
+msgstr "Chuyển đến"
+
+#: src/components/teach/SkillDraftCard.tsx:79
+#: src/pages/Auth.tsx:134
+#: src/pages/GroupPanel.tsx:119
+#: src/pages/GroupPanel.tsx:212
+#: src/pages/RoutineEditor.tsx:310
+#: src/pages/shell/bot-panel.tsx:251
+#: src/pages/shell/bot-panel.tsx:622
+#: src/pages/shell/dialogs.tsx:72
+#: src/pages/shell/dialogs.tsx:188
+#: src/pages/shell/dialogs.tsx:251
+msgid "Name"
+msgstr "Tên"
+
+#: src/pages/shell/bot-panel.tsx:257
+msgid "Name this bot"
+msgstr "Đặt tên cho Bot này"
+
+#: src/pages/GroupPanel.tsx:124
+msgid "Name this group"
+msgstr "Đặt tên cho nhóm này"
+
+#: src/pages/RoutineEditor.tsx:314
+msgid "Name this routine"
+msgstr "Đặt tên cho routine này"
+
+#: src/pages/ActivityList.tsx:153
+msgid "Needs input"
+msgstr "Cần nhập liệu"
+
+#: src/pages/ActivityList.tsx:155
+msgid "Needs takeover"
+msgstr "Cần tiếp quản"
+
+#: src/pages/Shell.tsx:4395
+msgid "Needs you"
+msgstr "Cần bạn"
+
+#: src/pages/shell/bot-panel.tsx:235
+msgid "New bot"
+msgstr "Tạo bot mới"
+
+#: src/pages/GroupPanel.tsx:101
+msgid "New group"
+msgstr "Nhóm mới"
+
+#: src/pages/ScratchpadSection.tsx:186
+msgid "New open-work item"
+msgstr "Mục việc mở mới"
+
+#: src/pages/Auth.tsx:295
+msgid "New password"
+msgstr "Mật khẩu mới"
+
+#: src/pages/BotContextMenu.tsx:114
+#: src/pages/shell/dialogs.tsx:181
+msgid "New section"
+msgstr "Mục mới"
+
+#: src/pages/KnowledgeSection.tsx:470
+msgid "New skill"
+msgstr "Kỹ năng mới"
+
+#: src/pages/shell/dialogs.tsx:68
+msgid "New space"
+msgstr "Space mới"
+
+#: src/pages/MessagingSettingsOverlay.tsx:265
+msgid "No agent connections yet."
+msgstr "Chưa có kết nối agent nào."
+
+#: src/pages/PluginsOverlay.tsx:791
+msgid "No apps match your search."
+msgstr "Không có ứng dụng nào khớp với tìm kiếm."
+
+#: src/pages/PluginsOverlay.tsx:1135
+msgid "no auth"
+msgstr "không xác thực"
+
+#: src/pages/PluginsOverlay.tsx:1038
+msgid "No authentication"
+msgstr "Không xác thực"
+
+#: src/pages/shell/command-palette.tsx:107
+msgid "No bots"
+msgstr "Không có Bot"
+
+#: src/pages/shell/bot-picker.tsx:63
+msgid "No bots match"
+msgstr "Không có Bot phù hợp"
+
+#: src/pages/MessagingSettingsOverlay.tsx:146
+msgid "No chat apps linked yet."
+msgstr "Chưa liên kết ứng dụng chat nào."
+
+#: src/components/ApprovalRulesSettings.tsx:163
+msgid "No exceptions. Actions run automatically."
+msgstr "Không có ngoại lệ. Các thao tác chạy tự động."
+
+#: src/pages/MessagingSettingsOverlay.tsx:194
+msgid "No group chats yet."
+msgstr "Chưa có nhóm chat nào."
+
+#: src/pages/ImportSettingsPanel.tsx:542
+msgid "No imports yet"
+msgstr "Chưa có dữ liệu đã nhập"
+
+#: src/components/AskCard.tsx:116
+msgid "No longer active"
+msgstr "Không còn hoạt động"
+
+#: src/pages/PluginsOverlay.tsx:786
+msgid "No managed app catalog is configured on this deployment."
+msgstr "Chưa cấu hình danh mục ứng dụng được quản lý trên bản triển khai này."
+
+#: src/pages/ModelSettingsOverlay.tsx:1247
+msgid "No matching models"
+msgstr "Không có model phù hợp"
+
+#: src/pages/PluginsOverlay.tsx:1115
+msgid "No MCP or API tool sources installed yet."
+msgstr "Chưa cài nguồn công cụ MCP hoặc API nào."
+
+#: src/pages/McpServersOverlay.tsx:426
+msgid "No MCP servers yet."
+msgstr "Chưa có máy chủ MCP nào."
+
+#: src/pages/PeerMessagesOverlay.tsx:122
+msgid "No messages with {peerBotName} yet."
+msgstr "Chưa có tin nhắn nào với {peerBotName}."
+
+#: src/pages/ModelSettingsOverlay.tsx:961
+msgid "No model catalog is available."
+msgstr "Không có danh mục model."
+
+#: src/pages/ModelSettingsOverlay.tsx:550
+msgid "No providers found."
+msgstr "Không tìm thấy nhà cung cấp."
+
+#: src/components/integrations/IntegrationSetup.tsx:273
+msgid "No remote MCP servers found"
+msgstr "Không tìm thấy máy chủ MCP từ xa"
+
+#: src/pages/PluginsOverlay.tsx:888
+#: src/pages/SpaceSearch.tsx:23
+msgid "No results"
+msgstr "Không có kết quả"
+
+#: src/pages/RoutineEditor.tsx:501
+msgid "No runs yet"
+msgstr "Chưa có lần chạy nào"
+
+#: src/pages/KnowledgeSection.tsx:365
+msgid "No skills yet"
+msgstr "Chưa có kỹ năng nào"
+
+#: src/pages/MessagingSettingsOverlay.tsx:340
+msgid "No team conversations yet."
+msgstr "Chưa có cuộc trò chuyện nhóm nào."
+
+#: src/pages/PluginsOverlay.tsx:648
+msgid "No tools available."
+msgstr "Không có công cụ nào."
+
+#: src/pages/RoutineEditor.tsx:108
+msgid "No trigger"
+msgstr "Không có trình kích hoạt"
+
+#: src/pages/ScratchpadSection.tsx:110
+msgid "None yet"
+msgstr "Chưa có"
+
+#: src/pages/ModelSettingsOverlay.tsx:748
+msgid "Not connected"
+msgstr "Chưa kết nối"
+
+#: src/pages/PluginsOverlay.tsx:772
+msgid "Not in the plugin catalog"
+msgstr "Không có trong danh mục plugin"
+
+#: src/pages/shell/message-cards.tsx:367
+msgid "Not now"
+msgstr "Để sau"
+
+#: src/pages/ImportSettingsPanel.tsx:319
+#: src/pages/ImportSettingsPanel.tsx:328
+#: src/pages/ImportSettingsPanel.tsx:337
+#: src/pages/ImportSettingsPanel.tsx:348
+msgid "Not read yet"
+msgstr "Chưa đọc"
+
+#: src/components/ComputerUpdateProgress.tsx:251
+msgid "Nothing is still running"
+msgstr "Không còn gì đang chạy"
+
+#: src/pages/KnowledgeSection.tsx:163
+msgid "Nothing remembered yet"
+msgstr "Chưa ghi nhớ gì"
+
+#: src/pages/shell/bot-panel.tsx:717
+msgid "Notifications"
+msgstr "Thông báo"
+
+#: src/pages/ActivityList.tsx:72
+msgid "Now"
+msgstr "Bây giờ"
+
+#. placeholder {0}: selected.label
+#: src/pages/ModelSettingsOverlay.tsx:286
+msgid "Now using {0}."
+msgstr "Đang dùng {0}."
+
+#: src/pages/McpOAuthCallback.tsx:24
+msgid "OAuth authorization was cancelled."
+msgstr "Đã hủy ủy quyền OAuth."
+
+#: src/pages/McpServersOverlay.tsx:32
+msgid "OAuth connected"
+msgstr "Đã kết nối OAuth"
+
+#: src/pages/McpOAuthCallback.tsx:52
+msgid "OAuth connection failed"
+msgstr "Kết nối OAuth thất bại"
+
+#: src/pages/McpServersOverlay.tsx:33
+msgid "OAuth expired"
+msgstr "OAuth đã hết hạn"
+
+#: src/pages/RoutineEditor.tsx:424
+msgid "On a schedule"
+msgstr "Theo lịch"
+
+#. placeholder {0}: preset.time
+#: src/pages/RoutineSchedule.tsx:161
+msgid "on the 1st at {0}"
+msgstr "vào ngày 1 lúc {0}"
+
+#: src/pages/ImportSettingsPanel.tsx:399
+msgid "On Windows, you can also run import_local.bat. Or open an exported .a-company-import.json file."
+msgstr "Trên Windows, bạn cũng có thể chạy import_local.bat. Hoặc mở tệp .a-company-import.json đã xuất."
+
+#: src/pages/Shell.tsx:4100
+msgid "Only empty spaces can be deleted. Delete its bots and groups first."
+msgstr "Chỉ có thể xóa space trống. Hãy xóa Bot và nhóm trong đó trước."
+
+#: src/pages/ScratchpadSection.tsx:159
+#: src/pages/Shell.tsx:3649
+#: src/pages/Shell.tsx:3654
+#: src/pages/Shell.tsx:6520
+msgid "Open"
+msgstr "Mở"
+
+#. placeholder {0}: group.title
+#: src/pages/Shell.tsx:2876
+msgid "Open {0}"
+msgstr "Mở {0}"
+
+#: src/pages/ImportSettingsPanel.tsx:374
+msgid "Open import file"
+msgstr "Mở tệp nhập"
+
+#: src/pages/Shell.tsx:3617
+msgid "Open in full window"
+msgstr "Mở toàn cửa sổ"
+
+#: src/pages/Shell.tsx:3312
+msgid "Open navigation"
+msgstr "Mở điều hướng"
+
+#: src/pages/ScratchpadSection.tsx:106
+msgid "Open work"
+msgstr "Việc đang mở"
+
+#: src/pages/ModelSettingsOverlay.tsx:580
+#: src/pages/Onboarding.tsx:428
+msgid "OpenAI-compatible server URL"
+msgstr "URL máy chủ tương thích OpenAI"
+
+#: src/pages/Shell.tsx:6343
+msgid "Opened its thread."
+msgstr "Đã mở luồng của nó."
+
+#: src/pages/Onboarding.tsx:703
+msgid "Opening chat…"
+msgstr "Đang mở chat…"
+
+#: src/pages/Shell.tsx:4863
+msgid "Optimization proposals"
+msgstr "Đề xuất tối ưu"
+
+#: src/pages/ModelSettingsOverlay.tsx:859
+#: src/pages/Onboarding.tsx:649
+msgid "Optional"
+msgstr "Không bắt buộc"
+
+#: src/pages/AccountSettingsOverlay.tsx:156
+msgid "Optional controls most people never need"
+msgstr "Tùy chọn nâng cao mà hầu hết mọi người không cần"
+
+#: src/pages/McpServersOverlay.tsx:376
+msgid "Optional header value"
+msgstr "Giá trị header (không bắt buộc)"
+
+#: src/pages/ModelSettingsOverlay.tsx:873
+msgid "Or connect an API key"
+msgstr "Hoặc kết nối bằng API key"
+
+#: src/pages/Onboarding.tsx:660
+msgid "Or paste an API key"
+msgstr "Hoặc dán API key"
+
+#: src/pages/shell/bot-panel.tsx:347
+msgid "Or start from a template"
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:132
+msgid "Organic"
+msgstr "Tự nhiên"
+
+#: src/pages/memory-providers/SupermemorySettingsForm.tsx:61
+msgid "Organization API key"
+msgstr "API key của tổ chức"
+
+#: src/pages/ModelSettingsOverlay.tsx:628
+#: src/pages/Onboarding.tsx:204
+#: src/pages/Onboarding.tsx:472
+msgid "Other model…"
+msgstr "Model khác…"
+
+#: src/pages/RoutineEditor.tsx:59
+msgid "PagerDuty incident"
+msgstr "Sự cố PagerDuty"
+
+#: src/pages/Shell.tsx:4837
+msgid "paint a cinematic 4K sunset over the ocean"
+msgstr "vẽ ảnh phong cảnh hoàng hôn trên biển điện ảnh 4K"
+
+#: src/pages/ScratchpadSection.tsx:143
+#: src/pages/ScratchpadSection.tsx:148
+msgid "Park"
+msgstr "Tạm gác"
+
+#: src/components/AskCard.tsx:43
+#: src/pages/Auth.tsx:166
+#: src/pages/Auth.tsx:175
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: src/pages/Auth.tsx:76
+msgid "Password recovery is not configured for this server"
+msgstr "Máy chủ này chưa cấu hình khôi phục mật khẩu"
+
+#: src/pages/Auth.tsx:285
+msgid "Password updated"
+msgstr "Đã cập nhật mật khẩu"
+
+#: src/pages/Auth.tsx:261
+msgid "Passwords do not match"
+msgstr "Mật khẩu không khớp"
+
+#: src/pages/VoiceSettingsOverlay.tsx:260
+msgid "Paste a replacement key"
+msgstr "Dán key thay thế"
+
+#: src/pages/ModelSettingsOverlay.tsx:591
+msgid "Paste the OpenAI-compatible address from your server. A-Company adds /v1 if needed."
+msgstr "Dán địa chỉ tương thích OpenAI từ máy chủ của bạn. A-Company sẽ thêm /v1 nếu cần."
+
+#: src/pages/VoiceSettingsOverlay.tsx:260
+msgid "Paste your API key"
+msgstr "Dán API key của bạn"
+
+#: src/pages/RoutineEditor.tsx:100
+msgid "Paused"
+msgstr "Đã tạm dừng"
+
+#: src/pages/ModelSettingsOverlay.tsx:742
+msgid "Personal credential"
+msgstr "Thông tin xác thực cá nhân"
+
+#: src/pages/BotContextMenu.tsx:91
+msgid "Pin"
+msgstr "Ghim"
+
+#: src/pages/VoiceSettingsOverlay.tsx:322
+msgid "Playing…"
+msgstr "Đang phát…"
+
+#: src/pages/RoutineEditor.tsx:600
+msgid "POST to"
+msgstr "POST tới"
+
+#: src/pages/ImportSettingsPanel.tsx:528
+msgid "Prepare selection"
+msgstr "Chuẩn bị nội dung đã chọn"
+
+#: src/pages/Shell.tsx:5809
+msgid "Press"
+msgstr "Nhấn"
+
+#. placeholder {0}: props.name
+#: src/components/ArtifactFileCard.tsx:65
+msgid "Preview {0}"
+msgstr "Xem trước {0}"
+
+#: src/pages/shell/bot-panel.tsx:71
+msgid "Private"
+msgstr "Riêng tư"
+
+#: src/pages/shell/dialogs.tsx:138
+msgid "Private workspace with its own bots and groups."
+msgstr "Không gian làm việc riêng với Bot và nhóm của riêng nó."
+
+#: src/components/integrations/IntegrationSetup.tsx:182
+msgid "Project ID"
+msgstr "Project ID"
+
+#: src/pages/ImportSettingsPanel.tsx:315
+msgid "Projects"
+msgstr "Dự án"
+
+#: src/pages/Shell.tsx:4864
+msgid "Propose performance improvements and upgrade paths"
+msgstr "Đề xuất các phương án nâng cấp và tối ưu hiệu năng"
+
+#: src/pages/MemorySettingsOverlay.tsx:219
+#: src/pages/Onboarding.tsx:400
+#: src/pages/Onboarding.tsx:407
+msgid "Provider"
+msgstr "Nhà cung cấp"
+
+#: src/pages/ModelSettingsOverlay.tsx:458
+#: src/pages/VoiceSettingsOverlay.tsx:191
+msgid "Providers"
+msgstr "Nhà cung cấp"
+
+#: src/components/CloudAgentCard.tsx:44
+msgid "Pull request"
+msgstr "Pull request"
+
+#: src/pages/ActivityList.tsx:147
+msgid "Queued"
+msgstr "Đang chờ"
+
+#: src/pages/Shell.tsx:4871
+msgid "Quick Actions"
+msgstr "Gợi ý tác vụ nhanh"
+
+#: src/pages/Shell.tsx:5126
+msgid "Quote"
+msgstr "Trích dẫn"
+
+#: src/pages/Shell.tsx:5954
+msgid "React"
+msgstr "Bày tỏ cảm xúc"
+
+#: src/pages/Shell.tsx:5965
+msgid "Reactions"
+msgstr "Cảm xúc"
+
+#: src/pages/shell/bot-panel.tsx:792
+msgid "Read replies aloud"
+msgstr "Đọc to câu trả lời"
+
+#: src/pages/KnowledgeSection.tsx:384
+msgid "read-only"
+msgstr "chỉ đọc"
+
+#: src/pages/ImportSettingsPanel.tsx:614
+msgid "Read-only history. Continue creates a new agent; the archive stays unchanged."
+msgstr "Lịch sử chỉ đọc. Thao tác tiếp tục tạo một tác nhân mới; bản lưu không thay đổi."
+
+#: src/pages/Shell.tsx:3362
+#: src/pages/Shell.tsx:4813
+msgid "Ready"
+msgstr "Sẵn sàng"
+
+#: src/pages/ModelSettingsOverlay.tsx:682
+#: src/pages/Onboarding.tsx:522
+msgid "Reasoning effort"
+msgstr "Mức độ suy luận"
+
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:94
+msgid "Recall and write"
+msgstr "Gợi nhớ và ghi"
+
+#: src/pages/memory-providers/SerenitySettingsForm.tsx:85
+msgid "Recall only"
+msgstr "Chỉ gợi nhớ"
+
+#: src/pages/ActivityList.tsx:82
+msgid "Recent"
+msgstr "Gần đây"
+
+#: src/pages/McpServersOverlay.tsx:39
+msgid "Reconnect OAuth"
+msgstr "Kết nối lại OAuth"
+
+#: src/components/ComputerUpdateProgress.tsx:54
+msgid "Reconnecting"
+msgstr "Đang kết nối lại"
+
+#: src/components/teach/TeachComputerOverlay.tsx:76
+#: src/components/teach/TeachComputerOverlay.tsx:127
+#: src/components/teach/TeachComputerOverlay.tsx:160
+msgid "Recording may have started, but the view could not refresh"
+msgstr "Có thể đã bắt đầu ghi, nhưng không thể làm mới giao diện"
+
+#: src/components/teach/TeachComputerOverlay.tsx:266
+msgid "Recording started. Refresh the view to continue."
+msgstr "Đã bắt đầu ghi. Làm mới giao diện để tiếp tục."
+
+#. placeholder {0}: recording.goal
+#: src/components/teach/TeachRecordingChrome.tsx:43
+#: src/components/teach/TeachRecordingChrome.tsx:61
+msgid "Recording: {0}"
+msgstr "Đang ghi: {0}"
+
+#: src/components/ComputerMaintenanceActions.tsx:135
+#: src/components/ComputerUpdateProgress.tsx:209
+msgid "Recover computer"
+msgstr "Khôi phục máy tính"
+
+#. placeholder {0}: update.name
+#: src/components/ComputerUpdateProgress.tsx:64
+msgid "Recovering {0}’s Computer"
+msgstr "Đang khôi phục máy tính của {0}"
+
+#: src/components/ComputerUpdateProgress.tsx:63
+msgid "Recovering Team Computer"
+msgstr "Đang khôi phục máy tính nhóm"
+
+#: src/components/ComputerMaintenanceActions.tsx:135
+msgid "Recovering…"
+msgstr "Đang khôi phục…"
+
+#: src/components/ComputerUpdateProgress.tsx:59
+msgid "Recovery failed"
+msgstr "Khôi phục thất bại"
+
+#: src/components/ComputerUpdateProgress.tsx:160
+msgid "Recovery is unavailable until the previous operation has stopped."
+msgstr "Không thể khôi phục cho đến khi thao tác trước đó dừng lại."
+
+#: src/components/ComputerUpdateProgress.tsx:162
+msgid "Recovery restores the last saved workspace. Unsaved work may be lost."
+msgstr "Khôi phục sẽ đưa về không gian làm việc đã lưu gần nhất. Công việc chưa lưu có thể bị mất."
+
+#: src/components/ComputerUpdateProgress.tsx:52
+msgid "Recreating the computer"
+msgstr "Đang tạo lại máy tính"
+
+#: src/components/teach/TeachComputerOverlay.tsx:271
+msgid "Refresh view"
+msgstr "Làm mới giao diện"
+
+#: src/components/teach/TeachComputerOverlay.tsx:271
+msgid "Refreshing…"
+msgstr "Đang làm mới…"
+
+#: src/pages/Shell.tsx:6057
+msgid "Release"
+msgstr "Giải phóng"
+
+#: src/components/ComputerUpdateProgress.tsx:180
+msgid "Release computer"
+msgstr "Giải phóng máy tính"
+
+#: src/components/ComputerUpdateProgress.tsx:225
+msgid "Release interrupted computer?"
+msgstr "Giải phóng máy tính bị gián đoạn?"
+
+#: src/components/ApprovalRulesSettings.tsx:179
+#: src/pages/ModelSettingsOverlay.tsx:950
+#: src/pages/PluginsOverlay.tsx:603
+#: src/pages/PluginsOverlay.tsx:1147
+#: src/pages/ScratchpadSection.tsx:165
+msgid "Remove"
+msgstr "Xóa"
+
+#. placeholder {0}: attachment.file.name
+#: src/pages/Shell.tsx:5519
+msgid "Remove {0}"
+msgstr "Xóa {0}"
+
+#. placeholder {0}: credential.label
+#: src/pages/ModelSettingsOverlay.tsx:297
+msgid "Remove {0}? Bots using it switch to the default model."
+msgstr "Xóa {0}? Các Bot đang dùng model này sẽ chuyển sang model mặc định."
+
+#: src/pages/RoutineEditor.tsx:591
+msgid "Remove Git event"
+msgstr "Xóa sự kiện Git"
+
+#. placeholder {0}: mention.name
+#: src/pages/Shell.tsx:5678
+msgid "Remove mention {0}"
+msgstr "Xóa nhắc đến {0}"
+
+#: src/pages/RoutineEditor.tsx:524
+msgid "Remove message trigger"
+msgstr "Xóa trình kích hoạt tin nhắn"
+
+#: src/pages/RoutineEditor.tsx:353
+msgid "Remove schedule"
+msgstr "Xóa lịch"
+
+#. placeholder {0}: selectedSkill.name
+#: src/pages/Shell.tsx:5657
+msgid "Remove skill {0}"
+msgstr "Xóa kỹ năng {0}"
+
+#: src/pages/RoutineEditor.tsx:591
+msgid "Remove webhook"
+msgstr "Xóa webhook"
+
+#: src/pages/Shell.tsx:6342
+msgid "Removed with chat, computer, and memory."
+msgstr "Đã xóa cùng với chat, máy tính và bộ nhớ."
+
+#: src/pages/ScratchpadSection.tsx:94
+msgid "Removed, but list refresh failed"
+msgstr "Đã xóa, nhưng không làm mới được danh sách"
+
+#: src/pages/ModelSettingsOverlay.tsx:950
+#: src/pages/PluginsOverlay.tsx:568
+#: src/pages/PluginsOverlay.tsx:603
+#: src/pages/PluginsOverlay.tsx:1147
+msgid "Removing…"
+msgstr "Đang xóa…"
+
+#: src/pages/BotContextMenu.tsx:119
+#: src/pages/Shell.tsx:4189
+#: src/pages/shell/dialogs.tsx:247
+msgid "Rename section"
+msgstr "Đổi tên mục"
+
+#: src/pages/ScratchpadSection.tsx:119
+#: src/pages/ScratchpadSection.tsx:154
+msgid "Reopen"
+msgstr "Mở lại"
+
+#: src/pages/ModelSettingsOverlay.tsx:871
+#: src/pages/ModelSettingsOverlay.tsx:908
+msgid "Replace API key"
+msgstr "Thay API key"
+
+#: src/pages/VoiceSettingsOverlay.tsx:272
+msgid "Replace key"
+msgstr "Thay key"
+
+#: src/pages/Shell.tsx:5986
+#: src/pages/Shell.tsx:6008
+msgid "Reply"
+msgstr "Trả lời"
+
+#: src/pages/Shell.tsx:5481
+msgid "Replying to {replyName}"
+msgstr "Đang trả lời {replyName}"
+
+#: src/pages/Shell.tsx:5480
+msgid "Replying to {replyName}: “{replyQuote}”"
+msgstr "Đang trả lời {replyName}: “{replyQuote}”"
+
+#: src/components/ComputerMaintenanceActions.tsx:100
+#: src/pages/shell/avatar-studio-popover.tsx:190
+msgid "Reset"
+msgstr "Đặt lại"
+
+#: src/components/ComputerMaintenanceActions.tsx:140
+msgid "Reset computer"
+msgstr "Đặt lại máy tính"
+
+#: src/components/ComputerMaintenanceActions.tsx:88
+msgid "Reset computer?"
+msgstr "Đặt lại máy tính?"
+
+#: src/pages/Auth.tsx:317
+msgid "Reset password"
+msgstr "Đặt lại mật khẩu"
+
+#: src/pages/Auth.tsx:40
+msgid "Reset your password"
+msgstr "Đặt lại mật khẩu của bạn"
+
+#: src/components/ComputerMaintenanceActions.tsx:100
+#: src/components/ComputerMaintenanceActions.tsx:140
+msgid "Resetting…"
+msgstr "Đang đặt lại…"
+
+#: src/components/DesktopUpdates.tsx:104
+#: src/components/DesktopUpdates.tsx:150
+msgid "Restart to update"
+msgstr "Khởi động lại để cập nhật"
+
+#: src/pages/Shell.tsx:3125
+#: src/pages/Shell.tsx:3156
+msgid "Restore"
+msgstr "Khôi phục"
+
+#: src/pages/ImportSettingsPanel.tsx:827
+msgid "Restore Backup"
+msgstr ""
+
+#: src/components/ComputerMaintenanceActions.tsx:91
+msgid "Restore the last saved workspace. Unsaved work on the computer is lost."
+msgstr "Khôi phục không gian làm việc đã lưu gần nhất. Công việc chưa lưu trên máy tính sẽ bị mất."
+
+#. placeholder {0}: res.createdBots
+#. placeholder {1}: res.restoredSkills
+#: src/pages/ImportSettingsPanel.tsx:786
+msgid "Restored {0} bots and {1} skills."
+msgstr ""
+
+#: src/components/ComputerUpdateProgress.tsx:53
+msgid "Restoring your workspace"
+msgstr "Đang khôi phục không gian làm việc"
+
+#: src/pages/PeerMessagesOverlay.tsx:116
+msgid "Retry now"
+msgstr "Thử lại ngay"
+
+#: src/pages/Shell.tsx:2606
+msgid "Retry screen"
+msgstr "Thử lại màn hình"
+
+#: src/pages/McpOAuthCallback.tsx:62
+msgid "Return to A-Company"
+msgstr "Quay lại A-Company"
+
+#. placeholder {0}: doc.revision
+#: src/pages/KnowledgeSection.tsx:180
+msgid "rev {0}"
+msgstr "bản sửa đổi {0}"
+
+#: src/pages/MessagingSettingsOverlay.tsx:324
+msgid "Revoke"
+msgstr "Thu hồi"
+
+#: src/pages/AccountSettingsOverlay.tsx:132
+msgid "Robot"
+msgstr "Robot"
+
+#: src/pages/ExternalConversationSettings.tsx:125
+msgid "Room guidance"
+msgstr "Hướng dẫn phòng"
+
+#: src/pages/RoutineEditor.tsx:620
+msgid "Rotate key"
+msgstr "Xoay vòng key"
+
+#: src/pages/shell/bot-panel.tsx:924
+msgid "Rotate secret"
+msgstr ""
+
+#: src/pages/RoutineEditor.tsx:265
+#: src/pages/Shell.tsx:3842
+#: src/pages/Shell.tsx:3854
+msgid "Routine"
+msgstr "Routine"
+
+#: src/pages/RoutineEditor.tsx:116
+msgid "Routines"
+msgstr "Routine"
+
+#: src/pages/RoutineEditor.tsx:400
+#: src/pages/RoutineEditor.tsx:406
+msgid "Run at"
+msgstr "Chạy lúc"
+
+#: src/pages/RoutineEditor.tsx:499
+msgid "Run history"
+msgstr "Lịch sử chạy"
+
+#: src/pages/Shell.tsx:3835
+msgid "Run time must be in the future."
+msgstr "Thời gian chạy phải ở tương lai."
+
+#: src/components/CloudAgentCard.tsx:32
+msgid "running"
+msgstr "đang chạy"
+
+#: src/pages/ActivityList.tsx:151
+msgid "Running"
+msgstr "Đang chạy"
+
+#: src/pages/RoutineEditor.tsx:172
+msgid "Running · Stop"
+msgstr "Đang chạy · Dừng"
+
+#: src/pages/RoutineEditor.tsx:304
+msgid "Running…"
+msgstr "Đang chạy…"
+
+#: src/pages/RoutineEditor.tsx:532
+msgid "Runs when this bot receives a verified message from this provider."
+msgstr "Chạy khi Bot này nhận được tin nhắn đã xác minh từ nhà cung cấp này."
+
+#: src/pages/ImportSettingsPanel.tsx:37
+msgid "Runtime settings are not imported."
+msgstr "Không nhập cài đặt thời gian chạy."
+
+#: src/components/AskCard.tsx:157
+#: src/components/teach/SkillDraftCard.tsx:142
+#: src/pages/ExternalConversationSettings.tsx:255
+#: src/pages/GroupPanel.tsx:236
+#: src/pages/KnowledgeSection.tsx:203
+#: src/pages/KnowledgeSection.tsx:423
+#: src/pages/ModelSettingsOverlay.tsx:906
+#: src/pages/RoutineEditor.tsx:489
+#: src/pages/shell/bot-panel.tsx:828
+#: src/pages/shell/dialogs.tsx:267
+msgid "Save"
+msgstr "Lưu"
+
+#: src/pages/AccountSettingsOverlay.tsx:325
+msgid "Save caps"
+msgstr ""
+
+#: src/components/AskCard.tsx:18
+#: src/components/teach/SkillDraftCard.tsx:142
+#: src/pages/AccountSettingsOverlay.tsx:329
+#: src/pages/ExternalConversationSettings.tsx:257
+msgid "Saved"
+msgstr "Đã lưu"
+
+#: src/lib/use-model-oauth-signin.ts:73
+#: src/pages/ScratchpadSection.tsx:53
+#: src/pages/ScratchpadSection.tsx:75
+msgid "Saved, but list refresh failed"
+msgstr "Đã lưu, nhưng không làm mới được danh sách"
+
+#: src/pages/ModelSettingsOverlay.tsx:384
+msgid "Saved."
+msgstr "Đã lưu."
+
+#: src/pages/RoutineEditor.tsx:563
+msgid "Saved. Rotate to reveal."
+msgstr "Đã lưu. Xoay vòng để hiển thị."
+
+#: src/components/ComputerUpdateProgress.tsx:51
+msgid "Saving your workspace"
+msgstr "Đang lưu không gian làm việc"
+
+#: src/pages/ExternalConversationSettings.tsx:255
+msgid "Saving..."
+msgstr "Đang lưu..."
+
+#: src/components/AskCard.tsx:157
+#: src/components/teach/SkillDraftCard.tsx:142
+#: src/pages/AccountSettingsOverlay.tsx:325
+#: src/pages/GroupPanel.tsx:236
+#: src/pages/ModelSettingsOverlay.tsx:904
+#: src/pages/RoutineEditor.tsx:489
+#: src/pages/shell/dialogs.tsx:267
+msgid "Saving…"
+msgstr "Đang lưu…"
+
+#: src/pages/CallView.tsx:255
+msgid "Say something. Silence sends it."
+msgstr "Hãy nói gì đó. Im lặng sẽ gửi đi."
+
+#: src/pages/CallView.tsx:41
+#: src/pages/CallView.tsx:42
+msgid "Say yes or no, or answer in a sentence."
+msgstr "Hãy nói có hoặc không, hoặc trả lời bằng một câu."
+
+#: src/pages/ImportSettingsPanel.tsx:45
+msgid "Scan limit reached. Some items may be missing."
+msgstr "Đã đạt giới hạn quét. Có thể thiếu một số mục."
+
+#: src/pages/ModelSettingsOverlay.tsx:1208
+#: src/pages/PluginsOverlay.tsx:878
+#: src/pages/shell/bot-picker.tsx:55
+#: src/pages/shell/bot-picker.tsx:56
+#: src/pages/shell/command-palette.tsx:102
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: src/pages/Shell.tsx:2793
+msgid "Search agents…"
+msgstr "Tìm kiếm trợ lý…"
+
+#: src/components/integrations/IntegrationSetup.tsx:250
+#: src/components/integrations/IntegrationSetup.tsx:251
+#: src/pages/PluginsOverlay.tsx:696
+#: src/pages/PluginsOverlay.tsx:697
+msgid "Search apps"
+msgstr "Tìm ứng dụng"
+
+#: src/pages/shell/command-palette.tsx:91
+msgid "Search bots and switch conversations"
+msgstr "Tìm Bot và chuyển cuộc trò chuyện"
+
+#: src/pages/PluginsOverlay.tsx:848
+msgid "Search by domain"
+msgstr "Tìm theo tên miền"
+
+#: src/components/integrations/IntegrationSetup.tsx:256
+msgid "Search integrations.sh"
+msgstr "Tìm trên integrations.sh"
+
+#: src/pages/ModelSettingsOverlay.tsx:1203
+msgid "Search models"
+msgstr "Tìm model"
+
+#: src/pages/ModelSettingsOverlay.tsx:461
+#: src/pages/ModelSettingsOverlay.tsx:467
+msgid "Search providers"
+msgstr "Tìm nhà cung cấp"
+
+#: src/pages/PluginsOverlay.tsx:878
+#: src/pages/SpaceSearch.tsx:16
+msgid "Searching…"
+msgstr "Đang tìm…"
+
+#: src/pages/Shell.tsx:3357
+msgid "Select a bot"
+msgstr "Chọn một trợ lý"
+
+#: src/pages/ImportSettingsPanel.tsx:472
+msgid "Select visible"
+msgstr "Chọn các mục đang hiển thị"
+
+#: src/pages/ImportSettingsPanel.tsx:416
+msgid "Selected data may contain passwords, keys, tokens, or .env files. It is stored encrypted and inactive, never used to sign in or continue chats."
+msgstr "Dữ liệu đã chọn có thể chứa mật khẩu, khóa, token hoặc tệp .env. Dữ liệu được lưu ở dạng mã hóa, không tự kích hoạt và không bao giờ được dùng để đăng nhập hay tiếp tục trò chuyện."
+
+#: src/pages/Shell.tsx:5776
+#: src/pages/Shell.tsx:5797
+msgid "Send"
+msgstr "Gửi"
+
+#: src/pages/MessagingSettingsOverlay.tsx:180
+msgid "Send <0>{linkCode}</0> to the line from your chat app within 10 minutes. You'll get a confirmation reply once linked."
+msgstr "Gửi <0>{linkCode}</0> tới số này từ ứng dụng chat của bạn trong vòng 10 phút. Bạn sẽ nhận được tin xác nhận sau khi liên kết."
+
+#: src/components/AskCard.tsx:176
+msgid "Send answer"
+msgstr "Gửi câu trả lời"
+
+#: src/components/AskCard.tsx:193
+msgid "Send it"
+msgstr "Gửi đi"
+
+#: src/pages/Auth.tsx:213
+msgid "Send reset link"
+msgstr "Gửi liên kết đặt lại"
+
+#: src/components/AskCard.tsx:129
+#: src/components/AskCard.tsx:176
+#: src/components/AskCard.tsx:193
+msgid "Sending…"
+msgstr "Đang gửi…"
+
+#: src/pages/ImportSettingsPanel.tsx:38
+msgid "Sensitive data is stored encrypted and inactive."
+msgstr "Dữ liệu nhạy cảm được lưu ở dạng mã hóa và không tự kích hoạt."
+
+#: src/pages/ImportSettingsPanel.tsx:129
+msgid "Sensitive data requires HTTPS or a loopback server."
+msgstr "Dữ liệu nhạy cảm yêu cầu HTTPS hoặc máy chủ loopback."
+
+#: src/pages/RoutineEditor.tsx:58
+msgid "Sentry alert"
+msgstr "Cảnh báo Sentry"
+
+#: src/components/integrations/IntegrationSetup.tsx:132
+#: src/pages/AccountSettingsOverlay.tsx:145
+#: src/pages/LocalSettings.tsx:42
+msgid "Server integrations"
+msgstr "Tích hợp máy chủ"
+
+#: src/pages/McpServersOverlay.tsx:282
+msgid "Server name"
+msgstr "Tên máy chủ"
+
+#: src/components/integrations/IntegrationSetup.tsx:282
+#: src/components/integrations/IntegrationSetup.tsx:300
+#: src/pages/McpServersOverlay.tsx:329
+#: src/pages/ModelSettingsOverlay.tsx:575
+#: src/pages/Onboarding.tsx:423
+msgid "Server URL"
+msgstr "URL máy chủ"
+
+#: src/pages/ImportSettingsPanel.tsx:324
+msgid "Sessions"
+msgstr "Phiên"
+
+#: src/pages/MessagingSettingsOverlay.tsx:361
+#: src/pages/SettingsOverlay.tsx:97
+#: src/pages/SettingsOverlay.tsx:152
+#: src/pages/Shell.tsx:3228
+#: src/pages/Shell.tsx:3235
+#: src/pages/Shell.tsx:3567
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: src/pages/Shell.tsx:5830
+msgid "Settings: General"
+msgstr "Cài đặt: Chung"
+
+#: src/pages/Shell.tsx:5832
+msgid "Settings: Usage"
+msgstr "Cài đặt: Mức sử dụng"
+
+#: src/components/integrations/IntegrationSetup.tsx:328
+#: src/pages/ModelSettingsOverlay.tsx:588
+msgid "Setup help"
+msgstr "Trợ giúp thiết lập"
+
+#: src/pages/shell/avatar-studio-popover.tsx:198
+msgid "Shape"
+msgstr "Hình dạng"
+
+#: src/pages/MemorySettingsOverlay.tsx:49
+#: src/pages/shell/bot-panel.tsx:764
+msgid "Shared"
+msgstr "Dùng chung"
+
+#: src/pages/shell/dialogs.tsx:136
+msgid "Shared chat with 2-6 bots. They all reply in the same thread."
+msgstr "Chat chung với 2-6 Bot. Tất cả cùng trả lời trong một luồng."
+
+#: src/pages/KnowledgeSection.tsx:66
+msgid "Shared documents"
+msgstr "Tài liệu dùng chung"
+
+#: src/pages/Shell.tsx:3261
+#: src/pages/Shell.tsx:3322
+#: src/pages/Shell.tsx:3323
+msgid "Show bots"
+msgstr "Hiện Bot"
+
+#: src/pages/Shell.tsx:3591
+msgid "Show computer"
+msgstr "Hiện máy tính"
+
+#: src/pages/PluginsOverlay.tsx:813
+msgid "Show more"
+msgstr "Xem thêm"
+
+#: src/pages/Auth.tsx:186
+msgid "Show password"
+msgstr "Hiện mật khẩu"
+
+#: src/pages/Shell.tsx:3591
+msgid "Show settings"
+msgstr "Hiện cài đặt"
+
+#: src/lib/localized-provider-hint.ts:7
+#: src/pages/Auth.tsx:230
+#: src/pages/Auth.tsx:288
+#: src/pages/ModelSettingsOverlay.tsx:841
+#: src/pages/Onboarding.tsx:189
+msgid "Sign in"
+msgstr "Đăng nhập"
+
+#: src/pages/Auth.tsx:36
+msgid "Sign in to A-Company"
+msgstr "Đăng nhập vào A-Company"
+
+#: src/pages/Auth.tsx:223
+#: src/pages/Welcome.tsx:34
+msgid "Sign up"
+msgstr "Đăng ký"
+
+#. placeholder {0}: skill.name
+#: src/pages/Shell.tsx:5583
+msgid "Skill {0}"
+msgstr "Kỹ năng {0}"
+
+#: src/pages/ImportSettingsPanel.tsx:333
+#: src/pages/KnowledgeSection.tsx:42
+msgid "Skills"
+msgstr "Kỹ năng"
+
+#: src/pages/ImportSettingsPanel.tsx:40
+msgid "Skills are archived, not activated."
+msgstr "Kỹ năng được lưu trữ, không được kích hoạt."
+
+#: src/components/integrations/IntegrationSetup.tsx:364
+#: src/pages/Shell.tsx:6064
+msgid "Skip"
+msgstr "Bỏ qua"
+
+#: src/lib/localized-provider-hint.ts:8
+msgid "Skip or deploy key"
+msgstr "Bỏ qua hoặc triển khai key"
+
+#. placeholder {0}: skipped.join(", ")
+#: src/pages/Shell.tsx:1990
+msgid "Skipped {0}"
+msgstr "Đã bỏ qua {0}"
+
+#: src/pages/RoutineEditor.tsx:104
+#: src/pages/RoutineEditor.tsx:442
+#: src/pages/RoutineEditor.tsx:512
+msgid "Slack message"
+msgstr "Tin nhắn Slack"
+
+#: src/pages/RoutineEditor.tsx:435
+#: src/pages/RoutineEditor.tsx:446
+msgid "Slack not enabled"
+msgstr "Chưa bật Slack"
+
+#: src/components/SoftwareUpdateSection.tsx:140
+#: src/components/SoftwareUpdateSection.tsx:235
+msgid "Software update"
+msgstr "Cập nhật phần mềm"
+
+#: src/pages/ImportSettingsPanel.tsx:42
+msgid "Some project files are excluded."
+msgstr "Một số tệp dự án bị loại trừ."
+
+#: src/pages/ImportSettingsPanel.tsx:49
+msgid "Some source data is unavailable."
+msgstr "Một số dữ liệu nguồn không khả dụng."
+
+#: src/pages/ImportSettingsPanel.tsx:48
+msgid "Some source formats are not supported."
+msgstr "Một số định dạng nguồn không được hỗ trợ."
+
+#: src/pages/ImportSettingsPanel.tsx:442
+msgid "Source"
+msgstr "Nguồn"
+
+#: src/pages/shell/bot-panel.tsx:296
+#: src/pages/shell/bot-panel.tsx:670
+msgid "Space default"
+msgstr "Mặc định của space"
+
+#: src/pages/CallView.tsx:267
+msgid "Space interrupts · Esc hangs up"
+msgstr "Phím cách để ngắt · Esc để gác máy"
+
+#: src/pages/shell/dialogs.tsx:132
+msgid "Spaces"
+msgstr "Space"
+
+#: src/pages/Shell.tsx:6191
+#: src/pages/Shell.tsx:6449
+msgid "Speak"
+msgstr "Nói"
+
+#: src/pages/VoiceSettingsOverlay.tsx:223
+msgid "Speak + transcribe"
+msgstr "Nói + chép lời"
+
+#: src/pages/VoiceSettingsOverlay.tsx:225
+msgid "Speak only"
+msgstr "Chỉ nói"
+
+#: src/pages/Shell.tsx:6187
+#: src/pages/Shell.tsx:6445
+msgid "Speak this reply"
+msgstr "Đọc câu trả lời này"
+
+#: src/pages/CallView.tsx:249
+msgid "Speaking…"
+msgstr "Đang nói…"
+
+#: src/pages/Shell.tsx:4825
+msgid "Specialized AI assistant for A-Company workspace."
+msgstr "Trợ lý AI chuyên biệt cho không gian làm việc A-Company."
+
+#: src/components/teach/TeachComputerOverlay.tsx:250
+msgid "Start recording"
+msgstr "Bắt đầu ghi"
+
+#: src/pages/ImportSettingsPanel.tsx:397
+msgid "Start the helper on this computer, then reconnect:"
+msgstr "Khởi chạy trình hỗ trợ trên máy tính này, rồi kết nối lại:"
+
+#: src/pages/ImportSettingsPanel.tsx:856
+msgid "Starter Teams"
+msgstr ""
+
+#: src/pages/ActivityList.tsx:149
+msgid "Starting"
+msgstr "Đang khởi động"
+
+#: src/components/teach/TeachComputerOverlay.tsx:248
+#: src/pages/ModelSettingsOverlay.tsx:839
+#: src/pages/Onboarding.tsx:634
+msgid "Starting…"
+msgstr "Đang khởi động…"
+
+#: src/pages/Shell.tsx:4853
+msgid "Status overview"
+msgstr "Tổng quan trạng thái"
+
+#: src/components/teach/SkillDraftCard.tsx:100
+msgid "Steps"
+msgstr "Các bước"
+
+#: src/pages/Shell.tsx:4410
+#: src/pages/Shell.tsx:4415
+#: src/pages/Shell.tsx:5786
+#: src/pages/Shell.tsx:6191
+#: src/pages/Shell.tsx:6449
+msgid "Stop"
+msgstr "Dừng"
+
+#: src/pages/Shell.tsx:6187
+#: src/pages/Shell.tsx:6445
+msgid "Stop speaking"
+msgstr "Dừng nói"
+
+#: src/components/teach/TeachRecordingChrome.tsx:78
+#: src/components/teach/TeachRecordingChrome.tsx:100
+msgid "Stop teaching"
+msgstr "Dừng dạy"
+
+#. js-lingui-explicit-id
+#: src/lib/browser-notifications.ts:94
+msgid "Stopped."
+msgstr "Đã dừng."
+
+#: src/pages/McpServersOverlay.tsx:361
+msgid "Stored encrypted"
+msgstr "Được lưu mã hóa"
+
+#: src/pages/ModelSettingsOverlay.tsx:753
+msgid "Stored securely. Never shown here."
+msgstr "Được lưu an toàn. Không bao giờ hiển thị ở đây."
+
+#: src/pages/Shell.tsx:6296
+msgid "subagent"
+msgstr "subagent"
+
+#: src/pages/ModelSettingsOverlay.tsx:798
+#: src/pages/Onboarding.tsx:600
+msgid "Submit"
+msgstr "Gửi"
+
+#: src/pages/Shell.tsx:4854
+msgid "Summarize current workspace status and active tasks"
+msgstr "Tóm tắt trạng thái và các tác vụ hiện tại trong workspace"
+
+#: src/pages/ModelSettingsOverlay.tsx:704
+#: src/pages/Onboarding.tsx:532
+msgid "Supports images"
+msgstr "Hỗ trợ hình ảnh"
+
+#: src/pages/ModelSettingsOverlay.tsx:667
+#: src/pages/Onboarding.tsx:509
+msgid "Supports thinking"
+msgstr "Hỗ trợ suy luận"
+
+#: src/pages/shell/command-palette.tsx:90
+msgid "Switch bot"
+msgstr "Chuyển Bot"
+
+#: src/pages/ModelSettingsOverlay.tsx:937
+msgid "Switching…"
+msgstr "Đang chuyển…"
+
+#: src/pages/ImportSettingsPanel.tsx:43
+msgid "Symbolic links are excluded."
+msgstr "Không bao gồm liên kết tượng trưng."
+
+#: src/pages/AccountSettingsOverlay.tsx:418
+msgid "System"
+msgstr "Hệ thống"
+
+#: src/components/teach/TeachComputerOverlay.tsx:205
+#: src/components/teach/TeachComputerOverlay.tsx:213
+msgid "Teach a task"
+msgstr "Dạy một tác vụ"
+
+#: src/pages/Shell.tsx:3488
+msgid "Teaching in progress. Stop teaching before sending a new message."
+msgstr "Đang dạy. Hãy dừng dạy trước khi gửi tin nhắn mới."
+
+#: src/pages/shell/bot-panel.tsx:71
+msgid "Team"
+msgstr "Nhóm"
+
+#: src/pages/ImportSettingsPanel.tsx:800
+msgid "Team Blueprints & Backup"
+msgstr ""
+
+#: src/pages/Shell.tsx:6581
+msgid "Team Computer"
+msgstr "Máy tính nhóm"
+
+#: src/pages/MessagingSettingsOverlay.tsx:336
+msgid "Team conversations"
+msgstr "Cuộc trò chuyện nhóm"
+
+#: src/pages/RoutineEditor.tsx:56
+#: src/pages/RoutineEditor.tsx:105
+#: src/pages/RoutineEditor.tsx:514
+msgid "Teams message"
+msgstr "Tin nhắn Teams"
+
+#: src/pages/RoutineEditor.tsx:455
+msgid "Teams not enabled"
+msgstr "Chưa bật Teams"
+
+#: src/components/teach/SkillDraftCard.tsx:145
+msgid "Test"
+msgstr "Kiểm tra"
+
+#: src/pages/RoutineEditor.tsx:304
+msgid "Test run"
+msgstr "Chạy thử"
+
+#: src/components/SoftwareUpdateSection.tsx:212
+msgid "The API did not come back. Refresh this page."
+msgstr "API không phản hồi lại. Hãy làm mới trang này."
+
+#: src/pages/MemorySettingsOverlay.tsx:245
+msgid "The selected memory provider is not available in this build."
+msgstr "Nhà cung cấp bộ nhớ đã chọn không có trong bản dựng này."
+
+#: src/pages/ImportSettingsPanel.tsx:46
+msgid "The session's project is not selected."
+msgstr "Chưa chọn dự án của phiên này."
+
+#: src/pages/shell/bot-panel.tsx:310
+#: src/pages/shell/bot-panel.tsx:689
+msgid "Thinking"
+msgstr "Đang suy nghĩ"
+
+#: src/pages/Shell.tsx:6561
+msgid "This bot runs on this computer, not a Linux desktop. Shell and files use your home folder."
+msgstr "Bot này chạy trên máy tính này, không phải máy tính Linux. Shell và tệp dùng thư mục home của bạn."
+
+#: src/pages/shell/dialogs.tsx:388
+#: src/pages/shell/dialogs.tsx:443
+msgid "This cannot be undone."
+msgstr "Không thể hoàn tác thao tác này."
+
+#: src/pages/PeerMessagesOverlay.tsx:156
+msgid "This chat is view-only"
+msgstr "Cuộc trò chuyện này chỉ xem"
+
+#: src/pages/HostComputerPrompt.tsx:22
+msgid "this computer"
+msgstr "máy tính này"
+
+#: src/pages/ImportSettingsPanel.tsx:590
+msgid "This file contains secrets in plaintext. Store it securely and do not share it."
+msgstr "Tệp này chứa thông tin bí mật ở dạng văn bản thuần. Hãy lưu trữ an toàn và không chia sẻ tệp."
+
+#: src/components/ArtifactFileCard.tsx:133
+msgid "This file is not valid UTF-8 Markdown."
+msgstr "Tệp này không phải Markdown UTF-8 hợp lệ."
+
+#: src/pages/HostComputerPrompt.tsx:22
+msgid "this Mac"
+msgstr "máy Mac này"
+
+#: src/pages/AccountSettingsOverlay.tsx:270
+msgid "This month (UTC)"
+msgstr ""
+
+#: src/pages/shell/dialogs.tsx:297
+msgid "This permanently removes every message and stops current work. The chat remains available."
+msgstr "Thao tác này sẽ xóa vĩnh viễn mọi tin nhắn và dừng công việc hiện tại. Cuộc trò chuyện vẫn còn."
+
+#: src/pages/Auth.tsx:253
+msgid "This reset link is invalid or expired"
+msgstr "Liên kết đặt lại không hợp lệ hoặc đã hết hạn"
+
+#: src/pages/shell/message-cards.tsx:313
+msgid "This server cannot be assigned without a bot."
+msgstr "Không thể gán máy chủ này khi không có Bot."
+
+#: src/pages/McpServersOverlay.tsx:189
+msgid "This server did not request browser authorization."
+msgstr "Máy chủ này không yêu cầu ủy quyền qua trình duyệt."
+
+#: src/pages/McpServersOverlay.tsx:185
+msgid "This server is already connected. Disconnect it first to authorize again."
+msgstr "Máy chủ này đã được kết nối. Hãy ngắt kết nối trước để ủy quyền lại."
+
+#: src/pages/ModelSettingsOverlay.tsx:918
+msgid "This subscription sign-in is not available in A-Company yet. Use a deployment credential or choose another provider."
+msgstr "Hình thức đăng nhập bằng gói đăng ký này chưa được hỗ trợ trong A-Company. Hãy dùng thông tin xác thực triển khai hoặc chọn nhà cung cấp khác."
+
+#: src/pages/RoutineSchedule.tsx:217
+msgid "Time of day"
+msgstr "Thời điểm trong ngày"
+
+#: src/pages/shell/bot-panel.tsx:262
+#: src/pages/shell/bot-panel.tsx:633
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: src/pages/Shell.tsx:5813
+msgid "to send,"
+msgstr "để gửi,"
+
+#: src/pages/shell/bot-picker.tsx:50
+msgid "To:"
+msgstr "Đến:"
+
+#: src/pages/AccountSettingsOverlay.tsx:261
+msgid "Today (UTC)"
+msgstr ""
+
+#: src/pages/AccountSettingsOverlay.tsx:290
+msgid "Token spend caps"
+msgstr ""
+
+#: src/pages/PluginsOverlay.tsx:1111
+msgid "Tool sources"
+msgstr "Nguồn công cụ"
+
+#: src/pages/PluginsOverlay.tsx:629
+msgid "Tools"
+msgstr "Công cụ"
+
+#: src/pages/ExternalConversationSettings.tsx:61
+msgid "Treat like a person"
+msgstr "Đối xử như một người"
+
+#: src/pages/PluginsOverlay.tsx:1067
+msgid "Treg token"
+msgstr "Treg token"
+
+#: src/pages/Onboarding.tsx:698
+msgid "Try again"
+msgstr "Thử lại"
+
+#: src/components/AskCard.tsx:172
+msgid "Type your answer"
+msgstr "Nhập câu trả lời của bạn"
+
+#: src/pages/BotContextMenu.tsx:108
+msgid "Unassigned"
+msgstr "Chưa phân công"
+
+#: src/components/SoftwareUpdateSection.tsx:272
+msgid "Unavailable"
+msgstr "Không khả dụng"
+
+#: src/pages/PluginsOverlay.tsx:568
+msgid "Uninstall"
+msgstr "Gỡ cài đặt"
+
+#: src/pages/AccountSettingsOverlay.tsx:302
+#: src/pages/AccountSettingsOverlay.tsx:316
+msgid "Unlimited"
+msgstr ""
+
+#: src/pages/MessagingSettingsOverlay.tsx:139
+msgid "Unlink"
+msgstr "Hủy liên kết"
+
+#: src/pages/BotContextMenu.tsx:91
+msgid "Unpin"
+msgstr "Bỏ ghim"
+
+#. placeholder {0}: pending.file.name
+#: src/pages/Shell.tsx:2068
+msgid "Unsupported file type: {0}"
+msgstr "Loại tệp không được hỗ trợ: {0}"
+
+#: src/pages/ImportSettingsPanel.tsx:327
+#: src/pages/ImportSettingsPanel.tsx:622
+msgid "Untitled session"
+msgstr "Phiên chưa đặt tên"
+
+#: src/components/DesktopUpdates.tsx:166
+#: src/components/SoftwareUpdateSection.tsx:253
+msgid "Up to date"
+msgstr "Đã cập nhật mới nhất"
+
+#: src/components/SoftwareUpdateSection.tsx:81
+msgid "Update"
+msgstr "Cập nhật"
+
+#: src/components/SoftwareUpdateSection.tsx:260
+msgid "Update available"
+msgstr "Có bản cập nhật"
+
+#: src/components/ComputerMaintenanceActions.tsx:149
+msgid "Update computer"
+msgstr "Cập nhật máy tính"
+
+#: src/components/ComputerUpdateProgress.tsx:60
+#: src/components/SoftwareUpdateSection.tsx:185
+msgid "Update failed"
+msgstr "Cập nhật thất bại"
+
+#: src/components/SoftwareUpdateSection.tsx:181
+#: src/components/SoftwareUpdateSection.tsx:201
+msgid "Update finished with errors"
+msgstr "Cập nhật hoàn tất nhưng có lỗi"
+
+#: src/components/ComputerUpdateProgress.tsx:118
+msgid "Update progress"
+msgstr "Tiến trình cập nhật"
+
+#: src/components/SoftwareUpdateSection.tsx:178
+#: src/components/SoftwareUpdateSection.tsx:195
+msgid "Updated"
+msgstr "Đã cập nhật"
+
+#: src/pages/SettingsOverlay.tsx:92
+msgid "Updates"
+msgstr "Cập nhật"
+
+#. placeholder {0}: update.name
+#: src/components/ComputerUpdateProgress.tsx:67
+msgid "Updating {0}’s Computer"
+msgstr "Đang cập nhật máy tính của {0}"
+
+#: src/components/ComputerUpdateProgress.tsx:66
+msgid "Updating Team Computer"
+msgstr "Đang cập nhật máy tính nhóm"
+
+#: src/components/ComputerMaintenanceActions.tsx:149
+#: src/components/SoftwareUpdateSection.tsx:81
+msgid "Updating…"
+msgstr "Đang cập nhật…"
+
+#: src/pages/shell/avatar-studio-popover.tsx:181
+msgid "Upload"
+msgstr "Tải lên"
+
+#: src/pages/ImportSettingsPanel.tsx:433
+msgid "Upload for preview"
+msgstr "Tải lên để xem trước"
+
+#: src/pages/ImportSettingsPanel.tsx:428
+msgid "Upload the selected content to this A-Company server for preview? Nothing is imported yet."
+msgstr "Tải nội dung đã chọn lên máy chủ A-Company này để xem trước? Chưa có dữ liệu nào được nhập."
+
+#: src/pages/AccountSettingsOverlay.tsx:248
+#: src/pages/SettingsOverlay.tsx:89
+#: src/pages/Shell.tsx:3240
+#: src/pages/Shell.tsx:3251
+msgid "Usage"
+msgstr "Mức sử dụng"
+
+#: src/pages/HostComputerPrompt.tsx:92
+msgid "Use {hostLabel}"
+msgstr "Dùng {hostLabel}"
+
+#: src/pages/ModelSettingsOverlay.tsx:653
+#: src/pages/Onboarding.tsx:498
+msgid "Use a found model"
+msgstr "Dùng model đã tìm thấy"
+
+#: src/pages/ExternalConversationSettings.tsx:129
+#: src/pages/ExternalConversationSettings.tsx:130
+msgid "Use default guidance"
+msgstr "Dùng hướng dẫn mặc định"
+
+#: src/pages/ModelSettingsOverlay.tsx:939
+msgid "Use this model"
+msgstr "Dùng model này"
+
+#: src/pages/PluginsOverlay.tsx:1092
+msgid "Verify and add"
+msgstr "Xác minh và thêm"
+
+#: src/pages/PluginsOverlay.tsx:1090
+msgid "Verifying…"
+msgstr "Đang xác minh…"
+
+#: src/pages/SettingsOverlay.tsx:88
+#: src/pages/Shell.tsx:5763
+#: src/pages/Shell.tsx:5764
+#: src/pages/shell/bot-panel.tsx:796
+#: src/pages/VoiceSettingsOverlay.tsx:175
+#: src/pages/VoiceSettingsOverlay.tsx:298
+msgid "Voice"
+msgstr "Giọng nói"
+
+#: src/pages/ModelSettingsOverlay.tsx:803
+#: src/pages/ModelSettingsOverlay.tsx:825
+#: src/pages/Onboarding.tsx:605
+#: src/pages/Onboarding.tsx:627
+msgid "Waiting for sign-in…"
+msgstr "Đang chờ đăng nhập…"
+
+#: src/components/SoftwareUpdateSection.tsx:188
+msgid "Waiting for the API to come back…"
+msgstr "Đang chờ API phản hồi lại…"
+
+#: src/pages/shell/message-cards.tsx:195
+msgid "Waiting…"
+msgstr "Đang chờ…"
+
+#: src/pages/ImportSettingsPanel.tsx:54
+msgid "Warnings and omissions"
+msgstr "Cảnh báo và nội dung bị bỏ qua"
+
+#: src/pages/RoutineEditor.tsx:475
+msgid "Webhook"
+msgstr "Webhook"
+
+#: src/pages/RoutineEditor.tsx:635
+#: src/pages/RoutineSchedule.tsx:36
+#: src/pages/RoutineSchedule.tsx:155
+msgid "Weekdays"
+msgstr "Các ngày trong tuần"
+
+#: src/pages/shell/dialogs.tsx:358
+msgid "What about its memories?"
+msgstr "Còn ký ức của nó thì sao?"
+
+#: src/components/teach/TeachComputerOverlay.tsx:227
+msgid "What result will you demonstrate?"
+msgstr "Bạn sẽ minh họa kết quả gì?"
+
+#: src/pages/RoutineEditor.tsx:325
+msgid "What should this routine do each time it runs?"
+msgstr "Routine này nên làm gì mỗi lần chạy?"
+
+#: src/pages/shell/bot-panel.tsx:279
+msgid "What this bot is for"
+msgstr "Mục đích của Bot này"
+
+#: src/components/teach/SkillDraftCard.tsx:119
+msgid "What to return"
+msgstr "Kết quả trả về"
+
+#: src/pages/RoutineEditor.tsx:102
+#: src/pages/RoutineEditor.tsx:586
+msgid "When a webhook fires"
+msgstr "Khi webhook được kích hoạt"
+
+#: src/pages/RoutineEditor.tsx:334
+msgid "When to run"
+msgstr "Thời điểm chạy"
+
+#: src/components/teach/SkillDraftCard.tsx:81
+msgid "When to use"
+msgstr "Khi nào dùng"
+
+#: src/pages/HostComputerPrompt.tsx:59
+msgid "Where should bots run?"
+msgstr "Bot nên chạy ở đâu?"
+
+#: src/pages/Auth.tsx:209
+#: src/pages/Auth.tsx:317
+#: src/pages/CallView.tsx:251
+#: src/pages/ImportSettingsPanel.tsx:389
+msgid "Working…"
+msgstr "Đang xử lý…"
+
+#: src/pages/ImportSettingsPanel.tsx:595
+msgid "Yes, export sensitive data"
+msgstr "Có, xuất dữ liệu nhạy cảm"
+
+#: src/pages/Shell.tsx:5910
+msgid "Yesterday"
+msgstr "Hôm qua"
+
+#: src/pages/Shell.tsx:1763
+msgid "You"
+msgstr "Bạn"
+
+#: src/pages/McpOAuthCallback.tsx:69
+msgid "You can close this tab if it does not redirect automatically."
+msgstr "Bạn có thể đóng tab này nếu trang không tự chuyển hướng."
+
+#: src/pages/McpOAuthCallback.tsx:67
+msgid "You can close this window."
+msgstr "Bạn có thể đóng cửa sổ này."
+
+#: src/pages/Shell.tsx:4399
+msgid "You have control"
+msgstr "Bạn đang điều khiển"
+
+#: src/pages/Auth.tsx:157
+msgid "Your email address"
+msgstr "Địa chỉ email của bạn"
+
+#: src/pages/Auth.tsx:142
+msgid "Your name"
+msgstr "Tên của bạn"
+
+#: src/pages/Welcome.tsx:23
+msgid "Your team of always-on agents<0/>that you can give real work to."
+msgstr "Đội ngũ agent luôn hoạt động<0/>mà bạn có thể giao việc thực sự."

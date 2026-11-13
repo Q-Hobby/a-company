@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerabilities
+    url: https://github.com/phuocka/a-company/blob/main/SECURITY.md
+    about: Report security issues to security@a-company.dev — do not open a public issue.
+  - name: User support
+    url: mailto:support@a-company.dev
+    about: Questions about using A-Company or self-hosting help.
+  - name: Maintainer
+    url: mailto:hello@a-company.dev
+    about: Reach the maintainer directly.
