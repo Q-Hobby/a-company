@@ -10,9 +10,9 @@ Dự án mã nguồn mở theo giấy phép **Apache-2.0**, có ba cách chạy 
 
 ## Tải về / Releases
 
-### [Tải A-Company cho Windows x64 — ZIP khoảng 180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.1/A-Company-0.2.1-Windows-x64.zip)
+### [Tải A-Company cho Windows x64 — ZIP khoảng 180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-Windows-x64.zip)
 
-**[Trang release v0.2.1](https://github.com/phuocka/a-company/releases/tag/v0.2.1)** · **[Tất cả phiên bản](https://github.com/phuocka/a-company/releases)** · **[Mã kiểm tra SHA-256](https://github.com/phuocka/a-company/releases/download/v0.2.1/SHA256SUMS)**
+**[Trang release v0.2.2](https://github.com/phuocka/a-company/releases/tag/v0.2.2)** · **[Tất cả phiên bản](https://github.com/phuocka/a-company/releases)** · **[Mã kiểm tra SHA-256](https://github.com/phuocka/a-company/releases/download/v0.2.2/SHA256SUMS)**
 
 1. Tải file ZIP và **giải nén toàn bộ** vào một thư mục trên máy.
 2. Mở **`A-Company.exe`**; giữ nguyên các file đi kèm và thư mục `resources`.

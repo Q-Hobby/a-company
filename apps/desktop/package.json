@@ -2,7 +2,7 @@
   "name": "@acompany/desktop",
   "productName": "A-Company",
   "description": "Self-hosted AI teammates with a built-in local workspace, Lite CLI, and Docker/server options.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "Apache-2.0",
   "type": "module",
   "main": "dist/main.js",

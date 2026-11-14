@@ -42,12 +42,12 @@ Bot có bộ nhớ, công cụ làm việc, lịch tự động, mini-app trong 
 
 ## Downloads / Tải về
 
-**[Release v0.2.1 — downloads & release notes / tải xuống và ghi chú phát hành](https://github.com/phuocka/a-company/releases/tag/v0.2.1)** · [All releases / Các phiên bản](https://github.com/phuocka/a-company/releases)
+**[Release v0.2.2 — downloads & release notes / tải xuống và ghi chú phát hành](https://github.com/phuocka/a-company/releases/tag/v0.2.2)** · [All releases / Các phiên bản](https://github.com/phuocka/a-company/releases)
 
 | Download / Tải xuống | Platform / Nền tảng | Usage / Cách dùng |
 | --- | --- | --- |
-| **[A-Company Windows ZIP — ~180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.1/A-Company-0.2.1-Windows-x64.zip)** | Windows x64 | Extract all files, open `A-Company.exe` / Giải nén toàn bộ, mở `A-Company.exe` |
-| [SHA256SUMS](https://github.com/phuocka/a-company/releases/download/v0.2.1/SHA256SUMS) | Checksum / Mã kiểm tra | Verify the ZIP download / Kiểm tra tính toàn vẹn của ZIP |
+| **[A-Company Windows ZIP — ~180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-Windows-x64.zip)** | Windows x64 | Extract all files, open `A-Company.exe` / Giải nén toàn bộ, mở `A-Company.exe` |
+| [SHA256SUMS](https://github.com/phuocka/a-company/releases/download/v0.2.2/SHA256SUMS) | Checksum / Mã kiểm tra | Verify the ZIP download / Kiểm tra tính toàn vẹn của ZIP |
 
 No installer required. This Windows build is unsigned; system policy may warn or block it. / Không cần cài đặt. Bản Windows chưa ký số; hệ thống có thể cảnh báo hoặc chặn.
 
@@ -78,7 +78,7 @@ Choose the setup that matches your workflow — all three share the exact same c
 
 ### Option 1 — Windows Desktop ZIP (Extract & Run · No Installer · No Docker)
 
-Download **[A-Company-0.2.1-Windows-x64.zip](https://github.com/phuocka/a-company/releases/download/v0.2.1/A-Company-0.2.1-Windows-x64.zip)**, extract the entire archive, and open **`A-Company.exe`**. Keep the adjacent files and `resources` folder together; the executable is not a single-file application.
+Download **[A-Company-0.2.2-Windows-x64.zip](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-Windows-x64.zip)**, extract the entire archive, and open **`A-Company.exe`**. Keep the adjacent files and `resources` folder together; the executable is not a single-file application.
 
 - **Dedicated app window:** No browser tab, Docker Desktop, separate Node.js, PostgreSQL, or account registration is needed for the built-in workspace.
 - **Local engine:** The bundled API, background worker, and PGlite run in a separate process managed by the app. Cloud models require internet and a configured account or key; local models and optional CLI tools require their own configuration.

@@ -25,12 +25,12 @@ describe("Windows portable distribution", () => {
   });
 
   it("never loads or contacts the installer updater in portable builds", async () => {
-    const state = initialUpdateState({ packaged: true, version: "0.2.1", portable: true });
+    const state = initialUpdateState({ packaged: true, version: "0.2.2", portable: true });
     expect(state.phase).toBe("unsupported");
     expect(state.message).toContain("ZIP");
     let loaded = false;
     const controller = new DesktopUpdateController(
-      { packaged: true, version: "0.2.1", portable: true },
+      { packaged: true, version: "0.2.2", portable: true },
       async () => {
         loaded = true;
         throw new Error("Portable builds must not load the installer updater");
