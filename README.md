@@ -6,9 +6,15 @@
 
 # A-Company
 
+**[English](README.md) · [Tiếng Việt](README.vi.md)**
+
 **Self-hosted AI teammates across Web, Desktop, and Mobile.**  
 Persistent bots with live computers, scheduled routines, interactive chat mini-apps, token spend caps, and portable Markdown blueprints.  
 Run with your own model API keys, zero-cost local subscription CLIs, or embedded PGlite — **100% Apache-2.0**.
+
+**Đội ngũ AI tự lưu trữ trên Web, Desktop và Mobile.**
+
+Bot có bộ nhớ, công cụ làm việc, lịch tự động, mini-app trong hội thoại và giới hạn chi phí token. Chọn **ZIP Windows giải nén chạy ngay**, **Zero-Docker Lite CLI** hoặc **Docker/server** — mã nguồn mở **Apache-2.0**.
 
 <p>
   <a href="https://github.com/phuocka/a-company/stargazers"><img src="https://img.shields.io/github/stars/phuocka/a-company?style=for-the-badge&logo=github&label=Stars&color=2563eb&labelColor=0f172a" alt="GitHub Stars" /></a>
@@ -18,6 +24,7 @@ Run with your own model API keys, zero-cost local subscription CLIs, or embedded
 </p>
 
 <p>
+  <a href="#downloads"><strong>Downloads / Tải về</strong></a> ·
   <a href="#why-a-company"><strong>Why A-Company</strong></a> ·
   <a href="#three-ways-to-run-a-company"><strong>3 Ways to Run</strong></a> ·
   <a href="#product-tour"><strong>Product Tour</strong></a> ·
@@ -28,6 +35,23 @@ Run with your own model API keys, zero-cost local subscription CLIs, or embedded
 </p>
 
 </div>
+
+---
+
+<a id="downloads"></a>
+
+## Downloads / Tải về
+
+**[Release v0.2.1 — downloads & release notes / tải xuống và ghi chú phát hành](https://github.com/phuocka/a-company/releases/tag/v0.2.1)** · [All releases / Các phiên bản](https://github.com/phuocka/a-company/releases)
+
+| Download / Tải xuống | Platform / Nền tảng | Usage / Cách dùng |
+| --- | --- | --- |
+| **[A-Company Windows ZIP — ~180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.1/A-Company-0.2.1-Windows-x64.zip)** | Windows x64 | Extract all files, open `A-Company.exe` / Giải nén toàn bộ, mở `A-Company.exe` |
+| [SHA256SUMS](https://github.com/phuocka/a-company/releases/download/v0.2.1/SHA256SUMS) | Checksum / Mã kiểm tra | Verify the ZIP download / Kiểm tra tính toàn vẹn của ZIP |
+
+No installer required. This Windows build is unsigned; system policy may warn or block it. / Không cần cài đặt. Bản Windows chưa ký số; hệ thống có thể cảnh báo hoặc chặn.
+
+**Zero-Docker Lite CLI and Docker/server remain available alongside the ZIP. / Zero-Docker Lite CLI và Docker/server vẫn tồn tại song song với bản ZIP.** See [three ways to run](#three-ways-to-run-a-company) or [hướng dẫn tiếng Việt](README.vi.md).
 
 ---
 
