@@ -23,6 +23,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  Tabs,
+  TabsList,
+  TabsTrigger,
 } from "@acompany/ui-web";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
@@ -94,6 +97,16 @@ function providerLabel(entry: ModelCatalogEntry): string {
   return entry.provider === "openai-codex" ? "ChatGPT" : (entry.providerName ?? entry.provider);
 }
 
+type ConnectMethod = "sign-in" | "api-key";
+
+function connectsBySignIn(entry: ModelCatalogEntry): boolean {
+  return entry.signIn !== undefined || isLocalCliProviderId(entry.provider);
+}
+
+function connectsByApiKey(entry: ModelCatalogEntry): boolean {
+  return entry.auth !== "oauth" && !isLocalCliProviderId(entry.provider);
+}
+
 function nextStepAfterModel(needsIntegrationSetup: boolean): "integrations" | "bot" {
   return needsIntegrationSetup ? "integrations" : "bot";
 }
@@ -107,6 +120,7 @@ export function OnboardingPage() {
   const needsIntegrationSetup = integrationSetup?.needsSetup ?? false;
   const [integrationServers, setIntegrationServers] = useState<string[]>([]);
   const [catalog, setCatalog] = useState<ModelCatalogEntry[]>([]);
+  const [method, setMethod] = useState<ConnectMethod>("api-key");
   const [provider, setProvider] = useState("openrouter");
   const [modelId, setModelId] = useState("");
   const [apiKey, setApiKey] = useState("");
@@ -157,6 +171,7 @@ export function OnboardingPage() {
           models.find((entry) => entry.provider === me.defaultProvider) ??
           models[0];
         if (preferred) {
+          setMethod(connectsByApiKey(preferred) ? "api-key" : "sign-in");
           setProvider(preferred.provider);
           setModelId(preferred.provider === OPENAI_COMPATIBLE_PROVIDER_ID ? "" : preferred.id);
         }
@@ -175,6 +190,9 @@ export function OnboardingPage() {
     }
     return [...seen.values()];
   }, [catalog]);
+  const signInProviders = useMemo(() => providers.filter(connectsBySignIn), [providers]);
+  const apiKeyProviders = useMemo(() => providers.filter(connectsByApiKey), [providers]);
+  const methodProviders = method === "sign-in" ? signInProviders : apiKeyProviders;
 
   const modelsForProvider = useMemo(
     () => catalog.filter((entry) => entry.provider === provider),
@@ -184,8 +202,8 @@ export function OnboardingPage() {
   const selected = modelsForProvider.find((entry) => entry.id === modelId) ?? modelsForProvider[0];
   const isOpenAiCompatible = provider === OPENAI_COMPATIBLE_PROVIDER_ID;
   const isLocalCli = isLocalCliProviderId(provider);
-  const subscriptionSignIn = selected?.signIn !== undefined;
-  const acceptsKey = selected?.auth !== "oauth" && !isLocalCli;
+  const subscriptionSignIn = method === "sign-in" && selected?.signIn !== undefined;
+  const acceptsKey = method === "api-key" && selected !== undefined && connectsByApiKey(selected);
   const signInLabel = selected?.oauthLabel ?? t`Sign in`;
   const openAiCompatibleReady = openAiCompatibleConnectReady({
     baseUrl,
@@ -204,8 +222,8 @@ export function OnboardingPage() {
   const otherModelLabel = t`Other model…`;
   // Base UI Select.Value only resolves labels when Root gets `items`.
   const providerItems = useMemo(
-    () => providers.map((entry) => ({ value: entry.provider, label: providerLabel(entry) })),
-    [providers],
+    () => methodProviders.map((entry) => ({ value: entry.provider, label: providerLabel(entry) })),
+    [methodProviders],
   );
   const modelItems = useMemo(
     () => modelsForProvider.map((entry) => ({ value: entry.id, label: entry.label })),
@@ -232,16 +250,26 @@ export function OnboardingPage() {
     resetOpenAiCompatibleProbe();
   }
 
-  function selectProvider(nextProvider: string) {
-    if (nextProvider === provider) return;
+  function selectMethod(nextMethod: ConnectMethod) {
+    if (nextMethod === method) return;
+    const group = nextMethod === "sign-in" ? signInProviders : apiKeyProviders;
+    setMethod(nextMethod);
+    const keep = group.some((entry) => entry.provider === provider);
+    selectProvider(keep ? provider : (group[0]?.provider ?? provider), true);
+  }
+
+  function selectProvider(nextProvider: string, force = false) {
+    if (nextProvider === provider && !force) return;
     cancelOAuthAttempt();
     setProvider(nextProvider);
     setApiKey("");
-    setModelId(
-      nextProvider === OPENAI_COMPATIBLE_PROVIDER_ID
-        ? ""
-        : (catalog.find((item) => item.provider === nextProvider)?.id ?? ""),
-    );
+    if (nextProvider !== provider) {
+      setModelId(
+        nextProvider === OPENAI_COMPATIBLE_PROVIDER_ID
+          ? ""
+          : (catalog.find((item) => item.provider === nextProvider)?.id ?? ""),
+      );
+    }
     setBaseUrl("");
     setReasoning(false);
     setThinkingLevel(null);
@@ -395,20 +423,38 @@ export function OnboardingPage() {
             <h1 className="text-[32px] font-medium text-foreground">
               <Trans>Connect a model</Trans>
             </h1>
-            <div className="mt-8 block text-sm font-medium text-foreground">
+            {signInProviders.length && apiKeyProviders.length ? (
+              <Tabs
+                value={method}
+                onValueChange={(value) => selectMethod(value as ConnectMethod)}
+                className="mt-8"
+              >
+                <TabsList className="w-full">
+                  <TabsTrigger value="sign-in">
+                    <Trans>Sign in</Trans>
+                  </TabsTrigger>
+                  <TabsTrigger value="api-key">
+                    <Trans>API key</Trans>
+                  </TabsTrigger>
+                </TabsList>
+              </Tabs>
+            ) : null}
+            <div className="mt-6 block text-sm font-medium text-foreground">
               <span>
                 <Trans>Provider</Trans>
               </span>
               <Select
                 value={provider}
-                onValueChange={(value) => selectProvider(String(value))}
+                onValueChange={(value) => {
+                  if (typeof value === "string" && value) selectProvider(value);
+                }}
                 items={providerItems}
               >
                 <SelectTrigger aria-label={t`Provider`} className="mt-2 w-full">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  {providers.map((entry) => (
+                  {methodProviders.map((entry) => (
                     <SelectItem key={entry.provider} value={entry.provider}>
                       {providerLabel(entry)}
                     </SelectItem>
@@ -657,7 +703,7 @@ export function OnboardingPage() {
                   htmlFor={`${fieldId}-api-key`}
                   className="mt-4 block text-sm font-medium text-foreground"
                 >
-                  {subscriptionSignIn ? <Trans>Or paste an API key</Trans> : <Trans>API key</Trans>}
+                  <Trans>API key</Trans>
                   <Input
                     id={`${fieldId}-api-key`}
                     value={apiKey}

@@ -27,12 +27,25 @@ test("onboarding uses compact model selects without misleading latest labels", a
   });
 
   const provider = page.getByRole("combobox", { name: "Provider" });
+  await expect(page.getByRole("tab", { name: "API key" })).toHaveAttribute("aria-selected", "true");
   await expect(provider).toContainText("OpenRouter");
   await page.getByLabel("API key").fill("openrouter-only-key");
   await provider.click();
-  await expect(page.getByRole("option", { name: "ChatGPT" })).toBeVisible();
+  // Sign-in-only providers live in their own group.
+  await expect(page.getByRole("option", { name: "ChatGPT" })).toHaveCount(0);
   await expect(page.getByRole("option", { name: "Vercel AI Gateway" })).toBeVisible();
+  await page.keyboard.press("Escape");
+
+  await page.getByRole("tab", { name: "Sign in" }).click();
+  await expect(page.getByLabel("API key")).toHaveCount(0);
+  await provider.click();
+  await expect(page.getByRole("option", { name: "ChatGPT" })).toBeVisible();
+  await expect(page.getByRole("option", { name: "Vercel AI Gateway" })).toHaveCount(0);
   await page.getByRole("option", { name: "Anthropic" }).click();
+  await expect(page.getByRole("button", { name: /Sign in/ })).toBeVisible();
+  await captureScreenshot(page, testInfo, "onboarding-sign-in-providers");
+
+  await page.getByRole("tab", { name: "API key" }).click();
   await expect(provider).toContainText("Anthropic");
   await expect(page.getByLabel(/API key/)).toHaveValue("");
 
