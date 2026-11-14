@@ -10,17 +10,23 @@ Dự án mã nguồn mở theo giấy phép **Apache-2.0**, có ba cách chạy 
 
 ## Tải về / Releases
 
-### [Tải A-Company cho Windows x64 — ZIP khoảng 180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-Windows-x64.zip)
+| Tải xuống | Máy | Cách dùng |
+| --- | --- | --- |
+| **[Windows x64 — ZIP ~180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-Windows-x64.zip)** | Windows 10/11 | Giải nén toàn bộ, mở `A-Company.exe` |
+| **[macOS Apple Silicon — DMG ~158 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-macOS-arm64.dmg)** | Mac M1/M2/M3/M4 | Mở DMG, kéo A-Company vào Applications |
+| **[macOS Intel — DMG ~166 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-macOS-x64.dmg)** | Mac chip Intel | Như trên |
 
 **[Trang release v0.2.2](https://github.com/phuocka/a-company/releases/tag/v0.2.2)** · **[Tất cả phiên bản](https://github.com/phuocka/a-company/releases)** · **[Mã kiểm tra SHA-256](https://github.com/phuocka/a-company/releases/download/v0.2.2/SHA256SUMS)**
 
-1. Tải file ZIP và **giải nén toàn bộ** vào một thư mục trên máy.
-2. Mở **`A-Company.exe`**; giữ nguyên các file đi kèm và thư mục `resources`.
-3. Kết nối mô hình AI để bắt đầu sử dụng.
+**Windows:** tải ZIP, **giải nén toàn bộ**, mở **`A-Company.exe`**; giữ nguyên các file đi kèm và thư mục `resources`.
+
+**macOS:** chọn đúng loại chip (menu Apple → Giới thiệu về máy Mac), mở file DMG, kéo **A-Company** vào **Applications** rồi mở app.
+
+Sau đó kết nối mô hình AI (tab **Đăng nhập** hoặc **API key**) để bắt đầu.
 
 Bản Desktop chạy trong cửa sổ riêng, **không cần bộ cài, tab trình duyệt, Node.js, PostgreSQL hay Docker cài riêng** cho không gian làm việc tích hợp. File exe cần các tài nguyên đi kèm, không phải một file độc lập để chép riêng.
 
-> Bản Windows hiện **chưa ký số**. Windows có thể cảnh báo hoặc chặn theo chính sách của máy; không tắt các cơ chế bảo vệ để chạy ứng dụng. Release này chỉ có gói Windows x64, chưa cung cấp bản macOS/Linux.
+> Các bản này **chưa được Microsoft ký số hay Apple công chứng (notarize)**, nên hệ thống có thể cảnh báo khi mở lần đầu. Trên macOS, nếu bị chặn: vào **System Settings → Privacy & Security**, chọn **Open Anyway**. Không tắt các cơ chế bảo vệ của hệ thống. Chưa có bản Linux.
 
 Mô hình đám mây cần internet và tài khoản hoặc API key phù hợp. Mô hình chạy cục bộ và các công cụ CLI tùy chọn cần được cài đặt, cấu hình riêng; ứng dụng không đóng gói sẵn mô hình AI.
 
@@ -28,7 +34,7 @@ Mô hình đám mây cần internet và tài khoản hoặc API key phù hợp. 
 
 | Lựa chọn | Phù hợp với | Cách bắt đầu |
 | --- | --- | --- |
-| **Desktop ZIP** | Người muốn tải về và mở app trên Windows | Giải nén ZIP, mở `A-Company.exe` |
+| **Desktop** | Người muốn tải về và mở app trên Windows hoặc macOS | Windows: giải nén ZIP, mở `A-Company.exe` · macOS: mở DMG |
 | **Zero-Docker Lite CLI** | Người muốn chạy từ mã nguồn mà không cần Docker/PostgreSQL riêng | `pnpm dev:lite` |
 | **Docker/server** | Nhóm cần nhiều tài khoản hoặc triển khai máy chủ | Docker Engine + Docker Compose |
 
@@ -38,8 +44,8 @@ Mô hình đám mây cần internet và tài khoản hoặc API key phù hợp. 
 
 API, worker và cơ sở dữ liệu PGlite được đóng gói cùng ứng dụng. Engine chạy trong tiến trình riêng do app quản lý; khi thoát, app chờ cơ sở dữ liệu dừng.
 
-- **Dữ liệu:** lưu tại `%APPDATA%\A-Company`, không nằm trong thư mục giải nén. Đóng app trước khi sao lưu toàn bộ thư mục này, bao gồm dữ liệu mã hóa và khóa cần để khôi phục.
-- **Cập nhật:** đóng app, giải nén ZIP mới vào một thư mục mới rồi mở exe mới. Bản ZIP không dùng trình cập nhật của bộ cài.
+- **Dữ liệu:** Windows lưu tại `%APPDATA%\A-Company`, macOS tại `~/Library/Application Support/A-Company`, không nằm trong thư mục app. Đóng app trước khi sao lưu toàn bộ thư mục này, bao gồm dữ liệu mã hóa và khóa cần để khôi phục.
+- **Cập nhật:** tải bản mới trên trang Release. Windows: giải nén ZIP mới vào thư mục mới; macOS: kéo app mới đè vào Applications. Các bản này không tự cập nhật.
 - **Xóa app:** xóa thư mục giải nén không xóa dữ liệu làm việc đã lưu riêng.
 - **Kết nối server:** dùng **File → Change A-Company Server…** nếu muốn chuyển sang Docker cục bộ hoặc máy chủ dùng chung.
 

@@ -47,11 +47,13 @@ Bot có bộ nhớ, công cụ làm việc, lịch tự động, mini-app trong 
 | Download / Tải xuống | Platform / Nền tảng | Usage / Cách dùng |
 | --- | --- | --- |
 | **[A-Company Windows ZIP — ~180 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-Windows-x64.zip)** | Windows x64 | Extract all files, open `A-Company.exe` / Giải nén toàn bộ, mở `A-Company.exe` |
-| [SHA256SUMS](https://github.com/phuocka/a-company/releases/download/v0.2.2/SHA256SUMS) | Checksum / Mã kiểm tra | Verify the ZIP download / Kiểm tra tính toàn vẹn của ZIP |
+| **[A-Company macOS Apple Silicon — DMG ~158 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-macOS-arm64.dmg)** | macOS · M1/M2/M3/M4 | Open the DMG, drag A-Company to Applications / Mở DMG, kéo A-Company vào Applications |
+| **[A-Company macOS Intel — DMG ~166 MB](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-macOS-x64.dmg)** | macOS · Intel | Same as above / Như trên |
+| [SHA256SUMS](https://github.com/phuocka/a-company/releases/download/v0.2.2/SHA256SUMS) | Checksum / Mã kiểm tra | Verify downloads / Kiểm tra tính toàn vẹn |
 
-No installer required. This Windows build is unsigned; system policy may warn or block it. / Không cần cài đặt. Bản Windows chưa ký số; hệ thống có thể cảnh báo hoặc chặn.
+Windows needs no installer. These builds are not code-signed by Microsoft or notarized by Apple, so the system may warn on first launch. On macOS, if A-Company is blocked, open **System Settings → Privacy & Security** and choose **Open Anyway**. / Bản Windows không cần cài đặt. Các bản này chưa được Microsoft ký số hay Apple công chứng (notarize), nên hệ thống có thể cảnh báo khi mở lần đầu. Trên macOS, nếu bị chặn, vào **System Settings → Privacy & Security** và chọn **Open Anyway**.
 
-**Zero-Docker Lite CLI and Docker/server remain available alongside the ZIP. / Zero-Docker Lite CLI và Docker/server vẫn tồn tại song song với bản ZIP.** See [three ways to run](#three-ways-to-run-a-company) or [hướng dẫn tiếng Việt](README.vi.md).
+**Zero-Docker Lite CLI and Docker/server remain available alongside the desktop downloads. / Zero-Docker Lite CLI và Docker/server vẫn tồn tại song song với bản Desktop.** See [three ways to run](#three-ways-to-run-a-company) or [hướng dẫn tiếng Việt](README.vi.md).
 
 ---
 
@@ -87,7 +89,7 @@ Download **[A-Company-0.2.2-Windows-x64.zip](https://github.com/phuocka/a-compan
 - **Unsigned Windows build:** Windows may warn or block the app according to system policy. Code signing is deferred; do not disable security controls to run it.
 - **Optional server connection:** **File → Change A-Company Server…** connects the desktop to a local Docker stack or shared team server.
 
-Windows x64 is the available portable target. macOS (`.dmg` / `.zip`) and Linux (`.AppImage`) targets remain configured but are not included in this Windows release. Download only artifacts actually attached to [GitHub Releases](https://github.com/phuocka/a-company/releases/latest).
+**macOS:** download the [Apple Silicon](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-macOS-arm64.dmg) or [Intel](https://github.com/phuocka/a-company/releases/download/v0.2.2/A-Company-0.2.2-macOS-x64.dmg) DMG, drag A-Company to Applications, and open it. The build is ad-hoc signed but not notarized: if macOS blocks it, use **System Settings → Privacy & Security → Open Anyway**. Data lives in `~/Library/Application Support/A-Company`. Update by downloading the next DMG; there is no automatic updater in these builds. Linux (`.AppImage`) packaging remains configured but is not published yet.
 
 To launch or build from source:
 
