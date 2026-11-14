@@ -14,7 +14,7 @@ export interface UpdaterEnvironment {
 
 export function updaterSupport(env: UpdaterEnvironment): { supported: boolean; reason: string } {
   if (env.portable === true) {
-    return { supported: false, reason: "Update this portable app by downloading a new ZIP." };
+    return { supported: false, reason: "Update by downloading the latest release." };
   }
   if (env.disabled === true) {
     return { supported: false, reason: "Automatic updates are turned off for this install." };

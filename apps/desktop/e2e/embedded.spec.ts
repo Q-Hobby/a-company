@@ -6,9 +6,12 @@ import { _electron as electron, expect, test } from "@playwright/test";
 test("standalone engine opens without login and preserves workspace data after quit", async () => {
   test.setTimeout(120_000);
   const userData = await mkdtemp(path.join(tmpdir(), "acompany-standalone-e2e-"));
+  const executablePath = process.env.ACOMPANY_E2E_EXECUTABLE;
+  const screenshot = process.env.ACOMPANY_E2E_SCREENSHOT ?? "10-standalone-onboarding.png";
   const launch = () =>
     electron.launch({
-      args: ["."],
+      ...(executablePath ? { executablePath: path.resolve(executablePath) } : {}),
+      args: executablePath ? [] : ["."],
       cwd: path.resolve(import.meta.dirname, ".."),
       env: {
         ...process.env,
@@ -28,7 +31,7 @@ test("standalone engine opens without login and preserves workspace data after q
     expect(new URL(page.url()).hostname).toBe("127.0.0.1");
     expect(new URL(page.url()).pathname).toBe("/onboarding");
     await page.screenshot({
-      path: path.join(import.meta.dirname, "screenshots/10-standalone-onboarding.png"),
+      path: path.join(import.meta.dirname, "screenshots", screenshot),
     });
     const spaceId = await page.evaluate(async () => {
       const response = await fetch("/rpc/spaces/create", {

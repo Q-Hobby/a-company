@@ -1,0 +1,139 @@
+name: release-macos-direct
+
+# macOS builds for direct download. They are ad-hoc signed, not notarized, and publish no
+# update feed, so they never replace the signed release-desktop pipeline. Run it from main
+# while the desktop version still matches the release tag it attaches to.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag to attach the macOS DMGs to (for example v0.2.2)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-macos-direct-${{ inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build macOS ${{ matrix.arch }} DMG
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-26
+            arch: arm64
+          - os: macos-15-intel
+            arch: x64
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Require a stable tag matching the desktop version
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          test "$RELEASE_TAG" = "v$(node -p "require('./apps/desktop/package.json').version")"
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:generate
+      - name: Build renderer and Electron main process
+        run: pnpm --filter @acompany/web build && pnpm --filter @acompany/desktop build
+        env:
+          ACOMPANY_ALLOW_DEV_SECRETS: "1"
+      - name: Package ad-hoc signed DMG
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+        run: >-
+          pnpm --filter @acompany/desktop exec electron-builder
+          --config electron-builder.mac.cjs --mac --${{ matrix.arch }} --publish never
+      - name: Verify DMG contents, signature, and the bundled engine
+        env:
+          ARCH: ${{ matrix.arch }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="${RELEASE_TAG#v}"
+          dmg="apps/desktop/out/macos/A-Company-${version}-macOS-${ARCH}.dmg"
+          test -s "$dmg"
+          hdiutil verify "$dmg"
+          mount="$RUNNER_TEMP/dmg"
+          hdiutil attach "$dmg" -nobrowse -readonly -mountpoint "$mount"
+          trap 'hdiutil detach "$mount" -force || true' EXIT
+          app="$mount/A-Company.app"
+          codesign --verify --deep --strict --verbose=2 "$app"
+          binary="$app/Contents/MacOS/A-Company"
+          expected="$([[ "$ARCH" == arm64 ]] && echo arm64 || echo x86_64)"
+          lipo -archs "$binary" | grep -qw "$expected"
+          test ! -e "$app/Contents/Resources/app-update.yml"
+          ELECTRON_RUN_AS_NODE=1 ACOMPANY_MODEL_CATALOG_UPDATES=off "$binary" \
+            apps/desktop/scripts/verify-direct-download.mjs \
+            "$app/Contents/Resources" "$RUNNER_TEMP" "$version"
+      - name: Capture packaged first-run window
+        if: matrix.arch == 'arm64'
+        env:
+          ACOMPANY_E2E_EXECUTABLE: out/macos/mac-arm64/A-Company.app/Contents/MacOS/A-Company
+          ACOMPANY_E2E_SCREENSHOT: 11-macos-standalone-onboarding.png
+        run: >-
+          pnpm --filter @acompany/desktop exec playwright test
+          --config e2e/playwright.config.ts embedded.spec.ts
+      - name: Upload macOS screenshot
+        if: always() && matrix.arch == 'arm64'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: macos-direct-screenshot
+          path: apps/desktop/e2e/screenshots/11-macos-standalone-onboarding.png
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Retain DMG
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: macos-dmg-${{ matrix.arch }}
+          path: apps/desktop/out/macos/*.dmg
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 7
+
+  publish:
+    name: Attach DMGs to the release
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          pattern: macos-dmg-*
+          path: dmgs
+          merge-multiple: true
+      - name: Upload DMGs and refresh SHA256SUMS
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null
+          mkdir sums
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS --dir sums || touch sums/SHA256SUMS
+          (cd dmgs && sha256sum *.dmg) > new-sums
+          cut -d' ' -f3 new-sums > new-names
+          grep -vFf new-names sums/SHA256SUMS > merged || true
+          cat new-sums >> merged
+          sort -k2 merged > SHA256SUMS
+          cat SHA256SUMS
+          gh release upload "$RELEASE_TAG" dmgs/*.dmg SHA256SUMS --repo "$GITHUB_REPOSITORY" --clobber
