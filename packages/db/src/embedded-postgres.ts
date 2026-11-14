@@ -35,6 +35,11 @@ const DEFAULT_MIGRATIONS_DIR = path.resolve(
   "../prisma/migrations",
 );
 
+function resolveMigrationsDir(explicit?: string): string {
+  const fromEnv = process.env.ACOMPANY_MIGRATIONS_DIR?.trim();
+  return explicit ?? (fromEnv ? path.resolve(fromEnv) : DEFAULT_MIGRATIONS_DIR);
+}
+
 const MIGRATIONS_TABLE_SQL = `
 CREATE TABLE IF NOT EXISTS "_acompany_embedded_migrations" (
   "name" TEXT PRIMARY KEY,
@@ -142,7 +147,7 @@ export async function startEmbeddedPostgres(
   try {
     const appliedMigrations = await applyEmbeddedMigrations(
       pglite,
-      options.migrationsDir ?? DEFAULT_MIGRATIONS_DIR,
+      resolveMigrationsDir(options.migrationsDir),
     );
 
     socketServer = new PGLiteSocketServer({

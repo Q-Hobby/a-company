@@ -9,7 +9,7 @@ export const PROBE_RESPONSE_LIMIT_BYTES = 64 * 1024;
 export const SETUP_FILE_NAME = "setup.json";
 
 export type StartupTarget =
-  | { kind: "app"; url: string; source: "env" | "saved" }
+  | { kind: "app"; url: string; source: "env" | "saved" | "embedded" }
   | { kind: "setup" };
 
 const SCHEME = /^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//;
@@ -79,12 +79,14 @@ export function parseSetupInput(value: unknown): DesktopSetup | null {
   if (typeof value !== "object" || value === null) return null;
 
   const { mode, serverUrl } = value as Record<string, unknown>;
-  if (mode !== "new" && mode !== "existing") return null;
+  if (mode !== "embedded" && mode !== "new" && mode !== "existing") return null;
   if (typeof serverUrl !== "string") return null;
 
   const normalized = normalizeServerUrl(serverUrl);
   if (normalized === null) return null;
-  if (mode === "new" && !isLoopbackHost(new URL(normalized).hostname)) return null;
+  if ((mode === "new" || mode === "embedded") && !isLoopbackHost(new URL(normalized).hostname)) {
+    return null;
+  }
   return { mode, serverUrl: normalized };
 }
 
@@ -109,6 +111,7 @@ export function resolveStartupTarget(input: {
   envUrl?: string;
   saved?: DesktopSetup | null;
   forceSetup?: boolean;
+  defaultEmbedded?: boolean;
 }): StartupTarget {
   if (input.forceSetup === true) return { kind: "setup" };
 
@@ -118,6 +121,9 @@ export function resolveStartupTarget(input: {
   if (input.saved != null) {
     const saved = parseSetupInput(input.saved);
     if (saved !== null) return { kind: "app", url: saved.serverUrl, source: "saved" };
+  }
+  if (input.defaultEmbedded === true) {
+    return { kind: "app", url: DEFAULT_LOCAL_WEB_URL, source: "embedded" };
   }
   return { kind: "setup" };
 }

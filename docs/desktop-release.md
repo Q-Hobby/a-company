@@ -1,8 +1,53 @@
 # Desktop releases
 
+## Windows ZIP: extract and run
+
+The Windows x64 distribution is `A-Company-<version>-Windows-x64.zip`. Extract the
+whole archive and open `A-Company.exe`; keep the adjacent files and `resources`
+folder together. The built-in workspace requires no installer, separate Node.js,
+PostgreSQL, or Docker installation. The ZIP is unsigned: Windows may warn or
+block it according to system policy. Signing is deferred; do not disable security
+controls to run it.
+
+Build with `pnpm desktop:portable`. Output goes to `apps/desktop/out/portable/`,
+separately from installer artifacts. The package metadata marks this distribution
+as portable and disables the installer updater. Publish the ZIP and its SHA-256
+checksum, never installer update-feed metadata. To update manually, quit the app,
+extract the new release into a fresh folder, and launch its executable.
+
+Data remains in `%APPDATA%/A-Company`, not beside the executable. Close the app
+before backing up that entire directory, including its encryption material.
+Deleting the extracted app does not delete workspace data. This is no-install
+packaging, not a portable data profile.
+
+## Standalone runtime and other deployment modes
+
+The desktop includes the API, in-process job runner, and PGlite. The engine runs
+in a separate child process using Electron's bundled Node runtime. Closing the
+app waits for the database to stop. Packaged first launch starts this engine.
+**Change A-Company Server…** opens built-in, Docker, and remote-server options.
+
+The Lite CLI (`pnpm dev:lite`) and Docker Compose/server deployment remain
+supported alongside the ZIP; they do not share its standalone database directory.
+Cloud models need internet and a configured account or key. Optional local models
+and CLI tools need their own configuration.
+
+The accountless API rejects cross-origin browser mutations and non-loopback Host
+headers before assigning its local actor. Same-origin requests and local JSON CLI
+clients remain supported. This is a local trust boundary, not a multi-user network
+server; use the authenticated Docker/server deployment for shared access.
+
+`e2e/embedded.spec.ts` covers onboarding and persistence across quit. Run Electron
+UI tests in CI's virtual display, not on a maintainer's desktop. macOS and Linux
+packages need platform-specific verification and are not in the Windows release.
+
+## Signed installer channel (optional, separate)
+
 The `release-desktop` workflow builds, signs, notarizes, attests, and publishes
-the Electron app from a `vMAJOR.MINOR.PATCH` tag on `main`. Publishing the
-Docker images triggers from the same tag.
+installers from a `vMAJOR.MINOR.PATCH` tag on `main` only when enabled through
+`DESKTOP_SIGNING_ENABLED`, or explicitly dispatched. The unsigned ZIP is released
+separately and must not replace signed installer update feeds. Docker image
+publication remains a separate workflow triggered by release tags.
 
 ## Repository secrets
 

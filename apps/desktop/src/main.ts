@@ -1,5 +1,5 @@
 import { randomBytes } from "node:crypto";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { DesktopReachability, DesktopSetup } from "@acompany/contracts";
@@ -22,6 +22,7 @@ import {
 } from "./auto-update.js";
 import { openBrowserAuth } from "./browser-auth.js";
 import { DOCKER_INSTALL_LINKS, isDesktopSetupLink, runDocker } from "./docker-cli.js";
+import { EmbeddedDesktopServer } from "./embedded-server.js";
 import { requestLocalSettings } from "./local-settings.js";
 import {
   LocalStackController,
@@ -96,6 +97,10 @@ const WARM_WINDOW_TTL_MS = warmWindowTtlMs(process.env.ACOMPANY_WARM_WINDOW_TTL_
 const updaterEnvironment = {
   packaged: app.isPackaged,
   version: app.getVersion(),
+  portable:
+    app.isPackaged &&
+    JSON.parse(readFileSync(path.join(app.getAppPath(), "package.json"), "utf8"))
+      .acompanyDistribution === "portable",
   disabled: process.env.ACOMPANY_DISABLE_AUTO_UPDATE === "1",
 };
 const desktopUpdater = new DesktopUpdateController(
@@ -111,12 +116,37 @@ const desktopUpdater = new DesktopUpdateController(
 );
 let launchUpdateCheckScheduled = false;
 let localStack: LocalStackController;
+let embeddedServer: EmbeddedDesktopServer;
+
+function defaultEmbeddedEnabled(): boolean {
+  if (process.env.ACOMPANY_EMBEDDED_MODE === "1" || process.env.ACOMPANY_EMBEDDED_MODE === "true") {
+    return true;
+  }
+  if (
+    process.env.ACOMPANY_EMBEDDED_MODE === "0" ||
+    process.env.ACOMPANY_EMBEDDED_MODE === "false"
+  ) {
+    return false;
+  }
+  // Test harnesses pass ACOMPANY_PERFORMANCE_USER_DATA to exercise setup/docker flows.
+  if (PERFORMANCE_USER_DATA) return false;
+  return app.isPackaged;
+}
 
 markOnce("rk:main:module-evaluated");
 if (PERFORMANCE_USER_DATA) {
   app.setPath("userData", PERFORMANCE_USER_DATA);
   app.setPath("sessionData", path.join(PERFORMANCE_USER_DATA, "session"));
 }
+const ownsProfile = app.requestSingleInstanceLock();
+if (!ownsProfile) app.quit();
+app.on("second-instance", () => {
+  const window = mainWindow ?? setupWindow;
+  if (!window || window.isDestroyed()) return;
+  if (window.isMinimized()) window.restore();
+  window.show();
+  window.focus();
+});
 app.once("will-finish-launching", () => markOnce("rk:main:will-finish-launching"));
 app.once("ready", () => markOnce("rk:main:ready"));
 // Includes fresh partitions and popup-created sessions, before they load remote content.
@@ -634,9 +664,12 @@ async function showLocalSettings() {
   if (openingSettings) return;
   openingSettings = true;
   try {
-    const url = localStack.webUrl();
-    const token = await readStackToken(stackDir(app.getPath("userData")));
-    if (!token || !(await localStack.matchesDesiredStack(url))) {
+    const embeddedRunning = currentSetup?.mode === "embedded" && embeddedServer?.isRunning();
+    const url = embeddedRunning ? embeddedServer.webUrl()! : localStack.webUrl();
+    const token = embeddedRunning
+      ? embeddedServer.token()
+      : await readStackToken(stackDir(app.getPath("userData")));
+    if (!token || (!embeddedRunning && !(await localStack.matchesDesiredStack(url)))) {
       await dialog.showMessageBox({
         message: "Start the local server before opening its settings.",
         type: "info",
@@ -1001,8 +1034,21 @@ function safeOrigin(targetUrl: string) {
 }
 
 app.whenReady().then(async () => {
+  if (!ownsProfile) return;
   installSessionPermissions(session.defaultSession, permissionTarget);
   const userDataDir = app.getPath("userData");
+  const resolvedImageTag = resolveImageTag({
+    version: app.getVersion(),
+    packaged: app.isPackaged,
+    override: process.env.ACOMPANY_IMAGE_TAG,
+  });
+  embeddedServer = new EmbeddedDesktopServer({
+    userDataDir,
+    packaged: app.isPackaged,
+    resourcesPath: process.resourcesPath,
+    appPath: app.getAppPath(),
+    imageTag: resolvedImageTag,
+  });
   localStack = new LocalStackController({
     platform: process.platform,
     env: process.env,
@@ -1017,11 +1063,7 @@ app.whenReady().then(async () => {
     localWebUrl:
       process.env.ACOMPANY_LOCAL_WEB_URL?.trim() ||
       (await readStackWebUrl(stackDir(userDataDir), LOCAL_WEB_URL)),
-    imageTag: resolveImageTag({
-      version: app.getVersion(),
-      packaged: app.isPackaged,
-      override: process.env.ACOMPANY_IMAGE_TAG,
-    }),
+    imageTag: resolvedImageTag,
     probe: (url, signal, token) => probeManagedStack(url, token, signal),
     randomHex: (bytes) => randomBytes(bytes).toString("hex"),
     onState: (state) => {
@@ -1035,6 +1077,7 @@ app.whenReady().then(async () => {
     envUrl: process.env.ACOMPANY_WEB_URL,
     saved: currentSetup,
     forceSetup: process.env.ACOMPANY_FORCE_SETUP === "1",
+    defaultEmbedded: defaultEmbeddedEnabled(),
   });
   if (process.env.ACOMPANY_PERFORMANCE_CLEAR_CACHE === "1") {
     const cacheSessions = new Set<Session>([session.defaultSession]);
@@ -1206,7 +1249,17 @@ app.whenReady().then(async () => {
 
       // Only open the exact origin selected and authenticated by the managed stack.
       let openSetup = setup;
-      if (setup.mode === "new") {
+      if (setup.mode === "embedded") {
+        try {
+          const embeddedOrigin = await embeddedServer.start();
+          openSetup = { mode: "embedded", serverUrl: embeddedOrigin };
+        } catch (error) {
+          return {
+            ok: false,
+            error: `Could not start the built-in engine. ${error instanceof Error ? error.message : String(error)}`,
+          };
+        }
+      } else if (setup.mode === "new") {
         const managedUrl = managedLocalOpenUrl(setup.serverUrl, localStack.webUrl());
         if (managedUrl === null || !(await localStack.matchesDesiredStack())) {
           return {
@@ -1312,6 +1365,24 @@ app.whenReady().then(async () => {
 
   if (target.kind === "setup") {
     showSetupWindow();
+  } else if (
+    target.source === "embedded" ||
+    (target.source === "saved" && currentSetup?.mode === "embedded")
+  ) {
+    try {
+      const embeddedOrigin = await embeddedServer.start();
+      const nextSetup: DesktopSetup = { mode: "embedded", serverUrl: embeddedOrigin };
+      currentSetup = nextSetup;
+      if (await openApp(embeddedOrigin)) {
+        await writeSetup(userDataDir, nextSetup).catch(() => undefined);
+        commitPendingAppSwitch();
+        destroySetupWindow();
+      }
+    } catch (error) {
+      showSetupWindow(
+        `Could not start the built-in engine. ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
   } else if (target.source === "saved") {
     if (currentSetup?.mode === "new") {
       const managedUrl = managedLocalOpenUrl(target.url, localStack.webUrl());
@@ -1354,9 +1425,21 @@ app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
 
-app.on("before-quit", () => {
+let embeddedShutdownComplete = false;
+let embeddedShutdown: Promise<void> | null = null;
+app.on("before-quit", (event) => {
   quitting = true;
   clearTimeout(warmWindowTimer);
-  // Containers keep running; only an in-flight pull/up is cut short.
+  // Containers keep running; the built-in database must flush before Electron exits.
   localStack?.abort();
+  if (!embeddedServer || embeddedShutdownComplete) return;
+  event.preventDefault();
+  if (embeddedShutdown) return;
+  embeddedShutdown = embeddedServer
+    .stop()
+    .catch(() => undefined)
+    .finally(() => {
+      embeddedShutdownComplete = true;
+      app.quit();
+    });
 });

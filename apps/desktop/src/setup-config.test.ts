@@ -122,8 +122,13 @@ describe("saved setup", () => {
     expect(parseSetupInput({ mode: "new", serverUrl: 5173 })).toBeNull();
   });
 
-  it("keeps the new-instance choice on this computer", () => {
+  it("keeps the new-instance and embedded choices on this computer", () => {
     expect(parseSetupInput({ mode: "new", serverUrl: "http://192.168.1.20:3100" })).toBeNull();
+    expect(parseSetupInput({ mode: "embedded", serverUrl: "http://192.168.1.20:3100" })).toBeNull();
+    expect(parseSetupInput({ mode: "embedded", serverUrl: "http://127.0.0.1:45173" })).toEqual({
+      mode: "embedded",
+      serverUrl: "http://127.0.0.1:45173",
+    });
     expect(parseSetupInput({ mode: "existing", serverUrl: "http://192.168.1.20:3100" })).toEqual({
       mode: "existing",
       serverUrl: "http://192.168.1.20:3100",
@@ -136,6 +141,14 @@ describe("startup target", () => {
 
   it("runs setup on a first launch", () => {
     expect(resolveStartupTarget({})).toEqual({ kind: "setup" });
+  });
+
+  it("auto-boots the built-in embedded engine on packaged first launch when enabled", () => {
+    expect(resolveStartupTarget({ defaultEmbedded: true })).toEqual({
+      kind: "app",
+      url: DEFAULT_LOCAL_WEB_URL,
+      source: "embedded",
+    });
   });
 
   it("opens the saved instance on later launches", () => {

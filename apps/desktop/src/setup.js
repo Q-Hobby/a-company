@@ -81,8 +81,8 @@
   function syncPanels() {
     const mode = selectedMode();
     panelNew.hidden = mode !== "new";
-    panelExisting.hidden = mode === "new";
-    checkButton.hidden = mode === "new";
+    panelExisting.hidden = mode !== "existing";
+    checkButton.hidden = mode !== "existing";
     if (mode !== "new") continueButton.textContent = "Continue";
     setStatus("");
   }
@@ -312,7 +312,10 @@
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (selectedMode() === "new") void runStack();
+    const mode = selectedMode();
+    if (mode === "new") void runStack();
+    else if (mode === "embedded")
+      void save("embedded", defaultLocalUrl || "http://127.0.0.1:45173");
     else void save("existing", serverUrl.value);
   });
 

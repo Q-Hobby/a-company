@@ -11,6 +11,9 @@
   "scripts": {
     "dev": "cross-env COREPACK_ENABLE_DOWNLOAD_PROMPT=0 turbo dev --filter=@acompany/api --filter=@acompany/worker --filter=@acompany/web --filter=@acompany/sandbox-supervisor",
     "dev:lite": "tsx scripts/dev-lite.ts",
+    "desktop:dev": "pnpm --filter @acompany/desktop dev:standalone",
+    "desktop:portable": "pnpm --filter @acompany/desktop pack:zip",
+    "desktop:installer": "pnpm --filter @acompany/desktop pack:win",
     "build": "turbo build",
     "check": "turbo check",
     "lint": "biome check .",

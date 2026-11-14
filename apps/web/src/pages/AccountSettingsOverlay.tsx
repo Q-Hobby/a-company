@@ -186,7 +186,7 @@ export function GeneralSettingsPanels({
         </Button>
       ) : null}
 
-      {email ? (
+      {email && email !== "workspace@a-company.local" ? (
         <section className="rounded-xl border border-border px-4 py-4">
           <h3 className="text-[15px] font-medium text-foreground">
             <Trans>Account</Trans>

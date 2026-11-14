@@ -12,14 +12,14 @@ Run with your own model API keys, zero-cost local subscription CLIs, or embedded
 
 <p>
   <a href="https://github.com/phuocka/a-company/stargazers"><img src="https://img.shields.io/github/stars/phuocka/a-company?style=for-the-badge&logo=github&label=Stars&color=2563eb&labelColor=0f172a" alt="GitHub Stars" /></a>
-  <a href="https://github.com/phuocka/a-company/releases/latest"><img src="https://img.shields.io/github/v/release/phuocka/a-company?style=for-the-badge&label=Release&color=10b981&labelColor=0f172a" alt="Latest Release" /></a>
+  <a href="https://github.com/phuocka/a-company/releases/latest"><img src="https://img.shields.io/github/v/release/phuocka/a-company?style=for-the-badge&label=Desktop_ZIP&color=10b981&labelColor=0f172a" alt="Windows Desktop ZIP Release" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-38bdf8?style=for-the-badge&labelColor=0f172a" alt="Apache-2.0 License" /></a>
-  <a href="#zero-docker-quick-start-embedded-pglite"><img src="https://img.shields.io/badge/Zero--Docker-PGlite_Ready-8b5cf6?style=for-the-badge&labelColor=0f172a" alt="Zero-Docker PGlite" /></a>
+  <a href="#three-ways-to-run-a-company"><img src="https://img.shields.io/badge/Zero--Docker-Standalone_&_PGlite-8b5cf6?style=for-the-badge&labelColor=0f172a" alt="Zero-Docker Standalone and PGlite" /></a>
 </p>
 
 <p>
   <a href="#why-a-company"><strong>Why A-Company</strong></a> ·
-  <a href="#zero-docker-quick-start-embedded-pglite"><strong>5-Min Quick Start</strong></a> ·
+  <a href="#three-ways-to-run-a-company"><strong>3 Ways to Run</strong></a> ·
   <a href="#product-tour"><strong>Product Tour</strong></a> ·
   <a href="#architecture"><strong>Architecture</strong></a> ·
   <a href="#published-docker-images-server--vps"><strong>Docker Installers</strong></a> ·
@@ -39,7 +39,7 @@ Most AI tools trap your prompts, memory, and workflows inside a single vendor ta
 | --- | --- |
 | **Web · Electron · Expo Mobile** | One shared Hono + oRPC API across browser, macOS/Windows/Linux desktop, and native iOS/Android. |
 | **100% Apache-2.0 Open Source** | Complete multi-user, worker, team-computer, and connector stack with no locked `enterprise/` tier. |
-| **Zero-Docker Lite Mode** | Launch locally in under a minute via `pnpm dev:lite` with embedded PostgreSQL (**PGlite**) and local host folders. |
+| **3 Deployment Modes** | Extract the **Windows Desktop ZIP** and open `A-Company.exe`, run **`pnpm dev:lite`** (Zero-Docker CLI), or deploy the multi-user **Docker Compose Server**. |
 | **Provider-Neutral + Local CLIs** | Connect cloud APIs via Pi, point to Ollama/LM Studio, or reuse local **Claude Code**, **Codex**, **Gemini CLI**, and **OpenCode** logins at zero extra API cost. |
 | **Shared & Private Computers + My Chrome** | Give bots isolated Docker, E2B, Daytona, or Box Linux desktops, local folders, or attach directly to your signed-in Chrome via CDP (`BROWSER_PROVIDER=my-chrome`). |
 | **Interactive Chat Mini-Apps** | Bots call `render_widget` to render sandboxed HTML/CSS/SVG dashboards, calculators, and status boards inline inside chat. |
@@ -48,9 +48,35 @@ Most AI tools trap your prompts, memory, and workflows inside a single vendor ta
 
 ---
 
-## Zero-Docker Quick Start (Embedded PGlite)
+## Three Ways to Run A-Company
 
-Run the complete A-Company stack on **macOS, Windows, or Linux** without installing Docker or PostgreSQL:
+Choose the setup that matches your workflow — all three share the exact same codebase, bot tools, blueprints, and model providers:
+
+### Option 1 — Windows Desktop ZIP (Extract & Run · No Installer · No Docker)
+
+Download **[A-Company-0.2.1-Windows-x64.zip](https://github.com/phuocka/a-company/releases/download/v0.2.1/A-Company-0.2.1-Windows-x64.zip)**, extract the entire archive, and open **`A-Company.exe`**. Keep the adjacent files and `resources` folder together; the executable is not a single-file application.
+
+- **Dedicated app window:** No browser tab, Docker Desktop, separate Node.js, PostgreSQL, or account registration is needed for the built-in workspace.
+- **Local engine:** The bundled API, background worker, and PGlite run in a separate process managed by the app. Cloud models require internet and a configured account or key; local models and optional CLI tools require their own configuration.
+- **Persistent data:** Workspace data lives in `%APPDATA%\A-Company`, outside the extracted folder. Close the app and back up that entire directory, including its encryption material. This is a no-install distribution, not a USB-carried data profile.
+- **Manual updates:** Close the app, extract the new ZIP into a fresh folder, and open the new executable. The installer updater is disabled for ZIP builds.
+- **Unsigned Windows build:** Windows may warn or block the app according to system policy. Code signing is deferred; do not disable security controls to run it.
+- **Optional server connection:** **File → Change A-Company Server…** connects the desktop to a local Docker stack or shared team server.
+
+Windows x64 is the available portable target. macOS (`.dmg` / `.zip`) and Linux (`.AppImage`) targets remain configured but are not included in this Windows release. Download only artifacts actually attached to [GitHub Releases](https://github.com/phuocka/a-company/releases/latest).
+
+To launch or build from source:
+
+```bash
+pnpm desktop:dev        # Launch the standalone Electron app with embedded PGlite
+pnpm desktop:portable   # Build the Windows ZIP in apps/desktop/out/portable/
+```
+
+**The Zero-Docker Lite CLI and Docker/server options below remain supported alongside the desktop ZIP.**
+
+### Option 2 — Zero-Docker Lite CLI (`pnpm dev:lite` · Embedded PGlite)
+
+Run the complete A-Company stack from source on **macOS, Windows, or Linux** without installing Docker or PostgreSQL:
 
 ```bash
 git clone https://github.com/phuocka/a-company.git
@@ -63,6 +89,10 @@ pnpm dev:lite
 `pnpm dev:lite` boots an in-process PostgreSQL engine (`DATABASE_URL=pglite` persisted under `./data/lite/pglite`), runs all Prisma migrations automatically, starts the background worker + Hono API, and serves the web studio at **`http://127.0.0.1:5173`**.
 
 > **Tip:** If `claude`, `codex`, `gemini`, or `opencode` is installed on your `PATH`, you can pick it immediately during onboarding or in **Settings → Models** — zero API keys required.
+
+### Option 3 — Multi-User Docker Server (Self-Hosted Team & Linux Sandboxes)
+
+Deploy the multi-user PostgreSQL + isolated Linux computer container stack on any laptop, home lab, or cloud VPS — see [Published Docker Images](#published-docker-images-server--vps) below.
 
 ---
 

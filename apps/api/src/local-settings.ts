@@ -5,7 +5,7 @@ import {
   LOCAL_SETTINGS_RPC,
   LOCAL_SETTINGS_TOKEN_HEADER,
 } from "@acompany/contracts";
-import { type PrismaClient, requireMembership } from "@acompany/db";
+import { type PrismaClient, requireMembership, resolveDefaultActor } from "@acompany/db";
 import type { RPCHandler } from "@orpc/server/fetch";
 import type { Hono } from "hono";
 
@@ -27,6 +27,7 @@ export function mountLocalSettings(
   app: Hono,
   deps: {
     token?: string;
+    accountlessMode?: boolean;
     prisma: PrismaClient;
     rpc: RPCHandler<{ actor: Actor | null; signal?: AbortSignal }>;
   },
@@ -42,7 +43,9 @@ export function mountLocalSettings(
     const owner = await deps.prisma.deploymentSettings.findUnique({ where: { id: "default" } });
     const actor = owner?.ownerUserId
       ? await requireMembership(deps.prisma, owner.ownerUserId).catch(() => null)
-      : null;
+      : deps.accountlessMode
+        ? await resolveDefaultActor(deps.prisma).catch(() => null)
+        : null;
     if (!actor?.isDeploymentOwner) {
       return c.json(
         { error: "Create the server owner account before configuring local settings" },

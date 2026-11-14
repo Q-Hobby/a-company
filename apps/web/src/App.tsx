@@ -1,5 +1,5 @@
 import { LOCAL_SETTINGS_PAGE } from "@acompany/contracts";
-import { lazy, type ReactNode, Suspense, useLayoutEffect } from "react";
+import { lazy, type ReactNode, Suspense, useEffect, useLayoutEffect, useState } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { authClient } from "./lib/auth";
 import { markAfterPaint, markOnce } from "./lib/performance";
@@ -10,20 +10,22 @@ import { LocalSettingsPage } from "./pages/LocalSettings";
 import { McpOAuthCallbackPage } from "./pages/McpOAuthCallback";
 import { ShellPage } from "./pages/Shell";
 import { WelcomePage } from "./pages/Welcome";
+import { WindowChrome } from "./pages/WindowChrome";
 
 const OnboardingPage = lazy(() =>
   import("./pages/Onboarding").then((module) => ({ default: module.OnboardingPage })),
 );
 
-const accountlessMode = import.meta.env.VITE_ACCOUNTLESS_MODE === "true";
+const staticAccountlessMode = import.meta.env.VITE_ACCOUNTLESS_MODE === "true";
 
 export function App() {
   if (window.location.pathname === LOCAL_SETTINGS_PAGE) return <LocalSettingsPage />;
-  if (accountlessMode) return <AccountlessWorkspaceApp />;
+  if (staticAccountlessMode) return <AccountlessWorkspaceApp />;
   return <AuthenticatedWorkspaceApp />;
 }
 
 function AccountlessWorkspaceApp() {
+  const location = useLocation();
   useLayoutEffect(() => {
     markOnce("rk:renderer:session-committed");
     markAfterPaint("rk:renderer:session-painted");
@@ -31,6 +33,11 @@ function AccountlessWorkspaceApp() {
 
   return (
     <div className="h-full" data-acompany-app-state="ready">
+      {window.acompanyDesktop && location.pathname === "/onboarding" ? (
+        <div className="app-drag absolute inset-x-0 top-0 z-50 flex h-12 items-center px-4">
+          <WindowChrome />
+        </div>
+      ) : null}
       <Suspense fallback={<div className="h-full bg-background" />}>
         <Routes>
           <Route path="/" element={<Navigate to="/app" replace />} />
@@ -53,14 +60,44 @@ function AccountlessWorkspaceApp() {
 function AuthenticatedWorkspaceApp() {
   const { data: session, isPending } = authClient.useSession();
   const signedIn = Boolean(session?.user);
+  const [serverAccountless, setServerAccountless] = useState<boolean | null>(() =>
+    window.acompanyDesktop ? null : false,
+  );
+
+  useEffect(() => {
+    if (signedIn || serverAccountless !== null) return;
+    let active = true;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 3_000);
+    void fetch("/api/auth/capabilities", { signal: controller.signal })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((body: { accountless?: unknown } | null) => {
+        if (active) setServerAccountless(body?.accountless === true);
+      })
+      .catch(() => {
+        if (active) setServerAccountless(false);
+      })
+      .finally(() => clearTimeout(timer));
+    return () => {
+      active = false;
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [signedIn, serverAccountless]);
+
+  const waitingForAuth = isPending || (!signedIn && serverAccountless === null);
 
   useLayoutEffect(() => {
-    if (isPending) return;
+    if (waitingForAuth || serverAccountless === true) return;
     markOnce("rk:renderer:session-committed");
     markAfterPaint("rk:renderer:session-painted");
-  }, [isPending]);
+  }, [waitingForAuth, serverAccountless]);
 
-  if (isPending) {
+  if (serverAccountless === true) {
+    return <AccountlessWorkspaceApp />;
+  }
+
+  if (waitingForAuth) {
     return <div className="h-full bg-background" data-acompany-app-state="session-pending" />;
   }
 

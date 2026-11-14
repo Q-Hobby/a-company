@@ -66,9 +66,10 @@ export interface ACompanyDesktop {
 
 /**
  * How the desktop app was pointed at a A-Company server during first-run setup.
+ * `embedded` runs the built-in PGlite + API engine directly inside the desktop app with zero Docker.
  * `new` is the Docker Compose stack this app installs and runs on the same computer.
  */
-export type DesktopInstanceMode = "new" | "existing";
+export type DesktopInstanceMode = "embedded" | "new" | "existing";
 
 export interface DesktopSetup {
   mode: DesktopInstanceMode;

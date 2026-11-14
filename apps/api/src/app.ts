@@ -157,11 +157,16 @@ export async function createApp(
   const env = {
     ...loadEnv({
       ...process.env,
+      ...(envOverrides.nodeEnv ? { NODE_ENV: envOverrides.nodeEnv } : {}),
       ...(envOverrides.databaseUrl ? { DATABASE_URL: envOverrides.databaseUrl } : {}),
       ...(envOverrides.authSecret ? { BETTER_AUTH_SECRET: envOverrides.authSecret } : {}),
       ...(envOverrides.encryptionKey ? { ENCRYPTION_KEY: envOverrides.encryptionKey } : {}),
       ...(envOverrides.screenProxySecret
         ? { SCREEN_PROXY_SECRET: envOverrides.screenProxySecret }
+        : {}),
+      ...(envOverrides.sandboxProvider ? { SANDBOX_PROVIDER: envOverrides.sandboxProvider } : {}),
+      ...(envOverrides.sandboxSupervisorToken
+        ? { SANDBOX_SUPERVISOR_TOKEN: envOverrides.sandboxSupervisorToken }
         : {}),
     }),
     ...envOverrides,
@@ -545,11 +550,19 @@ export async function createApp(
     }
     return auth.handler(c.req.raw);
   });
-  mountLocalSettings(app, { token: env.desktopStackToken, prisma, rpc });
+  mountLocalSettings(app, {
+    token: env.desktopStackToken,
+    accountlessMode: env.accountlessMode,
+    prisma,
+    rpc,
+  });
   app.use("/rpc/*", async (c, next) => {
     const session = await auth.api
       .getSession({ headers: sessionHeaders(c.req.raw) })
       .catch(() => null);
+    if (!session?.user && env.accountlessMode && !allowsAccountlessRequest(c.req.raw, env)) {
+      return c.json({ error: "Cross-origin accountless RPC is forbidden" }, 403);
+    }
     const requestedSpaceId = c.req.header("x-acompany-space-id");
     const actor = session?.user
       ? await requireMembership(prisma, session.user.id, requestedSpaceId).catch(() => null)
@@ -570,6 +583,9 @@ export async function createApp(
     const session = await auth.api
       .getSession({ headers: sessionHeaders(c.req.raw) })
       .catch(() => null);
+    if (!session?.user && env.accountlessMode && !allowsAccountlessRequest(c.req.raw, env)) {
+      return null;
+    }
     const requestedSpaceId = c.req.header("x-acompany-space-id");
     const actor = session?.user
       ? await requireMembership(prisma, session.user.id, requestedSpaceId).catch(() => null)
@@ -913,12 +929,53 @@ function isTrustedOrigin(origin: string, env: AppEnv) {
   if (!origin) return true;
   if (origin === env.webOrigin || origin === env.apiUrl || origin === env.authUrl) return true;
   if (origin.startsWith("acompany://") || origin.startsWith("exp://")) return true;
+  if (env.accountlessMode) return false;
   try {
     const host = new URL(origin).hostname;
     return isLoopbackHost(host);
   } catch {
     return false;
   }
+}
+
+function allowsAccountlessRequest(request: Request, env: AppEnv): boolean {
+  const pathname = new URL(request.url).pathname;
+  if (pathname === "/rpc/health") return true;
+
+  // Reject DNS rebinding against the local loopback listener.
+  const hostHeader = request.headers.get("host");
+  if (hostHeader) {
+    try {
+      const parsedHost = new URL(`http://${hostHeader}`);
+      if (!isLoopbackHost(parsedHost.hostname)) return false;
+    } catch {
+      return false;
+    }
+  }
+
+  // Browser cross-site requests advertise Sec-Fetch-Site or an Origin header.
+  const secFetchSite = request.headers.get("sec-fetch-site");
+  if (secFetchSite && secFetchSite !== "same-origin" && secFetchSite !== "none") {
+    const origin = request.headers.get("origin");
+    if (!origin || !isExactAccountlessOrigin(origin, env)) return false;
+  }
+
+  const origin = request.headers.get("origin");
+  if (origin !== null && !isExactAccountlessOrigin(origin, env)) {
+    return false;
+  }
+
+  if (request.method === "POST") {
+    const contentType = request.headers.get("content-type")?.toLowerCase() ?? "";
+    if (!contentType.startsWith("application/json")) return false;
+  }
+
+  return true;
+}
+
+function isExactAccountlessOrigin(origin: string, env: AppEnv): boolean {
+  if (!origin || origin === "null") return false;
+  return origin === env.webOrigin || origin === env.apiUrl || origin === env.authUrl;
 }
 
 function isLoopbackHost(host: string): boolean {
